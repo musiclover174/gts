@@ -1,0 +1,148 @@
+html,
+body
+  font-family $font
+body
+  overflow-x: hidde
+
+.content
+  h1:not([class])
+    font-size 48px
+    font-weight 700
+    line-height 54px
+    margin 43px 0 37px
+  h2:not([class])
+    font-size 32px
+    font-weight 700
+    line-height 38px
+    margin 43px 0 22px
+  h3:not([class]),
+  h4:not([class])
+    font-size 24px
+    font-weight 700
+    line-height 34px
+    margin 43px 0 16px
+  img:not([class])
+    margin 6px 0
+    max-width 100%
+  * + img:not([class])
+    margin-top 5px
+  ul:not([class])
+    list-style  none
+    margin  18px 0
+  * + ul:not([class])
+    margin-top -6px
+  ul:not([class]) li
+    padding-left 41px
+    position relative
+    font-size 19px
+    font-weight 400
+    line-height 31px
+  ul:not([class]) li + li
+    margin-top 22px
+  ul:not([class]) li:before
+    content ""
+    position absolute
+    left 24px
+    top 12px
+    width 6px
+    height 6px
+    border-radius 50%
+    background-color #40ad68
+  ol:not([class])
+    list-style none
+    margin 15px 0
+    counter-reset myCounter
+  * + ol:not([class])
+    margin-top -6px
+  ol:not([class]) li
+    padding-left 41px
+    position relative
+    font-size 19px
+    font-weight 400
+    line-height 31px
+  ol:not([class]) li + li
+    margin-top 12px
+  ol:not([class]) li:befor
+    counter-increment myCounter
+    content counter(myCounter)"."	
+    position absolute
+    left 0
+    top 0
+    width 41px
+    padding-right 9px
+    text-align right
+    color #40ad68
+    font-size 17px
+    font-weight 700
+    line-height 27px
+    box-sizing border-box
+  table:not([class])
+    border 5px solid #40ad68
+    margin 23px 0
+    max-width 100%
+    table-layout fixed
+  table:not([class]) th
+    text-align left
+    padding 18px 25px
+    color $color
+    font-size 15px
+    font-weight 700
+    line-height 25px
+    border 1px solid #40ad68
+  table:not([class]) td
+    padding 18px 25px
+    color $color
+    font-size 15px
+    font-weight 400
+    line-height 25px
+    border 1px solid #40ad68
+  p:not([class])
+    color $color
+    font-size 19px
+    font-weight 400
+    line-height 31px
+    margin 15px 0
+  a:not([class])
+    color $color
+    border-bottom 1px solid
+    transition .5s border
+    &:hover
+      border-color transparent
+ 
+  *:not([class]):not(span):first-child
+    margin-top 0 !important
+  *:not([class]):not(span):last-child
+    margin-bottom 0 !important
+
+input::-webkit-input-placeholder
+  color #a6adbf
+input::-moz-placeholder
+  color #a6adbf
+input:-ms-input-placeholder
+  color #a6adbf
+input:-moz-placeholder
+  color #a6adbf
+
+.animator
+  position relative
+  &:not(.visible)[data-direction="rtl"]
+    right -100px
+    opacity 0
+  &:not(.visible)[data-direction="ltr"]
+    left -100px
+    opacity 0
+  &:not(.visible)[data-direction="ttb"]
+    top -100px
+    opacity 0
+  &:not(.visible)[data-direction="btt"]
+    bottom -100px
+    opacity 0
+  &:not(.visible)[data-direction="fi"]
+    opacity 0
+
+input.warning,
+textarea.warning
+  border-color #ff3a0f
+
+.hidden-block
+  display none
