@@ -4,6 +4,262 @@ html
     include layout/__head
   body
     include layout/__header
-    .content
+    main.content
+      section.swiper-container.i-banner.js-ibanner
+        .swiper-wrapper
+          .swiper-slide(style="background-image: url('img/banner.jpg')")
+            .container
+              .i-banner__inner
+                p.i-banner__title 20 лет на рынке комплексного оснащения складов
+                a(href="#").btn.i-banner__more Подробнее
+          .swiper-slide(style="background-image: url('img/banner.jpg')")
+            .container
+              .i-banner__inner
+                p.i-banner__title 20 лет на рынке комплексного оснащения складов1
+                a(href="#").btn.i-banner__more Подробнее
+        .swiper-buttons
+          .swiper-button-prev
+          .swiper-button-next
+        
+      section.i-cats
+        .container
+          .i-cats__upper
+            .i-cats__item
+              span.i-cats__bg
+                img(src="img/icats1.jpg").i-cats__img
+              .i-cats__width
+                a(href="#").i-cats__mainhref 
+                  span Стеллажи от производителя
+              ul.i-cats__hreflist
+                li.i-cats__hrefitem
+                  a(href="#").i-cats__href Лайт
+                li.i-cats__hrefitem
+                  a(href="#").i-cats__href Универсал
+                li.i-cats__hrefitem
+                  a(href="#").i-cats__href Профи-Т
+                li.i-cats__hrefitem
+                  a(href="#").i-cats__href Оптима
+                li.i-cats__hrefitem
+                  a(href="#").i-cats__href Паллетные
+                li.i-cats__hrefitem
+                  a(href="#").i-cats__href Cash&Carry
+                li.i-cats__hrefitem
+                  a(href="#").i-cats__href Мезонины
+            .i-cats__item
+              span.i-cats__bg
+                img(src="img/icats2.jpg").i-cats__img
+              .i-cats__width
+                a(href="#").i-cats__mainhref 
+                  span Складская техника
+              ul.i-cats__hreflist
+                li.i-cats__hrefitem
+                  a(href="#").i-cats__href Гидравлические тележки
+                li.i-cats__hrefitem
+                  a(href="#").i-cats__href Штабелёры
+                li.i-cats__hrefitem
+                  a(href="#").i-cats__href Подъёмные столы
+            .i-cats__item
+              span.i-cats__bg
+                img(src="img/icats3.jpg").i-cats__img
+              .i-cats__width
+                a(href="#").i-cats__mainhref 
+                  span Грузоподъёмное оборудование
+              ul.i-cats__hreflist
+                li.i-cats__hrefitem
+                  a(href="#").i-cats__href Тельферы
+                li.i-cats__hrefitem
+                  a(href="#").i-cats__href Подъемники
+                li.i-cats__hrefitem
+                  a(href="#").i-cats__href Такелажные системы
+            .i-cats__item
+              span.i-cats__bg
+                img(src="img/icats4.jpg").i-cats__img
+              .i-cats__width
+                a(href="#").i-cats__mainhref 
+                  span Аксессуары для хранения
+              p.i-cats__text Мы занимаемся продажей стеллажей более 20 лет и за это время досконально изучили своих клиентов и нюансы логистических российских складов.
+            .i-cats__item
+              span.i-cats__bg
+                img(src="img/icats5.jpg").i-cats__img
+              .i-cats__width
+                a(href="#").i-cats__mainhref 
+                  span Металлическая мебель
+              p.i-cats__text В сочетании с высокой квалификацией наших специалистов это дает возможность предложить каждому заказчику самый выгодный вариант проекта.
+            .i-cats__item
+              span.i-cats__bg.i-cats__bg_black
+                img(src="img/icats6.png").i-cats__img
+              span.i-cats__mainhref.i-cats__mainhref_white Прайс
+              p.i-cats__text.i-cats__text_white Стоимость всех готовых изделий вы можете узнать в нашем прайсе.
+              .i-cats__priceover
+                a(href="#").i-cats__price Скачать прайс-лист 1.02.2018
+            
+      section.i-news
+        include blocks/news-elem
+        
+        .container
+          .i-news__hrefs
+            a(href="#", data-type="news").i-news__href.active.js-inews-href Новости
+            a(href="#", data-type="specs").i-news__href.js-inews-href Спецпредложения
+          .i-news__wrapper
+            .i-news__content
+              .i-news__type(data-type="news")
+                -var newsArray = []
+                -newsArray.push({img: 'img/inews1.jpg', date: "12 апреля 2018", href: "Доллар растет, а мы снижаем цены!", text: 'Хотим порадовать отличной новостью! Мы снизили цены на ряд самоходных штабелеров SMART и SMART PREMIUM!'})
+                -newsArray.push({img: 'img/inews2.jpg', date: "6 февраля 2018", href: "Качество не обязательно должно быть слишком дорогим! Наше предложение тому подтверждение!", text: 'ГТС "Складские системы" уже более 20 лет обеспечивает своих клиентов надежной техникой для любых нужд. Мы всегда стремимся дать нашим клиентам наиболее комфортные условия по самым низким ценам.'})
+                -newsArray.push({img: 'img/inews3.jpg', date: "15 ноября 2017", href: "На гидравлические штабелеры с электроподъемом SMART!", text: "Для тех кто ищет максимальную выгоду, мы снизили цены на популярные модели штабелеров с электроподъемом SMART BDA!"})
+                ul.news__list
+                  for news in newsArray
+                    +newsElem(news)
+                a(href="#").i-news__toall Все новости
+              .i-news__type(data-type="specs")
+                ul.news-list
+                  for news in newsArray
+                    +newsElem(news)
+                a(href="#").i-news__toall Все спецпредложения
+            aside.i-news__banner
+              a(href="#").i-news__banner-href
+                img(src="img/news-banner.jpg").i-news__banner-img
       
+      section.equipment
+        .container
+          p.common__title Комплексное оснащение склада
+          ol.equipment__list
+            li.equipment__item
+              p.equipment__title Проект
+              p.equipment__text При монтаже складских систем, наша компания использует только профессиональных обученных монтажников с многолетним опытом работы по монтажу складских стеллажей и лицензией на проведение высотных работ. 
+            li.equipment__item
+              p.equipment__title Оснащение
+              p.equipment__text При монтаже складских систем, наша компания использует только профессиональных обученных монтажников с многолетним опытом работы по монтажу складских стеллажей и лицензией на проведение высотных работ. 
+            li.equipment__item
+              p.equipment__title Монтаж
+              p.equipment__text При монтаже складских систем, наша компания использует только профессиональных обученных монтажников с многолетним опытом работы по монтажу складских стеллажей и лицензией на проведение высотных работ. 
+          p.equipment__ordertext По вашему желанию наши специалисты составят подробный проект стеллажной системы. Наши специалисты накопили большой опыт в проектировании складов разного уровня и при выполнении работ пользуются специализированным программным обеспечением.
+          button(type="button", data-fancybox, data-src="#order").btn.equipment__button Заказать проект склада
+    
+      section.video
+        .container
+          .video__elem
+            span.video__elem-bg(style="background-image: url(img/video1.jpg)")
+            .video__content
+              button(type="button", data-fancybox, data-src="https://www.youtube.com/watch?v=_sI_Ps7JSEk").video__play
+            p.video__text Наши производственные линии
+            a(href="#").video__href О производстве
+          .video__elem
+            span.video__elem-bg(style="background-image: url(img/video2.jpg)")
+            .video__content
+              button(type="button", data-fancybox, data-src="https://www.youtube.com/watch?v=_sI_Ps7JSEk").video__play
+            p.video__text Собственный бренд SMART. Высокий стандарт, оптимальная цена
+            a(href="#").video__href О бренде SMART
+          .video__elem.video__elem_bigger
+            span.video__elem-bg(style="background-image: url(img/video3.jpg)")
+            .video__content
+              button(type="button", data-fancybox, data-src="https://www.youtube.com/watch?v=_sI_Ps7JSEk").video__play
+            p.video__text.video__text_longer Посмотрите на компанию «ГТС Складские системы» изнутри
+            a(href="#").video__href О компании
+            
+      section.services
+        .container
+          p.common__title Наши услуги
+          ul.services__list
+            li.services__item
+              a(href="#").services__item-href
+                .services__item-imgover
+                  img(src="img/services-icon1.png").services__item-icon
+                span.services__item-title Ремонт
+            li.services__item
+              a(href="#").services__item-href
+                .services__item-imgover
+                  img(src="img/services-icon2.png").services__item-icon
+                span.services__item-title Помощь в переезде склада
+            li.services__item
+              a(href="#").services__item-href
+                .services__item-imgover
+                  img(src="img/services-icon3.png").services__item-icon
+                span.services__item-title Доставка и сборка по России
+            li.services__item
+              a(href="#").services__item-href
+                .services__item-imgover
+                  img(src="img/services-icon4.png").services__item-icon
+                span.services__item-title Монтаж профессионалами
+            li.services__item
+              a(href="#").services__item-href
+                .services__item-imgover
+                  img(src="img/services-icon5.png").services__item-icon
+                span.services__item-title Шеф-монтаж
+                
+      section.projects
+        include blocks/project
+      
+        .container
+          a(href="#").common__toall Все выполненные проекты
+          p.common__title Проекты, которые мы реализовали
+          .swiper-container.projects-car.js-iprojects
+            .swiper-wrapper
+              -var projectsArray = []
+              -projectsArray.push({img: 'img/iproject1.jpg', cost: "от 2 600 руб за 1 полку", href: "Стеллажные системы «Каскад»", text: 'Склад «Мособлфармация», 2016'})
+              -projectsArray.push({img: 'img/iproject2.jpg', cost: "от 1 800 руб. за 1 паллетоместо", href: "Стеллажные системы «Турин»", text: 'Склад «Кант», 2016'})
+              -projectsArray.push({img: 'img/iproject1.jpg', cost: "от 2 600 руб./м<sup>2</sup>", href: "Магазин «Элекс-Нет», 2017"})
+              ul.projects__list
+                for project in projectsArray
+                  .swiper-slide
+                    +project(project)
+            .swiper-button-prev
+            .swiper-button-next
+          
+      section.reviews
+        .container
+          a(href="#").common__toall Все отзывы
+          button(type="button", data-fancybox, data-src="#reviews").btn.reviews__make Оставить отзыв
+          p.common__title Клиенты о нас
+          .swiper-container.reviews-car.js-ireviews
+            .swiper-wrapper
+              .swiper-slide
+                .reviews__elem
+                  aside.reviews__about
+                    img(src="img/reviews-logo1.png").reviews__logo
+                    p.reviews__name АО «Стройтрансгаз» 
+                  .reviews__text
+                    p Компания АО «Стройтрансгаз» выражает благодарность «ГТС» за высокий профессионализм и качество проведенных работ в рамках договора поставки складскогой техники. Заказанное оборудование соответствует высоким технологическим требованиям и условиям контракта. ГТС складские системы выполнило  в срок взятые на себя обязательства на высоком профессиональном уровне.
+                    .reviews__person
+                      p.reviews__person-who Директор по эксплуатации и административным вопросам<br>Кириченко О. И.
+                      img(src="img/reviews-sign1.png").reviews__person-sign
+                  aside.reviews__imgover
+                    img(src="img/reviews-img1.jpg").reviews__img
+              .swiper-slide
+                .reviews__elem
+                  aside.reviews__about
+                    img(src="img/reviews-logo1.png").reviews__logo
+                    p.reviews__name АО «Стройтрансгаз» 1
+                  .reviews__text
+                    p Компания АО «Стройтрансгаз» выражает благодарность «ГТС» за высокий профессионализм и качество проведенных работ в рамках договора поставки складскогой техники. Заказанное оборудование соответствует высоким технологическим требованиям и условиям контракта. 
+                    .reviews__person
+                      p.reviews__person-who Директор по эксплуатации и административным вопросам<br>Кириченко О. И.
+                      img(src="img/reviews-sign1.png").reviews__person-sign
+                  aside.reviews__imgover
+                    img(src="img/reviews-img1.jpg").reviews__img
+            .swiper-button-prev
+            .swiper-button-next
+            
+      section.clients
+        .container
+          .swiper-container.clients-car.js-iclients
+            .swiper-wrapper
+              .swiper-slide
+                img(src="img/clients1.jpg").clients__img
+              .swiper-slide
+                img(src="img/clients2.jpg").clients__img
+              .swiper-slide
+                img(src="img/clients3.jpg").clients__img
+              .swiper-slide
+                img(src="img/clients4.jpg").clients__img
+              .swiper-slide
+                img(src="img/clients5.jpg").clients__img
+            .swiper-button-prev
+            .swiper-button-next
+            
+      section.seo
+        .container
+          h3 CEО заголовок
+          p Мы занимаемся продажей стеллажей более 20 лет и за это время досконально изучили своих клиентов и нюансы логистических российских складов. В сочетании с высокой квалификацией наших специалистов это дает возможность предложить каждому заказчику самый выгодный вариант проекта складских стеллажных систем с учетом особенностей помещения, специфики грузов и организации работы склада.
+          p Также мы изготавливаем стеллажи на заказ, по вашим размерам, с учетом всех пожеланий. Вы можете купить стеллажи или сделать заказ на стеллажи с понедельника по пятницу с 9 до 18 часов (без обеда) в нашем офисе в Москве. Мы занимаемся продажей стеллажей более 20 лет и за это время досконально изучили своих клиентов и нюансы логистических российских складов. В сочетании с высокой квалификацией наших специалистов это дает возможность предложить каждому заказчику самый выгодный вариант проекта складских стеллажных систем с учетом особенностей помещения, специфики грузов и организации работы склада. 
     include layout/__footer

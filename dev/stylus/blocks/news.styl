@@ -1,0 +1,121 @@
+.i-news
+  padding 75px 0 80px
+  &__hrefs
+    mb 41px
+    @media $tPortraitMax
+      ml -15px
+      width calc(100% + 15px)
+  &__href
+    ib()
+    color $orange
+    fontify 44px 400 40px
+    @media $desktopMax
+      fontify 38px 400 46px
+    @media $tPortraitMax
+      fontify 32px 400 36px
+      ml 15px
+    @media $mPortraitMax
+      fontify 24px 400 28px
+    border-bottom 2px dotted $orange
+    transition .5s border, .5s color
+    & + &
+      ml 40px
+      @media $tPortraitMax
+        ml 15px
+    &:hover
+      border-color transparent
+    &.active
+      color #222
+      border-color transparent
+      cursor default
+  &__wrapper
+    display flex
+    flex-wrap nowrap
+    justify-content space-between
+  &__content
+    ib()
+    w calc(100% - 370px)
+    pos relative
+    @media $tLandscapeMax
+      width 100%
+  &__banner
+    w 310px
+    ib()
+    @media $tLandscapeMax
+      dn()
+  &__type
+    dn()
+    &:first-child
+      db()
+  &__toall
+    pos absolute
+    r 2px
+    t -60px
+    color $dark
+    fontify 14px 500 18px
+    border-bottom 2px solid $orange
+    transition .5s border
+    &:after
+      content ""
+      pos absolute
+      t 1px
+      r -32px
+      size 24px 16px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQBAMAAAD+CqKmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEUODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg7///8TqNONAAAADXRSTlMACT3pPpb0A588ofPncb+tAQAAAAFiS0dEDm+9ME8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA9SURBVAjXY2CAAgEGBGAyQeKwXnNAcNh7U5CkKvBL3UWAK8icmwhlVbcnIAxYu5MICVYkCQbOk0hWgr0AAOa2JA82/bjiAAAAAElFTkSuQmCC") no-repeat center
+    @media $tPortrait
+      &:hover
+        border-color transparent
+    @media $desktopMax
+      t -65px
+    @media $mLandscape
+      pos relative
+      r auto
+      t 0
+      mt 35px
+      ib()
+.news
+  &__elem
+    display flex
+    justify-content space-between
+    @media $mLandscape
+      flex-wrap wrap
+      flex-direction column
+    & + &
+      mt 30px
+      @media $mLandscape
+        mt 35px
+  &__imgover
+    db()
+    size 310px 207px
+    overflow hidden
+    pos relative
+    @media $mLandscape
+      db()
+      max-width 100%
+  &__content
+    w calc(100% - 340px)
+    @media $mLandscape
+      w 100%
+      mt 17px
+  &__img
+    imgCentering()
+    @media $tPortrait
+      &:hover 
+        imgCenteringZoom()
+  &__date
+    color alpha($dark, .8)
+    fontify 12px 400 18px
+    mb 8px
+    mt -4px
+  &__href
+    color $dark
+    fontify 20px 500 28px
+    border-bottom 2px solid $orange
+    transition .5s border
+    @media $tPortrait
+      &:hover
+        border-color transparent
+  &__text
+    color $dark
+    fontify 14px 400 22px
+    mt 23px

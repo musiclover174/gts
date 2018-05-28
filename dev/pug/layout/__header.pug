@@ -1,38 +1,45 @@
 header.header
   .header__top
-    .town Ваш город
-      a(href="#").town-href Петропавловск-Камчатский
-    nav.menu
-      ul.menu-list
-        li.menu-item
-          a(href="#").menu-item.active О компании
-        li.menu-item
-          a(href="#").menu-item Производство
-        li.menu-item
-          a(href="#").menu-item Стать дилером
-        li.menu-item
-          a(href="#").menu-item Контакты
+    .container
+      .town Ваш город: 
+        a(href="#").town__href Петропавловск-Камчатский
+      nav.menu
+        ul.menu__list
+          li.menu__item
+            a(href="#").menu__item-href.active О компании
+          li.menu__item
+            a(href="#").menu__item-href Производство
+          li.menu__item
+            a(href="#").menu__item-href Стать дилером
+          li.menu__item
+            a(href="#").menu__item-href Контакты
   .header__bottom
-    .header__icons
-      span.header__icon.header__icon_card.empty 0
-      a(href="#").header__icon.header__icon_favorite 2
-      a(href="#").header__icon.header__icon_compare 3
-    .header__contacts
-      p.header__contacts-row Бесплатно по России
-        a(href="tel:+78002340684") 8 (800) 234-06-84
-      p.header__contacts-row Без выходных с 9:00 до 19:00
-        a(href="tel:+74957889934") +7 (495) 788-99-34
-    form.search
-      input(type="submit", value="").search__icon
-      input(type="text", placeholder="Поиск..").search__input
-    a(href="#").header__logo
-      img(src="img/logo.png", alt="").header__logo-img
-    nav.navcats
-      ul.navcats__list
-        li.navcats__item
-          a(href="#").navcats__item-href.navcats__item-href_stell Стеллажи
-        li.navcats__item
-          a(href="#").navcats__item-href.navcats__item-href_tech Техника
-        li.navcats__item
-          a(href="#").navcats__item-href.navcats__item-href_serv Сервис
-    
+    .container
+      .burger
+        button(type="button").burger__icon
+          span
+        span.burger__shadow
+      .header__icons
+        a(href="#").header__icons-elem.header__icons-elem_compare 3
+        a(href="#").header__icons-elem.header__icons-elem_favorite 2
+        span.header__icons-elem.header__icons-elem_card.empty 0
+      form.search
+        input(type="submit", value="").search__icon
+        input(type="text", placeholder="Поиск..").search__input
+      .header__contacts
+        p.header__contacts-row 
+          span Бесплатно по России
+          a(href="tel:+78002340684") 8 (800) 234-06-84
+        p.header__contacts-row 
+          span Без выходных с 9:00 до 19:00
+          a(href="tel:+74957889934") +7 (495) 788-99-34
+      a(href="#").header__logo
+        img(src="img/logo.png", alt="").header__logo-img
+      nav.navcats
+        ul.navcats__list
+          li.navcats__item
+            a(href="#").navcats__item-href.navcats__item-href_stell Стеллажи
+          li.navcats__item
+            a(href="#").navcats__item-href.navcats__item-href_tech Техника
+          li.navcats__item
+            a(href="#").navcats__item-href.navcats__item-href_serv Сервис

@@ -1,10 +1,25 @@
 html,
 body
-  font-family $font
+  font-family $os
 body
-  overflow-x: hidde
+  overflow-x: hidden
 
+.container
+  max-width 1330px
+  margin 0 auto
+  @media $desktopMax
+    max-width 1120px
+  @media $tLandscapeMax
+    max-width 940px
+  @media $tPortraitMax
+    max-width 700px
+  @media $mLandscape
+    max-width 100%
+    padding 0 30px
 .content
+  pt 124px
+  @media $mLandscape
+    pt 72px
   h1:not([class])
     font-size 48px
     font-weight 700
@@ -84,26 +99,26 @@ body
   table:not([class]) th
     text-align left
     padding 18px 25px
-    color $color
+    color $black
     font-size 15px
     font-weight 700
     line-height 25px
     border 1px solid #40ad68
   table:not([class]) td
     padding 18px 25px
-    color $color
+    color $black
     font-size 15px
     font-weight 400
     line-height 25px
     border 1px solid #40ad68
   p:not([class])
-    color $color
+    color $black
     font-size 19px
     font-weight 400
     line-height 31px
     margin 15px 0
   a:not([class])
-    color $color
+    color $black
     border-bottom 1px solid
     transition .5s border
     &:hover
@@ -123,6 +138,38 @@ input:-ms-input-placeholder
 input:-moz-placeholder
   color #a6adbf
 
+.common
+  &__title
+    color $dark
+    fontify 44px 400 54px
+    mb 25px
+    @media $desktopMax
+      fontify 38px 400 46px
+    @media $tPortraitMax
+      fontify 32px 400 36px
+    @media $mPortraitMax
+      fontify 24px 400 28px
+
+.btn
+  ib()
+  bgc $orange
+  border 0
+  border-radius 24px
+  color white
+  outline none
+  cursor pointer
+  font-family $os
+  fontify 14px 300 48px
+  letter-spacing .1em
+  text-transform uppercase;
+  padding 0 45px
+  transition .5s background
+  &:hover
+    bgc $orangeHov
+  @media $tPortraitMax
+    fontify 13px 300 38px
+    padding 0 25px
+  
 .animator
   position relative
   &:not(.visible)[data-direction="rtl"]

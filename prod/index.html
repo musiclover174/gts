@@ -9,11 +9,363 @@
     <title>Главная</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <link rel="stylesheet" href="static/css/fonts.css">
     <link rel="stylesheet" href="static/css/style.css">
   </head>
   <body>
-    <div class="content"></div>
+    <header class="header">
+      <div class="header__top">
+        <div class="container">
+          <div class="town">Ваш город: <a class="town__href" href="#">Петропавловск-Камчатский</a></div>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__item-href active" href="#">О компании</a></li>
+              <li class="menu__item"><a class="menu__item-href" href="#">Производство</a></li>
+              <li class="menu__item"><a class="menu__item-href" href="#">Стать дилером</a></li>
+              <li class="menu__item"><a class="menu__item-href" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="container">
+          <div class="burger">
+            <button class="burger__icon" type="button"><span></span></button><span class="burger__shadow"></span>
+          </div>
+          <div class="header__icons"><a class="header__icons-elem header__icons-elem_compare" href="#">3</a><a class="header__icons-elem header__icons-elem_favorite" href="#">2</a><span class="header__icons-elem header__icons-elem_card empty">0</span></div>
+          <form class="search">
+            <input class="search__icon" type="submit" value="">
+            <input class="search__input" type="text" placeholder="Поиск..">
+          </form>
+          <div class="header__contacts">
+            <p class="header__contacts-row"> <span>Бесплатно по России</span><a href="tel:+78002340684">8 (800) 234-06-84</a></p>
+            <p class="header__contacts-row"> <span>Без выходных с 9:00 до 19:00</span><a href="tel:+74957889934">+7 (495) 788-99-34</a></p>
+          </div><a class="header__logo" href="#"><img class="header__logo-img" src="img/logo.png" alt=""></a>
+          <nav class="navcats">
+            <ul class="navcats__list">
+              <li class="navcats__item"><a class="navcats__item-href navcats__item-href_stell" href="#">Стеллажи</a></li>
+              <li class="navcats__item"><a class="navcats__item-href navcats__item-href_tech" href="#">Техника</a></li>
+              <li class="navcats__item"><a class="navcats__item-href navcats__item-href_serv" href="#">Сервис</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="content">
+      <section class="swiper-container i-banner js-ibanner">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image: url('img/banner.jpg')">
+            <div class="container">
+              <div class="i-banner__inner">
+                <p class="i-banner__title">20 лет на рынке комплексного оснащения складов</p><a class="btn i-banner__more" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="background-image: url('img/banner.jpg')">
+            <div class="container">
+              <div class="i-banner__inner">
+                <p class="i-banner__title">20 лет на рынке комплексного оснащения складов1</p><a class="btn i-banner__more" href="#">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-buttons">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <section class="i-cats">
+        <div class="container">
+          <div class="i-cats__upper">
+            <div class="i-cats__item"><span class="i-cats__bg"><img class="i-cats__img" src="img/icats1.jpg"></span>
+              <div class="i-cats__width"><a class="i-cats__mainhref" href="#"> <span>Стеллажи от производителя</span></a></div>
+              <ul class="i-cats__hreflist">
+                <li class="i-cats__hrefitem"><a class="i-cats__href" href="#">Лайт</a></li>
+                <li class="i-cats__hrefitem"><a class="i-cats__href" href="#">Универсал</a></li>
+                <li class="i-cats__hrefitem"><a class="i-cats__href" href="#">Профи-Т</a></li>
+                <li class="i-cats__hrefitem"><a class="i-cats__href" href="#">Оптима</a></li>
+                <li class="i-cats__hrefitem"><a class="i-cats__href" href="#">Паллетные</a></li>
+                <li class="i-cats__hrefitem"><a class="i-cats__href" href="#">Cash&Carry</a></li>
+                <li class="i-cats__hrefitem"><a class="i-cats__href" href="#">Мезонины</a></li>
+              </ul>
+            </div>
+            <div class="i-cats__item"><span class="i-cats__bg"><img class="i-cats__img" src="img/icats2.jpg"></span>
+              <div class="i-cats__width"><a class="i-cats__mainhref" href="#"> <span>Складская техника</span></a></div>
+              <ul class="i-cats__hreflist">
+                <li class="i-cats__hrefitem"><a class="i-cats__href" href="#">Гидравлические тележки</a></li>
+                <li class="i-cats__hrefitem"><a class="i-cats__href" href="#">Штабелёры</a></li>
+                <li class="i-cats__hrefitem"><a class="i-cats__href" href="#">Подъёмные столы</a></li>
+              </ul>
+            </div>
+            <div class="i-cats__item"><span class="i-cats__bg"><img class="i-cats__img" src="img/icats3.jpg"></span>
+              <div class="i-cats__width"><a class="i-cats__mainhref" href="#"> <span>Грузоподъёмное оборудование</span></a></div>
+              <ul class="i-cats__hreflist">
+                <li class="i-cats__hrefitem"><a class="i-cats__href" href="#">Тельферы</a></li>
+                <li class="i-cats__hrefitem"><a class="i-cats__href" href="#">Подъемники</a></li>
+                <li class="i-cats__hrefitem"><a class="i-cats__href" href="#">Такелажные системы</a></li>
+              </ul>
+            </div>
+            <div class="i-cats__item"><span class="i-cats__bg"><img class="i-cats__img" src="img/icats4.jpg"></span>
+              <div class="i-cats__width"><a class="i-cats__mainhref" href="#"> <span>Аксессуары для хранения</span></a></div>
+              <p class="i-cats__text">Мы занимаемся продажей стеллажей более 20 лет и за это время досконально изучили своих клиентов и нюансы логистических российских складов.</p>
+            </div>
+            <div class="i-cats__item"><span class="i-cats__bg"><img class="i-cats__img" src="img/icats5.jpg"></span>
+              <div class="i-cats__width"><a class="i-cats__mainhref" href="#"> <span>Металлическая мебель</span></a></div>
+              <p class="i-cats__text">В сочетании с высокой квалификацией наших специалистов это дает возможность предложить каждому заказчику самый выгодный вариант проекта.</p>
+            </div>
+            <div class="i-cats__item"><span class="i-cats__bg i-cats__bg_black"><img class="i-cats__img" src="img/icats6.png"></span><span class="i-cats__mainhref i-cats__mainhref_white">Прайс</span>
+              <p class="i-cats__text i-cats__text_white">Стоимость всех готовых изделий вы можете узнать в нашем прайсе.</p>
+              <div class="i-cats__priceover"><a class="i-cats__price" href="#">Скачать прайс-лист 1.02.2018</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="i-news">
+        <div class="container">
+          <div class="i-news__hrefs"><a class="i-news__href active js-inews-href" href="#" data-type="news">Новости</a><a class="i-news__href js-inews-href" href="#" data-type="specs">Спецпредложения</a></div>
+          <div class="i-news__wrapper">
+            <div class="i-news__content">
+              <div class="i-news__type" data-type="news">
+                <ul class="news__list">
+                          <li class="news__elem"><a class="news__imgover" href="#"><img class="news__img" src="img/inews1.jpg" alt=""></a>
+                            <div class="news__content">
+                              <p class="news__date">12 апреля 2018</p><a class="news__href" href="#">Доллар растет, а мы снижаем цены!</a>
+                              <p class="news__text">Хотим порадовать отличной новостью! Мы снизили цены на ряд самоходных штабелеров SMART и SMART PREMIUM!</p>
+                            </div>
+                          </li>
+                          <li class="news__elem"><a class="news__imgover" href="#"><img class="news__img" src="img/inews2.jpg" alt=""></a>
+                            <div class="news__content">
+                              <p class="news__date">6 февраля 2018</p><a class="news__href" href="#">Качество не обязательно должно быть слишком дорогим! Наше предложение тому подтверждение!</a>
+                              <p class="news__text">ГТС "Складские системы" уже более 20 лет обеспечивает своих клиентов надежной техникой для любых нужд. Мы всегда стремимся дать нашим клиентам наиболее комфортные условия по самым низким ценам.</p>
+                            </div>
+                          </li>
+                          <li class="news__elem"><a class="news__imgover" href="#"><img class="news__img" src="img/inews3.jpg" alt=""></a>
+                            <div class="news__content">
+                              <p class="news__date">15 ноября 2017</p><a class="news__href" href="#">На гидравлические штабелеры с электроподъемом SMART!</a>
+                              <p class="news__text">Для тех кто ищет максимальную выгоду, мы снизили цены на популярные модели штабелеров с электроподъемом SMART BDA!</p>
+                            </div>
+                          </li>
+                </ul><a class="i-news__toall" href="#">Все новости</a>
+              </div>
+              <div class="i-news__type" data-type="specs">
+                <ul class="news-list">
+                          <li class="news__elem"><a class="news__imgover" href="#"><img class="news__img" src="img/inews1.jpg" alt=""></a>
+                            <div class="news__content">
+                              <p class="news__date">12 апреля 2018</p><a class="news__href" href="#">Доллар растет, а мы снижаем цены!</a>
+                              <p class="news__text">Хотим порадовать отличной новостью! Мы снизили цены на ряд самоходных штабелеров SMART и SMART PREMIUM!</p>
+                            </div>
+                          </li>
+                          <li class="news__elem"><a class="news__imgover" href="#"><img class="news__img" src="img/inews2.jpg" alt=""></a>
+                            <div class="news__content">
+                              <p class="news__date">6 февраля 2018</p><a class="news__href" href="#">Качество не обязательно должно быть слишком дорогим! Наше предложение тому подтверждение!</a>
+                              <p class="news__text">ГТС "Складские системы" уже более 20 лет обеспечивает своих клиентов надежной техникой для любых нужд. Мы всегда стремимся дать нашим клиентам наиболее комфортные условия по самым низким ценам.</p>
+                            </div>
+                          </li>
+                          <li class="news__elem"><a class="news__imgover" href="#"><img class="news__img" src="img/inews3.jpg" alt=""></a>
+                            <div class="news__content">
+                              <p class="news__date">15 ноября 2017</p><a class="news__href" href="#">На гидравлические штабелеры с электроподъемом SMART!</a>
+                              <p class="news__text">Для тех кто ищет максимальную выгоду, мы снизили цены на популярные модели штабелеров с электроподъемом SMART BDA!</p>
+                            </div>
+                          </li>
+                </ul><a class="i-news__toall" href="#">Все спецпредложения</a>
+              </div>
+            </div>
+            <aside class="i-news__banner"><a class="i-news__banner-href" href="#"><img class="i-news__banner-img" src="img/news-banner.jpg"></a></aside>
+          </div>
+        </div>
+      </section>
+      <section class="equipment">
+        <div class="container">
+          <p class="common__title">Комплексное оснащение склада</p>
+          <ol class="equipment__list">
+            <li class="equipment__item">
+              <p class="equipment__title">Проект</p>
+              <p class="equipment__text">При монтаже складских систем, наша компания использует только профессиональных обученных монтажников с многолетним опытом работы по монтажу складских стеллажей и лицензией на проведение высотных работ. </p>
+            </li>
+            <li class="equipment__item">
+              <p class="equipment__title">Оснащение</p>
+              <p class="equipment__text">При монтаже складских систем, наша компания использует только профессиональных обученных монтажников с многолетним опытом работы по монтажу складских стеллажей и лицензией на проведение высотных работ. </p>
+            </li>
+            <li class="equipment__item">
+              <p class="equipment__title">Монтаж</p>
+              <p class="equipment__text">При монтаже складских систем, наша компания использует только профессиональных обученных монтажников с многолетним опытом работы по монтажу складских стеллажей и лицензией на проведение высотных работ. </p>
+            </li>
+          </ol>
+          <p class="equipment__ordertext">По вашему желанию наши специалисты составят подробный проект стеллажной системы. Наши специалисты накопили большой опыт в проектировании складов разного уровня и при выполнении работ пользуются специализированным программным обеспечением.</p>
+          <button class="btn equipment__button" type="button" data-fancybox data-src="#order">Заказать проект склада</button>
+        </div>
+      </section>
+      <section class="video">
+        <div class="container">
+          <div class="video__elem"><span class="video__elem-bg" style="background-image: url(img/video1.jpg)"></span>
+            <div class="video__content">
+              <button class="video__play" type="button" data-fancybox data-src="https://www.youtube.com/watch?v=_sI_Ps7JSEk"></button>
+            </div>
+            <p class="video__text">Наши производственные линии</p><a class="video__href" href="#">О производстве</a>
+          </div>
+          <div class="video__elem"><span class="video__elem-bg" style="background-image: url(img/video2.jpg)"></span>
+            <div class="video__content">
+              <button class="video__play" type="button" data-fancybox data-src="https://www.youtube.com/watch?v=_sI_Ps7JSEk"></button>
+            </div>
+            <p class="video__text">Собственный бренд SMART. Высокий стандарт, оптимальная цена</p><a class="video__href" href="#">О бренде SMART</a>
+          </div>
+          <div class="video__elem video__elem_bigger"><span class="video__elem-bg" style="background-image: url(img/video3.jpg)"></span>
+            <div class="video__content">
+              <button class="video__play" type="button" data-fancybox data-src="https://www.youtube.com/watch?v=_sI_Ps7JSEk"></button>
+            </div>
+            <p class="video__text video__text_longer">Посмотрите на компанию «ГТС Складские системы» изнутри</p><a class="video__href" href="#">О компании</a>
+          </div>
+        </div>
+      </section>
+      <section class="services">
+        <div class="container">
+          <p class="common__title">Наши услуги</p>
+          <ul class="services__list">
+            <li class="services__item"><a class="services__item-href" href="#">
+                <div class="services__item-imgover"><img class="services__item-icon" src="img/services-icon1.png"></div><span class="services__item-title">Ремонт</span></a></li>
+            <li class="services__item"><a class="services__item-href" href="#">
+                <div class="services__item-imgover"><img class="services__item-icon" src="img/services-icon2.png"></div><span class="services__item-title">Помощь в переезде склада</span></a></li>
+            <li class="services__item"><a class="services__item-href" href="#">
+                <div class="services__item-imgover"><img class="services__item-icon" src="img/services-icon3.png"></div><span class="services__item-title">Доставка и сборка по России</span></a></li>
+            <li class="services__item"><a class="services__item-href" href="#">
+                <div class="services__item-imgover"><img class="services__item-icon" src="img/services-icon4.png"></div><span class="services__item-title">Монтаж профессионалами</span></a></li>
+            <li class="services__item"><a class="services__item-href" href="#">
+                <div class="services__item-imgover"><img class="services__item-icon" src="img/services-icon5.png"></div><span class="services__item-title">Шеф-монтаж</span></a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="projects">
+        <div class="container"><a class="common__toall" href="#">Все выполненные проекты</a>
+          <p class="common__title">Проекты, которые мы реализовали</p>
+          <div class="swiper-container projects-car js-iprojects">
+            <div class="swiper-wrapper">
+              <ul class="projects__list">
+                <div class="swiper-slide"><a class="project__imgover" href="#"><img class="project__img" src="#{data.img}" alt=""><span class="project__cost">от 2 600 руб за 1 полку</span></a><a class="project__href" href="#">Стеллажные системы «Каскад»</a>
+                          <p class="project__text">Склад «Мособлфармация», 2016</p>
+                </div>
+                <div class="swiper-slide"><a class="project__imgover" href="#"><img class="project__img" src="#{data.img}" alt=""><span class="project__cost">от 1 800 руб. за 1 паллетоместо</span></a><a class="project__href" href="#">Стеллажные системы «Турин»</a>
+                          <p class="project__text">Склад «Кант», 2016</p>
+                </div>
+                <div class="swiper-slide"><a class="project__imgover" href="#"><img class="project__img" src="#{data.img}" alt=""><span class="project__cost">от 2 600 руб./м&lt;sup&gt;2&lt;/sup&gt;</span></a><a class="project__href" href="#">Магазин «Элекс-Нет», 2017</a>
+                          <p class="project__text"></p>
+                </div>
+              </ul>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container"><a class="common__toall" href="#">Все отзывы</a>
+          <button class="btn reviews__make" type="button" data-fancybox data-src="#reviews">Оставить отзыв</button>
+          <p class="common__title">Клиенты о нас</p>
+          <div class="swiper-container reviews-car js-ireviews">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="reviews__elem">
+                  <aside class="reviews__about"><img class="reviews__logo" src="img/reviews-logo1.png">
+                    <p class="reviews__name">АО «Стройтрансгаз» </p>
+                  </aside>
+                  <div class="reviews__text">
+                    <p>Компания АО «Стройтрансгаз» выражает благодарность «ГТС» за высокий профессионализм и качество проведенных работ в рамках договора поставки складскогой техники. Заказанное оборудование соответствует высоким технологическим требованиям и условиям контракта. ГТС складские системы выполнило  в срок взятые на себя обязательства на высоком профессиональном уровне.</p>
+                    <div class="reviews__person">
+                      <p class="reviews__person-who">Директор по эксплуатации и административным вопросам<br>Кириченко О. И.</p><img class="reviews__person-sign" src="img/reviews-sign1.png">
+                    </div>
+                  </div>
+                  <aside class="reviews__imgover"><img class="reviews__img" src="img/reviews-img1.jpg"></aside>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="reviews__elem">
+                  <aside class="reviews__about"><img class="reviews__logo" src="img/reviews-logo1.png">
+                    <p class="reviews__name">АО «Стройтрансгаз» 1</p>
+                  </aside>
+                  <div class="reviews__text">
+                    <p>Компания АО «Стройтрансгаз» выражает благодарность «ГТС» за высокий профессионализм и качество проведенных работ в рамках договора поставки складскогой техники. Заказанное оборудование соответствует высоким технологическим требованиям и условиям контракта. </p>
+                    <div class="reviews__person">
+                      <p class="reviews__person-who">Директор по эксплуатации и административным вопросам<br>Кириченко О. И.</p><img class="reviews__person-sign" src="img/reviews-sign1.png">
+                    </div>
+                  </div>
+                  <aside class="reviews__imgover"><img class="reviews__img" src="img/reviews-img1.jpg"></aside>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      <section class="clients">
+        <div class="container">
+          <div class="swiper-container clients-car js-iclients">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img class="clients__img" src="img/clients1.jpg"></div>
+              <div class="swiper-slide"><img class="clients__img" src="img/clients2.jpg"></div>
+              <div class="swiper-slide"><img class="clients__img" src="img/clients3.jpg"></div>
+              <div class="swiper-slide"><img class="clients__img" src="img/clients4.jpg"></div>
+              <div class="swiper-slide"><img class="clients__img" src="img/clients5.jpg"></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </section>
+      <section class="seo">
+        <div class="container">
+          <h3>CEО заголовок</h3>
+          <p>Мы занимаемся продажей стеллажей более 20 лет и за это время досконально изучили своих клиентов и нюансы логистических российских складов. В сочетании с высокой квалификацией наших специалистов это дает возможность предложить каждому заказчику самый выгодный вариант проекта складских стеллажных систем с учетом особенностей помещения, специфики грузов и организации работы склада.</p>
+          <p>Также мы изготавливаем стеллажи на заказ, по вашим размерам, с учетом всех пожеланий. Вы можете купить стеллажи или сделать заказ на стеллажи с понедельника по пятницу с 9 до 18 часов (без обеда) в нашем офисе в Москве. Мы занимаемся продажей стеллажей более 20 лет и за это время досконально изучили своих клиентов и нюансы логистических российских складов. В сочетании с высокой квалификацией наших специалистов это дает возможность предложить каждому заказчику самый выгодный вариант проекта складских стеллажных систем с учетом особенностей помещения, специфики грузов и организации работы склада. </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__cols">
+          <div class="footer__col"><img class="footer__logo" src="img/footer-logo.png">
+            <p class="footer__info">© ООО «Горторгснаб» Складское оборудование и техника, 2000–2018 </p>
+            <p class="footer__addr">117312, Москва,  проспект 60-летия Октября, дом 11-А</p>
+            <p class="footer__phones"><a href="tel:+74957889934">(495) 788-99-34</a>&nbsp;&nbsp;<a href="tel:88002340684">8-800-234-06-84</a></p><a class="footer__mail" href="mailto:salegts@gortorsnab.ru">salegts@gortorsnab.ru</a>
+            <div class="footer__socials"><a class="footer__social footer__social_fb" href="#"></a><a class="footer__social footer__social_vk" href="#"></a><a class="footer__social footer__social_yt" href="#"></a><a class="footer__social footer__social_tw" href="#"></a></div>
+          </div>
+          <div class="footer__col"><a class="footer__mainhref" href="#">Продукция</a>
+            <ul class="footer__listhref">
+              <li class="footer__itemhref"><a class="footer__href" href="#">Стеллажи</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Складская техника</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Подъемное оборудование</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Шкафы, верстаки, сейфы</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Автомобильные аксессуары</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Строительное оборудование</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Торговое оборудование</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Другое оборудование</a></li>
+            </ul>
+            <button class="btn footer__calc" type="button" data-fancybox data-src="#calc">Калькулятор стеллажей</button>
+          </div>
+          <div class="footer__col"><a class="footer__mainhref" href="#">Сервис и обслуживание</a>
+            <ul class="footer__listhref">
+              <li class="footer__itemhref"><a class="footer__href" href="#">Помощь в переезде склада</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Монтаж сборщиками</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Выезд сборщиков в регионы</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Шеф-монтаж</a></li>
+            </ul><a class="footer__mainhref" href="#">Партнерам</a>
+            <ul class="footer__listhref">
+              <li class="footer__itemhref"><a class="footer__href" href="#">Преимущества работы</a></li>
+            </ul>
+          </div>
+          <div class="footer__col"><a class="footer__mainhref" href="#">О компании</a>
+            <ul class="footer__listhref">
+              <li class="footer__itemhref"><a class="footer__href" href="#">Новости</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Производство</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Проекты</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Акции</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Оплата и доставка</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Возврат и обмен товара</a></li>
+              <li class="footer__itemhref"><a class="footer__href" href="#">Контактная информация</a></li>
+              <li class="footer__itemhref"><a class="footer__href footer__href_white footer__href_bordered" href="#">Бесплатная доставка</a></li>
+            </ul><a class="footer__dextra" href="https://www.dextra.ru/" target="_blank">Разработка сайта:<span>Интернет-агентство Dextra</span></a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script type="text/javascript" src="static/js/vendor.js"></script>
     <script type="text/javascript" src="static/js/script.js"></script>
   </body>

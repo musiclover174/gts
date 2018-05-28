@@ -51,17 +51,57 @@ window.onload = function () {
   }).init();
 
   window.gts.main = ({
-
-    animationInProgress: false,
-
+    
+    bannerCar: () => {
+      
+      let bannerSwiper = new Swiper ('.js-ibanner', {
+        loop: true,
+        speed: 800,
+        navigation: {
+          nextEl: '.js-ibanner .swiper-button-next',
+          prevEl: '.js-ibanner .swiper-button-prev',
+        },
+        autoplay: {
+          delay: 5000
+        }
+      });
+      
+    },
+    
+    inewsToggler: () => {
+      
+      document.querySelectorAll('.js-inews-href').forEach((item, i) => {
+        
+        item.addEventListener('click', (e) => {
+          if (item.classList.contains('active')) return false
+          let curActive = document.querySelector('.js-inews-href.active'),
+              curAttr = curActive.getAttribute('data-type'),
+              newAttr = item.getAttribute('data-type');
+          
+          curActive.classList.remove('active');
+          item.classList.add('active');
+          
+          $('.i-news__type[data-type="' + curAttr +'"]').fadeOut(400, function(){
+            $('.i-news__type[data-type="' + newAttr +'"]').fadeIn(400);
+          });
+          
+          e.stopPropagation();
+          e.preventDefault();
+          
+        });
+        
+      });
+      
+    },
+    
     init: function () {
 
-      var _self = this;
+      if (document.querySelectorAll('.js-ibanner').length) this.bannerCar();
+      
+      if (document.querySelectorAll('.js-inews-href').length) this.inewsToggler();
 
-      $('select').styler(); // styler initialize
-
-      $('.js-dot').dotdotdot(); // dots initialize
-
+      
+      
       $('[data-fancybox]').fancybox(); // fancy init
 
     }

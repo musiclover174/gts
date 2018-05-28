@@ -1,0 +1,143 @@
+.i-cats
+  bgc whitesmoke
+  pos relative
+  z-index 1
+  pb 25px
+  &__upper
+    pos relative
+    z-index 1
+    t -55px
+    display flex
+    flex-wrap wrap
+    align-items stretch
+  &__item
+    ib()
+    h 360px
+    pos relative
+    w calc(100% / 3)
+    padding 26px 34px
+    transition .5s border
+    @media $tLandscape
+      &:nth-child(n + 2):not(:nth-child(3n - 2))
+        border-left 2px solid #e5e5e5
+      &:nth-child(n + 4)
+        border-top 2px solid #e5e5e5
+    @media $tPortraitMax
+      &:nth-child(n + 1):not(:nth-child(2n - 1))
+        border-left 2px solid #e5e5e5
+      &:nth-child(n + 3)
+        border-top 2px solid #e5e5e5
+    @media $mLandscape
+      & + &
+        border-top 2px solid #e5e5e5
+      &:nth-child(n + 1):not(:nth-child(2n - 1))
+        border-left none
+    @media $tPortrait
+      &:hover
+        border-color transparent
+        z-index 1
+        & ^[0]__bg
+          box-shadow 0 6px 19px rgba(0, 0, 0, 0.12)
+          transform scale(1.05)
+    @media $tPortraitMax
+      width 50%
+    @media $mLandscape
+      width 100%
+    @media $mPortraitMax
+      h auto
+  &__bg
+    bgc white
+    pos absolute
+    l 0
+    t 0
+    w 100%
+    h 100%
+    overflow hidden
+    z-index -1
+    will-change transform
+    box-shadow none
+    transition .5s transform, .5s box-shadow
+    &_black
+      bgc #222
+      & ^[0]__img
+        l 300px
+        @media $desktopMax
+          l 230px
+        @media $mLandscapeMax
+          l auto
+          r 0
+  &__img
+    pos absolute
+    l 254px
+    t 50%
+    transform translateY(-50%)
+    @media $desktopMax
+      l 200px
+    @media $mLandscapeMax
+      l auto
+      r 0
+    @media $mPortraitMax
+      dn()
+  &__width
+    max-width 170px
+    @media $mPortraitMax
+      max-width 100%
+  &__mainhref
+    color $dark
+    fontify 24px 400 30px
+    border-bottom 2px solid currentColor
+    @media $mPortraitMax
+      fontify 18px 400 24px
+    span
+      pos relative
+      t 2px
+      line-height 25px
+      transition .5s border
+    &:hover
+      border-color transparent
+    &_white
+      pl 56px
+      color white
+      border-color transparent
+      pos relative
+      t 21px
+      &:before
+        content ""
+        pos absolute
+        l 0
+        t -10px
+        size 38px 48px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAwCAMAAABKbPgaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAP1BMVEX////////////////////nbxf////qgjbsjEX52cHxqXT99fD3z7LysoPpeSb87OD1xaL0vJPtlVXvn2T64tH+rMMiAAAABXRSTlMAgoOEhaR19zgAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAoUlEQVQ4y+3QwRKDIAwEUG3LkhBEkP7/tzY6TA9WaU691D2/CbsMrptxaOkzjDaGm40195XhbmObMzA8bEydM+ViF/tL5snEmH/IAoJzEjc2CSSm42s8uyzbNULxSzx51EteDyqrqJ1uE7h1i5CczhiLpDYhlRl0zAJIF7yXIn8wwlNXZpVVl/iFyZe15455bcW60s2i/YUYkNL/3oNcbJcXARQlcK+H2mgAAAAASUVORK5CYII=") no-repeat center
+  &__hreflist
+    mt 22px
+  &__hrefitem
+    & + &
+      mt 11px
+  &__href 
+    color $dark
+    font-size 14px
+    font-weight 400
+    line-height 22px
+  &__text
+    color $dark
+    fontify 14px 300 22px
+    max-width 200px
+    mt 22px
+    &_white
+      color white
+      max-width 170px
+      mt 50px
+    @media $mPortraitMax
+      max-width 100%
+  &__priceover
+    mt 18px
+    max-width 170px
+    @media $mPortraitMax
+      max-width 100%
+  &__price
+    color white
+    fontify 14px 500 22px
+    border-bottom 2px solid $orange
+    transition .5s border
+    &:hover
+      border-color transparent

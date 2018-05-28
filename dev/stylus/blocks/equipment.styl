@@ -1,0 +1,76 @@
+.equipment
+  background-color whitesmoke
+  padding 66px 0 74px
+  &__list
+    display flex
+    flex-wrap nowrap
+    justify-content space-between
+    counter-reset equipCounter
+    mt 50px
+    mb 59px
+    @media $mLandscape
+      flex-wrap wrap
+      flex-direction column
+  &__item
+    w calc(100% / 3 - 64px)
+    pl 82px
+    @media $tLandscapeMax
+      pl 42px
+      w calc(100% / 3 - 40px)
+    @media $tPortraitMax
+      pl 0
+    @media $mLandscape
+      pl 82px
+      w 100%
+      & + &
+        mt 70px
+    @media $mPortraitMax
+      pl 0
+      & + &
+        mt 30px
+    position relative
+    z-index 1
+    &:before
+      counter-increment equipCounter
+      content counter(equipCounter)
+      text-shadow 0 8px 54px rgba(1, 10, 26, 0.52)
+      color white
+      opacity .2
+      font-family FiraSans
+      fontify 250px 900 30px
+      pos absolute
+      z-index -1
+      l 0
+      t 60px
+      @media $tPortraitMax
+        l -40px
+      @media $mLandscape
+        l 0
+        t 30px
+        fontify 200px 900 30px
+      @media $mPortraitMax
+        dn()
+  &__title
+    color $dark
+    fontify 20px 500 30px
+  &__text
+    color alpha(#0e0e0e, .6)
+    fontify 14px 400 22px
+    mt 11px
+  &__ordertext
+    ib()
+    color black
+    fontify 14px 400 22px
+    max-width 650px
+    @media $tLandscapeMax
+      max-width 613px
+    @media $tPortraitMax
+      max-width none
+  &__button
+    ib()
+    ml 26px
+    mt 10px
+    @media $tPortraitMax
+      mt 30px
+      ml 0
+  
