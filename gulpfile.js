@@ -99,7 +99,11 @@ gulp.task('css-min', ['css-make'], function () {
 // image minify task
 gulp.task('image-min', function () {
 	return gulp.src(src.dev.imgs)
-		.pipe(imagemin())
+		.pipe(imagemin({
+      interlaced: true,
+      progressive: true,
+      optimizationLevel: 5
+    }))
 		.pipe(gulp.dest(src.prod.imgs))
 });
 

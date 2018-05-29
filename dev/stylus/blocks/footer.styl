@@ -1,28 +1,45 @@
 .footer
   bgc #1a1a18
   padding 75px 0 80px
+  @media $tPortraitMax
+    pb 20px
   mt 60px
   &__cols
     display flex
+    justify-content space-between
+    @media $tPortraitMax
+      flex-wrap wrap
   &__col
-    pr 20px
-    width 25%
+    width calc(25% - 90px / 4)
+    @media $tPortraitMax
+      width calc(50% - 15px)
+      mb 60px
+    @media $mPortraitMax
+      width 100%
+  &__logo
+    mt 3px
   &__info
     color white
-    mt 38px
+    mt 32px
     fontify 14px 400 19px
+    max-width 250px
   &__addr
     color white
-    mt 38px
+    mt 31px
     fontify 14px 400 19px
+    max-width 250px
   &__phones
-    mt 38px
+    mt 31px
     a
       color white
       fontify 14px 400 19px
+    br
+      dn()
+      @media $tLandscapeMax
+        db()
   &__mail
     ib()
-    mt 38px
+    mt 33px
     color white
     fontify 14px 400 19px
     border-bottom 1px solid alpha(white, .25)
@@ -30,7 +47,7 @@
     &:hover
       border-color transparent
   &__socials
-    mt 38px
+    mt 33px
   &__social
     ib()
     size 32px
@@ -67,18 +84,53 @@
       background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAMAAACOacfrAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAilBMVEX///8iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL///8cvFaxAAAALHRSTlMAb51iEFl+qtCnhZoJNS7piDRxWjDVNkn2FvS2Kf1A4peKqEGz5m5Ff5ufjO0LiSkAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAaUlEQVQI10XN2xKCMBAD0KBQC6KCBVTwingB8v/fB12s5ClndiYL/OItlvARKMGKpA4RcR0DG9pobMldku5FBlnOfwocZhxPgCqdqnHtfHG62vHoNuE+PX4IalufjfTXWw7x59t2vfEFA8GOD57D0YeaAAAAAElFTkSuQmCC") no-repeat center
   &__mainhref
     color white
-    fontify 18px 400 21px
+    fontify 18px 400 26px
+    letter-spacing .025em
     border-bottom 2px solid $orange
     transition .5s border
     &.active,
     &:hover
       border-color transparent
   &__listhref
-    mt 25px
+    mt 27px
+    mb 30px
+    &:last-child
+      mb 0
+  &__itemhref
+    & + &
+      mt 16px
+  &__calc
+    mt 15px
+    @media $desktopMax
+      padding 0 25px
+    @media $tLandscapeMax
+      padding 0
+      text-align center
+      w 100%
+      fontify 13px 300 38px
   &__href
     color alpha(#fff, .5)
-    fontify 14px 400 20px
-    transition .5s color
+    fontify 14px 300 20px
+    letter-spacing .025em
+    transition .5s color, .5s border
     &.active,
     &:hover
       color alpha(#fff, 1)
+    &_white
+      color white
+    &_bordered
+      border-bottom 2px solid $orange
+      &.active,
+      &:hover
+        border-color transparent
+  &__dextra-over
+    mt 42px
+  &__dextra
+    color darkgrey
+    fontify 15px 400 24px
+    span
+      color white
+      border-bottom 1px solid alpha(white, .5)
+      transition .5s border
+      ^[-1]:hover span
+        border-color transparent

@@ -1,0 +1,30 @@
+.burger
+  button(type="button").burger__icon.js-burger
+    span
+  span.burger__shadow.js-burger-shadow
+  .burger__menu
+    .burger__menu-inner
+      .town Ваш город: 
+        a(href="#").town__href Петропавловск-Камчатский
+      ul.menu__list
+        li.menu__item
+          a(href="#").menu__item-href.active О компании
+        li.menu__item
+          a(href="#").menu__item-href Производство
+        li.menu__item
+          a(href="#").menu__item-href Стеллажи
+        li.menu__item
+          a(href="#").menu__item-href Техника
+        li.menu__item
+          a(href="#").menu__item-href Сервис
+        li.menu__item
+          a(href="#").menu__item-href Стать дилером
+        li.menu__item
+          a(href="#").menu__item-href Контакты
+      .header__icons
+        a(href="#").header__icons-elem.header__icons-elem_compare 3
+        a(href="#").header__icons-elem.header__icons-elem_favorite 2
+        span.header__icons-elem.header__icons-elem_card.empty 0
+      form.search
+        input(type="submit", value="").search__icon
+        input(type="text", placeholder="Поиск..").search__input 

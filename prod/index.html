@@ -29,7 +29,26 @@
       <div class="header__bottom">
         <div class="container">
           <div class="burger">
-            <button class="burger__icon" type="button"><span></span></button><span class="burger__shadow"></span>
+            <button class="burger__icon js-burger" type="button"><span></span></button><span class="burger__shadow js-burger-shadow"></span>
+            <div class="burger__menu">
+              <div class="burger__menu-inner">
+                <div class="town">Ваш город: <a class="town__href" href="#">Петропавловск-Камчатский</a></div>
+                <ul class="menu__list">
+                  <li class="menu__item"><a class="menu__item-href active" href="#">О компании</a></li>
+                  <li class="menu__item"><a class="menu__item-href" href="#">Производство</a></li>
+                  <li class="menu__item"><a class="menu__item-href" href="#">Стеллажи</a></li>
+                  <li class="menu__item"><a class="menu__item-href" href="#">Техника</a></li>
+                  <li class="menu__item"><a class="menu__item-href" href="#">Сервис</a></li>
+                  <li class="menu__item"><a class="menu__item-href" href="#">Стать дилером</a></li>
+                  <li class="menu__item"><a class="menu__item-href" href="#">Контакты</a></li>
+                </ul>
+                <div class="header__icons"><a class="header__icons-elem header__icons-elem_compare" href="#">3</a><a class="header__icons-elem header__icons-elem_favorite" href="#">2</a><span class="header__icons-elem header__icons-elem_card empty">0</span></div>
+                <form class="search">
+                  <input class="search__icon" type="submit" value="">
+                  <input class="search__input" type="text" placeholder="Поиск..">
+                </form>
+              </div>
+            </div>
           </div>
           <div class="header__icons"><a class="header__icons-elem header__icons-elem_compare" href="#">3</a><a class="header__icons-elem header__icons-elem_favorite" href="#">2</a><span class="header__icons-elem header__icons-elem_card empty">0</span></div>
           <form class="search">
@@ -179,7 +198,7 @@
           <ol class="equipment__list">
             <li class="equipment__item">
               <p class="equipment__title">Проект</p>
-              <p class="equipment__text">При монтаже складских систем, наша компания использует только профессиональных обученных монтажников с многолетним опытом работы по монтажу складских стеллажей и лицензией на проведение высотных работ. </p>
+              <p class="equipment__text">При монтаже складских систем, наша компания использует только профессиональных обученных монтажников с многолетним опытом работы по монтажу складских стеллажей и лицензией на проведение высотных работ.</p>
             </li>
             <li class="equipment__item">
               <p class="equipment__title">Оснащение</p>
@@ -339,8 +358,8 @@
           <div class="footer__col"><img class="footer__logo" src="img/footer-logo.png">
             <p class="footer__info">© ООО «Горторгснаб» Складское оборудование и техника, 2000–2018 </p>
             <p class="footer__addr">117312, Москва,  проспект 60-летия Октября, дом 11-А</p>
-            <p class="footer__phones"><a href="tel:+74957889934">(495) 788-99-34</a>&nbsp;&nbsp;<a href="tel:88002340684">8-800-234-06-84</a></p><a class="footer__mail" href="mailto:salegts@gortorsnab.ru">salegts@gortorsnab.ru</a>
-            <div class="footer__socials"><a class="footer__social footer__social_fb" href="#"></a><a class="footer__social footer__social_vk" href="#"></a><a class="footer__social footer__social_yt" href="#"></a><a class="footer__social footer__social_tw" href="#"></a></div>
+            <p class="footer__phones"><a href="tel:+74957889934">(495) 788-99-34</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><a href="tel:88002340684">8-800-234-06-84</a></p><a class="footer__mail" href="mailto:salegts@gortorsnab.ru">salegts@gortorsnab.ru</a>
+            <div class="footer__socials"><a class="footer__social footer__social_fb" href="#" target="_blank"></a><a class="footer__social footer__social_vk" href="#" target="_blank"></a><a class="footer__social footer__social_yt" href="#" target="_blank"></a><a class="footer__social footer__social_tw" href="#" target="_blank"></a></div>
           </div>
           <div class="footer__col"><a class="footer__mainhref" href="#">Продукция</a>
             <ul class="footer__listhref">
@@ -376,7 +395,8 @@
               <li class="footer__itemhref"><a class="footer__href" href="#">Возврат и обмен товара</a></li>
               <li class="footer__itemhref"><a class="footer__href" href="#">Контактная информация</a></li>
               <li class="footer__itemhref"><a class="footer__href footer__href_white footer__href_bordered" href="#">Бесплатная доставка</a></li>
-            </ul><a class="footer__dextra" href="https://www.dextra.ru/" target="_blank">Разработка сайта:<span>Интернет-агентство Dextra</span></a>
+            </ul>
+            <div class="footer__dextra-over"><a class="footer__dextra" href="https://www.dextra.ru/" target="_blank">Разработка сайта:<br><span>Интернет-агентство Dextra</span></a></div>
           </div>
         </div>
       </div>

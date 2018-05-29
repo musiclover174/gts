@@ -52,6 +52,27 @@ window.onload = function () {
 
   window.gts.main = ({
     
+    burger: () => {
+      let burger = document.querySelector('.js-burger'),
+          burgerShadow = document.querySelector('.js-burger-shadow');
+      
+      burger.addEventListener('click', function(e){
+        document.querySelector('.burger__menu').classList.toggle('open');
+        this.classList.toggle('open');
+        document.querySelector('html').classList.toggle('burgeropen');
+        e.preventDefault();
+        e.stopPropagation();
+      })
+      
+      burgerShadow.addEventListener('click', function(e){
+        let event = new Event('click');
+        burger.dispatchEvent(event);
+        e.preventDefault();
+        e.stopPropagation();
+      })
+
+    },
+    
     bannerCar: () => {
       
       let bannerSwiper = new Swiper ('.js-ibanner', {
@@ -176,9 +197,9 @@ window.onload = function () {
       if (document.querySelectorAll('.js-iprojects').length) this.projectsCar();
       
       if (document.querySelectorAll('.js-inews-href').length) this.inewsToggler();
+      
+      if (document.querySelectorAll('.js-burger').length) this.burger();
 
-      
-      
       $('[data-fancybox]').fancybox(); // fancy init
 
     }

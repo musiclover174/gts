@@ -232,12 +232,87 @@
   mr -14px
   @media $tPortrait
     dn()
+  &__shadow
+    pos fixed
+    w 100%
+    h 0
+    t 0
+    l 0
+    bgc #e97e2f
+    z-index 2
+    transition .5s height
+  &__menu
+    display flex
+    flex-direction column
+    flex-wrap wrap
+    pos fixed
+    z-index 3
+    w 100%
+    h 100%
+    l 0
+    t 0
+    padding 60px 20px
+    text-align center
+    overflow auto
+    visibility hidden
+    opacity 0
+    transition .5s opacity, .5s visibility
+    @media $tPortrait
+      dn()
+    &.open
+      visibility visible
+      opacity 1
+    .town
+      float none
+      fontify 15px 400 18px
+      &:before
+        dn()
+    .menu
+      &__list
+        mt 30px
+      &__item
+        db()
+        & + .menu__item
+          ml 0
+          mt 20px
+        &-href
+          fontify 15px 400 28px
+          &.active,
+          &:hover
+            border-color transparent
+            color white
+            font-weight 700
+    .header__icons
+      db()
+      float none
+      ml 0
+      &-elem:before
+        filter grayscale(100%) invert(100%)
+    .search
+      db()
+      float none
+      ml 0
+      w 100%
+      h 48px
+      &__icon
+        position absolute
+        right 14px
+        t 50%
+        mt -8px
+      &__input
+        w 100%
+        l 0
+        padding 0 39px 0 19px
+        visibility visible
+        opacity 1
   &__icon
+    outline none
     size 44px
-    bgc white
     pos relative
     border 0
     cursor pointer
+    z-index 4
+    bgc transparent
     &:before,
     span,
     &:after
@@ -248,14 +323,29 @@
       pos absolute
       t 14px
       l 14px
-      transition .5s all
+      transition .5s transform, .5s background
+      will-change transform
     span
       pos absolute
       t 21px
       l 14px
-      transition .5s all
+      transition .5s opacity
     &:after
       pos absolute
       b 14px
       l 14px
-      transition .5s all
+      transition .5s transform, .5s background
+      will-change transform
+    &.open
+      span
+        opacity 0
+      &:before
+        transform rotate(225deg)
+        t 21px
+        bgc white
+      &:after
+        transform rotate(-225deg)
+        b 21px
+        bgc white
+      & + ^[0]__shadow
+        h 100%
