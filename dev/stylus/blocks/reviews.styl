@@ -1,0 +1,148 @@
+.reviews
+  mb 62px
+  pos relative
+  z-index 1
+  @media $mLandscape
+    mb 122px
+  .container,
+  &__car-over
+    pos relative
+  &__toall
+    float right
+    mr 28px
+    mt 31px
+    @media $desktopMax
+      mt 23px
+    @media $tPortraitMax
+      mt 16px
+    pos relative
+    color $dark
+    fontify 14px 500 18px
+    border-bottom 2px solid $orange
+    transition .5s border
+    &:after
+      content ""
+      pos absolute
+      t 1px
+      r -32px
+      size 24px 16px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQBAMAAAD+CqKmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEUODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg7///8TqNONAAAADXRSTlMACT3pPpb0A588ofPncb+tAQAAAAFiS0dEDm+9ME8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA9SURBVAjXY2CAAgEGBGAyQeKwXnNAcNh7U5CkKvBL3UWAK8icmwhlVbcnIAxYu5MICVYkCQbOk0hWgr0AAOa2JA82/bjiAAAAAElFTkSuQmCC") no-repeat center
+    @media $tPortrait
+      &:hover
+        border-color transparent
+    @media $mLandscape
+      pos absolute
+      b -50px
+      l 30px
+  &__make
+    float right
+    mr 30px
+    mt 19px
+    @media $desktopMax
+      mt 8px
+    @media $tPortraitMax
+      mt 6px
+    @media $mLandscape
+      dn()
+  &__car-over
+    pt 6px
+  &__elem
+    border 2px solid #ececec
+    display flex
+    align-items stretch
+    @media $mLandscape
+      flex-wrap wrap
+  &__about
+    border-right 2px solid #ececec
+    w 310px
+    text-align center
+    pt 65px
+    @media $desktopMax
+      w 250px
+    @media $tLandscapeMax
+      pt 35px
+    @media $mLandscape
+      w 100%
+      border-right 0
+      border-bottom 2px solid #ececec
+      padding 20px 0
+  &__name
+    mt 70px
+    color $dark
+    fontify 16px 400 24px
+    @media $tLandscapeMax
+      mt 35px
+  &__content
+    w calc(100% - 310px)
+    padding 43px 47px
+    overflow hidden
+    @media $desktopMax
+      w calc(100% - 250px)
+      padding 43px 37px
+    @media $mLandscape
+      w 100%
+      padding 27px 30px
+  &__imgover
+    float right
+    w 372px
+    ml 40px
+    mt 6px
+    @media $desktopMax
+      width 322px
+    @media $tLandscapeMax
+      dn()
+  &__img
+    max-width 100%
+  &__text
+    max-width 430px
+    @media $tLandscapeMax
+      max-width 100%
+  &__person
+    w 100%
+    max-width 390px
+    @media $tLandscapeMax
+      max-width 100%
+    mt 26px
+    overflow hidden
+    &-who
+      max-width 225px
+      color alpha($dark, .65)
+      fontify 14px 400 22px
+      font-style italic
+      float left
+      @media $mLandscape
+        float none
+    &-sign
+      float right
+      ml 20px
+      @media $mLandscape
+        float none
+        ml 0
+        mt 20px
+  .swiper-button-prev
+    l -73px
+    outline none
+    @media $lDesktopMax
+      l -55px
+    @media $tLandscapeMax
+      t 0
+      l 0
+      mt 0
+  .swiper-button-next
+    r -73px
+    outline none
+    @media $lDesktopMax
+      r -55px
+    @media $tLandscapeMax
+      t 0
+      r auto
+      l 66px
+      mt 0
+  .swiper-buttons
+    @media $tLandscapeMax
+      pos relative
+      margin 0 auto
+      z-index 10
+      w 110px
+      h 44px
+      mt 30px

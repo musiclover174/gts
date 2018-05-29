@@ -1,20 +1,102 @@
 .video
-  padding 80px 0
+  padding 80px 0 45px
   .container
     display flex
     flex-direction column
     flex-wrap wrap
     h 732px
+    @media $tLandscapeMax
+      h 580px
+    @media $mLandscape
+      h auto
   &__elem
+    display flex
     w calc(50% - 15px)
     h 336px
     pos relative
     mb 30px
+    overflow hidden
+    align-content flex-end
+    @media $tLandscapeMax
+      h 260px
+    @media $mLandscape
+      width 100%
     &_bigger
       h 702px
       ml 30px
+      @media $tLandscapeMax
+        h 550px
+      @media $mLandscape
+        h 260px
+        ml 0
+    &:before
+      content ""
+      pos absolute
+      z-index 1
+      w 100%
+      h 100%
+      background linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,0.8) 100%)
     &-bg
       pos absolute
+      z-index 0
       w 100%
       h 100%
       background-size cover
+      will-change transform
+      transform scale(1)
+      transition .5s transform
+      ^[-1]:hover &
+        transform scale(1.007)
+  &__content
+    padding 42px 52px
+    pos relative
+    z-index 1
+    align-self flex-end
+    @media $tLandscapeMax
+      padding 32px 36px
+  &__play
+    pos relative
+    size 60px
+    border 0
+    cursor pointer
+    outline none
+    border-radius 50%
+    &:before
+      content ""
+      w 100%
+      h 100%
+      bgc #e76f17
+      border-radius 50%
+      z-index 0
+      position absolute
+      left 50%
+      top 50%
+      transform translate(-50%, -50%)
+      transition .5s background
+    &:after
+      content ""
+      w 100%
+      h 100%
+      t 0
+      l 0
+      pos absolute
+      z-index 1
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAMAAABl5a5YAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAflBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+yfIzaAAAAKXRSTlMAtyr7lRTxewnhWQHHOP6mHvmMEOtqBNVIz+ZiAvaEDL8321HvcwauKPnuFXcAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAWklEQVQY033QNRLAQAwDwAszMzPo/x9MG11xLnfGI8tC0wUPDNNiAGzHZQA8P2AAwkgCxEnKAGR5wQCUVc0ANK0EHUM/jP+VaV5UsetGh+0HdTmvW1X/efk/H12uFr5Ep2/aAAAAAElFTkSuQmCC") no-repeat center
+    &:hover:before
+      bgc #e97e2f
+  &__text
+    margin 23px 0 20px
+    color white
+    fontify 14px 400 22px
+    max-width 260px
+    @media $tLandscapeMax
+      margin 14px 0 11px
+    &_longer
+      max-width 360px
+  &__href
+    color white
+    fontify 14px 400 18px
+    border-bottom 2px solid $orange
+    transition .5s border
+    &:hover
+      border-color transparent

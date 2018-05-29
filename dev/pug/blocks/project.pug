@@ -1,6 +1,6 @@
 mixin project(data)
-  a(href="#").project__imgover
-    img(src="#{data.img}", alt="").project__img
-    span.project__cost #{data.cost}
-  a(href="#").project__href !{data.href}
-  p.project__text !{data.text}
+  a(href="#").projects__imgover
+    img(src=data.img, alt="").projects__img
+    span.projects__cost !{data.cost}
+  a(href="#").projects__href !{data.href}
+  p.projects__text !{data.text}

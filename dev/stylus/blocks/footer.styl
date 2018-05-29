@@ -1,0 +1,84 @@
+.footer
+  bgc #1a1a18
+  padding 75px 0 80px
+  mt 60px
+  &__cols
+    display flex
+  &__col
+    pr 20px
+    width 25%
+  &__info
+    color white
+    mt 38px
+    fontify 14px 400 19px
+  &__addr
+    color white
+    mt 38px
+    fontify 14px 400 19px
+  &__phones
+    mt 38px
+    a
+      color white
+      fontify 14px 400 19px
+  &__mail
+    ib()
+    mt 38px
+    color white
+    fontify 14px 400 19px
+    border-bottom 1px solid alpha(white, .25)
+    transition .5s border
+    &:hover
+      border-color transparent
+  &__socials
+    mt 38px
+  &__social
+    ib()
+    size 32px
+    pos relative
+    bgc #8d8d8c
+    border-radius 50%
+    transition .5s background
+    &:hover
+      bgc $orange
+    & + &
+      ml 15px
+    &:before
+      content ""
+      pos absolute
+    &_fb:before
+      size 7px 14px
+      t 9px
+      l 12px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAOCAMAAADUg/YpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAeFBMVEX///8iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL///8sdJk1AAAAJnRSTlMARlQ6GfXopM+mzZfIgZnC9+XEktSlbIfqyopFyYSIzomLj0JXK9uZW64AAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAUUlEQVQI1x3KRQKAMBADwMVLkSLF3fL/J7LdHDKHhIjj+QF3GAExmwAqZTUyN1KOgrs0FeqmJQuXjvphxDQvvKzY5KexiwdOUeESLW7xeT+iHyHrBZLKyjTAAAAAAElFTkSuQmCC") no-repeat center
+    &_vk:before
+      size 15px 8px
+      t 13px
+      l 9px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAICAMAAAARDVXAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAkFBMVEX///8iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL////cO872AAAALnRSTlMArLu0Gqqga6iVligR8J0Z9vouHtsOg9Ne1Wf+9CwI1zD1WUTsPNn8G9+kHMfaqGL4pAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABgSURBVAjXNYjbGoFAAAb/NodaKdvBmUIKMe//eImvuZoZecafaAozaW5MoBCsFuArWkKsZIVLs6Et5IW0hs0WdvsDx5Okc8lIrIHqMra7/sat/np9b6D9j4d9upe6N3x6rfsMLMAw8YgAAAAASUVORK5CYII=") no-repeat center
+    &_yt:before
+      size 14px 10px
+      t 11px
+      l 9px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAKCAMAAACzB5/1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAdVBMVEX///8iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL///+T/SpGAAAAJXRSTlMAO3uixdv0MEqxsOIvk+/7CVzCEG7WNZ31r09INHKavfHYnng2Y4EJVAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABZSURBVAjXTcxJDoAgEETREhBRVBTFeR7uf0WFaEJvfl5SaSAglIWch4ySCBC3dwKxzwTSJs1yRwllAxSlfqt+VrVxdOOm7b5x77/qMfgcgWleVpNvuz7OCw8AEw7j7FTZcAAAAABJRU5ErkJggg==") no-repeat center
+    &_tw:before
+      size 13px 12px
+      t 10px
+      l 10px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAMAAACOacfrAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAilBMVEX///8iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL///8cvFaxAAAALHRSTlMAb51iEFl+qtCnhZoJNS7piDRxWjDVNkn2FvS2Kf1A4peKqEGz5m5Ff5ufjO0LiSkAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAaUlEQVQI10XN2xKCMBAD0KBQC6KCBVTwingB8v/fB12s5ClndiYL/OItlvARKMGKpA4RcR0DG9pobMldku5FBlnOfwocZhxPgCqdqnHtfHG62vHoNuE+PX4IalufjfTXWw7x59t2vfEFA8GOD57D0YeaAAAAAElFTkSuQmCC") no-repeat center
+  &__mainhref
+    color white
+    fontify 18px 400 21px
+    border-bottom 2px solid $orange
+    transition .5s border
+    &.active,
+    &:hover
+      border-color transparent
+  &__listhref
+    mt 25px
+  &__href
+    color alpha(#fff, .5)
+    fontify 14px 400 20px
+    transition .5s color
+    &.active,
+    &:hover
+      color alpha(#fff, 1)

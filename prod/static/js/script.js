@@ -68,6 +68,74 @@ window.onload = function () {
       });
     },
 
+    reviewsCar: function reviewsCar() {
+
+      var reviewsSwiper = new Swiper('.js-ireviews', {
+        loop: true,
+        speed: 800,
+        navigation: {
+          nextEl: '.js-ireviews ~ .swiper-buttons .swiper-button-next',
+          prevEl: '.js-ireviews ~ .swiper-buttons .swiper-button-prev'
+        },
+        effect: 'fade',
+        autoHeight: true,
+        fadeEffect: {
+          crossFade: true
+        },
+        autoplay: {
+          delay: 5000
+        }
+      });
+    },
+
+    clientsCar: function clientsCar() {
+
+      var projectsSwiper = new Swiper('.js-iclients', {
+        loop: true,
+        speed: 800,
+        slidesPerView: 5,
+        spaceBetween: 26,
+        navigation: {
+          nextEl: '.js-iclients ~ .swiper-buttons .swiper-button-next',
+          prevEl: '.js-iclients ~ .swiper-buttons .swiper-button-prev'
+        },
+        breakpoints: {
+          700: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          999: {
+            slidesPerView: 4,
+            spaceBetween: 20
+          }
+        }
+      });
+    },
+
+    projectsCar: function projectsCar() {
+
+      var projectsSwiper = new Swiper('.js-iprojects', {
+        loop: true,
+        speed: 800,
+        slidesPerView: 3,
+        spaceBetween: 32,
+        navigation: {
+          nextEl: '.js-iprojects ~ .swiper-buttons .swiper-button-next',
+          prevEl: '.js-iprojects ~ .swiper-buttons .swiper-button-prev'
+        },
+        breakpoints: {
+          600: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          999: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          }
+        }
+      });
+    },
+
     inewsToggler: function inewsToggler() {
 
       document.querySelectorAll('.js-inews-href').forEach(function (item, i) {
@@ -94,6 +162,12 @@ window.onload = function () {
     init: function init() {
 
       if (document.querySelectorAll('.js-ibanner').length) this.bannerCar();
+
+      if (document.querySelectorAll('.js-iclients').length) this.clientsCar();
+
+      if (document.querySelectorAll('.js-ireviews').length) this.reviewsCar();
+
+      if (document.querySelectorAll('.js-iprojects').length) this.projectsCar();
 
       if (document.querySelectorAll('.js-inews-href').length) this.inewsToggler();
 
