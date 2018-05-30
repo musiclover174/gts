@@ -43,18 +43,11 @@
                   <li class="menu__item"><a class="menu__item-href" href="#">Контакты</a></li>
                 </ul>
                 <div class="header__icons"><a class="header__icons-elem header__icons-elem_compare" href="#">3</a><a class="header__icons-elem header__icons-elem_favorite" href="#">2</a><span class="header__icons-elem header__icons-elem_card empty">0</span></div>
-                <form class="search">
-                  <input class="search__icon" type="submit" value="">
-                  <input class="search__input" type="text" placeholder="Поиск..">
-                </form>
               </div>
             </div>
           </div>
           <div class="header__icons"><a class="header__icons-elem header__icons-elem_compare" href="#">3</a><a class="header__icons-elem header__icons-elem_favorite" href="#">2</a><span class="header__icons-elem header__icons-elem_card empty">0</span></div>
-          <form class="search">
-            <input class="search__icon" type="submit" value="">
-            <input class="search__input" type="text" placeholder="Поиск..">
-          </form>
+          <button class="search__open js-search-icon" type="button"></button>
           <div class="header__contacts">
             <p class="header__contacts-row"> <span>Бесплатно по России</span><a href="tel:+78002340684">8 (800) 234-06-84</a></p>
             <p class="header__contacts-row"> <span>Без выходных с 9:00 до 19:00</span><a href="tel:+74957889934">+7 (495) 788-99-34</a></p>
@@ -69,6 +62,40 @@
         </div>
       </div>
     </header>
+    <div class="search"><span class="search__bg"></span><a class="search__close js-search-close" href="#"></a>
+      <form class="search__form" action="">
+        <input class="search__inp" type="text" data-req="req" placeholder="Введите запрос"><span class="search__icon"></span>
+        <div class="search__res js-search-res">
+          <p class="search__title">Товары</p>
+          <ul class="search__res-list search__res-list_products">
+            <li class="search__product"><a class="search__product-imgover" href="#"><img class="search__product-img" src="img/search-product1.jpg"></a>
+              <div class="search__product-content"><a class="search__product-href" href="#">Тележка гидравлическая SB 2000 RDP Smart Basic</a>
+                <p class="search__product-chars"><span class="search__product-weight">до 350кг</span><span class="search__product-size">1150х550 мм</span></p>
+                <p class="search__product-price"><span class="search__product-cost">13 395 <sub>руб.</sub></span><span class="search__product-prevcost">13 395 ₽</span></p>
+              </div>
+            </li>
+            <li class="search__product"><a class="search__product-imgover" href="#"><img class="search__product-img" src="img/search-product2.jpg"></a>
+              <div class="search__product-content"><a class="search__product-href" href="#">Гидравлическая тележка DBA 20 RUB (стандартная модель)</a>
+                <p class="search__product-chars"><span class="search__product-weight">до 2000кг</span><span class="search__product-size">1150х550 мм</span></p>
+                <p class="search__product-price"><span class="search__product-cost">12 800 <sub>руб.</sub></span></p>
+              </div>
+            </li>
+            <li class="search__product"><a class="search__product-imgover" href="#"><img class="search__product-img" src="img/search-product3.jpg"></a>
+              <div class="search__product-content"><a class="search__product-href" href="#">Тележка гидравлическая SB 2000 RDP Smart Basic</a>
+                <p class="search__product-chars"><span class="search__product-weight">до 350кг</span><span class="search__product-size">1150х550 мм</span></p>
+                <p class="search__product-price"><span class="search__product-cost">15 000 <sub>руб.</sub></span><span class="search__product-prevcost">13 395 ₽</span></p>
+              </div>
+            </li>
+          </ul><a class="search__res-toall" href="#">Смотреть ещё</a>
+          <p class="search__title">Страницы</p>
+          <ul class="search__res-list">
+            <li class="search__res-elem"><a class="search__res-href" href="#">Новость о новых моделях гидравлических тележек</a></li>
+            <li class="search__res-elem"><a class="search__res-href" href="#">Вопросы о гидравлических тележках стандартных моделей. Остались вопросы, напишите нам и мы обязательно вам на них ответим. Обрат...</a></li>
+            <li class="search__res-elem"><a class="search__res-href" href="#">Акция на гидравлические тележки стандартных моделей по цене до 20 000 руб.</a></li>
+          </ul><a class="search__res-toall" href="#">Смотреть ещё</a>
+        </div>
+      </form>
+    </div>
     <main class="content index">
       <section class="swiper-container i-banner js-ibanner">
         <div class="swiper-wrapper">

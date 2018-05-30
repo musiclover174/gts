@@ -21,9 +21,7 @@ header.header
         a(href="#").header__icons-elem.header__icons-elem_compare 3
         a(href="#").header__icons-elem.header__icons-elem_favorite 2
         span.header__icons-elem.header__icons-elem_card.empty 0
-      form.search
-        input(type="submit", value="").search__icon
-        input(type="text", placeholder="Поиск..").search__input
+      button(type="button").search__open.js-search-icon
       .header__contacts
         p.header__contacts-row 
           span Бесплатно по России
@@ -41,3 +39,57 @@ header.header
             a(href="#").navcats__item-href.navcats__item-href_tech Техника
           li.navcats__item
             a(href="#").navcats__item-href.navcats__item-href_serv Сервис
+.search
+  span.search__bg
+  a(href="#").search__close.js-search-close
+  form(action="").search__form
+    input(type="text", data-req="req", placeholder="Введите запрос").search__inp
+    span.search__icon
+    .search__res.js-search-res
+      p.search__title Товары
+      ul.search__res-list.search__res-list_products
+        li.search__product
+          a(href="#").search__product-imgover
+            img(src="img/search-product1.jpg").search__product-img
+          .search__product-content
+            a(href="#").search__product-href Тележка гидравлическая SB 2000 RDP Smart Basic
+            p.search__product-chars
+              span.search__product-weight до 350кг
+              span.search__product-size 1150х550 мм
+            p.search__product-price
+              span.search__product-cost 13 395 
+                sub руб.
+              span.search__product-prevcost 13 395 ₽
+        li.search__product
+          a(href="#").search__product-imgover
+            img(src="img/search-product2.jpg").search__product-img
+          .search__product-content
+            a(href="#").search__product-href Гидравлическая тележка DBA 20 RUB (стандартная модель)
+            p.search__product-chars
+              span.search__product-weight до 2000кг
+              span.search__product-size 1150х550 мм
+            p.search__product-price
+              span.search__product-cost 12 800 
+                sub руб.
+        li.search__product
+          a(href="#").search__product-imgover
+            img(src="img/search-product3.jpg").search__product-img
+          .search__product-content
+            a(href="#").search__product-href Тележка гидравлическая SB 2000 RDP Smart Basic
+            p.search__product-chars
+              span.search__product-weight до 350кг
+              span.search__product-size 1150х550 мм
+            p.search__product-price
+              span.search__product-cost 15 000 
+                sub руб.
+              span.search__product-prevcost 13 395 ₽
+      a(href="#").search__res-toall Смотреть ещё
+      p.search__title Страницы
+      ul.search__res-list
+        li.search__res-elem
+          a(href="#").search__res-href Новость о новых моделях гидравлических тележек
+        li.search__res-elem
+          a(href="#").search__res-href Вопросы о гидравлических тележках стандартных моделей. Остались вопросы, напишите нам и мы обязательно вам на них ответим. Обрат...
+        li.search__res-elem
+          a(href="#").search__res-href Акция на гидравлические тележки стандартных моделей по цене до 20 000 руб.
+      a(href="#").search__res-toall Смотреть ещё

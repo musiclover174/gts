@@ -52,6 +52,39 @@ window.onload = function () {
 
   window.gts.main = ({
     
+    search: () => {
+      let search = document.querySelector('.search'),
+          searchIcon = document.querySelector('.js-search-icon'),
+          searchClose = document.querySelector('.js-search-close'),
+          searchInp = document.querySelector('.search__inp'),
+          searchRes = document.querySelector('.js-search-res'),
+          html = document.querySelector('html');
+      
+      searchIcon.addEventListener('click', (e) => {
+        search.classList.add('open');
+        html.classList.add('burgeropen');
+        e.preventDefault();
+        e.stopPropagation();
+      });
+      
+      searchClose.addEventListener('click', (e) => {
+        searchInp.value = '';
+        searchRes.classList.remove('open');
+        search.classList.remove('open');
+        html.classList.remove('burgeropen');
+        e.preventDefault();
+        e.stopPropagation();
+      });
+      
+      searchInp.addEventListener('keyup', (e) => {
+        if (searchInp.value.trim() !== '')
+          searchRes.classList.add('open');
+        else
+          searchRes.classList.remove('open');
+      });
+      
+    },
+    
     burger: () => {
       let burger = document.querySelector('.js-burger'),
           burgerShadow = document.querySelector('.js-burger-shadow');
@@ -188,6 +221,8 @@ window.onload = function () {
     
     init: function () {
 
+      if (document.querySelectorAll('.js-search-icon').length) this.search();
+      
       if (document.querySelectorAll('.js-ibanner').length) this.bannerCar();
       
       if (document.querySelectorAll('.js-iclients').length) this.clientsCar();
