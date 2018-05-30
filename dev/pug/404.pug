@@ -1,0 +1,80 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    main.content
+      .container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim /
+        section.page404
+          aside.page404__side
+            p.page404__title 4
+              span 0
+              | 4
+            p.page404__subtitle Страница 
+              span не
+              |  найдена
+          .page404__main
+            p Ошибка 404. Страница не существует или была удалена.
+            p Перейдите на 
+              a(href="#") главную страницу
+              |  или воспользуйтесь картой сайта:
+            ul
+              li 
+                a(href="#") Продукция
+                ul
+                  li 
+                    a(href="#") Стеллажи
+                  li 
+                    a(href="#") Складская техника
+                  li 
+                    a(href="#") Подъемное оборудование
+                  li 
+                    a(href="#") Шкафы, верстаки, сейфы
+                  li 
+                    a(href="#") Автомобильные аксессуары
+                  li 
+                    a(href="#") Строительное оборудование
+                  li 
+                    a(href="#") Торговое оборудование
+                  li 
+                    a(href="#") Другое оборудование
+              li 
+                a(href="#") Сервис и обслуживание
+                ul
+                  li 
+                    a(href="#") Помощь в переезде склада
+                  li 
+                    a(href="#") Монтаж сборщиками
+                  li 
+                    a(href="#") Выезд сборщиков в регионы
+                  li 
+                    a(href="#") Шеф-монтаж
+              li 
+                a(href="#") Партнерам
+                ul
+                  li 
+                    a(href="#") Преимущества работы
+              li 
+                a(href="#") О компании
+                ul
+                  li 
+                    a(href="#") Новости
+                  li 
+                    a(href="#") Производство
+                  li 
+                    a(href="#") Проекты
+                  li 
+                    a(href="#") Акции
+                  li 
+                    a(href="#") Оплата и доставка
+                  li 
+                    a(href="#") Возврат и обмен товара
+                  li 
+                    a(href="#") Контактная информация
+              li 
+                a(href="#") Бесплатная доставка
+    include layout/__footer

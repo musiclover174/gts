@@ -19,119 +19,99 @@ html.burgeropen
   @media $mLandscape
     max-width 100%
     padding 0 30px
+
 .content
   pt 124px
   @media $mLandscape
     pt 72px
+  &:not(.index)
+    pt 190px
+    @media $mLandscape
+      pt 130px
   h1:not([class])
     color $dark
-    font-size 48px
-    font-weight 400
-    line-height 54px
+    fontify 48px 400 54px
     margin 43px 0 37px
   h2:not([class])
     color $dark
-    font-size 30px
-    font-weight 400
-    line-height 36px
+    fontify 30px 400 36px
     margin 43px 0 22px
   h3:not([class]),
   h4:not([class])
     color $dark
-    font-size 24px
-    font-weight 400
-    line-height 34px
+    fontify 24px 400 34px
     margin 43px 0 16px
   img:not([class])
     margin 6px 0
     max-width 100%
   * + img:not([class])
-    margin-top 5px
+    mt 5px
   ul:not([class])
     list-style  none
     margin  18px 0
-  * + ul:not([class])
-    margin-top -6px
   ul:not([class]) li
-    padding-left 41px
-    position relative
-    font-size 19px
-    font-weight 400
-    line-height 31px
+    pl 30px
+    pos relative
+    fontify 14px 400 22px
   ul:not([class]) li + li
-    margin-top 22px
+    mt 18px
   ul:not([class]) li:before
     content ""
-    position absolute
-    left 24px
-    top 12px
-    width 6px
-    height 6px
-    border-radius 50%
-    background-color #40ad68
+    pos absolute
+    l 0
+    t 10px
+    size 14px 2px
+    bgc $orange
   ol:not([class])
     list-style none
-    margin 15px 0
+    margin 18px 0
     counter-reset myCounter
-  * + ol:not([class])
-    margin-top -6px
   ol:not([class]) li
-    padding-left 41px
-    position relative
-    font-size 19px
-    font-weight 400
-    line-height 31px
+    pl 30px
+    pos relative
+    fontify 14px 400 22px
   ol:not([class]) li + li
-    margin-top 12px
+    mt 12px
   ol:not([class]) li:befor
     counter-increment myCounter
     content counter(myCounter)"."	
-    position absolute
-    left 0
-    top 0
-    width 41px
-    padding-right 9px
+    pos absolute
+    l 0
+    t 0
+    w 41px
+    pr 9px
     text-align right
-    color #40ad68
-    font-size 17px
-    font-weight 700
-    line-height 27px
-    box-sizing border-box
+    color $orange
+    fontify 14px 400 22px
   table:not([class])
-    border 5px solid #40ad68
+    border 5px solid $orange
     margin 23px 0
     max-width 100%
     table-layout fixed
   table:not([class]) th
     text-align left
     padding 18px 25px
-    color $dark
-    font-size 15px
-    font-weight 700
-    line-height 25px
-    border 1px solid #40ad68
+    color white
+    bgc $orange
+    fontify 14px 400 22px 
   table:not([class]) td
     padding 18px 25px
     color $dark
-    font-size 15px
-    font-weight 400
-    line-height 25px
-    border 1px solid #40ad68
+    fontify 14px 400 22px 
+    border 1px solid $dark
   p:not([class])
     color $dark
-    font-size 14px
-    font-weight 400
-    line-height 22px
+    fontify 14px 400 22px
     margin 18px 0
   a:not([class])
-    color $dark
+    color $orange
     border-bottom 1px solid
     transition .5s border
     &:hover
       border-color transparent
  
   *:not([class]):not(span):first-child
-    margin-top 0 !important
+    mt 0 !important
   *:not([class]):not(span):last-child
     margin-bottom 0 !important
 
@@ -156,6 +136,19 @@ input:-moz-placeholder
     @media $mPortraitMax
       fontify 24px 400 28px
 
+.breadcrumbs
+  mb 18px
+  &__href
+    color alpha($dark, .8)
+    fontify 12px 400 18px
+    border-bottom 1px solid alpha(#5d5d5d, .25)
+    transition .5s border
+    &:hover
+      border-color transparent
+  &__delim
+    padding 0 9px
+    fontify 12px 400 18px
+
 .btn
   ib()
   bgc $orange
@@ -177,12 +170,12 @@ input:-moz-placeholder
     padding 0 25px
   
 .animator
-  position relative
+  pos relative
   &:not(.visible)[data-direction="rtl"]
     right -100px
     opacity 0
   &:not(.visible)[data-direction="ltr"]
-    left -100px
+    l -100px
     opacity 0
   &:not(.visible)[data-direction="ttb"]
     top -100px

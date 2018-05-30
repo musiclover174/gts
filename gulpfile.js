@@ -7,7 +7,7 @@ var gulp = require('gulp'),
   babel = require('gulp-babel'),
   cleanCSS = require('gulp-clean-css'),
 	autoprefixer = require('gulp-autoprefixer'),
-	imagemin = require('gulp-imagemin'),
+	imagemin = require('compress-images'),
   browserSync = require('browser-sync'),
   reload = browserSync.reload;
 
@@ -98,19 +98,59 @@ gulp.task('css-min', ['css-make'], function () {
 
 // image minify task
 gulp.task('image-min', function () {
-	return gulp.src(src.dev.imgs)
-		.pipe(imagemin({
-      interlaced: true,
-      progressive: true,
-      optimizationLevel: 5
-    }))
-		.pipe(gulp.dest(src.prod.imgs))
+  imagemin(src.dev.imgs + '.{jpg,JPG,jpeg,JPEG,gif,png,svg}', src.prod.imgs, {
+    compress_force: false,
+    statistic: true,
+    autoupdate: true
+  }, false, {
+    jpg: {
+      engine: 'jpegtran',
+      command: ['-trim', '-progressive', '-copy', 'none', '-optimize']
+    }
+  }, {
+    png: {
+      engine: 'pngquant', 
+      command: ['--quality=30-60']
+    }
+  }, {
+    svg: {
+      engine: 'svgo',
+      command: false
+    }
+  }, {
+    gif: {
+      engine: 'gifsicle',
+      command: ['--colors', '64', '--use-col=web']
+    }
+  }, function () {});
 });
 
 gulp.task('icons-min', function () {
-	return gulp.src(src.dev.icons)
-		.pipe(imagemin())
-		.pipe(gulp.dest(src.prod.icons))
+  imagemin(src.dev.icons + '.{jpg,JPG,jpeg,JPEG,gif,png,svg}', src.prod.icons, {
+    compress_force: false,
+    statistic: true,
+    autoupdate: true
+  }, false, {
+    jpg: {
+      engine: 'jpegtran',
+      command: ['-trim', '-progressive', '-copy', 'none', '-optimize']
+    }
+  }, {
+    png: {
+      engine: 'pngquant', 
+      command: ['--quality=30-60']
+    }
+  }, {
+    svg: {
+      engine: 'svgo',
+      command: false
+    }
+  }, {
+    gif: {
+      engine: 'gifsicle',
+      command: ['--colors', '64', '--use-col=web']
+    }
+  }, function () {});
 });
 
 // Reload all Browsers

@@ -1,0 +1,44 @@
+.page404
+  display flex
+  justify-content space-between
+  @media $tPortraitMax
+    flex-wrap wrap
+    flex-flow column
+  &__side,
+  &__main
+    w calc(50% - 15px)
+    @media $tPortraitMax
+      w 100%
+  &__side
+    mt -17px
+    @media $tPortraitMax
+      mb 40px
+    @media $mLandscape
+      mt 0
+  &__title
+    color $dark
+    fontify 340px 900 270px
+    font-style italic
+    overflow hidden
+    @media $desktopMax
+      fontify 316px 900 255px
+    @media $tLandscapeMax
+      fontify 264px 900 221px
+    @media $mLandscape
+      fontify 150px 900 118px
+    span
+      color $orange
+  &__subtitle
+    mt 20px
+    fontify 52px 900 46px
+    letter-spacing -.008em
+    font-style italic
+    color $dark
+    @media $desktopMax
+      fontify 48px 900 46px
+    @media $tLandscapeMax
+      fontify 40px 900 46px
+    @media $mLandscape
+      fontify 23px 900 34px
+    span
+      color $orange

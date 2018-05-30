@@ -17,6 +17,8 @@
     w calc(100% / 3)
     padding 26px 34px
     transition .5s border
+    &:last-child
+      z-index 1
     @media $tLandscape
       &:nth-child(n + 2):not(:nth-child(3n - 2))
         border-left 2px solid #e5e5e5
@@ -35,7 +37,7 @@
     @media $tPortrait
       &:hover
         border-color transparent
-        z-index 1
+        z-index 2
         & ^[0]__bg
           box-shadow 0 6px 19px rgba(0, 0, 0, 0.12)
           transform scale(1.05)
@@ -111,6 +113,7 @@
   &__hreflist
     mt 22px
   &__hrefitem
+    ml -20px
     & + &
       mt 11px
   &__href 
@@ -118,6 +121,12 @@
     font-size 14px
     font-weight 400
     line-height 22px
+    padding 4px 20px
+    border-radius 15px
+    transition .5s background, .5s color
+    &:hover
+      color white
+      bgc #e76f17
   &__text
     color $dark
     fontify 14px 300 22px
