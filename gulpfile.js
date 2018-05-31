@@ -54,7 +54,7 @@ gulp.task('js', function () {
 	return gulp.src(src.dev.js)
 		.pipe(babel({
       presets: ['env'],
-      minified: false
+      minified: true
     }))
 		.pipe(gulp.dest(src.prod.js))
     .pipe(reload({stream:true}));

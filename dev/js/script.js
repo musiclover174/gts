@@ -53,7 +53,7 @@ window.onload = function () {
   window.gts.main = ({
     
     search: () => {
-      let search = document.querySelector('.search'),
+      const search = document.querySelector('.search'),
           searchIcon = document.querySelector('.js-search-icon'),
           searchClose = document.querySelector('.js-search-close'),
           searchInp = document.querySelector('.search__inp'),
@@ -86,7 +86,7 @@ window.onload = function () {
     },
     
     burger: () => {
-      let burger = document.querySelector('.js-burger'),
+      const burger = document.querySelector('.js-burger'),
           burgerShadow = document.querySelector('.js-burger-shadow');
       
       burger.addEventListener('click', function(e){
@@ -108,7 +108,7 @@ window.onload = function () {
     
     bannerCar: () => {
       
-      let bannerSwiper = new Swiper ('.js-ibanner', {
+      const bannerSwiper = new Swiper ('.js-ibanner', {
         loop: true,
         speed: 800,
         navigation: {
@@ -124,7 +124,7 @@ window.onload = function () {
     
     reviewsCar: () => {
       
-      let reviewsSwiper = new Swiper ('.js-ireviews', {
+      const reviewsSwiper = new Swiper ('.js-ireviews', {
         loop: true,
         speed: 800,
         navigation: {
@@ -145,7 +145,7 @@ window.onload = function () {
     
     clientsCar: () => {
       
-      let projectsSwiper = new Swiper ('.js-iclients', {
+      const projectsSwiper = new Swiper ('.js-iclients', {
         loop: true,
         speed: 800,
         slidesPerView: 5,
@@ -170,7 +170,7 @@ window.onload = function () {
     
     projectsCar: () => {
       
-      let projectsSwiper = new Swiper ('.js-iprojects', {
+      const projectsSwiper = new Swiper ('.js-iprojects', {
         loop: true,
         speed: 800,
         slidesPerView: 3,
@@ -206,8 +206,8 @@ window.onload = function () {
           curActive.classList.remove('active');
           item.classList.add('active');
           
-          $('.i-news__type[data-type="' + curAttr +'"]').fadeOut(400, function(){
-            $('.i-news__type[data-type="' + newAttr +'"]').fadeIn(400);
+          $(`.i-news__type[data-type="${curAttr}"]`).fadeOut(400, function(){
+            $(`.i-news__type[data-type="${newAttr}"]`).fadeIn(400);
           });
           
           e.stopPropagation();
@@ -219,9 +219,31 @@ window.onload = function () {
       
     },
     
-    init: function () {
+    resizeWatcher: () => {
+      const tableSel = document.querySelectorAll('table'),
+            scrollArray = [];
+      if (tableSel.length){
+        tableSel.forEach((item, i) => {
+          let orgHtml = item.outerHTML;
+          item.outerHTML = `<div class='table-scroller${i}'>${orgHtml}</div>`;
+          let ps = new PerfectScrollbar(`.table-scroller${i}`, {
+            wheelPropagation: true
+          });
+          scrollArray.push(ps);
+        });
+        $(window).resize(() => {
+          if (scrollArray.length)
+            scrollArray.forEach((item, i) => {
+              item.update()
+            });
+        }).trigger('trigger')
+      }
+      
+    },
+    
+    init: function() {
 
-      if (document.querySelectorAll('.js-search-icon').length) this.search();
+      if (document.querySelectorAll('.js-search-icon').length) 
       
       if (document.querySelectorAll('.js-ibanner').length) this.bannerCar();
       
@@ -235,8 +257,8 @@ window.onload = function () {
       
       if (document.querySelectorAll('.js-burger').length) this.burger();
 
-      $('[data-fancybox]').fancybox(); // fancy init
-
+      this.resizeWatcher();
+      
     }
   }).init();
 

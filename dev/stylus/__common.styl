@@ -30,22 +30,39 @@ html.burgeropen
       pt 130px
   h1:not([class])
     color $dark
-    fontify 48px 400 54px
+    fontify 60px 400 64px
     margin 43px 0 37px
+    @media $tLandscapeMax
+      fontify 50px 400 54px
+    @media $mLandscapeMax
+      fontify 32px 400 36px
   h2:not([class])
     color $dark
+    fontify 44px 400 48px
+    margin 43px 0 28px
+    @media $tLandscapeMax
+      fontify 38px 400 44px
+    @media $mLandscapeMax
+      fontify 26px 400 32px
+  h3:not([class])
+    color $dark
     fontify 30px 400 36px
-    margin 43px 0 22px
-  h3:not([class]),
+    margin 43px 0 28px
+    @media $tLandscapeMax
+      fontify 24px 400 34px
+    @media $mLandscapeMax
+      fontify 22px 400 28px
   h4:not([class])
     color $dark
     fontify 24px 400 34px
     margin 43px 0 16px
+    @media $mLandscapeMax
+      fontify 22px 400 28px
   img:not([class])
-    margin 6px 0
+    margin 17px 0
     max-width 100%
-  * + img:not([class])
-    mt 5px
+  img:not([class]) + *:not(img)
+    mt 0px
   ul:not([class])
     list-style  none
     margin  18px 0
@@ -71,34 +88,31 @@ html.burgeropen
     pos relative
     fontify 14px 400 22px
   ol:not([class]) li + li
-    mt 12px
-  ol:not([class]) li:befor
+    mt 18px
+  ol:not([class]) li:before
     counter-increment myCounter
     content counter(myCounter)"."	
     pos absolute
     l 0
     t 0
-    w 41px
+    w 30px
     pr 9px
-    text-align right
     color $orange
     fontify 14px 400 22px
   table:not([class])
-    border 5px solid $orange
     margin 23px 0
-    max-width 100%
-    table-layout fixed
   table:not([class]) th
     text-align left
-    padding 18px 25px
+    padding 18px 20px
     color white
     bgc $orange
-    fontify 14px 400 22px 
+    fontify 14px 400 16px 
   table:not([class]) td
-    padding 18px 25px
+    padding 14px 20px
     color $dark
-    fontify 14px 400 22px 
-    border 1px solid $dark
+    fontify 12px 400 22px 
+  table:not([class]) tr:nth-child(2n)
+    bgc whitesmoke
   p:not([class])
     color $dark
     fontify 14px 400 22px
@@ -122,6 +136,13 @@ input::-moz-placeholder
 input:-ms-input-placeholder
   color alpha(white, .5)
 
+div[class\^="table-scroller"]
+  w calc(100% + 144px)
+  pos relative
+  overflow auto
+  @media $tLandscapeMax
+    w 100%
+
 .common
   &__title
     color $dark
@@ -134,6 +155,12 @@ input:-ms-input-placeholder
     @media $mPortraitMax
       fontify 24px 400 28px
 
+.text
+  &_short
+    max-width 877px
+    @media $tLandscapeMax
+      max-width 100%
+      
 .breadcrumbs
   mb 18px
   &__href
