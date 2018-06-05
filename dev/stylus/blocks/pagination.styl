@@ -1,0 +1,28 @@
+.pagination
+  mt 40px
+  &__list
+    display flex
+    justify-content center
+  &__item
+    size 30px
+    border-radius 50%
+    text-align center
+    color $dark
+    fontify 14px 500 30px
+    &.active
+      bgc $orange
+    & + &
+      ml 10px
+    &-href
+      display inline-block
+      vertical-align middle
+      color $dark
+      fontify 14px 500 18px
+      border-bottom 2px solid $orange
+      transition .5s border
+      &:not(a)
+        border-bottom none
+      &:hover
+        border-color transparent
+      ^[-1].active &
+        color white

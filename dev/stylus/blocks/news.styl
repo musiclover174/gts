@@ -74,6 +74,12 @@
       mt 35px
       ib()
 .news
+  .news__list
+    display flex
+    flex-wrap wrap
+    mb -40px
+    ml -30px
+    w calc(100% + 30px)
   &__elem
     display flex
     justify-content space-between
@@ -84,6 +90,56 @@
       mt 30px
       @media $mLandscape
         mt 35px
+    ^[0] &
+      &:not(^[-1]_bigger)
+        w calc(25% - 30px)
+        ib()
+        @media $tLandscapeMax
+          w calc(100% / 3 - 30px)
+        @media $tPortraitMax
+          w calc(50% - 30px)
+        @media $mPortraitMax
+          w calc(100% - 30px)
+        & ^[0]__content
+          w 100%
+      mb 45px
+      ml 30px
+      & ^[0]__text
+        mt 14px
+      & + ^[-1]
+        mt 0
+      ^[-1]^[-1]_bigger
+        w 100%
+        @media $tPortraitMax
+          flex-wrap wrap
+          flex-direction column
+        & ^[0]__imgover
+          size 422px 281px
+          mb 3px
+          pt 0
+          @media $tLandscapeMax
+            size 380px 261px
+          @media $tPortraitMax
+            size 422px 281px
+          @media $mPortraitMax
+            w 100%
+            h auto
+            pt 67%
+        & ^[0]__content
+          w calc(100% - 452px)
+          pt 30px
+          @media $tLandscapeMax
+            w calc(100% - 410px)
+            pt 12px
+          @media $tPortraitMax
+            w 100%
+            pt 20px
+          @media $mPortraitMax
+            pt 0
+        & ^[0]__date
+          fontify 14px 400 22px
+          @media $mPortraitMax
+            fontify 12px 400 18px
   &__imgover
     db()
     size 310px 207px
@@ -92,16 +148,22 @@
     @media $mLandscape
       db()
       max-width 100%
+    ^[0] &
+      border 2px solid #ececec
+      mb 20px
+      w 100%
+      h auto
+      pt 67%
+    @media $tPortrait
+      &:hover ^[0]__img
+        imgCenteringZoom()
   &__content
     w calc(100% - 340px)
     @media $mLandscape
       w 100%
       mt 17px
   &__img
-    imgCentering()
-    @media $tPortrait
-      &:hover 
-        imgCenteringZoom()
+    imgCenteringMax()
   &__date
     color alpha($dark, .8)
     fontify 12px 400 18px
@@ -110,6 +172,18 @@
   &__href
     color $dark
     fontify 20px 500 28px
+    ^[0] &
+      fontify 16px 500 22px
+      @media $mPortraitMax
+        fontify 16px 500 24px
+      &_bigger
+        fontify 30px 400 36px
+        @media $desktopMax
+          fontify 24px 400 30px
+        @media $tLandscapeMax
+          fontify 22px 400 30px
+        @media $mPortraitMax
+          fontify 16px 500 24px
     border-bottom 2px solid $orange
     transition .5s border
     @media $tPortrait
@@ -119,3 +193,9 @@
     color $dark
     fontify 14px 400 22px
     mt 23px
+  &-inner
+    &__date
+      color alpha($dark, .5)
+      fontify 14px 400 22px
+      mt -12px
+      mb 38px

@@ -24,6 +24,9 @@ html.burgeropen
   pt 124px
   @media $mLandscape
     pt 72px
+  @media $mPortraitMax
+    overflow hidden
+    pb 3px
   &:not(.index)
     pt 190px
     @media $mLandscape
@@ -36,6 +39,8 @@ html.burgeropen
       fontify 50px 400 54px
     @media $mLandscapeMax
       fontify 32px 400 36px
+    @media $mPortraitMax
+      fontify 28px 400 36px
   h2:not([class])
     color $dark
     fontify 44px 400 48px
@@ -154,6 +159,24 @@ div[class\^="table-scroller"]
       fontify 32px 400 36px
     @media $mPortraitMax
       fontify 24px 400 28px
+  &__back
+    ib()
+    pos relative
+    mt 20px
+    ml 33px
+    color $dark
+    fontify 14px 500 18px
+    border-bottom 2px solid $orange
+    transition .5s border
+    &:hover
+      border-color transparent
+    &:before
+      content ""
+      pos absolute
+      l -33px
+      t 2px
+      size 24px 14px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAOCAMAAAACJixMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAYFBMVEUODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg7////uD/eTAAAAHnRSTlMAR7gNT/lwWPqJX/x/af51dGuIcm1od4FXigFO+Lahd6hkAAAAAWJLR0QfBQ0QvQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAFZJREFUGNN1kDcSgEAMA0W+I5icQf9/JjeUjNhyt7EFvERxAkWaMVe+cPTKlxVr5Rtjq3xn1ivvqcHwFzCaTfIHzMZFl3DuqsvmuB+ynJeeJIx4f0d8AJUECH5++C7JAAAAAElFTkSuQmCC") no-repeat center
 
 .text
   &_short
@@ -173,6 +196,8 @@ div[class\^="table-scroller"]
   &__delim
     padding 0 9px
     fontify 12px 400 18px
+  & + h1:not([class])
+    mt 0
 
 .btn
   ib()
@@ -193,23 +218,6 @@ div[class\^="table-scroller"]
   @media $tPortraitMax
     fontify 13px 300 38px
     padding 0 25px
-  
-.animator
-  pos relative
-  &:not(.visible)[data-direction="rtl"]
-    right -100px
-    opacity 0
-  &:not(.visible)[data-direction="ltr"]
-    l -100px
-    opacity 0
-  &:not(.visible)[data-direction="ttb"]
-    top -100px
-    opacity 0
-  &:not(.visible)[data-direction="btt"]
-    bottom -100px
-    opacity 0
-  &:not(.visible)[data-direction="fi"]
-    opacity 0
 
 input.warning,
 textarea.warning

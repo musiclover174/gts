@@ -1,0 +1,227 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    main.content
+      .container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim /
+        h1 Контакты
+        section.contacts
+          script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+          script(type="text/javascript", src="static/js/maps.js")
+          nav.contacts__scrollhrefs
+            button(type="button", data-to="regionals").contacts__scrollhrefs-href Региональные дилеры
+            button(type="button", data-to="geography").contacts__scrollhrefs-href География поставок
+          section.contacts__col-over.contacts__col-over_bigger
+            .contacts__col
+              p.contacts__col-title Москва
+              p.contacts__col-addr 117312, Москва, проспект 60-летия Октября,  11 А
+              .contacts-row
+                p.contacts-row-left Телефон:
+                p.contacts-row-right 8-800-234-0684<br>
+                  b (бесплатный звонок по России)
+                  span +7 (495) 788-99-34
+              .contacts-row
+                p.contacts-row-left E-mail:
+                p.contacts-row-right 
+                  a(href="mailto:salegts@gortorgsnab.ru") salegts@gortorgsnab.ru
+              p.contacts__col-subtitle График работы
+              .contacts-row
+                p.contacts-row-left Офис:
+                p.contacts-row-right с 8:00 до 19:00 (без обеда)
+              .contacts-row
+                p.contacts-row-left Склад:
+                p.contacts-row-right с 10:00 до 18:00
+              .contacts-row
+                p.contacts-row-left Касса:
+                p.contacts-row-right с 9:00 до 17:30
+              .contacts-row
+                p.contacts-row-left Выходные:
+                p.contacts-row-right суббота, воскресенье
+              p.contacts__col-subtitle Viber /  WhatsApp
+              .contacts-row
+                p.contacts-row-left.contacts-row-left_longer Тележки, штабелеры, погрузчики:
+                p.contacts-row-right +7 (915) 444-36-59
+              .contacts-row
+                p.contacts-row-left.contacts-row-left_longer Грузоподъемное оборудование:
+                p.contacts-row-right +7 (915) 444-35-46
+              .contacts-row
+                p.contacts-row-left.contacts-row-left_longer Полочные стеллажи и шкафы:
+                p.contacts-row-right +7 (915) 444-36-69
+              .contacts-row
+                p.contacts-row-left.contacts-row-left_longer Стеллажи для поддонов:
+                p.contacts-row-right +7 (915) 444-36-25
+            .contacts__col.contacts__col_wide
+              p.contacts__col-title Схема проезда
+              .contacts__schemehrefs
+                a(href="#").contacts__schemehrefs-href Упрощенная схема для печати
+                a(href="#").contacts__schemehrefs-href Скачать схему проезда в PDF
+              .contacts__schememap
+                script(async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A357df0cf8fe73d2f99c2728ceb527eb5b2e4d820a4e6c71f28eb038695d803ef&amp;lang=ru_RU&amp;scroll=false;onload=schemeMap")
+              .contacts__col-over
+                .contacts__col.contacts__col_double
+                  p.contacts__col-title Санкт-Петербург
+                  p.contacts__col-addr г. Санкт-Петербург, 198095, ул. Маршала Говорова, д.52, офис 225
+                  .contacts-row
+                    p.contacts-row-left.contacts-row-left_medium Телефон отдела продаж:
+                    p.contacts-row-right +7 (812) 252-61-03, 252-59-33
+                  .contacts-row
+                    p.contacts-row-left.contacts-row-left_medium Телефон сервисной службы: 
+                    p.contacts-row-right +7 (812) 252-45-51
+                  .contacts-row
+                    p.contacts-row-left.contacts-row-left_medium Часы работы:
+                    p.contacts-row-right с 10:00 до 17:00. Выходные: суббота, воскресенье
+                  .contacts-row
+                    p.contacts-row-left.contacts-row-left_medium Адрес сайта:
+                    p.contacts-row-right 
+                      a(href="#") www.gts-spb.ru
+                .contacts__col.contacts__col_double
+                  p.contacts__col-title Нижний Новгород
+                  p.contacts__col-addr г. Нижний Новгород, 603011, ул. Чонгарская, д. 28А
+                  .contacts-row
+                    p.contacts-row-left.contacts-row-left_medium Телефон отдела продаж:
+                    p.contacts-row-right +7 (831) 282-11-85
+                  .contacts-row
+                    p.contacts-row-left.contacts-row-left_medium Часы работы:
+                    p.contacts-row-right с 9:00 до 18:00. Выходные: суббота, воскресенье
+          p(data-to="regionals").common__title Региональные дилеры
+          section.contacts__mapover
+            .contacts__regionals(data-lat="55.76", data-lng="37.64", data-zoom="4", data-pins='[{"lat":"55.733365","lng":"37.500656","data":{"name":"Москва","addr":"Ленинградский проспект, 31 а<br>стр.1 БЦ «МонАрх», 9 этаж","phone":"+7 (495) 2-300-900","mail":"msk@gortorsnab.ru"}},{"lat":"59.8760892","lng":"30.3169013","data":{"name":"Санкт-Петербург","addr":"Пулковское шоссе, 28а, офис 1204<br>БЦ «PULKOVO STAR»","phone":"+7 (812) 775-14-00","mail":"spb@gortorsnab.ru"}}]')
+            // json template
+              [{
+                "lat": "55.733365",
+                "lng": "37.500656",
+                "data": {
+                  "name": "Москва",
+                  "addr": "Ленинградский проспект, 31 а<br>стр.1 БЦ «МонАрх», 9 этаж",
+                  "phone": "+7 (495) 2-300-900",
+                  "mail": "msk@expert-leasing.ru"
+                }
+              }]
+            aside.contacts__regionals-info.hidden
+              .contacts__regionals-row
+                p.contacts__regionals-title Город
+                p.contacts__regionals-val.js-reg-name 
+              .contacts__regionals-row
+                p.contacts__regionals-title Адрес
+                p.contacts__regionals-val.js-reg-addr 
+              .contacts__regionals-row
+                p.contacts__regionals-title Телефон
+                p.contacts__regionals-val.js-reg-phone 
+              .contacts__regionals-row
+                p.contacts__regionals-title Эл. почта
+                a(href="mailto:sales@gortorsnab.ru").contacts__regionals-val.contacts__regionals-val_href.js-reg-mail 
+          section.contacts__col-over
+            - for (var x = 0; x < 3; x++)
+              .contacts__col
+                .contacts__place
+                  p.contacts__place-title Воркута
+                  p.contacts__place-phone +7 (82151) 3-00-93
+                  p.contacts__place-addr 169901, г. Воркута, ул. Московская, д. 10
+                .contacts__place
+                  p.contacts__place-title Кострома
+                  p.contacts__place-phone +7(4942) 33-27-21<br>33-14-77,<br>33-27-02,<br>33-18-71
+                  p.contacts__place-addr 169901, г. Воркута, ул. Московская, д. 10
+                .contacts__place
+                  p.contacts__place-title Калининград
+                  p.contacts__place-phone +7(4012) 910-910
+                  p.contacts__place-addr 236006, г. Калининград, ул. Правая Набережная, д. 10
+                .contacts__place
+                  p.contacts__place-title Ростов-на-Дону
+                  p.contacts__place-phone +7(4932) 56-21-01<br>56-13-33
+                  p.contacts__place-addr г. Иваново, ул. Шубиных, д.16 В
+                .contacts__place
+                  p.contacts__place-title Красноярск
+                  p.contacts__place-phone +7(908)212-79-36
+                  p.contacts__place-addr 660052, г. Красноярск, ул. Тимошенкова, 197, офис 55
+                .contacts__place
+                  p.contacts__place-title Калуга
+                  p.contacts__place-phone +7 (4842) 75-06-09<br>75-02-23
+                  p.contacts__place-addr 248000, г. Калуга, ул. Московская, д. 326
+                .contacts__place
+                  p.contacts__place-title Магадан
+                  p.contacts__place-phone +7 (4842) 75-06-09<br>75-02-23
+                  p.contacts__place-addr г. Магадан, проспект Карла Маркса, д. 5
+                  a(href="mailto:GTSofficial@gmail.com").contacts__place-mail GTSofficial@gmail.com
+          p(data-to="geography").common__title География поставок
+          section.contacts__mapover
+            nav.contacts__mapswapper
+              button(type="button", data-map="russia").contacts__mapswapper-href.active.js-mapswapper Россия
+              button(type="button", data-map="kazahstan").contacts__mapswapper-href.js-mapswapper Казахстан
+              button(type="button", data-map="belarus").contacts__mapswapper-href.js-mapswapper Беларусь
+            .contacts__geography(data-lat="55.76", data-lng="37.64", data-zoom="4", data-pins='[{"russia":[{"lat":55.733365,"lng":37.500656},{"lat":59.8760892,"lng":30.3169013}],"kazahstan":[{"lat":58.350015,"lng":48.962077}],"belarus":[{"lat":52.475054,"lng":29.433999},{"lat":53.482925,"lng":24.775796}]}]')
+            // json template
+              [{
+                "russia": [
+                  {
+                    "lat": 55.733365,
+                    "lng": 37.500656
+                  },
+                  {
+                    "lat": 59.8760892,
+                    "lng": 30.3169013
+                  }
+                ],
+                "kazahstan": [
+                  {
+                    "lat": 58.350015,
+                    "lng": 48.962077
+                  }
+                ],
+                "belarus": [
+                  {
+                    "lat": 52.475054,
+                    "lng": 29.433999
+                  },
+                  {
+                    "lat": 53.482925,
+                    "lng": 24.775796
+                  }
+                ]
+              }]
+          section.contacts__features
+            p.common__title Наши преимущества
+            .contacts__col-over
+              .contacts__col
+                .contacts__features-item
+                  .contacts__features-imgover
+                    img(src="img/contacts-feat1.png", alt="").contacts__features-img
+                  p.contacts__features-title Выгодные цены
+                  p.contacts__features-text Собственное производство стеллажей позволяет держать адекватный уровень цен даже в условиях нестабильной экономической ситуации.
+              .contacts__col
+                .contacts__features-item
+                  .contacts__features-imgover
+                    img(src="img/contacts-feat2.png", alt="").contacts__features-img
+                  p.contacts__features-title Гарантия качества
+                  p.contacts__features-text Качество стеллажей от «Горторгснаб» подтверждено сертификатом ISO 9001:2000 (в России действует как стандарт ГОСТ Р ИСО 9001-2001). Мы осуществляем строгий контроль качества на всех этапах производства стеллажей.
+              .contacts__col
+                .contacts__features-item
+                  .contacts__features-imgover
+                    img(src="img/contacts-feat3.png", alt="").contacts__features-img
+                  p.contacts__features-title Гибкие системы скидок
+                  p.contacts__features-text Помимо разумных базовых цен, мы также способны предложить своим клиентам очень привлекательные скидки в зависимости от объёма заказа.
+            .contacts__col-over
+              .contacts__col
+                .contacts__features-item
+                  .contacts__features-imgover
+                    img(src="img/contacts-feat4.png", alt="").contacts__features-img
+                  p.contacts__features-title Индивидуальный проект
+                  p.contacts__features-text Многолетний опыт оснащения складов в сочетании с собственными производственными мощностями позволяет нам реализовывать даже сложные и нестандартные проекты стеллажных складских систем. Особенно мы гордимся нашими мезонинами!
+              .contacts__col
+                .contacts__features-item
+                  .contacts__features-imgover
+                    img(src="img/contacts-feat5.png", alt="").contacts__features-img
+                  p.contacts__features-title Быстрая доставка
+                  p.contacts__features-text Завод и основной склад расположены в Московской области, благодаря чему мы можем оперативно сформировать и доставить заказ.Кроме того, на складе всегда имеется запас готовых стеллажей популярных типоразмеров, поэтому некоторые заказы мы можем отгрузить буквально в течение нескольких дней! Также мы открыли представительство в Нижнем Новгороде.
+              .contacts__col
+                .contacts__features-item
+                  .contacts__features-imgover
+                    img(src="img/contacts-feat6.png", alt="").contacts__features-img
+                  p.contacts__features-title Быстро разрабатываем проекты
+                  p.contacts__features-text От момента получения необходимой информации (размер помещения, вес груза и т.д.) до предоставления клиенту проекта стеллажной системы проходит всего несколько часов, как правило - не более одного рабочего дня!
+                
+    include layout/__footer

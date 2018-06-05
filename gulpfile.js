@@ -14,7 +14,8 @@ var gulp = require('gulp'),
 var src = {
 	'dev': {
 		'stylus': 'dev/stylus/',
-		'js': 'dev/js/*',
+		'js': 'dev/js/script.js',
+		'progjs': 'dev/js/prog/*',
 		'jslibs': 'dev/js/ext/*.js',
 		'pug': 'dev/pug/*.pug',
 		'imgs': 'dev/img/*',
@@ -50,11 +51,22 @@ gulp.task('js-libs', function () {
 });
 
 // main js task
-gulp.task('js', function () {
+gulp.task('js', function (event) {
 	return gulp.src(src.dev.js)
 		.pipe(babel({
       presets: ['env'],
       minified: true
+    }))
+		.pipe(gulp.dest(src.prod.js))
+    .pipe(reload({stream:true}));
+});
+
+// prog js task
+gulp.task('prog-js', function (event) {
+	return gulp.src(src.dev.progjs)
+		.pipe(babel({
+      presets: ['env'],
+      minified: false
     }))
 		.pipe(gulp.dest(src.prod.js))
     .pipe(reload({stream:true}));
@@ -174,8 +186,8 @@ gulp.task('watch', function () {
 	gulp.watch(src.dev.imgs, ['image-min']);
 	gulp.watch(src.dev.icons, ['icons-min']);
 	gulp.watch(src.dev.stylus + '**/*.styl', ['stylus', 'css-make']);
-	gulp.watch(src.dev.js + '*/*.js', ['js', 'js-libs']);
+	gulp.watch(src.dev.js + '*/*.js', ['js', 'js-libs', 'prog-js']);
 });
 
 // Сборка проекта
-gulp.task('build', ['pug', 'stylus', 'css-make', 'css-min', 'js', 'js-libs', 'image-min', 'icons-min']);
+gulp.task('build', ['pug', 'stylus', 'css-make', 'css-min', 'js', 'js-libs', 'prog-js', 'image-min', 'icons-min']);

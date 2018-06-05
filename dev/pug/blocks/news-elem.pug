@@ -1,8 +1,18 @@
 mixin newsElem(data)
-  li.news__elem
-    a(href="#").news__imgover
-      img(src=data.img, alt="").news__img
-    .news__content
-      p.news__date #{data.date}
-      a(href="#").news__href !{data.href}
-      p.news__text !{data.text}
+  - var mainNews = ''
+  if data.mainNews
+    li.news__elem.news__elem_bigger
+      a(href="#").news__imgover
+        img(src=data.img, alt="").news__img
+      .news__content
+        p.news__date #{data.date}
+        a(href="#").news__href.news__href_bigger !{data.href}
+        p.news__text !{data.text}
+  else
+    li.news__elem
+      a(href="#").news__imgover
+        img(src=data.img, alt="").news__img
+      .news__content
+        p.news__date #{data.date}
+        a(href="#").news__href !{data.href}
+        p.news__text !{data.text}

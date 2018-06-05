@@ -52,6 +52,41 @@ window.onload = function () {
 
   window.gts.main = ({
     
+    cardHeight: () => {
+      let cardInfo = document.querySelectorAll('.card__elem-info'),
+          cardParent = document.querySelector('.card__list'),
+          elemsOnRow, maxH;
+      
+      function skippedAutoHeight(){
+        document.querySelectorAll('.card__elem-info.skipped').forEach(elem => {
+          elem.style.height = maxH + 'px';
+          elem.classList.remove('skipped');
+        });
+        maxH = 0;
+      }
+      
+      function autoHeight(){
+        maxH = 0;
+        cardInfo.forEach((item, i) => {
+          if (i % elemsOnRow === 0) skippedAutoHeight()
+
+          if (item.offsetHeight > maxH) {
+            maxH = item.offsetHeight;
+          }
+          item.classList.add('skipped');
+        });
+
+        if (document.querySelectorAll('.card__elem-info.skipped').length) skippedAutoHeight()
+      }
+      
+      window.addEventListener('resize', () => {
+        cardInfo.forEach(elem => elem.style.height = 'auto');
+        elemsOnRow = Math.floor(cardParent.offsetWidth / cardInfo[0].offsetWidth)
+        autoHeight();
+      });
+      
+    },
+    
     search: () => {
       const search = document.querySelector('.search'),
           searchIcon = document.querySelector('.js-search-icon'),
@@ -231,19 +266,22 @@ window.onload = function () {
           });
           scrollArray.push(ps);
         });
-        $(window).resize(() => {
+        window.addEventListener('resize', () => {
           if (scrollArray.length)
             scrollArray.forEach((item, i) => {
               item.update()
             });
-        }).trigger('trigger')
+        });
       }
       
     },
     
     init: function() {
 
-      if (document.querySelectorAll('.js-search-icon').length) 
+      if (document.querySelectorAll('.card__elem-info').length)
+        this.cardHeight();
+      
+      if (document.querySelectorAll('.js-search-icon').length) this.search();
       
       if (document.querySelectorAll('.js-ibanner').length) this.bannerCar();
       
@@ -258,6 +296,9 @@ window.onload = function () {
       if (document.querySelectorAll('.js-burger').length) this.burger();
 
       this.resizeWatcher();
+      
+      let eventResize = new Event('resize');
+      window.dispatchEvent(eventResize);
       
     }
   }).init();

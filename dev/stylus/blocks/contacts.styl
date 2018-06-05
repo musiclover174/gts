@@ -1,0 +1,292 @@
+.contacts
+  pos relative
+  &__scrollhrefs
+    pos absolute
+    r 0
+    t -58px
+    @media $mLandscape
+      dn()
+    &-href
+      ib()
+      color $dark
+      bgc transparent
+      cursor pointer
+      border 0
+      padding 0
+      @media $mLandscape
+        ml 20px
+        mb 5px
+      fontify 14px 700 16px
+      border-bottom 2px dotted $orange
+      transition .5s border
+      &:hover
+        border-color transparent
+      & + &
+        ml 24px
+        @media $mLandscape
+          ml 20px
+  &__col
+    display flex
+    flex-direction column
+    w calc(100% / 3 - 32px)
+    ml 32px
+    @media $mLandscape
+      w calc(100% - 32px)
+      mb 30px
+    &_double
+      w calc(50% - 32px)
+      @media $mLandscape
+        w calc(100% - 32px)
+    &_wide
+      w calc(200% / 3 - 32px)
+      @media $mLandscape
+        w calc(100% - 32px)
+    &-over
+      ml -32px
+      w calc(100% + 32px)
+      display flex
+      justify-content space-between
+      @media $mLandscape
+        flex-direction column
+    &-title
+      color $dark
+      fontify 24px 400 32px
+      mb 26px
+    &-subtitle
+      color $dark
+      fontify 18px 500 26px
+      mt 36px
+      mb 20px
+    &-addr
+      color $dark
+      fontify 14px 400 22px
+      mb 18px
+  &-row
+    display flex
+    @media $tLandscapeMax
+      flex-wrap wrap
+    & + &
+      mt 18px
+    &-left
+      w 90px
+      color $dark
+      fontify 14px 500 22px
+      @media $tLandscapeMax, $mLandscapeMin
+        w 100%
+      &_medium
+        w 220px
+        @media $desktopMax
+          w 170px
+        @media $tLandscapeMax, $mLandscapeMin
+          w 100%
+        & + ^[1]-right
+          w calc(100% - 220px)
+          @media $desktopMax
+            w calc(100% - 170px)
+          @media $tLandscapeMax, $mLandscapeMin
+            w 100%
+      &_longer
+        w 264px
+        @media $desktopMax
+          w 170px
+        @media $tLandscapeMax, $mLandscapeMin
+          w 100%
+        & + ^[1]-right
+          w calc(100% - 264px)
+          @media $desktopMax
+            w calc(100% - 170px)
+          @media $tLandscapeMax, $mLandscapeMin
+            w 100%
+    &-right
+      w calc(100% - 90px)
+      color $dark
+      fontify 14px 400 22px
+      @media $tLandscapeMax, $mLandscapeMin
+        w 100%
+      b
+        font-weight 500
+      span
+        db()
+        mt 10px
+  &__scheme
+    pos relative
+    &map
+      size 100% 367px
+      bgc #f3f3f3
+      mb 43px
+      mt 6px
+    &hrefs
+      pos absolute
+      r 0
+      t 11px
+      @media $tLandscapeMax
+        position static
+        mb 20px
+      @media $mLandscape
+        ml -20px
+        w calc(100% + 20px)
+      &-href
+        ib()
+        color $dark
+        fontify 14px 500 16px
+        border-bottom 2px solid $orange
+        transition .5s border
+        @media $mLandscape
+          ml 20px
+          mb 5px
+        &:hover
+          border-color transparent
+        & + &
+          ml 27px
+          @media $mLandscape
+            ml 20px
+  .common__title
+    mt 64px
+    @media $mLandscape
+      mt 0
+    &[data-to="geography"]
+      @media $mLandscape
+        dn()
+  &__mapover
+    pos relative
+    mb 35px
+    @media $mLandscape
+      dn()
+  &__regionals
+    w 100vw
+    pos relative
+    h 500px
+    bgc #f3f3f3
+    left 50%
+    transform translateX(-50%)
+    &-info
+      padding 42px 46px
+      size 358px auto
+      bgc white
+      box-shadow 0 6px 15px rgba(0, 0, 0, 0.05)
+      pos absolute
+      t 50%
+      r 0
+      transform translateY(-50%)
+      transition .5s opacity, .5s visibility
+      &.hidden
+        opacity 0
+        visibility hidden
+    &-row
+      & + &
+        mt 20px
+    &-title
+      color alpha($dark, .5)
+      fontify 12px 700 23px
+      text-transform uppercase
+    &-val
+      color $dark
+      fontify 14px 400 23px
+      &_href
+        color $orange
+        border-bottom 1px solid $orange
+        transition .5s border
+        &:hover
+          border-color transparent
+  &__place
+    max-width 355px
+    @media $mLandscape
+      max-width 100%
+    & + &
+      mt 28px
+    &-title
+      color $dark
+      fontify 14px 500 22px
+      mb 8px
+    &-phone
+      pl 20px
+      color $dark
+      fontify 14px 400 22px
+      pos relative
+      &:before
+        content ""
+        pos absolute
+        l 0
+        t 3px
+        size 12px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAhFBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///8cCL0CAAAAKnRSTlMAi9sSWXfN4QPz/hW3gktlu+gZGurOFzs39eRKDM8qOOntH58BUrnxoAouIoSRAAAAAWJLR0QrJLnkCAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAF5JREFUCNc9y1kSgkAUQ9GHgEwN4gDazKIC3v0vkAKqO3+nkog4J1dMPPAtzhCEBhHEiYGC1M4yuFhIzvVmcX9QlCLlc9dLU9VNi+o29QNo4L13Y86Wz/H7/qZoXv4rpBoHopB9qUkAAAAASUVORK5CYII=") no-repeat center
+    &-addr
+      pl 20px
+      color $dark
+      fontify 14px 400 22px
+      pos relative
+      &:before
+        content ""
+        pos absolute
+        l 0
+        t 3px
+        size 9px 12px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAMCAMAAACHgmeRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAdVBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfqgDL52MD++PT52cH////528X+/Pr++fXqgTOJvb62AAAAHXRSTlMADITc+QsOzo2L4fv40c+DHpyZGO7tFlb+UmvnaF0V5Z0AAAABYktHRCJdZVysAAAACXBIWXMAAAsSAAALEgHS3X78AAAAYUlEQVQI1y3L2w6CMACD4d+hgJsKAioeurF5eP9HdC72ovnSpLAy1boyG6gb/dLUtPJhCV5brGJK6SmL05L10o79fztg5OM7ftTRu/J1PRyLBmCcMk7nLC6z5islt/sj9xcKqgh/JJI/wgAAAABJRU5ErkJggg==") no-repeat center
+    &-mail
+      ml 20px
+      color $dark
+      fontify 14px 400 22px
+      pos relative
+      border-bottom 1px solid $orange
+      transition .5s border
+      &:hover
+        border-color transparent
+      &:before
+        content ""
+        pos absolute
+        l -23px
+        t 3px
+        size 16px 14px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAMAAAAR8Wy4AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAgVBMVEX////ncBj////////////////////////////////////////////////////////////////////////////////1wZv64M3oeCbncBj1wZrncRnqhTr638z1xKD3z7Hsjkn87+Xwp3HtlVT87+briUHum132yqn1wpz64Mz///9VlYi7AAAAFnRSTlMAAAFvD5HIx5Al4WJM4iRC4y3GDKg3LX1SIQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAACCSURBVAjXRY/pEsIwCISRRmvUar0gMfGot+//ghLStPuDYb9ZZhbAysAgUyHgdDYQU88RAImdVzk+YeKhJ44paNBnkrzPQIn6AuL5wkzXWwGxuwei8Hi+MhAvV5J/dzF55I/v9f1pwi6WMicAq2adC9omEdi021LZ7vYyD8fxKRzXP3zWCw9kz2CRAAAAAElFTkSuQmCC") no-repeat center
+  &__mapswapper
+    pos absolute
+    r 0
+    t -47px
+    &-href
+      ib()
+      color $dark
+      bgc transparent
+      cursor pointer
+      border 0
+      padding 0
+      outline none
+      fontify 14px 700 16px
+      border-bottom 2px dotted $orange
+      transition .5s border, .5s color
+      &:hover,
+      &.active
+        border-color transparent
+        color $orange
+      & + &
+        ml 24px
+  &__geography
+    w 100vw
+    pos relative
+    h 500px
+    bgc #f3f3f3
+    left 50%
+    transform translateX(-50%)
+  &__features
+    mb -34px
+    &-item
+      mb 34px
+      @media $mLandscape
+        mb 0
+    &-imgover
+      h 69px
+      line-height 69px
+      mb 19px
+    &-img
+      display inline-block
+      vertical-align middle
+      max-height 100%
+    &-title
+      color $dark
+      fontify 18px 500 22px
+      mb 19px
+    &-text
+      color $dark
+      fontify 14px 400 22px
+      max-width 375px
+      @media $mLandscape
+        max-width 100%
