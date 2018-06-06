@@ -1,0 +1,40 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    main.content
+      .container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim /
+          a(href="#").breadcrumbs__href О компании
+          span.breadcrumbs__delim /
+        .text.text_short
+          h1 Примеры комплексного оснащения складов
+          p В настоящее время компания «Горторгснаб» предоставляет практически весь комплекс услуг по организации складских помещений (склад «под ключ»). Нашими партнерами являются ведущие мировые производители грузоподъемной и складской техники: «Pfaff Silberblau», «Ningbo Ruyi», «Е-Р Equipment», «Soosung», «JET» и др. Специалистами «Горторгснаб» осуществляется проектирование, изготовление и монтаж современных стеллажных систем, комплектация складов (в том числе и «готовых») техникой.
+          p Все оборудование, представленное в каталоге компании «Горторгснаб», обеспечивается гарантийным и послегарантийным сервисом. Также осуществляется поставка любой техники под заказ.
+        .projects__page
+          include blocks/project
+          
+          -var projectsArray = []
+          -projectsArray.push({img: 'img/iproject1.jpg', cost: "от 2 600 руб за 1 полку", href: "Стеллажные системы «Каскад»", text: 'Склад «Мособлфармация», 2016'})
+          -projectsArray.push({img: 'img/iproject2.jpg', cost: "от 1 800 руб. за 1 паллетоместо", href: "Стеллажные системы «Турин»", text: 'Склад «Кант», 2016'})
+          -projectsArray.push({img: 'img/iproject3.jpg', cost: "от 2 600 руб./м<sup>2</sup>", href: "Системы хранения «Оптима»", text: "Магазин «Элекс-Нет», 2017"})
+          -projectsArray.push({img: 'img/iproject1.jpg', cost: "от 2 600 руб за 1 полку", href: "Стеллажные системы «Каскад»", text: 'Склад «Мособлфармация», 2016'})
+          -projectsArray.push({img: 'img/iproject2.jpg', cost: "от 1 800 руб. за 1 паллетоместо", href: "Стеллажные системы «Турин»", text: 'Склад «Кант», 2016'})
+          -projectsArray.push({img: 'img/iproject3.jpg', cost: "от 2 600 руб./м<sup>2</sup>", href: "Системы хранения «Оптима»", text: "Магазин «Элекс-Нет», 2017"})
+          -projectsArray.push({img: 'img/iproject1.jpg', cost: "от 2 600 руб за 1 полку", href: "Стеллажные системы «Каскад»", text: 'Склад «Мособлфармация», 2016'})
+          -projectsArray.push({img: 'img/iproject2.jpg', cost: "от 1 800 руб. за 1 паллетоместо", href: "Стеллажные системы «Турин»", text: 'Склад «Кант», 2016'})
+          -projectsArray.push({img: 'img/iproject3.jpg', cost: "от 2 600 руб./м<sup>2</sup>", href: "Системы хранения «Оптима»", text: "Магазин «Элекс-Нет», 2017"})
+          -projectsArray.push({img: 'img/iproject1.jpg', cost: "от 2 600 руб за 1 полку", href: "Стеллажные системы «Каскад»", text: 'Склад «Мособлфармация», 2016'})
+          -projectsArray.push({img: 'img/iproject2.jpg', cost: "от 1 800 руб. за 1 паллетоместо", href: "Стеллажные системы «Турин»", text: 'Склад «Кант», 2016'})
+          -projectsArray.push({img: 'img/iproject3.jpg', cost: "от 2 600 руб./м<sup>2</sup>", href: "Системы хранения «Оптима»", text: "Магазин «Элекс-Нет», 2017"})
+          ul.projects__list
+            for project in projectsArray
+              .projects__elem
+                +project(project)
+          
+          include blocks/pagination 
+    include layout/__footer

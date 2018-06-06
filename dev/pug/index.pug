@@ -213,6 +213,8 @@ html
           a(href="#").projects__toall Все выполненные проекты
           
       section.reviews
+        include blocks/reviews-elem
+      
         .container
           a(href="#").reviews__toall Все отзывы
           button(type="button", data-fancybox, data-src="#reviews").btn.reviews__make Оставить отзыв
@@ -220,32 +222,12 @@ html
           .reviews__car-over
             .swiper-container.reviews__car.js-ireviews
               .swiper-wrapper
-                .swiper-slide
-                  .reviews__elem
-                    aside.reviews__about
-                      img(src="img/reviews-logo1.png").reviews__logo
-                      p.reviews__name АО «Стройтрансгаз» 
-                    .reviews__content
-                      aside.reviews__imgover
-                        img(src="img/reviews-img1.jpg").reviews__img
-                      .reviews__text
-                        p Компания АО «Стройтрансгаз» выражает благодарность «ГТС» за высокий профессионализм и качество проведенных работ в рамках договора поставки складскогой техники. Заказанное оборудование соответствует высоким технологическим требованиям и условиям контракта. ГТС складские системы выполнило  в срок взятые на себя обязательства на высоком профессиональном уровне.
-                      .reviews__person
-                        p.reviews__person-who Директор по эксплуатации и административным вопросам<br>Кириченко О. И.
-                        img(src="img/reviews-sign1.png").reviews__person-sign
-                .swiper-slide
-                  .reviews__elem
-                    aside.reviews__about
-                      img(src="img/reviews-logo1.png").reviews__logo
-                      p.reviews__name АО «Стройтрансгаз» 1
-                    .reviews__content
-                      aside.reviews__imgover
-                        img(src="img/reviews-img1.jpg").reviews__img
-                      .reviews__text
-                        p Компания АО «Стройтрансгаз» выражает благодарность «ГТС» за высокий профессионализм и качество проведенных работ в рамках договора поставки складскогой техники. Заказанное оборудование соответствует высоким технологическим требованиям и условиям контракта. 
-                      .reviews__person
-                        p.reviews__person-who Директор по эксплуатации и административным вопросам<br>Кириченко О. И.
-                        img(src="img/reviews-sign1.png").reviews__person-sign
+                  -var reviewsArray = []
+                  -reviewsArray.push({logosrc: 'img/reviews-logo1.png', name: "АО «Стройтрансгаз»", imgsrc: "img/reviews-img1.jpg", text: '<p>Компания АО «Стройтрансгаз» выражает благодарность «ГТС» за высокий профессионализм и качество проведенных работ в рамках договора поставки складскогой техники. Заказанное оборудование соответствует высоким технологическим требованиям и условиям контракта. ГТС складские системы выполнило  в срок взятые на себя обязательства на высоком профессиональном уровне.</p>', who: 'Директор по эксплуатации и административным вопросам<br>Кириченко О. И.', signsrc: 'img/reviews-sign1.png'})
+                  -reviewsArray.push({logosrc: 'img/reviews-logo1.png', name: "АО «Стройтрансгаз»", imgsrc: "img/reviews-img1.jpg", text: '<p>Компания АО «Стройтрансгаз» выражает благодарность «ГТС» за высокий профессионализм и качество проведенных работ в рамках договора поставки складскогой техники. Заказанное оборудование соответствует высоким технологическим требованиям и условиям контракта.</p>', who: 'Директор по эксплуатации и административным вопросам<br>Кириченко О. И.', signsrc: 'img/reviews-sign1.png'})
+                  for review in reviewsArray
+                    .swiper-slide
+                      +reviewsElem(review)
             .swiper-buttons
               .swiper-button-prev.swiper-button-prev_dark
               .swiper-button-next.swiper-button-next_dark

@@ -4,9 +4,31 @@
   z-index 1
   @media $mLandscape
     mb 122px
+  &__page,
   .container,
   &__car-over
     pos relative
+  &__toform
+    db()
+    pos absolute
+    r 24px
+    t -59px
+    cursor pointer
+    color $dark
+    fontify 14px 500 17px
+    border-bottom 2px dotted $orange
+    transition .5s border
+    @media $mPortraitMedium
+      dn()
+    &:hover
+      border-color transparent
+    &:after
+      content ""
+      pos absolute
+      r -23px
+      t 0
+      size 14px 18px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAASCAMAAABcgh8DAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAb1BMVEUODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg7///8r3oVhAAAAI3RSTlMA8A1vAQ62jIm3R/mBf0hPdnT7UFb8bmz+WF/9YWdqcXKHiP1LaNEAAAABYktHRCS0BvmZAAAACXBIWXMAAAsSAAALEgHS3X78AAAAXklEQVQY073ORw6AMAwEQIcOoVdD6Pv/P6IQBXgBe7HmYK+J7ghB3/xPx/Ueuj4FCC0jxJRIpIYZZE5USJSaFepGb7QdeiEG7kZzbWJWinm2NQsDvL61G7B/3zhOMy82FQTJiOncQAAAAABJRU5ErkJggg==") no-repeat center
   &__toall
     float right
     mr 28px
@@ -52,26 +74,35 @@
     align-items stretch
     @media $mLandscape
       flex-wrap wrap
+    ^[0]__page & + &
+      mt 30px
+  &__logo-blocker
+    h 110px
+    line-height 110px
+    mb 35px
+    @media $tLandscapeMax
+      mb 18px
+  &__logo
+    max-height 100%
+    display inline-block
+    vertical-align middle
   &__about
     border-right 2px solid #ececec
     w 310px
     text-align center
-    pt 65px
+    padding 47px 20px 0
     @media $desktopMax
       w 250px
     @media $tLandscapeMax
-      pt 35px
+      padding 18px 15px 0
     @media $mLandscape
       w 100%
       border-right 0
       border-bottom 2px solid #ececec
       padding 20px 0
   &__name
-    mt 70px
     color $dark
-    fontify 16px 400 24px
-    @media $tLandscapeMax
-      mt 35px
+    fontify 16px 500 24px
   &__content
     w calc(100% - 310px)
     padding 43px 47px
@@ -97,6 +128,31 @@
     max-width 430px
     @media $tLandscapeMax
       max-width 100%
+  &__stars
+    db()
+    pos relative
+    mt 5px
+    mb 32px
+    size 139px 20px
+    background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIsAAAAUCAMAAACK9z5bAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABTVBMVEX////ncBTncBTncBTncBTncBTncBTncBTpeybpfCfncBTncBTncBTncBTncBTncBTncBTncBTncBTncBToeCHoeCHncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTodh7ncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTpeiXpeybncBTncBTncBTncBTncBTncBTncBTncRXncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTwp27wqG/41br41rv++/nvoWX////ncBTriDzsjUPrij/76dr2yab2yafvomf+9/L76Nn759jqhDTysH3+/PnxrXjyr3z//Pr528P87uPsj0j407f407bodx/OTvsDAAAAUXRSTlMAACgpenvLH/7+6ulwnZzAwUtKFvz97gfvLjN9pzbeN9TMDqjQZPVhYCrTpQjxL9yNBpOSBY6vykEexxr++nEB7E7nT2jkOmfz47W5FbQJdgIIk6UsAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAfNJREFUSMel1edTwjAYBnCCWhRRVFTEOouoZYgTQVAUBVRQcGDFvRUc//9H04a0Pdq+d4R8ILn7NQ/PddpsdNg7bNYDxNYVacPeoS417+wC8kBsXXVdOrtMunAckAdi66rrwnHGLo7uHodlHIgMqlVxOHsdhi6us3OXZR6IDKp1cfX1uwxd3BeXA5Z5IDKo1sU9ODTQ3MUzXKmMeCziQGRRtYpn1Osd89AuvnFl8FeSdMWTtU/dA2IbihDVCYQmVJ2cuq7e4HEhSZfyXL2emlbzQGxDEcI6M4vHIEJD8jyjqOC/vZPUcXfrF3QnE0R2xRdE8M/ZdW+8Ob+g3C+B+Xu642E+0HRpQWRV5f8DzgVaZdEZoPeuGHx8kjc8PQZFw80HIqOSBmIwJMizEAqK2nMUjjzLW14iYZMnAUQ2bZyOcET5GImRsO6ZXnolZ/LVZ5IHIps2uixFyRz16brwb9L7x0dF+uRN8gh+mSObNrrwy2hldW0dbfC6Llyt/h2LfddrmyZ5ILIp/S7GE1ux2FYivql1SaZ+tnfS6Z3t31TSEAcio5Iqyd29jKyZ/d2k2uXgL5uT51z2L2/IA5FRSZeDw6OcPOeODvNql+NCkRxTLJwY8kBkVNIFK1lgpV1OS2V6ULl02hQHIqsqDbDSdx1W/PsPPNHQLbjPLDcAAAAASUVORK5CYII=") no-repeat left top
+    &:before
+      content ""
+      pos absolute
+      l 0
+      t 0
+      h 100%
+      w 0
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIsAAAAUCAMAAACK9z5bAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAk1BMVEX////ncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBT///9HpNfIAAAAL3RSTlMAACgpenvLH/5wwMEW/P0uM3023jcOqGT1KtMI8S+vyhr6cQFo5DpntbkVtAl2Atm16vsAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAABc0lEQVRIx7XV61LCMBAF4IRLKYrWitwRuQgKAvv+b2dCmjbJbjLuqPlBS75JzhlIp0LIarTa5iqC4SHharTaIjEYajM63UQXi3SXTjeVxlCbkWWJLhbpLlmWSmNoFdHL8160S41kF63xMI5WEX2AfrRLjWQXrfE0jlYRdwD30S41kl20xtM4ahIGDwCPg0iXBqkuRmNhHC2ebqMENUpzX4gf4d/r8xCCMXypVyTxH3Q09ufGI+c3xCiTKn6nUk6mzdR0EvyjPobnJbmUr2r72dzOzWfobHqIzq6r+GhyVe+/WJq55YJ4jlzEz1GjghhM1fu/2oIF0cVF3KVRKo2pev/STpZEFxdxl0apNKbeXn3q+2qlPt6ILi7iLo1SaUxV269z2Gx3u+0G8jXq4iHq4ioO46ra/h32Bx1z2MMH6uIh6qJVX7XiNK6q7T+PJ/OuOR2/UBcPURel5kYpTuOqlOfL1b6Er5dzsMDHsItSe4uXcvUbhFd8S9VzRS8AAAAASUVORK5CYII=") no-repeat left top
+    &_star1:before
+      w 20%
+    &_star2:before
+      w 40%
+    &_star3:before
+      w 60%
+    &_star4:before
+      w 80%
+    &_star5:before
+      w 100%
   &__person
     w 100%
     max-width 390px
@@ -146,3 +202,75 @@
       w 110px
       h 44px
       mt 30px
+      mt 30px
+      
+  &__form
+    mt 70px
+    border 2px solid #ececec
+    padding 50px
+    display flex
+    justify-content space-between
+    @media $tLandscapeMax
+      align-content flex-start
+      flex-wrap wrap
+    @media $mPortraitMax
+      padding 35px
+    &-stars
+      pos relative
+      overflow hidden
+      mb 10px
+      &-input
+        pos absolute
+        w 0
+        h 0
+        opacity 0
+        l -1000px
+        t -1000px
+        border 0
+    &-star
+      ib()
+      cursor pointer
+      size 30px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABLFBMVEXncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBT///9Vwd2wAAAAYnRSTlMAKCl6e8sf6ulvnZxwwEvBFu4HZae3VlQP8AzxWrFbOES6YCfPuxKS3U/neAJ3HcIYuQOB5UbkQOOJBYgUSRAJEbCvqGQOYzDax2ZVRZEKo9Mm4CufKuEu3C998/LJqsoVa5AH0o0AAAABYktHRGNcvi2qAAAACXBIWXMAAAsSAAALEgHS3X78AAABPElEQVQoz33Ra1eCQBAG4LFC6WaKWiYqguY9Nc0k0qyMQE2ksjIrS///j4g1SViC+TDnnX04Z5ddAFO51sCp1jccmSCc1O0h3Q68ubW948C7Xu+evfr8FOX32XIgCBAM2HJoH+AgZKfhwwhAhA7bcDSGeixuXGMSf8VyaIFjVysMJFNz4mhZacRpfSLmqSQAlcky/23FZDPUIuTyhSKOxeN8Ts+lMlsxa+WkXFpN1dpp3aj1s1rV9HmDPxf0LFzwDXyzJt/SY4tvWg56Sbf12KavrFd2vco3UQt3blEXRdTvOrgKi3eWZFkC9O4Cxomu1npkv0/2tNC9x3hQAGWoanf8oA4VKAwwfnxyqSMFJWWkup5fzPo6jns4feDI+PjNxJP3xZmWJckfExN/TkXjKE6/jOP3DP/R2e+9/gCDiChMONHvUgAAAABJRU5ErkJggg==") no-repeat center
+      transition .5s bac
+      &.choosed
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA3lBMVEX////nbxfncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBTncBXnbxbnbxfncBT///85NmSCAAAARXRSTlMAACgpenvLH/5vcMDBFvxltw/4+VpbOES6J88Hkk/sHcIDgUDkFOMQ+hGoBfDxVUWR0ybgnwrhLvZg9S992jDJqg7KFWuPc4SaAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAARxJREFUKM9909lWwjAQBuDEBepCAa1A2bcisgkKKgoIykzy/k9kk2PbJKX97zpfMmfSNoQEoSJn5zQI0SNrF5epnMmkcdaysil8BXCdwjeIt8mcsxmzc4mcB8Ygn8gFZAwLSVy8Y37uiwnsgGB4ULlUDlNBwViJKiXiVjkEYTLhI6+6hNTqFrITQatek/0bzROOzUYwVasNpkK7FU3d6dpaA7S7He1Yvb7SAPo989zeINyPAy/2Wh6H0e7hU4wdtbkT45EyG45MHk9knXO5ajI2uCx643Q2mwqHZ4PnfhUWLqUvC38hzg1+RQbLlfiQq6Xvbzq/c/xYBz/h+hP5l8Ybvt2FF4Dutnyj8ff+QJUc9j8q/x7/L1GYoyfhDy7pUPx0CalSAAAAAElFTkSuQmCC") no-repeat center
+      & + &
+        ml 10px
+    &-text
+      color $dark
+      w 380px
+      @media $desktopMax
+        w 342px
+      @media $tLandscapeMax
+        w 100%
+    &-title
+      fontify 30px 400 36px
+      mb 20px
+    &-main
+      w 750px
+      display flex
+      justify-content space-between
+      flex-wrap wrap
+      @media $desktopMax
+        w 610px
+      @media $tLandscapeMax
+        w 100%
+        mt 30px
+      @media $mLandscape
+        flex-direction column
+    &-bottom
+      mt 20px
+      w 100%
+      display flex
+      justify-content space-between
+      @media $mLandscape
+        flex-direction column
+      .fakecheckbox
+        mt 4px
+        @media $tPortraitMax
+          mt 0
+        @media $mLandscape
+          mb 20px
+    .common__textarea
+      h 184px

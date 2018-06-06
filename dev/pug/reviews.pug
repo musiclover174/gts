@@ -1,0 +1,81 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    main.content
+      .container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim /
+          a(href="#").breadcrumbs__href О компании
+          span.breadcrumbs__delim /
+        h1 Отзывы
+        .reviews__page
+          button(type="button", data-to="reviews__form").reviews__toform.js-scrollTo Оставить отзыв
+          include blocks/reviews-elem
+          
+          -var reviewsArray = []
+          -reviewsArray.push({logosrc: 'img/reviews-logo1.png', name: "АО «Стройтрансгаз»", imgsrc: "img/reviews-img1.jpg", text: '<p>Компания АО «Стройтрансгаз» выражает благодарность «ГТС» за высокий профессионализм и качество проведенных работ в рамках договора поставки складскогой техники. Заказанное оборудование соответствует высоким технологическим требованиям и условиям контракта. ГТС складские системы выполнило  в срок взятые на себя обязательства на высоком профессиональном уровне.</p>', who: 'Директор по эксплуатации и административным вопросам<br>Кириченко О. И.', signsrc: 'img/reviews-sign1.png', stars: '5'})
+          -reviewsArray.push({logosrc: 'img/reviews-logo2.png', name: "Фирма «МОСПОСУДА-1»", imgsrc: "img/reviews-img2.jpg", text: '<p>Компания ООО «ГорТоргСнаб» проявила себя как ответственный и добросовестный поставщик складской техники и комплектующих к ней. Исполнительность, постоянное развитие, индивидуальный подход к заказчику, скорость выполнения поставок - это лучшие отличительные черты вашей организации. Сотрудники вашей компании - это высококвалифицированные профессионалы, сотрудничество с которыми приносит не только выгоду, но и доставляет удовольствие.</p>', who: 'Начальник отдела снабжения  ЗАО Фирма «МОСПОСУДА-1»<br>Толстошеев Ю. Б.', signsrc: 'img/reviews-sign1.png', stars: '5'})
+          -reviewsArray.push({name: "Московский Международный Фонд содействия ЮНЕСКО", imgsrc: "img/reviews-img3.jpg", text: '<p>Коллектив Международной общественной организации «Московский Международный Фонд содействия ЮНЕСКО» выражает искреннюю благодарность ООО «ГорТоргСнаб» за качественное и своевременное исполнение договорных обязательств, а также за всестороннее содействие в обеспечении всем необходимым складских и производственных помещений Фонда.</p><p>Выгодные ценовые условия, постоянное наличие на складах компании продукции собственного производства, при неизменно высоком качестве, делают сотрудничество с ООО «ГорТоргСнаб» очень привлекательным.</p><p>Хотим отдельно отметить грамотную и оперативную работу менеджеров компании, которые незамедлительно обрабатывали все заявки Фонда, в кратчайшие сроки производили поставки необходимой продукции и организовывали сборку оборудования в помещениях Фонда.</p>', who: 'Вице-президент Московского Международного Фонда содействия ЮНЕСКО, Академик РАХ<br>Попова М. В.', signsrc: 'img/reviews-sign1.png', stars: '4'})
+          -reviewsArray.push({logosrc: 'img/reviews-logo3.png', name: "RENAULT AVANTIME", imgsrc: "img/reviews-img1.jpg", text: '<p>Выражаем Вам свое почтение и благодарим за высокий уровень услуг, предоставляемых Вашей Компанией. Качество оборудования, своевременная поставка и проведение монтажных работ в максимально короткие сроки - вот определяющие факторы выбора именно Вашей Компании</p>', who: 'Генеральный директор ДЦ AVANTIME<br>В.А. Таборский', signsrc: 'img/reviews-sign1.png', stars: '5'})
+          -reviewsArray.push({logosrc: 'img/reviews-logo-default.png', imgsrc: "img/reviews-img2.jpg", text: '<p>Качество сборки и характеристики стеллажного оборудования позволяют эффективно использовать складские площади и соблюдать санитарно-гигиенические требования.</p><p>Сотрудники фирмы работали очень профессионально и оперативно.</p><p>Желаем Вашей фирме больших успехов и в дальнейшем!</p>', stars: '4'})
+          for review in reviewsArray
+            +reviewsElem(review)
+          
+          include blocks/pagination 
+          
+          form(data-scroll="reviews__form").reviews__form
+            aside.reviews__form-text
+              p.reviews__form-title Оставить отзыв
+              p Оставьте  отзыв о проделаной работе с помощью этой формы. Помогите нам стать лучше. Обратите внимание, поля со звездочками – обязательны для заполнения.
+            .reviews__form-main
+              .common__row
+                .reviews__form-stars
+                  input(type="stars", value="").reviews__form-stars-input.js-reviews-starinput
+                  span(data-star="1").reviews__form-star.js-reviews-star
+                  span(data-star="2").reviews__form-star.js-reviews-star
+                  span(data-star="3").reviews__form-star.js-reviews-star
+                  span(data-star="4").reviews__form-star.js-reviews-star
+                  span(data-star="5").reviews__form-star.js-reviews-star
+              .common__row
+                input(type="text", data-req="req").common__input
+                label.common__placeholder Название компании
+              .common__row
+                .common__col
+                  .common__row
+                    input(type="text", data-req="req").common__input
+                    label.common__placeholder ФИО
+                      span *
+                  .common__row
+                    input(type="text", data-req="req").common__input
+                    label.common__placeholder Должность
+                      span *
+                  .common__row
+                    input(type="text", data-req="req", data-type="email").common__input
+                    label.common__placeholder E-mail
+                      span *
+                .common__col
+                  .common__row
+                    textarea(data-req="req").common__textarea
+                    label.common__placeholder Текст отзыва
+                      span *
+              .common__row
+                .common__col
+                  .common__fileover
+                    input(type="file", name="").common__file#file1.js-common-fileinput
+                    label(for="file1", data-default="Добавить логотип").common__filename.js-common-file Добавить логотип
+                    button(type="button").common__filedelete.js-common-filedelete
+                  .common__fileover
+                    input(type="file", name="").common__file#file2.js-common-fileinput
+                    label(for="file2", data-default="Добавить изображение").common__filename.js-common-file Добавить изображение
+                    button(type="button").common__filedelete.js-common-filedelete
+              .reviews__form-bottom
+                .fakecheckbox
+                  input(type="checkbox", value="", name="agreement", checked)#agreement1.fakecheckbox__truecheck
+                  label(for="agreement1").fakecheckbox__label Я даю согласие на 
+                    a(href="#") обработку персональных данных
+                input(type="submit", value="Отправить").btn.common__sbm
+    include layout/__footer

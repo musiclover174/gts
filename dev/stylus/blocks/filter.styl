@@ -1,0 +1,55 @@
+.filter
+  display flex
+  justify-content space-between
+  pt 15px
+  mb 43px
+  @media $tLandscapeMax
+    flex-direction column
+  &__actions
+    &-href
+      color alpha($dark, .5)
+      fontify 14px 400 22px
+      border-bottom 1px solid alpha($dark, .3)
+      transition .5s border
+      &:hover
+        border-color transparent
+      & + &
+        ml 28px
+        @media $desktopMax
+          ml 18px
+    @media $tLandscapeMax
+      mt 10px
+    @media $tPortraitMax
+      mt 25px
+  &__main
+    display flex
+    @media $tPortraitMax
+      flex-direction column
+  &__sort
+    color alpha($dark, .5)
+    fontify 14px 400 22px
+    &-href
+      color $dark
+      fontify 14px 400 22px
+      ml 22px
+      border-bottom 2px dotted $orange
+      transition .5s border, .5s color
+      @media $desktopMax
+        ml 10px
+      &:hover,
+      &.active
+        border-color transparent
+        color $orange
+  &__show
+    color alpha($dark, .5)
+    fontify 14px 400 22px
+    ml 40px
+    @media $desktopMax
+      ml 25px
+    @media $tPortraitMax
+      ml 0
+      mt 30px
+  .choices,
+  .common__select
+    color $dark
+    w 101px

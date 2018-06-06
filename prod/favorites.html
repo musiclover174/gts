@@ -100,103 +100,274 @@
       <div class="container">
         <section class="breadcrumbs"><a class="breadcrumbs__href" href="#">Главная</a><span class="breadcrumbs__delim">/</span></section>
         <h1>Отложенные товары</h1>
-        <div class="news">
-          <ul class="card__list">
-                      <li class="card__elem">
-                        <div class="card__elem-hrefover"><a class="card__elem-href" href="#">Стеллаж сборный (разборный) ТСУ 1-150</a></div>
-                        <div class="card__elem-icons">
-                          <button class="card__elem-tofavorites" type="button"></button>
-                          <button class="card__elem-tocompare" type="button"></button>
-                        </div>
-                        <div class="card__elem-info">
-                          <div class="card__elem-params">
-                            <div class="card__elem-params-row">
-                              <p class="card__elem-params-title">Высота</p>
-                              <p class="card__elem-params-val">2000 мм</p>
+        <section class="favorites">
+          <div class="favorites__optionals"><a class="favorites__optionals-href favorites__optionals-href_mail" href="#">Отправить на E-mail</a><a class="favorites__optionals-href favorites__optionals-href_print js-print" href="#">Распечатать</a></div>
+          <section class="filter">
+            <div class="filter__main">
+              <div class="filter__sort">Сортировать:<a class="filter__sort-href active" href="#">по дате добавления</a><a class="filter__sort-href" href="#">сначала дорогие</a><a class="filter__sort-href" href="#">сначала дешёвые</a></div>
+              <div class="filter__show">Отображать:
+                <select class="js-select" name="">
+                  <option val="0" selected>Все</option>
+                  <option val="10">по 10</option>
+                  <option val="20">по 20</option>
+                </select>
+              </div>
+            </div>
+            <aside class="filter__actions"><a class="filter__actions-href js-filter-tocompare" href="#">Добавить в сравнение</a><a class="filter__actions-href js-filter-delete" href="#">Удалить из отложенных</a></aside>
+          </section>
+          <section class="favorites__cards">
+            <ul class="card__list">
+                          <li class="card__elem">
+                            <div class="card__elem-hrefover"><a class="card__elem-href" href="#">Стеллаж сборный (разборный) ТСУ 1-150</a></div>
+                            <div class="card__elem-checkbox"><span class="card__elem-checkfake js-checkfake"></span>
+                              <input class="card__elem-checktrue" type="checkbox" name="card-checks">
                             </div>
-                            <div class="card__elem-params-row">
-                              <p class="card__elem-params-title">Ширина</p>
-                              <p class="card__elem-params-val">2000 мм</p>
+                            <div class="card__elem-icons">
+                              <button class="card__elem-tofavorites" type="button"></button>
+                              <button class="card__elem-tocompare" type="button"></button>
                             </div>
-                            <div class="card__elem-params-row">
-                              <p class="card__elem-params-title">Глубина</p>
-                              <p class="card__elem-params-val">300 мм</p>
+                            <div class="card__elem-info">
+                              <div class="card__elem-params">
+                                <div class="card__elem-params-row">
+                                  <p class="card__elem-params-title">Высота</p>
+                                  <p class="card__elem-params-val">2000 мм</p>
+                                </div>
+                                <div class="card__elem-params-row">
+                                  <p class="card__elem-params-title">Ширина</p>
+                                  <p class="card__elem-params-val">2000 мм</p>
+                                </div>
+                                <div class="card__elem-params-row">
+                                  <p class="card__elem-params-title">Глубина</p>
+                                  <p class="card__elem-params-val">300 мм</p>
+                                </div>
+                                <div class="card__elem-params-row">
+                                  <p class="card__elem-params-title">Вес</p>
+                                  <p class="card__elem-params-val">120 кг</p>
+                                </div>
+                              </div>
+                              <aside class="card__elem-imgover"><img class="card__elem-img" src="img/card1.jpg" alt=""><span class="card__elem-modified card__elem-modified_new"></span></aside>
                             </div>
-                            <div class="card__elem-params-row">
-                              <p class="card__elem-params-title">Вес</p>
-                              <p class="card__elem-params-val">120 кг</p>
+                            <div class="card__elem-price"><span class="card__elem-prevcost">20 008 <sub>руб.</sub></span><span class="card__elem-cost">4 428 <sub>руб.</sub></span>
+                              <button class="btn card__elem-tocart added" type="button" data-default="в корзину" data-added="в корзине"></button>
                             </div>
-                          </div>
-                          <aside class="card__elem-imgover"><img class="card__elem-img" src="img/card1.jpg" alt=""><span class="card__elem-modified card__elem-modified_new"></span></aside>
-                        </div>
-                        <div class="card__elem-price"><span class="card__elem-prevcost">20 008 <sub>руб.</sub></span><span class="card__elem-cost">4 428 <sub>руб.</sub></span>
-                          <button class="btn card__elem-tocart added" type="button" data-default="в корзину" data-added="в корзине"></button>
-                        </div>
-                      </li>
-                      <li class="card__elem">
-                        <div class="card__elem-hrefover"><a class="card__elem-href" href="#">Большегрузная тележка БТ 3</a></div>
-                        <div class="card__elem-icons">
-                          <button class="card__elem-tofavorites" type="button"></button>
-                          <button class="card__elem-tocompare" type="button"></button>
-                        </div>
-                        <div class="card__elem-info">
-                          <div class="card__elem-params">
-                            <div class="card__elem-params-row">
-                              <p class="card__elem-params-title">Грузоподъемность</p>
-                              <p class="card__elem-params-val">400 кг</p>
+                          </li>
+                          <li class="card__elem">
+                            <div class="card__elem-hrefover"><a class="card__elem-href" href="#">Большегрузная тележка БТ 3</a></div>
+                            <div class="card__elem-checkbox"><span class="card__elem-checkfake js-checkfake"></span>
+                              <input class="card__elem-checktrue" type="checkbox" name="card-checks">
                             </div>
-                            <div class="card__elem-params-row">
-                              <p class="card__elem-params-title">Высота подъема вил</p>
-                              <p class="card__elem-params-val">1550 мм</p>
+                            <div class="card__elem-icons">
+                              <button class="card__elem-tofavorites" type="button"></button>
+                              <button class="card__elem-tocompare" type="button"></button>
                             </div>
-                            <div class="card__elem-params-row">
-                              <p class="card__elem-params-title">Минимальная высота бочки</p>
-                              <p class="card__elem-params-val">879 мм</p>
+                            <div class="card__elem-info">
+                              <div class="card__elem-params">
+                                <div class="card__elem-params-row">
+                                  <p class="card__elem-params-title">Грузоподъемность</p>
+                                  <p class="card__elem-params-val">400 кг</p>
+                                </div>
+                                <div class="card__elem-params-row">
+                                  <p class="card__elem-params-title">Высота подъема вил</p>
+                                  <p class="card__elem-params-val">1550 мм</p>
+                                </div>
+                                <div class="card__elem-params-row">
+                                  <p class="card__elem-params-title">Минимальная высота бочки</p>
+                                  <p class="card__elem-params-val">879 мм</p>
+                                </div>
+                                <div class="card__elem-params-row">
+                                  <p class="card__elem-params-title">Максимальная высота бочки</p>
+                                  <p class="card__elem-params-val">890 мм</p>
+                                </div>
+                              </div>
+                              <aside class="card__elem-imgover"><img class="card__elem-img" src="img/card2.jpg" alt=""><span class="card__elem-modified card__elem-modified_actions"></span></aside>
                             </div>
-                            <div class="card__elem-params-row">
-                              <p class="card__elem-params-title">Максимальная высота бочки</p>
-                              <p class="card__elem-params-val">890 мм</p>
+                            <div class="card__elem-price"><span class="card__elem-cost">56 334 <sub>руб.</sub></span>
+                              <button class="btn card__elem-tocart" type="button" data-default="в корзину" data-added="в корзине"></button>
                             </div>
-                          </div>
-                          <aside class="card__elem-imgover"><img class="card__elem-img" src="img/card2.jpg" alt=""><span class="card__elem-modified card__elem-modified_actions"></span></aside>
-                        </div>
-                        <div class="card__elem-price"><span class="card__elem-cost">56 334 <sub>руб.</sub></span>
-                          <button class="btn card__elem-tocart" type="button" data-default="в корзину" data-added="в корзине"></button>
-                        </div>
-                      </li>
-                      <li class="card__elem">
-                        <div class="card__elem-hrefover"><a class="card__elem-href" href="#">Штабелер с электроподъемом CDD 15B</a></div>
-                        <div class="card__elem-icons">
-                          <button class="card__elem-tofavorites" type="button"></button>
-                          <button class="card__elem-tocompare" type="button"></button>
-                        </div>
-                        <div class="card__elem-info">
-                          <div class="card__elem-params">
-                            <div class="card__elem-params-row">
-                              <p class="card__elem-params-title">Грузоподъемность</p>
-                              <p class="card__elem-params-val">1500 кг</p>
+                          </li>
+                          <li class="card__elem">
+                            <div class="card__elem-hrefover"><a class="card__elem-href" href="#">Штабелер с электроподъемом CDD 15B</a></div>
+                            <div class="card__elem-checkbox"><span class="card__elem-checkfake js-checkfake"></span>
+                              <input class="card__elem-checktrue" type="checkbox" name="card-checks">
                             </div>
-                            <div class="card__elem-params-row">
-                              <p class="card__elem-params-title"> Г/п на макс. высоте</p>
-                              <p class="card__elem-params-val">1550 мм</p>
+                            <div class="card__elem-icons">
+                              <button class="card__elem-tofavorites" type="button"></button>
+                              <button class="card__elem-tocompare" type="button"></button>
                             </div>
-                            <div class="card__elem-params-row">
-                              <p class="card__elem-params-title">Высота подъема вил</p>
-                              <p class="card__elem-params-val">879 мм</p>
+                            <div class="card__elem-info">
+                              <div class="card__elem-params">
+                                <div class="card__elem-params-row">
+                                  <p class="card__elem-params-title">Грузоподъемность</p>
+                                  <p class="card__elem-params-val">1500 кг</p>
+                                </div>
+                                <div class="card__elem-params-row">
+                                  <p class="card__elem-params-title"> Г/п на макс. высоте</p>
+                                  <p class="card__elem-params-val">1550 мм</p>
+                                </div>
+                                <div class="card__elem-params-row">
+                                  <p class="card__elem-params-title">Высота подъема вил</p>
+                                  <p class="card__elem-params-val">879 мм</p>
+                                </div>
+                                <div class="card__elem-params-row">
+                                  <p class="card__elem-params-title">Собственый вес</p>
+                                  <p class="card__elem-params-val">500 кг</p>
+                                </div>
+                              </div>
+                              <aside class="card__elem-imgover"><img class="card__elem-img" src="img/card3.jpg" alt=""><span class="card__elem-modified card__elem-modified_hit"></span></aside>
                             </div>
-                            <div class="card__elem-params-row">
-                              <p class="card__elem-params-title">Собственый вес</p>
-                              <p class="card__elem-params-val">500 кг</p>
+                            <div class="card__elem-price"><span class="card__elem-cost">56 334 <sub>руб.</sub></span>
+                              <button class="btn card__elem-tocart" type="button" data-default="в корзину" data-added="в корзине"></button>
                             </div>
-                          </div>
-                          <aside class="card__elem-imgover"><img class="card__elem-img" src="img/card3.jpg" alt=""><span class="card__elem-modified card__elem-modified_hit"></span></aside>
-                        </div>
-                        <div class="card__elem-price"><span class="card__elem-cost">56 334 <sub>руб.</sub></span>
-                          <button class="btn card__elem-tocart" type="button" data-default="в корзину" data-added="в корзине"></button>
-                        </div>
-                      </li>
-          </ul>
-        </div>
+                          </li>
+            </ul>
+          </section>
+          <section class="favorites__banner" style="background-image: url(img/favbanner.jpg)">
+            <p class="favorites__banner-text">Комплексное оснащение складов <span>со скидкой до 30%</span>, заголовок в три сторки, чтобы показать межстрочный интервал</p>
+          </section>
+          <form class="favorites__economy">
+            <aside class="favorites__economy-text">
+              <p class="favorites__economy-title">Экономьте свое время!</p>
+              <p>Остались вопросы, напишите нам и мы обязательно вам на них ответим. Обратите внимание, поля со звездочками – обязательны для заполнения.</p>
+            </aside>
+            <div class="favorites__economy-form">
+              <div class="common__col">
+                <div class="common__row">
+                  <input class="common__input" type="text" data-req="req">
+                  <label class="common__placeholder">Ваше имя<span>*</span></label>
+                </div>
+                <div class="common__row">
+                  <input class="common__input js-phone" type="text" data-req="req">
+                  <label class="common__placeholder">Ваш номер телефона<span>*</span></label>
+                </div>
+              </div>
+              <div class="common__col">
+                <div class="common__row">
+                  <textarea class="common__textarea"></textarea>
+                  <label class="common__placeholder">Интересующий вопрос</label>
+                </div>
+              </div>
+              <div class="favorites__economy-bottom">
+                <div class="fakecheckbox">
+                  <input class="fakecheckbox__truecheck" type="checkbox" value="" name="agreement" checked id="agreement1">
+                  <label class="fakecheckbox__label" for="agreement1">Я даю согласие на <a href="#">обработку персональных данных</a></label>
+                </div>
+                <input class="btn common__sbm" type="submit" value="Отправить">
+              </div>
+            </div>
+          </form>
+          <section class="recent">
+            <p class="common__title">Вы недавно просматривали</p>
+            <div class="recent__car-over">
+              <div class="swiper-container recent__car js-recent">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                                <li class="card__elem">
+                                  <div class="card__elem-hrefover"><a class="card__elem-href" href="#">Стеллаж сборный (разборный) ТСУ 1-150</a></div>
+                                  <div class="card__elem-icons">
+                                    <button class="card__elem-tofavorites" type="button"></button>
+                                    <button class="card__elem-tocompare" type="button"></button>
+                                  </div>
+                                  <div class="card__elem-info">
+                                    <div class="card__elem-params">
+                                      <div class="card__elem-params-row">
+                                        <p class="card__elem-params-title">Высота</p>
+                                        <p class="card__elem-params-val">2000 мм</p>
+                                      </div>
+                                      <div class="card__elem-params-row">
+                                        <p class="card__elem-params-title">Ширина</p>
+                                        <p class="card__elem-params-val">2000 мм</p>
+                                      </div>
+                                      <div class="card__elem-params-row">
+                                        <p class="card__elem-params-title">Глубина</p>
+                                        <p class="card__elem-params-val">300 мм</p>
+                                      </div>
+                                      <div class="card__elem-params-row">
+                                        <p class="card__elem-params-title">Вес</p>
+                                        <p class="card__elem-params-val">120 кг</p>
+                                      </div>
+                                    </div>
+                                    <aside class="card__elem-imgover"><img class="card__elem-img" src="img/card1.jpg" alt=""><span class="card__elem-modified card__elem-modified_new"></span></aside>
+                                  </div>
+                                  <div class="card__elem-price"><span class="card__elem-prevcost">20 008 <sub>руб.</sub></span><span class="card__elem-cost">4 428 <sub>руб.</sub></span>
+                                    <button class="btn card__elem-tocart added" type="button" data-default="в корзину" data-added="в корзине"></button>
+                                  </div>
+                                </li>
+                  </div>
+                  <div class="swiper-slide">
+                                <li class="card__elem">
+                                  <div class="card__elem-hrefover"><a class="card__elem-href" href="#">Большегрузная тележка БТ 3</a></div>
+                                  <div class="card__elem-icons">
+                                    <button class="card__elem-tofavorites" type="button"></button>
+                                    <button class="card__elem-tocompare" type="button"></button>
+                                  </div>
+                                  <div class="card__elem-info">
+                                    <div class="card__elem-params">
+                                      <div class="card__elem-params-row">
+                                        <p class="card__elem-params-title">Грузоподъемность</p>
+                                        <p class="card__elem-params-val">400 кг</p>
+                                      </div>
+                                      <div class="card__elem-params-row">
+                                        <p class="card__elem-params-title">Высота подъема вил</p>
+                                        <p class="card__elem-params-val">1550 мм</p>
+                                      </div>
+                                      <div class="card__elem-params-row">
+                                        <p class="card__elem-params-title">Минимальная высота бочки</p>
+                                        <p class="card__elem-params-val">879 мм</p>
+                                      </div>
+                                      <div class="card__elem-params-row">
+                                        <p class="card__elem-params-title">Максимальная высота бочки</p>
+                                        <p class="card__elem-params-val">890 мм</p>
+                                      </div>
+                                    </div>
+                                    <aside class="card__elem-imgover"><img class="card__elem-img" src="img/card2.jpg" alt=""><span class="card__elem-modified card__elem-modified_actions"></span></aside>
+                                  </div>
+                                  <div class="card__elem-price"><span class="card__elem-cost">56 334 <sub>руб.</sub></span>
+                                    <button class="btn card__elem-tocart" type="button" data-default="в корзину" data-added="в корзине"></button>
+                                  </div>
+                                </li>
+                  </div>
+                  <div class="swiper-slide">
+                                <li class="card__elem">
+                                  <div class="card__elem-hrefover"><a class="card__elem-href" href="#">Штабелер с электроподъемом CDD 15B</a></div>
+                                  <div class="card__elem-icons">
+                                    <button class="card__elem-tofavorites" type="button"></button>
+                                    <button class="card__elem-tocompare" type="button"></button>
+                                  </div>
+                                  <div class="card__elem-info">
+                                    <div class="card__elem-params">
+                                      <div class="card__elem-params-row">
+                                        <p class="card__elem-params-title">Грузоподъемность</p>
+                                        <p class="card__elem-params-val">1500 кг</p>
+                                      </div>
+                                      <div class="card__elem-params-row">
+                                        <p class="card__elem-params-title"> Г/п на макс. высоте</p>
+                                        <p class="card__elem-params-val">1550 мм</p>
+                                      </div>
+                                      <div class="card__elem-params-row">
+                                        <p class="card__elem-params-title">Высота подъема вил</p>
+                                        <p class="card__elem-params-val">879 мм</p>
+                                      </div>
+                                      <div class="card__elem-params-row">
+                                        <p class="card__elem-params-title">Собственый вес</p>
+                                        <p class="card__elem-params-val">500 кг</p>
+                                      </div>
+                                    </div>
+                                    <aside class="card__elem-imgover"><img class="card__elem-img" src="img/card3.jpg" alt=""><span class="card__elem-modified card__elem-modified_hit"></span></aside>
+                                  </div>
+                                  <div class="card__elem-price"><span class="card__elem-cost">56 334 <sub>руб.</sub></span>
+                                    <button class="btn card__elem-tocart" type="button" data-default="в корзину" data-added="в корзине"></button>
+                                  </div>
+                                </li>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-buttons">
+                <div class="swiper-button-prev swiper-button-prev_dark"></div>
+                <div class="swiper-button-next swiper-button-next_dark"></div>
+              </div>
+            </div>
+          </section>
+        </section>
       </div>
     </main>
     <footer class="footer">

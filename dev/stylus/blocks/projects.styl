@@ -5,6 +5,24 @@
   .container,
   &__car-over
     pos relative
+  &__page
+    mt 46px
+  &__list
+    display flex
+    flex-wrap wrap
+    ml -30px
+    w calc(100% + 30px)
+    mb -45px
+  &__elem
+    w calc(25% - 30px)
+    ml 30px
+    mb 45px
+    @media $desktopMax
+      w calc(100% / 3 - 30px)
+    @media $tPortraitMax
+      w calc(50% - 30px)
+    @media $mLandscape
+      w calc(100% - 30px)
   &__imgover
     db()
     w 100%
@@ -13,6 +31,8 @@
     pos relative
     mb 26px
     @media $tLandscapeMax
+      mb 16px
+    ^[0]__page &
       mb 16px
   &__img
     imgCentering()
@@ -37,6 +57,9 @@
     @media $tLandscapeMax
       fontify 15px 400 21px
       padding 8px 10px 10px
+    ^[0]__page &
+      fontify 15px 400 21px
+      padding 8px 20px 10px
   &__href
     color $dark
     fontify 20px 500 26px
@@ -46,10 +69,14 @@
       border-color transparent
     @media $tLandscapeMax
       fontify 18px 500 24px
+    ^[0]__page &
+      fontify 16px 500 22px
   &__text
     color $dark
     fontify 14px 400 22px
     mt 15px
+    ^[0]__page &
+      mt 20px
   &__toall
     pos absolute
     r 32px

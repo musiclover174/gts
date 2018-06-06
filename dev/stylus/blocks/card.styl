@@ -38,6 +38,36 @@
       transition .5s border
       &:hover
         border-color transparent
+    &-checkfake
+      db()
+      pos relative
+      size 28px
+      border 2px solid #b6b6b6
+      cursor pointer
+      &:before
+        content ""
+        pos absolute
+        l 4px
+        t 4px
+        opacity 0
+        size 16px 13px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANBAMAAABSlfMXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///+QQS04AAAACHRSTlMAAyio8Dc2OCv712kAAAABYktHRAnx2aXsAAAACXBIWXMAAAsSAAALEgHS3X78AAAAQElEQVQI12NgAANGBQjNIOwKFbBwgwq0JGARYBIACoCUhhgCBQKAjJJmQbAAA6uHMVgAKNcBNYzVJQBqfCqYBAAMIApabcID8AAAAABJRU5ErkJggg==") no-repeat center
+        transition .5s opacity
+      &.clicked:before
+        opacity 1
+    &-checktrue
+      pos absolute
+      w 0 
+      h 0
+      border 0
+      opacity 0
+    &-checkbox
+      t 23px
+      r 22px
+      pos absolute
+      size 28px
+      & + ^[-1]-icons
+        t 71px
     &-icons
       t 28px
       r 27px

@@ -1,0 +1,19 @@
+mixin reviewsElem(data)
+  .reviews__elem
+    aside.reviews__about
+      if data.logosrc
+        .reviews__logo-blocker
+          img(src=data.logosrc).reviews__logo
+      if data.name
+        p.reviews__name #{data.name}
+    .reviews__content
+      aside.reviews__imgover
+        img(src=data.imgsrc).reviews__img
+      .reviews__text 
+        if data.stars
+          span(class="reviews__stars reviews__stars_star" + data.stars)
+        | !{data.text}
+      if data.who && data.signsrc
+        .reviews__person
+          p.reviews__person-who !{data.who}
+          img(src=data.signsrc).reviews__person-sign

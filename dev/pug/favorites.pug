@@ -10,14 +10,65 @@ html
           a(href="#").breadcrumbs__href Главная
           span.breadcrumbs__delim /
         h1 Отложенные товары
-        .news
-          include blocks/card-elem
+        section.favorites
+          .favorites__optionals
+            a(href="#").favorites__optionals-href.favorites__optionals-href_mail Отправить на E-mail
+            a(href="#").favorites__optionals-href.favorites__optionals-href_print.js-print Распечатать
+          section.filter
+            .filter__main
+              .filter__sort Сортировать:
+                a(href="#").filter__sort-href.active по дате добавления
+                a(href="#").filter__sort-href сначала дорогие
+                a(href="#").filter__sort-href сначала дешёвые
+              .filter__show Отображать:
+                select(name="").js-select
+                  option(val="0", selected) Все
+                  option(val="10") по 10
+                  option(val="20") по 20
+            aside.filter__actions
+              a(href="#").filter__actions-href.js-filter-tocompare Добавить в сравнение
+              a(href="#").filter__actions-href.js-filter-delete Удалить из отложенных
 
-          -var cardArray = []
-          -cardArray.push({img: 'img/card1.jpg', name: "Стеллаж сборный (разборный) ТСУ 1-150", params: [{title: 'Высота', value: '2000 мм'},{title: 'Ширина', value: '2000 мм'},{title: 'Глубина', value: '300 мм'},{title: 'Вес', value: '120 кг'}], cost: '4 428', prevcost: '20 008', modified: 'new'})
-          -cardArray.push({img: 'img/card2.jpg', name: "Большегрузная тележка БТ 3", params: [{title: 'Грузоподъемность', value: '400 кг'},{title: 'Высота подъема вил', value: '1550 мм'},{title: 'Минимальная высота бочки', value: '879 мм'},{title: 'Максимальная высота бочки', value: '890 мм'}], cost: '56 334', modified: 'actions'})
-          -cardArray.push({img: 'img/card3.jpg', name: "Штабелер с электроподъемом CDD 15B", params: [{title: 'Грузоподъемность', value: '1500 кг'},{title: ' Г/п на макс. высоте', value: '1550 мм'},{title: 'Высота подъема вил', value: '879 мм'},{title: 'Собственый вес', value: '500 кг'}], cost: '56 334', modified: 'hit'})
-          ul.card__list
-            for card in cardArray
-              +cardElem(card)
+          section.favorites__cards
+            include blocks/card-elem
+
+            -var cardArray = []
+            -cardArray.push({img: 'img/card1.jpg', name: "Стеллаж сборный (разборный) ТСУ 1-150", params: [{title: 'Высота', value: '2000 мм'},{title: 'Ширина', value: '2000 мм'},{title: 'Глубина', value: '300 мм'},{title: 'Вес', value: '120 кг'}], cost: '4 428', prevcost: '20 008', modified: 'new', favorites: '1'})
+            -cardArray.push({img: 'img/card2.jpg', name: "Большегрузная тележка БТ 3", params: [{title: 'Грузоподъемность', value: '400 кг'},{title: 'Высота подъема вил', value: '1550 мм'},{title: 'Минимальная высота бочки', value: '879 мм'},{title: 'Максимальная высота бочки', value: '890 мм'}], cost: '56 334', modified: 'actions', favorites: '1'})
+            -cardArray.push({img: 'img/card3.jpg', name: "Штабелер с электроподъемом CDD 15B", params: [{title: 'Грузоподъемность', value: '1500 кг'},{title: ' Г/п на макс. высоте', value: '1550 мм'},{title: 'Высота подъема вил', value: '879 мм'},{title: 'Собственый вес', value: '500 кг'}], cost: '56 334', modified: 'hit', favorites: '1'})
+            ul.card__list
+              for card in cardArray
+                +cardElem(card)
+                
+          section.favorites__banner(style="background-image: url(img/favbanner.jpg)")
+            p.favorites__banner-text Комплексное оснащение складов 
+              span со скидкой до 30%
+              |, заголовок в три сторки, чтобы показать межстрочный интервал
+            
+          form.favorites__economy
+            aside.favorites__economy-text
+              p.favorites__economy-title Экономьте свое время!
+              p Остались вопросы, напишите нам и мы обязательно вам на них ответим. Обратите внимание, поля со звездочками – обязательны для заполнения.
+            .favorites__economy-form
+              .common__col
+                .common__row
+                  input(type="text", data-req="req").common__input
+                  label.common__placeholder Ваше имя
+                    span *
+                .common__row
+                  input(type="text", data-req="req").common__input.js-phone
+                  label.common__placeholder Ваш номер телефона
+                    span *
+              .common__col
+                .common__row
+                  textarea.common__textarea
+                  label.common__placeholder Интересующий вопрос
+              .favorites__economy-bottom
+                .fakecheckbox
+                  input(type="checkbox", value="", name="agreement", checked)#agreement1.fakecheckbox__truecheck
+                  label(for="agreement1").fakecheckbox__label Я даю согласие на 
+                    a(href="#") обработку персональных данных
+                input(type="submit", value="Отправить").btn.common__sbm
+          
+          include blocks/recent
     include layout/__footer

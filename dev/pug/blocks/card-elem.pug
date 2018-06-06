@@ -2,6 +2,10 @@ mixin cardElem(data)
   li.card__elem
     .card__elem-hrefover
       a(href="#").card__elem-href !{data.name}
+    if data.favorites
+      .card__elem-checkbox
+        span.card__elem-checkfake.js-checkfake
+        input(type="checkbox", name="card-checks").card__elem-checktrue
     .card__elem-icons
       button(type="button").card__elem-tofavorites
       button(type="button").card__elem-tocompare

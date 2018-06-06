@@ -14,6 +14,7 @@ var gulp = require('gulp'),
 var src = {
 	'dev': {
 		'stylus': 'dev/stylus/',
+		'jsdir': 'dev/js/*',
 		'js': 'dev/js/script.js',
 		'progjs': 'dev/js/prog/*',
 		'jslibs': 'dev/js/ext/*.js',
@@ -186,7 +187,7 @@ gulp.task('watch', function () {
 	gulp.watch(src.dev.imgs, ['image-min']);
 	gulp.watch(src.dev.icons, ['icons-min']);
 	gulp.watch(src.dev.stylus + '**/*.styl', ['stylus', 'css-make']);
-	gulp.watch(src.dev.js + '*/*.js', ['js', 'js-libs', 'prog-js']);
+	gulp.watch(src.dev.jsdir + '*/*.js', ['js', 'js-libs', 'prog-js']);
 });
 
 // Сборка проекта

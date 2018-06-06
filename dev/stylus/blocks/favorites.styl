@@ -1,0 +1,106 @@
+.favorites
+  pos relative
+  &__optionals
+    pos absolute
+    r 0
+    t -61px
+    @media $tPortraitMax
+      pos static
+      pl 33px
+      mb 25px
+    @media $mPortraitMedium
+      dn()
+    &-href
+      pos relative
+      color $dark
+      fontify 14px 500 22px
+      border-bottom 2px solid $orange
+      transition .5s border
+      &:hover
+        border-color transparent
+      & + &
+        ml 55px
+      &:before
+        content ""
+        pos absolute
+      &_mail:before
+        t 4px
+        l -33px
+        size 24px 13px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAANCAMAAACEsl7iAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAV1BMVEX///8aGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhj////UmD3EAAAAG3RSTlMAAPRloq8Trljv5URXVh/C/rgs/AN7+3qANrpjrr7SAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAHZJREFUGNN90NsOhCAMBNCOrvcqrrdV5///04pE48Y4Dw3hBFoQ/kdC3iCKcSSObvAhk9S208yvL0BesKxQlSxy7KB1ADSO7bela+ycSNf3dQAM48TpN8CDzNzFA7Csi9VzNJMARy7QO5xXqTyANdfnl6u+fckGhooQVwGu1+wAAAAASUVORK5CYII=") no-repeat center
+      &_print:before
+        t 2px
+        l -25px
+        size 17px 16px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQBAMAAAACH4lsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEUaGhj///8aGhgaGhgaGhgaGhgaGhgaGhj///+QA91HAAAAB3RSTlMAAEnm50rk8s+JTwAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAABISURBVAjXY2BgLwcBBgEGZFYBAwMDiKUMFiovVmAwh7DKDYDiYABUU85eDmMhi4EAGgtsHpA0Ly8oByEHhhAIqywAyTYsbgEAk1ImAYJeJngAAAAASUVORK5CYII=") no-repeat center
+  &__banner
+    padding 67px 0 71px
+    margin 80px 0
+    pos relative
+    l 50%
+    w 100vw
+    transform translateX(-50%)
+    text-align center
+    &-text
+      max-width 935px
+      margin 0 auto
+      color white
+      fontify 30px 400 36px
+      @media $tPortraitMax
+        fontify 25px 400 32px
+        max-width 700px
+      @media $mLandscape
+        fontify 20px 400 28px
+        max-width 100%
+        padding 0 30px
+      span
+        color #e76f17
+    @media $tPortraitMax
+      padding 47px 0 51px
+  &__economy
+    border 2px solid #ececec
+    mb 70px
+    padding 50px
+    display flex
+    align-items center
+    justify-content space-between
+    @media $tLandscapeMax
+      align-content flex-start
+      flex-wrap wrap
+    @media $mPortraitMax
+      padding 35px
+    &-text
+      color $dark
+      w 372px
+      @media $desktopMax
+        w 342px
+      @media $tLandscapeMax
+        w 100%
+    &-title
+      fontify 30px 400 36px
+      mb 20px
+    &-form
+      w 750px
+      display flex
+      justify-content space-between
+      flex-wrap wrap
+      @media $desktopMax
+        w 610px
+      @media $tLandscapeMax
+        w 100%
+        mt 30px
+      @media $mLandscape
+        flex-direction column
+    &-bottom
+      mt 20px
+      w 100%
+      display flex
+      justify-content space-between
+      @media $mLandscape
+        flex-direction column
+      .fakecheckbox
+        mt 4px
+        @media $tPortraitMax
+          mt 0
+        @media $mLandscape
+          mb 20px

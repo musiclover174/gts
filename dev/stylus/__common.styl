@@ -148,6 +148,26 @@ div[class\^="table-scroller"]
   @media $tLandscapeMax
     w 100%
 
+.btn
+  ib()
+  bgc $orange
+  border 0
+  border-radius 24px
+  color white
+  outline none
+  cursor pointer
+  font-family $os
+  fontify 14px 300 48px
+  letter-spacing .1em
+  text-transform uppercase;
+  padding 0 45px
+  transition .5s background
+  &:hover
+    bgc $orangeHov
+  @media $tPortraitMax
+    fontify 13px 300 38px
+    padding 0 25px
+    
 .common
   &__title
     color $dark
@@ -177,7 +197,156 @@ div[class\^="table-scroller"]
       t 2px
       size 24px 14px
       background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAOCAMAAAACJixMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAYFBMVEUODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg7////uD/eTAAAAHnRSTlMAR7gNT/lwWPqJX/x/af51dGuIcm1od4FXigFO+Lahd6hkAAAAAWJLR0QfBQ0QvQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAFZJREFUGNN1kDcSgEAMA0W+I5icQf9/JjeUjNhyt7EFvERxAkWaMVe+cPTKlxVr5Rtjq3xn1ivvqcHwFzCaTfIHzMZFl3DuqsvmuB+ynJeeJIx4f0d8AJUECH5++C7JAAAAAElFTkSuQmCC") no-repeat center
+  &__input
+    w 100%
+    h 48px
+    padding 0 18px
+    border 2px solid #ececec
+    bgc transparent
+    color $dark
+    font-family $os
+    font-size 14px
+    line-height 400
+    transition .5s border
+    &:focus + ^[0]__placeholder,
+    &.notempty + ^[0]__placeholder
+      dn()
+  &__textarea
+    w 100%
+    h 116px
+    overflow hidden
+    resize none
+    padding 11px 18px
+    border 2px solid #ececec
+    bgc transparent
+    color $dark
+    font-family $os
+    fontify 14px 400 24px
+    transition .5s border
+    &:focus + ^[0]__placeholder,
+    &.notempty + ^[0]__placeholder
+      dn()
+  &__sbm
+    padding 0 42px
+    font-family FiraSans
+  &__select
+    h 36px
+    bgc #fff
+    border 2px solid #b6b6b6
+    w auto
+    cursor pointer
+    transition .5s border
+    &.warning
+      border-color #ed1c24
+  &__placeholder
+    pos absolute
+    z-index -1
+    l 0 
+    t 0
+    pl 20px
+    color $dark
+    fontify 14px 400 50px
+    span
+      color $orange
+  &__col
+    w calc(50% - 14px)
+    @media $mLandscape
+      w 100%
+      & + &
+        mt 20px
+  &__row
+    display flex
+    justify-content space-between
+    pos relative
+    w 100%
+    @media $mLandscape
+      flex-direction column
+    & + &
+      mt 20px
+  &__fileover
+    pos relative
+    & + &
+      mt 20px
+  &__file
+    pos absolute
+    w 0
+    h 0
+    l 0
+    t 0
+    opacity 0
+    &name
+      ib()
+      pos relative
+      l 26px
+      cursor pointer
+      color $dark
+      fontify 14px 400 18px
+      border-bottom 2px dotted $orange
+      transition .5s border
+      &.choosed,
+      &:hover
+        border-color transparent
+      &:before
+        content ""
+        pos absolute
+        l -24px
+        t 6px
+        size 16px 8px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAMAAADHqI+lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAflBMVEUiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL////BkM1AAAAAKHRSTlMAFJLi/uaFBRrhukMXERM+1IeisgE0t8xM8EeJRFvnRmnsaKQ1uVUVNSas3QAAAAFiS0dEKcq3hSQAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABYSURBVAjXRc1ZEkAwEATQJvZ9jxC74P4nRATvr6eqewBNJ8ahmJYNx/X8IHxEcZIiywuUFZWAmoE1AGm5BHQ92PAf+DjNWK7KqipUbLhGxTcKadfJ+/WOJ3rfCXxQ+WZgAAAAAElFTkSuQmCC") no-repeat center
+      &.choosed + ^[-1]delete
+        visibility visible
+        cursor pointer
+    &delete
+      ib()
+      visibility hidden
+      mt 5px
+      ml 32px
+      size 9px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJBAMAAAASvxsjAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEUiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiL////wlQZJAAAADXRSTlMA0Do74eI5bGtqOM7MEv0urwAAAAFiS0dEDm+9ME8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA3SURBVAjXYxBiYGAWYFBRYDBNYGByYg5jYGBQLU0Akhw3GUDsKQoMDExRTE4MDKYLQMp2AbkHAKcGB4WerKhTAAAAAElFTkSuQmCC") no-repeat center
+      
 
+.fakecheckbox
+  ib()
+  pos relative
+  &__label
+    ib()
+    color $dark
+    fontify 14px 400 24px
+    pos relative
+    pl 37px
+    pt 7px
+    &:before 
+      content ""
+      pos absolute
+      l 0px
+      t 7px
+      size 20px
+      border 2px solid #ececec
+      cursor pointer
+      transition .5s border
+    &:after
+      content ""
+      pos absolute
+      size 16px 13px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANBAMAAABSlfMXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///+QQS04AAAACHRSTlMAAyio8Dc4NlLA1+AAAAABYktHRAnx2aXsAAAACXBIWXMAAAsSAAALEgHS3X78AAAAOUlEQVQI12NgAANGBQjNIOwKFbCAMoRbArAIMAlABUIMoSpSmgUhKlg9jKFaQjqgWlhdAqDGl4JJAP/cCjh7XMPDAAAAAElFTkSuQmCC") no-repeat center
+      l 4px
+      t 13px
+      opacity 0
+      cursor pointer
+      transition .5s opacity
+  &__truecheck
+    pos absolute
+    l 0
+    t 0
+    w 0
+    h 0
+    border 0
+    opacity 0
+    &:checked + ^[0]__label:after
+      opacity 1
+    &.warning + ^[0]__label:before 
+      border-color #ed1c24
+    
 .text
   &_short
     max-width 877px
@@ -198,26 +367,6 @@ div[class\^="table-scroller"]
     fontify 12px 400 18px
   & + h1:not([class])
     mt 0
-
-.btn
-  ib()
-  bgc $orange
-  border 0
-  border-radius 24px
-  color white
-  outline none
-  cursor pointer
-  font-family $os
-  fontify 14px 300 48px
-  letter-spacing .1em
-  text-transform uppercase;
-  padding 0 45px
-  transition .5s background
-  &:hover
-    bgc $orangeHov
-  @media $tPortraitMax
-    fontify 13px 300 38px
-    padding 0 25px
 
 input.warning,
 textarea.warning
