@@ -1,0 +1,119 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    main.content
+      .container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim /
+        h1 Сервис
+        section.services__page
+          ul.services__hreflist
+            li.services__hrefitem
+              a(href="#").services__href.active.services__href_repairs  Ремонт
+            li.services__hrefitem
+              a(href="#").services__href.services__href_relocation Помощь в переезде склада
+            li.services__hrefitem
+              a(href="#").services__href.services__href_delivery Доставка и сборка по России
+            li.services__hrefitem 
+              a(href="#").services__href.services__href_install Монтаж профессиональными сборщиками
+            li.services__hrefitem
+              a(href="#").services__href.services__href_chefinstall Шеф-монтаж
+          .text
+            .text_short
+              p Сервисная служба является одним из основных звеньев компании "Горторгснаб". Наши специалисты обеспечивают надежную и бесперебойную работу поставленного нами оборудования. Сервисная служба представлена высококлассными специалистами с многолетним опытом работы в данной области.
+            .h-servover
+              .h-servleft
+                p(style="font-weight: 700;font-size:17px;") Мы оказываем следующие виды услуг
+                .common__row
+                  .common__col
+                    ul
+                      li 
+                        span(style="color: #e76f17; font-weight:bold;") Выезд специалиста 
+                        |  для диагностики и устранения неисправностей электропогрузчиков «SOOSUNG», электроштабелеров и ручных штабелеров
+                      li 
+                        span(style="color: #e76f17; font-weight:bold;") Проведение плановых и разовых мероприятий по Техническому Обслуживанию
+                        |  погрузчиков и штабелеров на территории Заказчика
+                      li 
+                        span(style="color: #e76f17; font-weight:bold;") Ремонт всех видов гидравлических тележек
+                        |  азиатского и европейского производства в мастерской нашей фирмы
+                  .common__col
+                    ul
+                      li 
+                        span(style="color: #e76f17; font-weight:bold;") Заключение договоров на Техническое Обслуживание
+                        |  и послегарантийный ремонт тележек, штабелеров и погрузчиков, купленных у нашей фирмы. Предоставление скидок;
+                      li 
+                        span(style="color: #e76f17; font-weight:bold;") Проведение обучения технического персонала Заказчика
+                        |  и консультаций по всем вопросам, возникающим в процессе эксплуатации и ремонта нашей техники, в удобной для Заказчика форме.
+              .h-servright
+                img(src="img/services-text.jpg")
+          h2 Ремонт
+          form.services__content
+            .services__main
+              include blocks/services-table
+              
+              -var servArray = []
+              -servArray.push({title: 'Перечень услуг, предоставляемых при ремонте гидравлических тележек', price: '500'})
+              -servArray.push({title: 'Перечень услуг, предоставляемых при ремонте гидравлических штабелеров', price: '1300,36'})
+              -servArray.push({title: 'Перечень услуг, предоставляемых при ремонте и техническом обслуживании электрогидравлических штабелеров', price: '700,12'})
+              
+              +servVariant(servArray[0])
+              .services__device
+                a(href="#").services__device-title 
+                  span Ходовые ролики для гидравлических тележек
+                .services__device-text
+                  p Всегда в наличии - широкий ассортимент ходовых роликов для гидравлических тележек. В каталоге представлены большегрузные ролики из различных материалов: нейлона, полиамида, эластичной резины, нескольких размеров. Материал роликов для гидравлических тележек выбирается исходя из характеристик напольного покрытия.
+                  p Также в продаже - большой выбор подшипников для ходовых роликов , обращайтесь к менеджерам. Cтоимость роликов указана без учёта стоимости подшипников.
+                .services__device-gallery
+                  .services__device-mainover.js-device-mainover
+                    img(src="img/serv-device.jpg", data-index="1").services__device-mainimg.js-device-main
+                    .services__device-hide
+                      a(href="img/serv-device.jpg").services__device-glightbox
+                      a(href="img/inews1.jpg").services__device-glightbox
+                      a(href="img/inews2.jpg").services__device-glightbox
+                      a(href="img/inews3.jpg").services__device-glightbox
+                      a(href="img/reviews-img1.jpg").services__device-glightbox
+                      a(href="img/reviews-img2.jpg").services__device-glightbox
+                  .services__device-car-over
+                    .swiper-container.services__device-car.js-serv-car
+                      .swiper-wrapper
+                        .swiper-slide
+                          .services__device-carelem.active.js-serv-img
+                            img(src="img/serv-device-thumb1.jpg", data-index="1", data-original="img/serv-device.jpg").services__device-img
+                        .swiper-slide
+                          .services__device-carelem.js-serv-img
+                            img(src="img/serv-device-thumb2.jpg", data-index="2", data-original="img/inews1.jpg").services__device-img
+                        .swiper-slide
+                          .services__device-carelem.js-serv-img
+                            img(src="img/serv-device-thumb3.jpg", data-index="3", data-original="img/inews2.jpg").services__device-img
+                        .swiper-slide
+                          .services__device-carelem.js-serv-img
+                            img(src="img/serv-device-thumb4.jpg", data-index="4", data-original="img/inews3.jpg").services__device-img
+                        .swiper-slide
+                          .services__device-carelem.js-serv-img
+                            img(src="img/serv-device-thumb5.jpg", data-index="5", data-original="img/reviews-img1.jpg").services__device-img
+                        .swiper-slide
+                          .services__device-carelem.js-serv-img
+                            img(src="img/serv-device-thumb6.jpg", data-index="6", data-original="img/reviews-img2.jpg").services__device-img
+                    .swiper-button-prev.swiper-button-prev_dark
+                    .swiper-button-next.swiper-button-next_dark
+                  
+              
+              +servVariant(servArray[1])
+              +servVariant(servArray[2])
+            aside.services__cost.js-serv-sticky
+              .services__cost-sticky
+                p.services__cost-title Стоимость выбранных услуг
+                p.services__cost-digits 
+                  span.js-serv-cost 0
+                  |  руб.
+                input(type="submit", value="Перейти в корзину").btn.services__cost-tocart
+                .services__cost-hrefrow
+                  a(href="#").services__cost-href.services__cost-href_mail Отправить на E-mail
+                .services__cost-hrefrow
+                  a(href="#").services__cost-href.services__cost-href_print.js-print Распечатать
+                
+    include layout/__footer

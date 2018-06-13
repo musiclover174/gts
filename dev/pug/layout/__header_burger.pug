@@ -12,9 +12,12 @@
         li.menu__item
           a(href="#").menu__item-href Производство
         li.menu__item
-          a(href="#").menu__item-href Стеллажи
-        li.menu__item
-          a(href="#").menu__item-href Техника
+          a(href="#").menu__item-href Каталог
+          ul.menu__sublist
+             - var menuList = ['Стеллажи', 'Складская техника', 'Грузоподъемное оборудование, механизмы', 'Металлические шкафы', 'Металлические верстаки', 'Сейфы', 'Автомобильные аксессуары', 'Строительное оборудование', 'Торговое оборудование', 'Прочее оборудование и техника', 'Ремонт', 'Акции']
+              each item in menuList
+                li.menu__subitem
+                  a(href="#").menu__subitem-href= item
         li.menu__item
           a(href="#").menu__item-href Сервис
         li.menu__item

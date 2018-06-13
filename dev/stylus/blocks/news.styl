@@ -127,14 +127,14 @@
             pt 67%
         & ^[0]__content
           w calc(100% - 452px)
-          pt 30px
+          //pt 30px
           @media $tLandscapeMax
             w calc(100% - 410px)
-            pt 12px
+            //pt 12px
           @media $tPortraitMax
             w 100%
             pt 20px
-          @media $mPortraitMax
+          @media $mLandscape
             pt 0
         & ^[0]__date
           fontify 14px 400 22px
@@ -163,7 +163,9 @@
       w 100%
       mt 17px
   &__img
-    imgCenteringMax()
+    imgCentering()
+    ^[0] &
+      imgCenteringMax()
   &__date
     color alpha($dark, .8)
     fontify 12px 400 18px

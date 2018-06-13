@@ -1,0 +1,16 @@
+mixin servVariant(data)
+  .services__variants
+    a(href="#").services__variants-href !{data.title}
+    table.services__variants-table
+      thead
+        tr
+          th.services__variants-thname Наименование услуги
+          th.services__variants-thcost Цена, руб (на 23.05.18)
+      tbody
+        - for (var x = 0; x < 12; x++)
+          tr
+            td Замена сальников гидравлики (1 комплект)
+            td 
+              span.services__variants-cost #{data.price} руб.
+              label.services__variants-checkover.js-serv-checkbox
+                input(type="checkbox", name="services-elem[]", data-cost=data.price).services__variants-checkbox

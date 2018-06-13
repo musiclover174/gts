@@ -67,4 +67,280 @@
       display inline-block
       vertical-align middle
       max-height 100%
-    
+  &__href
+    pos relative
+    l 37px
+    color $dark
+    fontify 14px 500 22px
+    border-bottom 2px solid $orange
+    transition .5s border, .5s color
+    &.active,
+    &:hover
+      border-color transparent
+      color $orange
+    &:before
+      content ""
+      pos absolute
+      l -37px
+      t 0
+      transition .5s background
+    &_repairs
+      &:before
+        l -33px
+        size 21px 22px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAWCAMAAAAYXScKAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABfVBMVEUODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg7///9SANmaAAAAfnRSTlMAtqyuqz9bjgyPboWMAWOHkjUjml+JmDR8RhGhFLewr7EtBieoD7WqZwOlpEGmBC6UVa0SkQkXHl5xTVoxgWayMI1rQHpwDZ6bYByz0EcZTkKjKb1yw+jVkwIIB0OgaVSnfQtRChVvVjw3bXSfPoiWKFkvISQltBg2gxupfnUHaMBMAAAAAWJLR0R+P7hBcwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAVNJREFUGNNdkelbQUEYxY+llFypLFF2F4mrLCkpKluULK2ohEr7Ji3qf28u96HHfJgz5zfvPPOeGQDg8QXCIQyOYRFGRsU9OyahOiodB2QTHJyckiugVJHVtBqamS6c1eqkOugNRpj4ZsDSgbTVbLPPwUFbVfNO4l0sZAzuhUWiHnh9LKT0ZPIvBSTL7O5KkLtFuQqTMLS23jGmcKRLqY1Nx1Y0xtXEE0n5toJOpfU7u7FoP0UmuJfN2VL5wv7BQL7sIQP3kf345B8rlsqnRM6C5wmmB+PpykUVtZhWA7WlyMG6LnIJSK6uM8Q0PPFub8Kb2ztU72EzsjaU9rLQ9SB9dCcDT6B5KRY/W8lJn/pFlE9nDK9AikcDb/lmAowL4vfWB/+TLTMKTFRB662gngS+vtsNru0EZQmXcuTRmvDnyr3fkjGQ/pC8bQ/P2Q9UE7R+qT+JqjTwDyoh6gAAAABJRU5ErkJggg==") no-repeat center
+      &.active:before,
+      &:hover:before
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAWCAMAAAAYXScKAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABfVBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf////cZ9p1AAAAfnRSTlMAtqyuqz9bjgyPboWMAWOHkjUjml+JmDR8RhGhFLewr7EtBieoD7WqZwOlpEGmBC6UVa0SkQkXHl5xTVoxgWayMI1rQHpwDZ6bYByz0EcZTkKjKb1yw+jVkwIIB0OgaVSnfQtRChVvVjw3bXSfPoiWKFkvISQltBg2gxupfnUHaMBMAAAAAWJLR0R+P7hBcwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAVNJREFUGNNdkelbQUEYxY+llFypLFF2F4mrLCkpKluULK2ohEr7Ji3qf28u96HHfJgz5zfvPPOeGQDg8QXCIQyOYRFGRsU9OyahOiodB2QTHJyckiugVJHVtBqamS6c1eqkOugNRpj4ZsDSgbTVbLPPwUFbVfNO4l0sZAzuhUWiHnh9LKT0ZPIvBSTL7O5KkLtFuQqTMLS23jGmcKRLqY1Nx1Y0xtXEE0n5toJOpfU7u7FoP0UmuJfN2VL5wv7BQL7sIQP3kf345B8rlsqnRM6C5wmmB+PpykUVtZhWA7WlyMG6LnIJSK6uM8Q0PPFub8Kb2ztU72EzsjaU9rLQ9SB9dCcDT6B5KRY/W8lJn/pFlE9nDK9AikcDb/lmAowL4vfWB/+TLTMKTFRB662gngS+vtsNru0EZQmXcuTRmvDnyr3fkjGQ/pC8bQ/P2Q9UE7R+qT+JqjTwDyoh6gAAAABJRU5ErkJggg==") no-repeat center
+    &_relocation
+      &:before
+        size 28px 22px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAWCAMAAADkSAzAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAvVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD////rbFXeAAAAPnRSTlMAkJkb5DO3LeGleEaqFBgOIgQIiMz57Q/TRL20HsNLluvLsWCEnEgMHM3Z0ObXz/BX0mbbPNUGEVrIcLLeEEYfXkEAAAABYktHRD5JZADjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAxElEQVQoz6XRaxNCQBSA4aNISaVsJHSP7kU33f7/32pzlppmd/rQ++EYHrMsAN9JBawInGQlraTysIyHigi1ql4TYr1hNDNsmVl1iZA2SbMY2h0H66quB7YPvf77mfZAx8o8HBrYiIc+HePJNKiIEPdGMaRvozGcyWS+WMqErJZkvdl6kN9Ih+ey4b+uu39hiB9+pygMozjeZ3g4sp9mIYYxLcyQbgROZxsixLwcA+IKkS6U/MSL89ElcZzrjZ3c4WGKewIoCx4B2TiFdQAAAABJRU5ErkJggg==") no-repeat center
+      &.active:before,
+      &:hover:before
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAWCAMAAADkSAzAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAvVBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf////DA19ZAAAAPnRSTlMAkJkb5DO3LeGleEaqFBgOIgQIiMz57Q/TRL20HsNLluvLsWCEnEgMHM3Z0ObXz/BX0mbbPNUGEVrIcLLeEEYfXkEAAAABYktHRD5JZADjAAAACXBIWXMAAAsSAAALEgHS3X78AAAAxElEQVQoz6XRaxNCQBSA4aNISaVsJHSP7kU33f7/32pzlppmd/rQ++EYHrMsAN9JBawInGQlraTysIyHigi1ql4TYr1hNDNsmVl1iZA2SbMY2h0H66quB7YPvf77mfZAx8o8HBrYiIc+HePJNKiIEPdGMaRvozGcyWS+WMqErJZkvdl6kN9Ih+ey4b+uu39hiB9+pygMozjeZ3g4sp9mIYYxLcyQbgROZxsixLwcA+IKkS6U/MSL89ElcZzrjZ3c4WGKewIoCx4B2TiFdQAAAABJRU5ErkJggg==") no-repeat center
+    &_delivery
+      &:before
+        size 28px 20px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAMAAACpgK3LAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABLFBMVEUaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhj////exbgfAAAAY3RSTlMA4BzuYhgiDfbM26HwCER7pRSqw0vz3bsFqxGielr38ihph1cBsWob42Dv9LMKA1mKXAZji1IM/DyfZagkwma/kEjYQMhnvXO1BFCboMDBlJbNtAdM5Q8X5jZd1QItxvE30SUVwyIrAAAAAWJLR0RjXL4tqgAAAAlwSFlzAAALEgAACxIB0t1+/AAAAO5JREFUKM9jYGRiBgMWBiyAlQ0dsCMkOTjRABc3QpKHlw8V8AsgSQoKoQJhZEl0R4iIigGBuAR2SUkpIJCWwS4pICsH9Jq8AnZJRSUgpSysgluSQVUNj6S6BhM2SU0tkHvFtHWwSapIQYAoNklEEMizsenq6RsYShhBw91YgIGXxcRUxYxNnsGck9PCUsfKWtUGFvACeraWdvYOjpzmDNp8fLJOes4qLq6wgHdz9/C0MNLw4tNm8BYSEhdn8GEQ8oUHvZ+/bgBDYJCQN8jiYMYQBufQMLiTwiMiGaKiY6C82Lh4zgQkBzsnxtsnAWkAi4UgyW0ONq8AAAAASUVORK5CYII=") no-repeat center
+      &.active:before,
+      &:hover:before
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAUCAMAAACpgK3LAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABLFBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///+yUGVNAAAAY3RSTlMA4BzuYhgiDfbM26HwCER7pRSqw0vz3bsFqxGielr38ihph1cBsWob42Dv9LMKA1mKXAZji1IM/DyfZagkwma/kEjYQMhnvXO1BFCboMDBlJbNtAdM5Q8X5jZd1QItxvE30SUVwyIrAAAAAWJLR0RjXL4tqgAAAAlwSFlzAAALEgAACxIB0t1+/AAAAO5JREFUKM9jYGRiBgMWBiyAlQ0dsCMkOTjRABc3QpKHlw8V8AsgSQoKoQJhZEl0R4iIigGBuAR2SUkpIJCWwS4pICsH9Jq8AnZJRSUgpSysgluSQVUNj6S6BhM2SU0tkHvFtHWwSapIQYAoNklEEMizsenq6RsYShhBw91YgIGXxcRUxYxNnsGck9PCUsfKWtUGFvACeraWdvYOjpzmDNp8fLJOes4qLq6wgHdz9/C0MNLw4tNm8BYSEhdn8GEQ8oUHvZ+/bgBDYJCQN8jiYMYQBufQMLiTwiMiGaKiY6C82Lh4zgQkBzsnxtsnAWkAi4UgyW0ONq8AAAAASUVORK5CYII=") no-repeat center
+    &_install
+      &:before
+        size 25px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACIlBMVEX///8aGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhj///8qOKkPAAAAtXRSTlMAAAEimOObFAIQuNSGGqu3TsuldMpEyKAJo5BXsayUnSTMmQ/AFyeLxqYWI7W8jJO0sqoOIXuXcxgbs6nQhTXbVtavjrbOQBIKPNclzyo72G8IfR0wxYpPEYEgHwsNcgOnnJaunzloK43l/VgxZuJnOsLSzd6wJlXZekjsdWAsWU2eM9xRbH/avjQGahPHlVuEGeB5vQfTke0v5EUFfsOH0cRLuT1k3xWCpHFC3T7VcOtdNy671pc1HgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAHxSURBVCjPY2BgYIQAJmYWVjZ2Dk4ubh5eBgiAynDy8QsICgkLiYiKiaPKSEhKMUrLSMqKMsnJo8ooKCpBGMp8KqoIGTU2dQ1NLYgMg7aOrp6+KlSGz8DQyJiR0cTUzNyCgcHSytrGFiJjZ69gzMnI6ODo5Ozi6sbA4O7h6QWR8fYx8mVk9PMPcA9kD3IMZmAIkQ2FmsYcFs7IJGfNBGRGGEYyMBhxRUFlOKNjGGPZ4kDM+KAEBgZxYajbOK255YDOVQaHRWISA0NySixQJjUtPSMzLSs7J9cEJBOe58nAkO+awcBQUFhkL5LGGFbsWFJaxlSuV1EJMqiqmoGhxj+1tg6otqC+Ic+BqTFZmoGBIy6ARZaBoam5hTG+lSWbkTHAlZeR15iRgaGtvUOxk6Gr26eHU6a3z7WPUdS1H2RR4AQv0YnAiCidNJmxbYr2VN9pAhzTZ0wInGkZYzgdHJ6zZs9h5AtiZORoVGecOneexfzkifJOYBmuBd2MPFzBjOkLHJhMqzM81NoXii0Cy6jauvJG6y62XajJ6GlTM5WRcclSZWjEqS0LZ1y+YuWqeEZznx5w/EABk3lRiDQwahgtw1evqUeWYVhb7LOst5ZxbrHXusW+KDIMfuvrMopmb9i4SXgzI6oMkMO7pdmaEQagwgBmTGqqbqQgzAAAAABJRU5ErkJggg==") no-repeat center
+      &.active:before,
+      &:hover:before
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAMAAADzN3VRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACIlBMVEXnbxf////nbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///9JYjj7AAAAtXRSTlMAAAEimOObFAIQuNSGGqu3TsuldMpEyKAJo5BXsayUnSTMmQ/AFyeLxqYWI7W8jJO0sqoOIXuXcxgbs6nQhTXbVtavjrbOQBIKPNclzyo72G8IfR0wxYpPEYEgHwsNcgOnnJaunzloK43l/VgxZuJnOsLSzd6wJlXZekjsdWAsWU2eM9xRbH/avjQGahPHlVuEGeB5vQfTke0v5EUFfsOH0cRLuT1k3xWCpHFC3T7VcOtdNy671pc1HgAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAH0SURBVCjPVdHpWxJRFAbw94yEgA6ZiGYKagRmpgVoSEiCNSkECmhSuVCRSFlmkG3uWVq5pBVZmaVZtu/9gc0AWrxf7n2e313PATbCpIm2iNMlUllGJkt8NgFS+dasbdmK7Bxlbl6qbM/fgYLCfJWSURelSnHJTmEg0sh3af+JTly6u2xPQqh8b0XlPm1S5Pv1BiNQVX3AVENkPmiptSbgUF2xUQrY7PWHj3BHiRoaHc6EHHMZ3EBTs6fBm+6ztxC1qo4nT0tr84NRWxj+nhP6k0QG2amNz7R3oFPcJbwg4DtNlKdIvk1qyVADGo0gzJmzRMFznfy8O9QTPh+60HvxUpUg/j4H0WUuDPRfidTlhNAWtV8duMZcr7xxU6jArUFgqLl7eIRf3D861mdjxoMFRJIuj0gF3J64g8BdUS/g4ViwRn7D5NS9kvt4MO2akRbOznFzUHIPhep4553KBZYw8OgxJp+Ux9xPsySLz+a9z80d+sV4rV8svYTcB0jGSxFbflXzOrhQVB8X2co0MmUt6FmxMdWD4Ubd1Grum7horRzbXrFmXS2Do3YoBnr7TkOJzunW/Xj/4eOnAEyumXh/EgFjirQW8K2B2f/5y+j/gq9R1/rsMJajzm9r7hRB0/eRcGTpx89fit9IFT7snwlLsh+b8hcDjmqGms/qXgAAAABJRU5ErkJggg==") no-repeat center
+    &_chefinstall
+      &:before
+        size 20px 22px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAMAAAD3n0w0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABVlBMVEUODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg7////4W7psAAAAcXRSTlMALZkbAWzRaYfDXphlTC92jm5mS3hdNd53n6+/j33bBr0zNrow0LSsqq6y1h5J0zzHPsaEwOQsP0DdZGBfdQ8pBbwHYQOWt1YqK7ZPWYB/phCMsaE7p7B+DJLjJHBrWNmNJ6Va1IaRVzIaoCEiSEqIKEpIt9kAAAABYktHRHGvB1ziAAAACXBIWXMAAAsSAAALEgHS3X78AAABAklEQVQY02NggABGJiBgZkAGLKxs7AwMHJxcyGLcPLwgQT5+AYSgoBCDMEiQkUFEFCYmJi4iISklISEtIyErxwgRk1dQRAAlZRawoIqqmroGFGhqaetAlOrq6cBM0jcwhLKMJBGCxiZQloSpGZA0B1lhYWkFk+eyBhLsNkDCVhfuTjsFoJX2QJc6ODohXO/MAXaIi6swsudF3dw9PEW9vFFChMHNx9fPxh9FKCAwKDjEPDQsPAIuxBgZZc4QHRPLzBAXn5AI8bqMuHmSHVSaIzkl1QXISBPmYEQICrOnA8M0QybTIMwEGiJhjmqcdlnZDMkx7oE5SCApNzyPQSUfAxQAAGFhMS8//Cu2AAAAAElFTkSuQmCC") no-repeat center
+      &.active:before,
+      &:hover:before
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAMAAAD3n0w0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABWVBMVEXnbxf////nbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///+OX9hFAAAAcnRSTlMAAC2ZGwFs0WmHw16YZUwvdo5uZkt4XTXed5+vv4992wa9Mza6MNC0rKqustYeSdM8xz7GhMDkLD9A3WRgX3UPKQW8B2EDlrdWKiu2T1mAf6YQjLGhO6ewfgyS4yRwa1jZjSelWtSGkVcyGqAhIkhKiChYHBZ3AAAAAWJLR0QB/wIt3gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAQ5JREFUGNNjYIAAJmYgYAEyGIEAIsTKxs7BwMDJxY0kyMrDywcS5BcQRAgKCTOIgASZGETFYILiEqKSUtKSkjKyknLyTBBBBUUlBFBWYQULqqqpa2hCgZa2ji5Eu56+LtRhDAaGRlAzjaUQgiamUEFJM3MgacEEJCytrGFO4rYBEhy2QMJOD+5Oe0VWBgYHoEsdnZwR3nThZAVRrm4iSH5nEHP38PQS8/ZBDhAGBndfP3/bAJRQCgwKDgm1CAuPiIQLMkVFWzDExMaxMMQnJCaBBRVkJSyS7aFBzZmSmuYKFEwX4WRCCIpwZAgyMmTKZhmGm0JDJNxJncs+O4chJdYjKBcJJOdF5DOoFmCAQgBafTJYzC/YJQAAAABJRU5ErkJggg==") no-repeat center
+    &list
+      display flex
+      flex-wrap wrap
+      ml -29px
+      w calc(100% + 29px)
+      mb 25px
+    &item
+      ml 29px
+      pr 37px
+      mb 20px
+      @media $desktopMax
+        ml 19px
+  &__content
+    display flex
+    justify-content space-between
+    @media $tPortraitMax
+      flex-direction column
+  &__main
+    w calc(100% - 454px)
+    @media $desktopMax
+      w calc(100% - 400px)
+    @media $tLandscapeMax
+      w calc(100% - 340px)
+    @media $tPortraitMax
+      w 100%
+  &__variants
+    &-href
+      color $dark
+      fontify 18px 500 24px
+      border-bottom 2px solid $orange
+      transition .5s border
+      &:hover
+        border-color transparent
+      & + div[class\^="table-scroller"]
+        mt 10px
+      @media $mPortraitMax
+        fontify 16px 500 22px
+    &:last-child
+      mb -23px
+    &-checkover
+      float right
+      db()
+      pos relative
+      size 22px
+      border 2px solid #b6b6b6
+      bgc white
+      cursor pointer
+      &:before
+        content ""
+        pos absolute
+        l 1px
+        t 2px
+        opacity 0
+        size 16px 13px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANBAMAAABSlfMXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///+QQS04AAAACHRSTlMAAyio8Dc2OCv712kAAAABYktHRAnx2aXsAAAACXBIWXMAAAsSAAALEgHS3X78AAAAQElEQVQI12NgAANGBQjNIOwKFbBwgwq0JGARYBIACoCUhhgCBQKAjJJmQbAAA6uHMVgAKNcBNYzVJQBqfCqYBAAMIApabcID8AAAAABJRU5ErkJggg==") no-repeat center
+        transition .5s opacity
+      &.clicked:before
+        opacity 1
+    &-checkbox
+      pos absolute
+      w 0 
+      h 0
+      border 0
+      opacity 0
+    &-table
+      w 100%
+      border 1px solid whitesmoke
+      @media $mPortraitMax
+        w auto
+        min-width 480px
+      tr
+        transition .5s background
+      tr.choosed,
+      tr:hover
+        bgc #fcede3
+    &-thname
+      w calc(100% - 235px)
+      @media $mPortraitMax
+        w auto
+    &-thcost
+      w 235px
+      @media $mPortraitMax
+        w auto
+  &__cost
+    w 402px
+    pos relative
+    @media $desktopMax
+      w 350px
+    @media $tLandscapeMax
+      w 300px
+    @media $tPortraitMax
+      w 100%
+      mt 30px
+    &-sticky
+      position absolute
+      l 0
+      w 100%
+      t 0
+      bgc whitesmoke
+      padding 45px 50px
+      @media $desktopMax
+        padding 35px 40px
+      @media $tPortraitMax
+        position static !important
+        width 100% !important
+        transform none !important
+    &-title
+      color $dark
+      fontify 30px 400 36px
+      mb 23px
+      @media $tLandscapeMax
+        fontify 24px 400 28px
+    &-digits
+      color $orange
+      fontify 22px 500 26px
+      mb 37px
+    &-tocart
+      w 100%
+      padding 0
+      text-align center
+      mb 25px
+    &-hrefrow
+      pl 35px
+      & + &
+        mt 15px
+    &-href
+      pos relative
+      color $dark
+      fontify 14px 500 22px
+      border-bottom 2px solid $orange
+      transition .5s border
+      &:hover
+        border-color transparent
+      & + &
+        ml 55px
+      &:before
+        content ""
+        pos absolute
+      &_mail:before
+        t 4px
+        l -34px
+        size 24px 13px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAANCAMAAACEsl7iAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAV1BMVEX///8aGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhj////UmD3EAAAAG3RSTlMAAPRloq8Trljv5URXVh/C/rgs/AN7+3qANrpjrr7SAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAHZJREFUGNN90NsOhCAMBNCOrvcqrrdV5///04pE48Y4Dw3hBFoQ/kdC3iCKcSSObvAhk9S208yvL0BesKxQlSxy7KB1ADSO7bela+ycSNf3dQAM48TpN8CDzNzFA7Csi9VzNJMARy7QO5xXqTyANdfnl6u+fckGhooQVwGu1+wAAAAASUVORK5CYII=") no-repeat center
+      &_print:before
+        t 2px
+        l -32px
+        size 17px 16px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQBAMAAAACH4lsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEUaGhj///8aGhgaGhgaGhgaGhgaGhgaGhj///+QA91HAAAAB3RSTlMAAEnm50rk8s+JTwAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAABISURBVAjXY2BgLwcBBgEGZFYBAwMDiKUMFiovVmAwh7DKDYDiYABUU85eDmMhi4EAGgtsHpA0Ly8oByEHhhAIqywAyTYsbgEAk1ImAYJeJngAAAAASUVORK5CYII=") no-repeat center
+  &__device
+    mt 25px
+    &-title
+      color $dark
+      fontify 30px 400 36px
+      border-bottom 2px solid $orange
+      transition .5s border
+      span
+        pos relative
+        t 5px
+      &:hover
+        border-color transparent
+    &-text
+      mt 32px
+      mb 34px
+    &-mainover
+      w 100%
+      pt 57%
+      overflow hidden
+      pos relative
+      cursor pointer
+      &:before
+        content ""
+        pos absolute
+        l 0 
+        t 0
+        w 100%
+        h 100%
+        bgc #1a1a18
+        z-index 1
+        opacity 0
+        transition .5s opacity
+      &:after
+        content ""
+        pos absolute
+        z-index 2
+        l 50%
+        t 50%
+        size 30px 32px
+        mt -15px
+        ml -16px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAMAAAAynjhNAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABAlBMVEX////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7Srm1AAAAVXRSTlMAJna85vk/wgiY/u6UTR4GDSgSxvd9DArI3y4tm+McN8OHiC8PxIGflb5Rvx1Sgu02QJnlodQVExCGzdjSCUwFtRfVxUd35/oBk9PPaZKg61yOsTBhQDaFqAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAFCSURBVCjPfZJpQ4JAEIZXBVRQ8VhFywNTLMrKbsvSLo/u8/3/fyVDdkGu+TIz+yzMzLtDiG2xeEIQRSERjxG/SUlwS0oemErLUDLZnJovZDMK5HTKTYsl0HKFZZUyRanoUK2K2ob7+mYNVY1ndTSa68WaDdR5VzJteTttUZn1p6Ptn2QL+iroQOmyQ0NnUVdBxwp62ObfADzcQc/yJnaDcBZ7lhfQD8J9CJYXoa7qMk1X9VWINs6vY2MNC4hF/dzEflRroYMd2LIcOrIYPlmCRW0zUf+fZOClAyofsfjY/6AnOOVJ0Drg7JynF1XQ9pBlw0uKqxGuHX5jreI4N5nkxstVxK12d+/mRHpwFrkG+kg8nBSm5mw+n5nTwuLJ5s9u7hjnL2oUH+GVRPA43kg4f//AJwnjX8sZvhck1H5+pQX5A2DwQ/OJ4YbEAAAAAElFTkSuQmCC") no-repeat center
+        opacity 0
+        transition .5s opacity
+      &:hover:before
+        opacity .6
+      &:hover:after
+        opacity 1
+    &-mainimg
+      imgCentering()
+    &-glightbox
+      visibility hidden
+    &-car
+      pos relative
+      margin 18px 33px 50px
+      &-over
+        pos relative
+        .swiper-button-prev
+          l -17px
+          outline none
+          bgc transparent
+        .swiper-button-next
+          r -17px
+          outline none
+          bgc transparent
+    &-carelem
+      w 100%
+      pt 100%
+      cursor pointer
+      border 2px solid #ececec
+      transition .5s border
+      &.active,
+      &:hover
+        border-color $orange
+    &-img
+      imgCenteringMax()

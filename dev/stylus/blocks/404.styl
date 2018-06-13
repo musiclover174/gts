@@ -1,6 +1,7 @@
 .page404
   display flex
   justify-content space-between
+  align-items stretch
   @media $tPortraitMax
     flex-wrap wrap
     flex-flow column
@@ -9,10 +10,14 @@
     w calc(50% - 15px)
     @media $tPortraitMax
       w 100%
+  &__main
+    pt 17px
   &__side
-    mt -17px
     @media $tPortraitMax
       mb 40px
+      &over
+        transform none !important
+        position static !important
     @media $mLandscape
       mt 0
   &__title

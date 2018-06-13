@@ -1,0 +1,22 @@
+mixin cardElem(data)
+  .comparison__elem
+    .comparison__elem-icons
+      if data.inadd
+        button(type="button").comparison__elem-tofavorites.added
+      if !data.inadd
+        button(type="button").comparison__elem-tofavorites
+      button(type="button").comparison__elem-todelete
+    .comparison__elem-fixer
+      .js-comparison-fixer
+        a(href="#").comparison__elem-imgover
+          img(src=data.img, alt="").comparison__elem-img
+        .comparison__elem-hrefover
+          a(href="#").comparison__elem-href.js-comparison-shaver !{data.name}
+    .comparison__elem-info
+      p.comparison__elem-info-title Характеристики
+      .comparison__elem-params
+        each item in data.params
+          .comparison__elem-params-row
+            p.comparison__elem-params-title !{item.title}
+            p.comparison__elem-params-val !{item.value}
+    button(type="button", data-default="в корзину", data-added="в корзине").btn.comparison__elem-tocart

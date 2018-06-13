@@ -7,7 +7,10 @@ mixin cardElem(data)
         span.card__elem-checkfake.js-checkfake
         input(type="checkbox", name="card-checks").card__elem-checktrue
     .card__elem-icons
-      button(type="button").card__elem-tofavorites
+      if !data.favorites && data.inadd
+        button(type="button").card__elem-tofavorites.added
+      if !data.favorites && !data.inadd
+        button(type="button").card__elem-tofavorites
       button(type="button").card__elem-tocompare
     .card__elem-info
       .card__elem-params

@@ -14,8 +14,8 @@ html
           script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
           script(type="text/javascript", src="static/js/maps.js")
           nav.contacts__scrollhrefs
-            button(type="button", data-to="regionals").contacts__scrollhrefs-href Региональные дилеры
-            button(type="button", data-to="geography").contacts__scrollhrefs-href География поставок
+            button(type="button", data-to="regionals").contacts__scrollhrefs-href.js-scrollTo Региональные дилеры
+            button(type="button", data-to="geography").contacts__scrollhrefs-href.js-scrollTo География поставок
           section.contacts__col-over.contacts__col-over_bigger
             .contacts__col
               p.contacts__col-title Москва
@@ -88,7 +88,7 @@ html
                   .contacts-row
                     p.contacts-row-left.contacts-row-left_medium Часы работы:
                     p.contacts-row-right с 9:00 до 18:00. Выходные: суббота, воскресенье
-          p(data-to="regionals").common__title Региональные дилеры
+          p(data-scroll="regionals").common__title Региональные дилеры
           section.contacts__mapover
             .contacts__regionals(data-lat="55.76", data-lng="37.64", data-zoom="4", data-pins='[{"lat":"55.733365","lng":"37.500656","data":{"name":"Москва","addr":"Ленинградский проспект, 31 а<br>стр.1 БЦ «МонАрх», 9 этаж","phone":"+7 (495) 2-300-900","mail":"msk@gortorsnab.ru"}},{"lat":"59.8760892","lng":"30.3169013","data":{"name":"Санкт-Петербург","addr":"Пулковское шоссе, 28а, офис 1204<br>БЦ «PULKOVO STAR»","phone":"+7 (812) 775-14-00","mail":"spb@gortorsnab.ru"}}]')
             // json template
@@ -147,7 +147,7 @@ html
                   p.contacts__place-phone +7 (4842) 75-06-09<br>75-02-23
                   p.contacts__place-addr г. Магадан, проспект Карла Маркса, д. 5
                   a(href="mailto:GTSofficial@gmail.com").contacts__place-mail GTSofficial@gmail.com
-          p(data-to="geography").common__title География поставок
+          p(data-scroll="geography").common__title География поставок
           section.contacts__mapover
             nav.contacts__mapswapper
               button(type="button", data-map="russia").contacts__mapswapper-href.active.js-mapswapper Россия

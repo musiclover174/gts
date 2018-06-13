@@ -1,0 +1,20 @@
+.h
+  &-serv
+    &over
+      mt 40px
+      display flex
+      justify-content space-between
+      @media $tLandscapeMax
+        flex-direction column
+    &left
+      ib()
+      w calc(100% - 482px)
+      max-width 820px
+      @media $tLandscapeMax
+        w 100%
+        max-width 100%
+    &right
+      ib()
+      w 422px
+      @media $tLandscapeMax
+        dn()

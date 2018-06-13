@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+  gutil = require('gulp-util'),
 	stylus = require('gulp-stylus'),
 	pug = require('gulp-pug'),
 	concat = require('gulp-concat'),
@@ -9,6 +10,7 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	imagemin = require('compress-images'),
   browserSync = require('browser-sync'),
+  pump = require('pump'),
   reload = browserSync.reload;
 
 var src = {
@@ -42,13 +44,14 @@ gulp.task('browser-sync', function() {
 });
 
 // js libs task
-gulp.task('js-libs', function () {
-	return gulp.src(src.dev.jslibs)
-		.pipe(concat('vendor.js'))
-		.pipe(uglify())
-		//.pipe(gulp.dest(src.prod.jslibs))
-		//.pipe(rename('vendor.js'))
-		.pipe(gulp.dest(src.prod.js));
+gulp.task('js-libs', function (cb) {
+  pump([
+    gulp.src(src.dev.jslibs),
+    concat('vendor.js'),
+    uglify(),
+    gulp.dest(src.prod.js)
+  ],
+    cb);
 });
 
 // main js task
@@ -74,13 +77,20 @@ gulp.task('prog-js', function (event) {
 });
 
 // pug task
-gulp.task('pug', function () {
-	return gulp.src(src.dev.pug)
+gulp.task('pug', function (cb) {
+	/*return gulp.src(src.dev.pug)
 		.pipe(pug({
 			pretty: true
 		}))
 		.pipe(gulp.dest(src.prod.html))
-    .pipe(reload({stream:true}));
+    .pipe(reload({stream:true}));*/
+  pump([
+    gulp.src(src.dev.pug),
+    pug({pretty: true}),
+    gulp.dest(src.prod.html),
+    reload({stream:true})
+  ],
+    cb);
 });
 
 // stylus task and minify

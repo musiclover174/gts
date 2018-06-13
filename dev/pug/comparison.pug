@@ -1,0 +1,86 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    main.content
+      .container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim /
+        h1 Сравнение товаров
+        section.favorites
+          .favorites__optionals
+            a(href="#").favorites__optionals-href.favorites__optionals-href_mail Отправить на E-mail
+            a(href="#").favorites__optionals-href.favorites__optionals-href_print.js-print Распечатать
+          section.comparison
+            ul.comparison__list
+              li.comparison__item.active
+                span.comparison__item-href Тележки гидравлические (4)
+              li.comparison__item
+                a(href="#").comparison__item-href Стеллажи металлические (2)
+              li.comparison__item
+                a(href="#").comparison__item-href Тали (2)
+          section.filter
+            .filter__main
+              .filter__sort Показывать:
+                span
+                  a(href="#").filter__sort-href.active.js-comparison-all все параметры
+                  a(href="#").filter__sort-href.js-comparison-diffs различающиеся параметры
+            aside.filter__actions
+              a(href="#").filter__actions-href Удалить все
+
+          section.comparison__over
+            include blocks/card-elem-comparison
+            .comparison__carover
+              .swiper-container.comparison__car.js-comparison-car
+                .swiper-wrapper
+
+                  -var cardArray = []
+                  -cardArray.push({img: 'img/comparison1.jpg', name: "SB 2000 RDP Smart Basic", params: [{title: 'Цена', value: '15 000 руб.'}, {title: 'Грузоподъемность', value: '3000 кг'},{title: 'размер вил', value: '1150х550 мм'}, {title: 'колеса', value: 'металл, нейлон'}, {title: 'ролики', value: 'полиуретан'}, {title: 'гарантия', value: '12 месяцев'}], 'inadd': 1})
+                  -cardArray.push({img: 'img/comparison2.jpg', name: "DBA 20 NYL (стандартная модель)", params: [{title: 'Цена', value: '15 000 руб.'},{title: 'Грузоподъемность', value: '2500 кг'},{title: 'размер вил', value: '800х550 мм'},{title: 'колеса', value: 'полиуретан'}, {title: 'ролики', value: 'полиуретан'}, {title: 'гарантия', value: '12 месяцев'}]})
+                  -cardArray.push({img: 'img/comparison3.jpg', name: "SB 2000 РDP SMART BASIC, но в целом название может быть гораздо длинее", params: [{title: 'Цена', value: '15 000 руб.'},{title: 'Грузоподъемность', value: '5000 кг'},{title: 'размер вил', value: '800х550 мм'},{title: 'колеса', value: 'металлические обрезиненные'}, {title: 'ролики', value: 'металл, нейлон'}, {title: 'гарантия', value: '24 месяцев'}]})
+                  -cardArray.push({img: 'img/comparison3.jpg', name: "SB 2000 РDP SMART BASIC", params: [{title: 'Цена', value: '15 000 руб.'},{title: 'Грузоподъемность', value: '5000 кг'},{title: 'размер вил', value: '1150х550 мм'},{title: 'колеса', value: 'металлические обрезиненные'}, {title: 'ролики', value: 'металл, нейлон'}, {title: 'гарантия', value: '24 месяцев'}]})
+                  -cardArray.push({img: 'img/comparison4.jpg', name: "Тележка гидравлическая ручная CBY-25 III A", params: [{title: 'Цена', value: '15 000 руб.'},{title: 'Грузоподъемность', value: '5000 кг'},{title: 'размер вил', value: '1150х550 мм'},{title: 'колеса', value: 'металл, нейлон'}, {title: 'ролики', value: 'металл, нейлон'}, {title: 'гарантия', value: '24 месяцев'}]})
+
+                  for card in cardArray
+                    .swiper-slide
+                      +cardElem(card)
+
+              .swiper-buttons
+                .swiper-button-prev.swiper-button-prev_dark
+                .swiper-button-next.swiper-button-next_dark
+                
+          section.favorites__banner(style="background-image: url(img/favbanner.jpg)")
+            p.favorites__banner-text Комплексное оснащение складов 
+              span со скидкой до 30%
+              |, заголовок в три сторки, чтобы показать межстрочный интервал
+            
+          form.favorites__economy
+            aside.favorites__economy-text
+              p.favorites__economy-title Экономьте свое время!
+              p Остались вопросы, напишите нам и мы обязательно вам на них ответим. Обратите внимание, поля со звездочками – обязательны для заполнения.
+            .favorites__economy-form
+              .common__col
+                .common__row
+                  input(type="text", data-req="req").common__input
+                  label.common__placeholder Ваше имя
+                    span *
+                .common__row
+                  input(type="text", data-req="req").common__input.js-phone
+                  label.common__placeholder Ваш номер телефона
+                    span *
+              .common__col
+                .common__row
+                  textarea.common__textarea
+                  label.common__placeholder Интересующий вопрос
+              .favorites__economy-bottom
+                .fakecheckbox
+                  input(type="checkbox", value="", name="agreement", checked)#agreement1.fakecheckbox__truecheck
+                  label(for="agreement1").fakecheckbox__label Я даю согласие на 
+                    a(href="#") обработку персональных данных
+                input(type="submit", value="Отправить").btn.common__sbm
+          
+          include blocks/recent
+    include layout/__footer

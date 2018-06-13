@@ -99,6 +99,8 @@
       &.added,      
       &:hover
         background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOBAMAAADQ9FGEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEXnbxf////nbxfnbxfnbxf////qzH61AAAABHRSTlMAAMPEz03kvgAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA5SURBVAjXY1BxcVFgUHFREAQSLgZAwkCQAQaQWUAlDCAlTiAlYJYzDnVgJRDznPGZB7bXCW6vsyAAXjIMjKdXpC8AAAAASUVORK5CYII=") no-repeat center
+      &:first-child
+        mt 0
     &-info
       display flex
       justify-content space-between
@@ -208,6 +210,7 @@
           l 16px
           t 11px
       &.added
+        background $dark
         &:before
           content attr(data-added)
       @media $tPortraitMax

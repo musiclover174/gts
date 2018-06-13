@@ -34,6 +34,86 @@ header.header
       nav.navcats
         ul.navcats__list
           li.navcats__item
+            a(href="#").navcats__item-href.navcats__item-href_cat Каталог
+            ul.navcats__droplist
+              li.navcats__dropitem
+                a(href="#").navcats__dropitem-href Стеллажи
+              li.navcats__dropitem
+                a(href="#").navcats__dropitem-href Складская техника
+                ul.navcats__sublist
+                  li.navcats__subitem
+                    a(href="#").navcats__subitem-href Распродажа
+                  li.navcats__subitem
+                    a(href="#").navcats__subitem-href Тележки
+                    ul.navcats__deeplist
+                      - var menuList = ['Гидравлические тележки', 'Электрические (самоходные) тележки', 'Платформенные тележки', 'Складные тележки', 'Тележки с бортами']
+                      each item in menuList
+                        li.navcats__deepitem
+                          a(href="#").navcats__deepitem-href= item
+                      li.navcats__deepitem
+                        a(href="#").navcats__deepitem-href.navcats__deepitem-href_toall Смотреть все модели
+                  li.navcats__subitem
+                    a(href="#").navcats__subitem-href Штаблёры
+                    ul.navcats__deeplist
+                      - var menuList = ['Гидравлические штабелёры', 'Штабелёры с электроподъёмом', 'Электроштабелёры самоходные', 'Электрические штабелёры', 'Сборщик заказов']
+                      each item in menuList
+                        li.navcats__deepitem
+                          a(href="#").navcats__deepitem-href= item
+                  li.navcats__subitem
+                    a(href="#").navcats__subitem-href Ричтраки
+                  li.navcats__subitem
+                    a(href="#").navcats__subitem-href Шкафы на колёсах
+                  li.navcats__subitem
+                    a(href="#").navcats__subitem-href Контейнеры на колёсах
+                  li.navcats__subitem
+                    a(href="#").navcats__subitem-href Погрузчики
+                    ul.navcats__deeplist
+                      - var menuList = ['Складские минипогрузчики (оператор на подножке)', 'Вилочные электрические погрузчики']
+                      each item in menuList
+                        li.navcats__deepitem
+                          a(href="#").navcats__deepitem-href= item
+                  li.navcats__subitem
+                    a(href="#").navcats__subitem-href Колёса
+                    ul.navcats__deeplist
+                      - var menuList = ['Колёса и колёсные опоры для тележек', 'Колёса большегрузные для тележек', 'Колёса промышленные']
+                      each item in menuList
+                        li.navcats__deepitem
+                          a(href="#").navcats__deepitem-href= item
+                  li.navcats__subitem
+                    a(href="#").navcats__subitem-href Колёсные опоры
+                    ul.navcats__deeplist
+                      - var menuList = ['Колёсные опоры промышленные', 'Колёсные опоры аппаратные', 'Колёсные опоры пневматические', 'Опоры колёсные большегрузные']
+                      each item in menuList
+                        li.navcats__deepitem
+                          a(href="#").navcats__deepitem-href= item
+                  li.navcats__subitem
+                    a(href="#").navcats__subitem-href Ролики
+                    ul.navcats__deeplist
+                      - var menuList = ['Колёса и ролики для гидравлических тележек', 'Специальные колёса и ролики для тележек']
+                      each item in menuList
+                        li.navcats__deepitem
+                          a(href="#").navcats__deepitem-href= item
+              li.navcats__dropitem
+                a(href="#").navcats__dropitem-href Грузоподъемное оборудование, механизмы
+              li.navcats__dropitem
+                a(href="#").navcats__dropitem-href Металлические шкафы
+              li.navcats__dropitem
+                a(href="#").navcats__dropitem-href Металлические верстаки
+              li.navcats__dropitem
+                a(href="#").navcats__dropitem-href Сейфы
+              li.navcats__dropitem
+                a(href="#").navcats__dropitem-href Автомобильные аксессуары
+              li.navcats__dropitem
+                a(href="#").navcats__dropitem-href Строительное оборудование
+              li.navcats__dropitem
+                a(href="#").navcats__dropitem-href Торговое оборудование
+              li.navcats__dropitem
+                a(href="#").navcats__dropitem-href Прочее оборудование и техника
+              li.navcats__dropitem
+                a(href="#").navcats__dropitem-href Ремонт
+              li.navcats__dropitem
+                a(href="#").navcats__dropitem-href Акции
+          li.navcats__item
             a(href="#").navcats__item-href.navcats__item-href_stell Стеллажи
           li.navcats__item
             a(href="#").navcats__item-href.navcats__item-href_tech Техника
@@ -83,6 +163,17 @@ header.header
               span.search__product-cost 15 000 
                 sub руб.
               span.search__product-prevcost 13 395 ₽
+        li.search__product
+          a(href="#").search__product-imgover
+            img(src="img/search-product2.jpg").search__product-img
+          .search__product-content
+            a(href="#").search__product-href Гидравлическая тележка DBA 20 RUB (стандартная модель)
+            p.search__product-chars
+              span.search__product-weight до 2000кг
+              span.search__product-size 1150х550 мм
+            p.search__product-price
+              span.search__product-cost 12 800 
+                sub руб.
       a(href="#").search__res-toall Смотреть ещё
       p.search__title Страницы
       ul.search__res-list
@@ -92,4 +183,6 @@ header.header
           a(href="#").search__res-href Вопросы о гидравлических тележках стандартных моделей. Остались вопросы, напишите нам и мы обязательно вам на них ответим. Обрат...
         li.search__res-elem
           a(href="#").search__res-href Акция на гидравлические тележки стандартных моделей по цене до 20 000 руб.
+        li.search__res-elem
+          a(href="#").search__res-href Вопросы о гидравлических тележках стандартных моделей. Остались вопросы, напишите нам и мы обязательно вам на них ответим. Обрат...
       a(href="#").search__res-toall Смотреть ещё
