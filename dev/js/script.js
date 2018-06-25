@@ -66,13 +66,67 @@ window.onload = function () {
   
   window.gts.form = ({
 
+    maxValInputs: function () {
+      const maxValInputs = document.querySelectorAll('.js-input-maxval');
+      
+      for (let maxValInput of maxValInputs){
+        let plus = maxValInput.nextElementSibling,
+            minus = maxValInput.nextElementSibling.nextElementSibling,
+            max = maxValInput.getAttribute('data-max'),
+            min = maxValInput.getAttribute('data-min');
+        
+        maxValInput.addEventListener('keydown', (e) => {
+          let validArr = [46, 8, 9, 27, 13, 110, 190];
+          if (validArr.indexOf(e.keyCode) !== -1 ||
+            (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+            (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+            (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+            return;
+          }
+          if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+          }
+        });
+        
+        maxValInput.addEventListener('keyup', (e) => {
+          if (+maxValInput.value > +max)
+            maxValInput.value = max
+          
+          if (+maxValInput.value < +min)
+            maxValInput.value = min
+          
+          let eventChange = new Event('change');
+          maxValInput.dispatchEvent(eventChange);
+        });
+        
+        plus.addEventListener('click', () => {
+          if (+maxValInput.value < +max)
+            maxValInput.value = +maxValInput.value + 1
+          
+          let eventChange = new Event('change');
+          maxValInput.dispatchEvent(eventChange);
+        })
+        
+        minus.addEventListener('click', () => {
+          if (+maxValInput.value > +min)
+            maxValInput.value = +maxValInput.value - 1
+          
+          let eventChange = new Event('change');
+          maxValInput.dispatchEvent(eventChange);
+        })
+      }
+      
+    },
+    
     init: function () {
 
       const _th = this,
             inputs = document.querySelectorAll('.common__input, .common__textarea'),
             forms = document.querySelectorAll('form'),
             selectors = document.querySelectorAll('.js-select'),
-            choicesArr = [];
+            choicesArr = [],
+            digitsInput = document.querySelectorAll('.js-digits');
 
       $('.js-phone').mask('+7(999) 999-9999'); // jquery
       
@@ -100,6 +154,25 @@ window.onload = function () {
         form.addEventListener('submit', e => !_th.checkForm(form) && e.preventDefault())
       })
       
+      this.maxValInputs();
+      
+      for (let digitInput of digitsInput){
+        digitInput.addEventListener('keydown', (e) => {
+          let validArr = [46, 8, 9, 27, 13, 110, 190];
+          if (validArr.indexOf(e.keyCode) !== -1 ||
+            (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+            (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+            (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+            return;
+          }
+          if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+          }
+        });
+      }
+      
+      return this
     },
 
     checkForm: function (form) {
@@ -188,7 +261,7 @@ window.onload = function () {
     },
     
     page404: () => {
-      let sidebar = new StickySidebar('.js-page404-sticky', {
+      const sidebar = new StickySidebar('.js-page404-sticky', {
         containerSelector: '.page404',
         innerWrapperSelector: '.page404__sideover',
         topSpacing: document.querySelector('.header').offsetHeight + 20,
@@ -254,10 +327,14 @@ window.onload = function () {
       
       const bannerSwiper = new Swiper ('.js-ibanner', {
         loop: true,
-        speed: 800,
+        speed: 1800,
+        effect: 'fade',
         navigation: {
           nextEl: '.js-ibanner .swiper-button-next',
           prevEl: '.js-ibanner .swiper-button-prev',
+        },
+        fadeEffect: {
+          crossFade: true
         },
         autoplay: {
           delay: 5000
@@ -313,27 +390,29 @@ window.onload = function () {
     },
     
     recentCar: () => {
+      const projectsSwipers = document.querySelectorAll('.js-recent');
       
-      const projectsSwiper = new Swiper ('.js-recent', {
-        loop: true,
-        speed: 800,
-        slidesPerView: 3,
-        spaceBetween: 32,
-        navigation: {
-          nextEl: '.js-recent ~ .swiper-buttons .swiper-button-next',
-          prevEl: '.js-recent ~ .swiper-buttons .swiper-button-prev',
-        },
-        breakpoints: {
-          767: {
-            slidesPerView: 1,
-            spaceBetween: 10
+      for (let projectsSwiper of projectsSwipers)
+        projectsSwiper = new Swiper ('.js-recent', {
+          loop: false,
+          speed: 800,
+          slidesPerView: 3,
+          spaceBetween: 32,
+          navigation: {
+            nextEl: '.js-recent ~ .swiper-buttons .swiper-button-next',
+            prevEl: '.js-recent ~ .swiper-buttons .swiper-button-prev',
           },
-          1199: {
-            slidesPerView: 2,
-            spaceBetween: 20
+          breakpoints: {
+            767: {
+              slidesPerView: 1,
+              spaceBetween: 10
+            },
+            1199: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            }
           }
-        }
-      });
+        });
       
       let cardInfo = document.querySelectorAll('.js-recent .card__elem-info'), maxH = 0;
       
@@ -520,8 +599,6 @@ window.onload = function () {
         'selector': 'services__device-glightbox',
       });
       
-      window.serv = servLightbox;
-      
       mainOver.addEventListener('click', () => {
         let eventClick = new Event('click'),
             lightImgs = document.querySelectorAll('.services__device-glightbox'),
@@ -638,6 +715,380 @@ window.onload = function () {
       });
     },
     
+    cardPage: () => {
+      const sidebar = new StickySidebar('.js-card-sticky', {
+        containerSelector: '.card__main',
+        innerWrapperSelector: '.card__info-sticky',
+        topSpacing: document.querySelector('.header').offsetHeight + 20,
+        bottomSpacing: 0
+      });
+      
+      const paramsShower = document.querySelector('.js-card-params'),
+            paramsHidden = document.querySelector('.card__params-hidden');
+      
+      paramsShower.addEventListener('click', (e) => {
+        paramsHidden.classList.toggle('show')
+        paramsShower.classList.toggle('open')
+        e.preventDefault();
+      });
+      
+      window.addEventListener('resize', () => {
+        sidebar.updateSticky();
+      });
+      
+      const gallerySwiper = new Swiper ('.js-serv-car', {
+        loop: false,
+        speed: 800,
+        slidesPerView: 4,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.js-serv-car ~ .swiper-button-next',
+          prevEl: '.js-serv-car ~ .swiper-button-prev',
+        },
+        breakpoints: {
+          479: {
+            slidesPerView: 2,
+            spaceBetween: 10
+          },
+          700: {
+            slidesPerView: 2,
+            spaceBetween: 10
+          },
+          1199: {
+            slidesPerView: 3,
+            spaceBetween: 10
+          }
+        }
+      });
+      
+      const mscCheckbox = document.querySelector('.card__info-msc'),
+            mscCheckboxInp = document.querySelector('.card__info-msc input');
+      
+      mscCheckbox.addEventListener('click', (e) => {
+        mscCheckbox.classList.toggle('checked');
+        if (mscCheckbox.classList.contains('checked'))
+          mscCheckboxInp.setAttribute('checked', true)
+        else
+          mscCheckboxInp.removeAttribute('checked')
+        
+        let eventChange = new Event('change');
+        mscCheckboxInp.dispatchEvent(eventChange);
+        
+        e.preventDefault();
+      })
+      
+      const carElem = document.querySelectorAll('.js-serv-img'),
+            mainImg = document.querySelector('.js-device-main'),
+            mainOver = document.querySelector('.js-device-mainover');
+      
+      for (let item of carElem){
+        item.addEventListener('click', () => {
+          if (!item.classList.contains('active')){
+            for (let item of carElem) item.classList.remove('active')
+            item.classList.add('active');
+            
+            let imgOriginal = item.querySelector('img').getAttribute('data-original'),
+                imgIndex = item.querySelector('img').getAttribute('data-index');
+
+            mainImg.setAttribute('data-index', imgIndex);
+            mainImg.src = imgOriginal;
+          }
+        })
+      }
+      
+      const servLightbox = GLightbox({
+        'selector': 'card__main-glightbox',
+      });
+      
+      mainOver.addEventListener('click', () => {
+        let eventClick = new Event('click'),
+            lightImgs = document.querySelectorAll('.card__main-glightbox'),
+            index = parseInt(mainImg.getAttribute('data-index')) - 1;
+        
+        lightImgs[index].dispatchEvent(eventClick);
+      });
+      
+      const cardFilters = document.querySelectorAll('.associated__filter');
+      
+      const filterFunction = (costMin, costMax, load, elems) => {
+        for (let elem of elems){
+          let elemCost = elem.getAttribute('data-cost').replace(/\s+/g,''),
+              elemLoad = elem.getAttribute('data-load').replace(/\s+/g,'');
+          
+          if (+elemCost < +costMin || +elemCost > +costMax || +elemLoad < +load)
+            elem.classList.add('filtered')
+          else
+            elem.classList.remove('filtered')
+        }
+      }
+      
+      for (let cardFilter of cardFilters){
+        let 
+        costMin = cardFilter.querySelector('.js-assoc-filter-min'),
+        costMax = cardFilter.querySelector('.js-assoc-filter-max'),
+        load = cardFilter.querySelector('.js-assoc-filter-load'),
+        elems = cardFilter.nextElementSibling.querySelectorAll('.card__elem');
+        
+        filterFunction(costMin.value, costMax.value, load.value, elems);
+        
+        costMin.addEventListener('keyup', () => {
+          filterFunction(costMin.value, costMax.value, load.value, elems);
+        }, false);
+        costMax.addEventListener('keyup', () => {
+          filterFunction(costMin.value, costMax.value, load.value, elems)
+        }, false);
+        load.addEventListener('keyup', () => {
+          filterFunction(costMin.value, costMax.value, load.value, elems)
+        }, false);
+      }
+      
+    },
+    
+    equipment: () => {
+      const equipmentSwiper = new Swiper ('.js-equipment', {
+        loop: true,
+        speed: 800,
+        slidesPerView: 3,
+        spaceBetween: 40,
+        navigation: {
+          nextEl: '.js-equipment ~ .swiper-buttons .swiper-button-next',
+          prevEl: '.js-equipment ~ .swiper-buttons .swiper-button-prev',
+        },
+        breakpoints: {
+          767: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          999: {
+            slidesPerView: 2,
+            spaceBetween: 10
+          },
+          1199: {
+            slidesPerView: 3,
+            spaceBetween: 20
+          }
+        }
+      });
+    },
+    
+    others: () => {
+      const othersHref = document.querySelectorAll('.js-others-shaver');
+      
+      for (let otherHref of othersHref)
+        shave(otherHref, 40);
+      
+      const equipmentSwiper = new Swiper ('.js-others', {
+        loop: true,
+        speed: 800,
+        slidesPerView: 4,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: '.js-others ~ .swiper-buttons .swiper-button-next',
+          prevEl: '.js-others ~ .swiper-buttons .swiper-button-prev',
+        },
+        breakpoints: {
+          767: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          1199: {
+            slidesPerView: 3,
+            spaceBetween: 20
+          }
+        }
+      });
+      
+    },
+    
+    consult: () => {
+      
+      let sidebarReviews = false;
+      const sidebarQuestion = new StickySidebar('.js-consult-question-sticky', {
+        containerSelector: '.consult__question-sticky',
+        innerWrapperSelector: '.consult__person',
+        topSpacing: document.querySelector('.header').offsetHeight + 20,
+        bottomSpacing: 0
+      });
+      
+      if (document.querySelectorAll('.js-consult-reviews-sticky').length){
+        sidebarReviews = new StickySidebar('.js-consult-reviews-sticky', {
+          containerSelector: '.consult__reviews-sticky',
+          innerWrapperSelector: '.consult__makerev',
+          topSpacing: document.querySelector('.header').offsetHeight + 20,
+          bottomSpacing: 0
+        });
+      }
+      
+      document.querySelectorAll('.js-consult-tab').forEach((item, i) => {
+        
+        item.addEventListener('click', (e) => {
+          if (item.classList.contains('active')) return false
+          let curActive = document.querySelector('.js-consult-tab.active'),
+              curAttr = curActive.getAttribute('data-type'),
+              newAttr = item.getAttribute('data-type');
+          
+          curActive.classList.remove('active');
+          item.classList.add('active');
+          
+          let fadeOutElem = document.querySelector(`.consult__block[data-type="${curAttr}"]`),
+              fadeInElem = document.querySelector(`.consult__block[data-type="${newAttr}"]`);
+          window.animation.fadeOut(fadeOutElem, 400, () => {
+            window.animation.fadeIn(fadeInElem, 400, () => {
+              sidebarQuestion.updateSticky();
+              sidebarReviews.updateSticky();
+            })
+          })
+          
+          e.stopPropagation();
+          e.preventDefault();
+          
+        });
+        
+      });
+      
+      document.querySelectorAll('.js-consult-question').forEach((item, i) => {
+        
+        item.addEventListener('click', (e) => {
+          if (item.classList.contains('active')) return false
+          let curActive = document.querySelector('.js-consult-question.active'),
+              curAttr = curActive.getAttribute('data-type'),
+              newAttr = item.getAttribute('data-type');
+          
+          curActive.classList.remove('active');
+          item.classList.add('active');
+          
+          let fadeOutElem = document.querySelector(`.consult__question-list-tab[data-type="${curAttr}"]`),
+              fadeInElem = document.querySelector(`.consult__question-list-tab[data-type="${newAttr}"]`);
+          window.animation.fadeOut(fadeOutElem, 200, () => {
+            window.animation.fadeIn(fadeInElem, 200, () => {
+              sidebarQuestion.updateSticky();
+            })
+          })
+          
+          e.stopPropagation();
+          e.preventDefault();
+          
+        });
+        
+      });
+      
+      window.addEventListener('resize', () => {
+        sidebarQuestion.updateSticky();
+        if (sidebarReviews) sidebarReviews.updateSticky();
+      });
+      
+    },
+    
+    stillage: () => {
+      
+      function updatePopupData() {
+        const checks = document.querySelectorAll('.complex__calc-checkbox.checked'),
+              popList = document.querySelector('ol[data-cats]');
+        
+        if (checks.length){
+          popList.innerHTML = '';
+          for (let check of checks){
+            let item = document.createElement('li');
+            item.textContent = check.getAttribute('data-value');
+            popList.appendChild(item);
+          }
+          popList.removeAttribute('class');
+        } else {
+          popList.classList.add('hidden');
+        }
+      }
+      
+      const equipmentSwiper = new Swiper ('.js-stillage-banner', {
+        loop: true,
+        speed: 800,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        autoHeight: true,
+        navigation: {
+          nextEl: '.js-stillage-banner ~ .swiper-buttons .swiper-button-next',
+          prevEl: '.js-stillage-banner ~ .swiper-buttons .swiper-button-prev',
+        }
+      });
+      
+      const complexCheckbox = document.querySelectorAll('.js-complex-check');
+      
+      for (let checkbox of complexCheckbox){
+        checkbox.addEventListener('click', (e) => {
+          checkbox.classList.toggle('checked');
+          let trueCheck = checkbox.querySelector('.comlex__calc-checktrue');
+          if (checkbox.classList.contains('checked'))
+            trueCheck.setAttribute('checked', true)
+          else
+            trueCheck.removeAttribute('checked')
+          updatePopupData();
+          e.preventDefault();
+        })
+      }
+      
+      for(let shaverEl of document.querySelectorAll('.js-complex-title-shave')){
+        shave(shaverEl, 57);
+      }
+      
+      for(let shaverEl of document.querySelectorAll('.stillage__type-text')){
+        shave(shaverEl, 200);
+      }
+      
+    },
+    
+    catPage: () => {
+      const elemSwiper = new Swiper ('.js-catalog-car', {
+        loop: true,
+        speed: 800,
+        slidesPerView: 1,
+        navigation: {
+          nextEl: '.js-catalog-car ~ .swiper-button-next',
+          prevEl: '.js-catalog-car ~ .swiper-button-prev',
+        }
+      });
+      
+      const modSwiper = new Swiper ('.js-catalog-mod', {
+        loop: true,
+        speed: 800,
+        slidesPerView: 2,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: '.js-catalog-mod ~ .swiper-button-next',
+          prevEl: '.js-catalog-mod ~ .swiper-button-prev',
+        },
+        breakpoints: {
+          600: {
+            slidesPerView: 1,
+            spaceBetween: 0
+          },
+          999: {
+            slidesPerView: 2,
+            spaceBetween: 15
+          },
+          1200: {
+            slidesPerView: 1
+          }
+        }
+      });
+      
+      const catLightbox = GLightbox({
+        'selector': 'catalog__elem-glightbox',
+      });
+      
+      const slideCat = document.querySelectorAll('.js-catalog-car .swiper-slide');
+      
+      if (slideCat.length){
+        slideCat.forEach((item) => {
+          item.addEventListener('click', () => {
+            let eventClick = new Event('click'),
+                lightImgs = document.querySelectorAll('.catalog__elem-glightbox'),
+                index = parseInt(item.getAttribute('data-index'));
+
+            lightImgs[index].dispatchEvent(eventClick);
+          })
+        })
+      }
+    },
+    
     init: function() {
 
       const _self = this;
@@ -665,7 +1116,19 @@ window.onload = function () {
       
       if (document.querySelectorAll('.js-burger').length) this.burger();
       
+      if (document.querySelectorAll('.js-equipment').length) this.equipment();
+      
+      if (document.querySelectorAll('.js-stillage').length) this.stillage();
+      
+      if (document.querySelectorAll('.js-cardpage').length) this.cardPage();
+      
+      if (document.querySelectorAll('.js-catpage').length) this.catPage();
+      
+      if (document.querySelectorAll('.js-consult').length) this.consult();
+      
       if (document.querySelectorAll('.js-recent').length) this.recentCar();
+      
+      if (document.querySelectorAll('.js-others').length) this.others();
       
       if (document.querySelectorAll('.js-reviews-star').length) {
         let stars = document.querySelectorAll('.js-reviews-star');
@@ -740,13 +1203,46 @@ window.onload = function () {
         });
       }
       
+      if (document.querySelectorAll('.js-lightbox').length){
+        let lightbox = GLightbox({
+          'selector': 'js-lightbox',
+        })
+      }
 
+      if (document.querySelectorAll('.js-hidden').length){
+        for (let shower of document.querySelectorAll('.js-toggler')){
+          shower.addEventListener('click', (e) => {
+            shower.previousElementSibling.classList.toggle('show')
+            shower.classList.toggle('open')
+            e.preventDefault();
+          })
+        }
+      }
+      
+      if (document.querySelectorAll('.js-calc-open').length) {
+        const calcOpen = document.querySelector('.js-calc-open'),
+              calcHidden = document.querySelector('.js-calc-hidden');
+        
+        calcOpen.addEventListener('click', () => {
+          calcOpen.classList.toggle('open');
+          calcHidden.classList.toggle('open');
+        })
+      }
+      
       this.resizeWatcher();
       
       let eventResize = new Event('resize');
       window.dispatchEvent(eventResize);
       let eventScroll = new Event('scroll');
       window.dispatchEvent(eventScroll);
+      
+      $('[data-fancybox]').fancybox({
+        i18n: {
+          en: {
+            CLOSE: "Закрыть"
+          }
+        }
+      }); // jquery
       
     }
   }).init();

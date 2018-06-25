@@ -120,40 +120,40 @@ html
               a(href="#").i-news__banner-href
                 img(src="img/news-banner.jpg").i-news__banner-img
       
-      section.equipment
+      section.i-equipment
         .container
           p.common__title Комплексное оснащение склада
-          ol.equipment__list
-            li.equipment__item
-              p.equipment__title Проект
-              p.equipment__text При монтаже складских систем, наша компания использует только профессиональных обученных монтажников с многолетним опытом работы по монтажу складских стеллажей и лицензией на проведение высотных работ.
-            li.equipment__item
-              p.equipment__title Оснащение
-              p.equipment__text При монтаже складских систем, наша компания использует только профессиональных обученных монтажников с многолетним опытом работы по монтажу складских стеллажей и лицензией на проведение высотных работ. 
-            li.equipment__item
-              p.equipment__title Монтаж
-              p.equipment__text При монтаже складских систем, наша компания использует только профессиональных обученных монтажников с многолетним опытом работы по монтажу складских стеллажей и лицензией на проведение высотных работ. 
-          p.equipment__ordertext По вашему желанию наши специалисты составят подробный проект стеллажной системы. Наши специалисты накопили большой опыт в проектировании складов разного уровня и при выполнении работ пользуются специализированным программным обеспечением.
-          button(type="button", data-fancybox, data-src="#order").btn.equipment__button Заказать проект склада
+          ol.i-equipment__list
+            li.i-equipment__item
+              p.i-equipment__title Проект
+              p.i-equipment__text При монтаже складских систем, наша компания использует только профессиональных обученных монтажников с многолетним опытом работы по монтажу складских стеллажей и лицензией на проведение высотных работ.
+            li.i-equipment__item
+              p.i-equipment__title Оснащение
+              p.i-equipment__text При монтаже складских систем, наша компания использует только профессиональных обученных монтажников с многолетним опытом работы по монтажу складских стеллажей и лицензией на проведение высотных работ. 
+            li.i-equipment__item
+              p.i-equipment__title Монтаж
+              p.i-equipment__text При монтаже складских систем, наша компания использует только профессиональных обученных монтажников с многолетним опытом работы по монтажу складских стеллажей и лицензией на проведение высотных работ. 
+          p.i-equipment__ordertext По вашему желанию наши специалисты составят подробный проект стеллажной системы. Наши специалисты накопили большой опыт в проектировании складов разного уровня и при выполнении работ пользуются специализированным программным обеспечением.
+          button(type="button", data-fancybox, data-src="#project").btn.i-equipment__button Заказать проект склада
     
       section.video
         .container
           .video__elem
             span.video__elem-bg(style="background-image: url(img/video1.jpg)")
             .video__content
-              button(type="button", data-fancybox, data-src="https://www.youtube.com/watch?v=_sI_Ps7JSEk").video__play
+              a(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk").video__play.js-lightbox
               p.video__text Наши производственные линии
               a(href="#").video__href О производстве
           .video__elem
             span.video__elem-bg(style="background-image: url(img/video2.jpg)")
             .video__content
-              button(type="button", data-fancybox, data-src="https://www.youtube.com/watch?v=_sI_Ps7JSEk").video__play
+              a(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk").video__play.js-lightbox
               p.video__text Собственный бренд SMART. Высокий стандарт, оптимальная цена
               a(href="#").video__href О бренде SMART
           .video__elem.video__elem_bigger
             span.video__elem-bg(style="background-image: url(img/video3.jpg)")
             .video__content
-              button(type="button", data-fancybox, data-src="https://www.youtube.com/watch?v=_sI_Ps7JSEk").video__play
+              a(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk").video__play.js-lightbox
               p.video__text.video__text_longer Посмотрите на компанию «ГТС Складские системы» изнутри
               a(href="#").video__href О компании
             
@@ -217,7 +217,7 @@ html
       
         .container
           a(href="#").reviews__toall Все отзывы
-          button(type="button", data-fancybox, data-src="#reviews").btn.reviews__make Оставить отзыв
+          button(type="button", data-fancybox, data-src="#makereview").btn.reviews__make Оставить отзыв
           p.common__title Клиенты о нас
           .reviews__car-over
             .swiper-container.reviews__car.js-ireviews

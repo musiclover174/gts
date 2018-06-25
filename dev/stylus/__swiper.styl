@@ -170,8 +170,19 @@
   background-repeat no-repeat
   transition .5s background
 }
+@media (max-width: 1199px){
+  .swiper-buttons .swiper-button-prev,
+  .swiper-buttons .swiper-button-next{
+    margin-top: 0;
+  }
+}
 .swiper-button-prev_dark,
 .swiper-button-next_dark{
+  filter: invert(100%)
+}
+.swiper-button-prev_arr,
+.swiper-button-next_arr{
+  bgc transparent
   filter: invert(100%)
 }
 .swiper-button-prev:hover,

@@ -201,3 +201,67 @@
       fontify 14px 400 22px
       mt -12px
       mb 38px
+.intresting
+  mt 68px
+  pos relative
+  mb 62px
+  &__list
+    display flex
+    align-items flex-start
+    ml -30px
+    w calc(100% + 30px)
+  .news
+    &__elem
+      flex-direction column
+      ml 30px
+      w calc(25% - 30px)
+      @media $desktopMax
+        w calc(100% / 3 - 30px)
+        &:nth-child(4)
+          dn()
+      @media $tPortraitMax
+        w calc(50% - 30px)
+        &:nth-child(3)
+          dn()
+      @media $mLandscapeMax
+        w calc(100% - 30px)
+        &:nth-child(2)
+          dn()
+      & + .news__elem
+        mt 0
+    &__content
+      w 100%
+      mt 31px
+    &__imgover
+      w 100%
+      pt 66%
+      h 0
+    &__img
+      min-width 100%
+      min-height 100%
+  &__toall
+    pos absolute
+    r 32px
+    t 30px
+    color $dark
+    fontify 14px 500 18px
+    border-bottom 2px solid $orange
+    transition .5s border
+    &:after
+      content ""
+      pos absolute
+      t 1px
+      r -32px
+      size 24px 16px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQBAMAAAD+CqKmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEUODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg7///8TqNONAAAADXRSTlMACT3pPpb0A588ofPncb+tAQAAAAFiS0dEDm+9ME8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA9SURBVAjXY2CAAgEGBGAyQeKwXnNAcNh7U5CkKvBL3UWAK8icmwhlVbcnIAxYu5MICVYkCQbOk0hWgr0AAOa2JA82/bjiAAAAAElFTkSuQmCC") no-repeat center
+    @media $tPortrait
+      &:hover
+        border-color transparent
+    @media $desktopMax
+      t 23px
+    @media $tPortraitMax
+      pos relative
+      r auto
+      t 0
+      mt 35px
+      ib()

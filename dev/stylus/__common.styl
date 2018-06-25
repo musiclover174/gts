@@ -6,6 +6,9 @@ body
 
 html.burgeropen
   overflow hidden
+  .header
+    @media $mPortraitMax
+      overflow visible
   
 .container
   max-width 1330px
@@ -250,6 +253,10 @@ div[class\^="table-scroller"]
     pl 20px
     color alpha($dark, .5)
     fontify 14px 400 50px
+    text-overflow ellipsis
+    white-space nowrap
+    overflow hidden
+    max-width 100%
     span
       color $orange
   &__col

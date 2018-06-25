@@ -6,6 +6,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="cmsmagazine" content="6a5de8b480a9f417d465ec3935efb0fd">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Главная</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -15,7 +16,7 @@
     <header class="header">
       <div class="header__top">
         <div class="container">
-          <div class="town">Ваш город: <a class="town__href" href="#">Петропавловск-Камчатский</a></div>
+          <div class="town">Ваш город: <a class="town__href js-town" href="#city" data-fancybox>Петропавловск-Камчатский</a></div>
           <nav class="menu">
             <ul class="menu__list">
               <li class="menu__item"><a class="menu__item-href active" href="#">О компании</a></li>
@@ -651,6 +652,209 @@
         </div>
       </div>
     </footer>
+    <div class="hidden-block">
+      <div class="popup popup_city" id="city">
+        <p class="popup__title">Выбрать город</p>
+        <div class="popup__cities">
+          <div class="popup__citycol">
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">А</p><a class="popup__city-href" href="#">Абакан</a><a class="popup__city-href" href="#">Аксай</a><a class="popup__city-href" href="#">Альметьевск</a><a class="popup__city-href" href="#">Архангельск</a><a class="popup__city-href" href="#">Астрахань</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">Б</p><a class="popup__city-href" href="#">Барнаул</a><a class="popup__city-href" href="#">Батайск</a><a class="popup__city-href" href="#">Белгород</a><a class="popup__city-href" href="#">Березники</a><a class="popup__city-href" href="#">Бийск</a><a class="popup__city-href" href="#">Борисоглебск</a><a class="popup__city-href" href="#">Братск</a><a class="popup__city-href" href="#">Брянск</a><a class="popup__city-href" href="#">Бузулуг</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">В</p><a class="popup__city-href" href="#">Великий Новгород</a><a class="popup__city-href" href="#">Владимир</a><a class="popup__city-href" href="#">Волгоград</a><a class="popup__city-href" href="#">Волжский</a><a class="popup__city-href" href="#">Вологда</a><a class="popup__city-href" href="#">Воронеж</a><a class="popup__city-href" href="#">Выборг</a><a class="popup__city-href" href="#">Выкса</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">Д</p><a class="popup__city-href" href="#">Дертюли</a>
+            </div>
+          </div>
+          <div class="popup__citycol">
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">Е</p><a class="popup__city-href" href="#">Екатеринбург</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">И</p><a class="popup__city-href" href="#">Иваново</a><a class="popup__city-href" href="#">Ижевск</a><a class="popup__city-href" href="#">Иркутск</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">Й</p><a class="popup__city-href" href="#">Йошкар-Ола</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">К</p><a class="popup__city-href" href="#">Казань</a><a class="popup__city-href" href="#">Кемерово</a><a class="popup__city-href" href="#">Киров</a><a class="popup__city-href" href="#">Котлас</a><a class="popup__city-href" href="#">Краснодар</a><a class="popup__city-href" href="#">Красноярск</a><a class="popup__city-href" href="#">Курган</a><a class="popup__city-href" href="#">Курск</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">Л</p><a class="popup__city-href" href="#">Лермонтов</a><a class="popup__city-href" href="#">Липец</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">М</p><a class="popup__city-href" href="#">Магнитогорск</a><a class="popup__city-href" href="#">Миасс</a><a class="popup__city-href" href="#">Мурманск</a><a class="popup__city-href" href="#">Муром</a>
+            </div>
+          </div>
+          <div class="popup__citycol">
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">Н</p><a class="popup__city-href" href="#">Набережные Челны</a><a class="popup__city-href" href="#">Нефтекамск</a><a class="popup__city-href" href="#">Нижневартовск</a><a class="popup__city-href" href="#">Нижнекамск</a><a class="popup__city-href" href="#">Нижний Новгород</a><a class="popup__city-href" href="#">Нижний Тагил</a><a class="popup__city-href" href="#">Новокузнецк</a><a class="popup__city-href" href="#">Новосибирск</a><a class="popup__city-href" href="#">Новый Уренгой</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">О</p><a class="popup__city-href" href="#">Октябрьский</a><a class="popup__city-href" href="#">Омск</a><a class="popup__city-href" href="#">Оренбург</a><a class="popup__city-href" href="#">Орск</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">П</p><a class="popup__city-href" href="#">Пенза</a><a class="popup__city-href" href="#">Пермь</a><a class="popup__city-href" href="#">Петрозаводск</a><a class="popup__city-href" href="#">Псков</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">Р</p><a class="popup__city-href" href="#">Ростов-на-Дону</a><a class="popup__city-href" href="#">Рязань</a>
+            </div>
+          </div>
+          <div class="popup__citycol">
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">С</p><a class="popup__city-href" href="#">Сальск</a><a class="popup__city-href" href="#">Самара</a><a class="popup__city-href" href="#">Саранск</a><a class="popup__city-href" href="#">Саратов</a><a class="popup__city-href" href="#">Северодвинск</a><a class="popup__city-href" href="#">Смоленск</a><a class="popup__city-href" href="#">Ставрополь</a><a class="popup__city-href" href="#">Стерлитамак</a><a class="popup__city-href" href="#">Сургут</a><a class="popup__city-href" href="#">Сыктывкар</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">Т</p><a class="popup__city-href" href="#">Тамбов</a><a class="popup__city-href" href="#">Тверь</a><a class="popup__city-href" href="#">Тольятти</a><a class="popup__city-href" href="#">Томск</a><a class="popup__city-href" href="#">Тула</a><a class="popup__city-href" href="#">Тюмень</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">У</p><a class="popup__city-href" href="#">Ульяновск</a><a class="popup__city-href" href="#">Уфа</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">Ч</p><a class="popup__city-href" href="#">Чебоксары</a><a class="popup__city-href" href="#">Челябинск</a><a class="popup__city-href" href="#">Череповец</a><a class="popup__city-href" href="#">Чита</a>
+            </div>
+            <div class="popup__cityblock">
+              <p class="popup__city-alpha">Я</p><a class="popup__city-href" href="#">Ярославь</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="text">
+        <p class="popup__title">Заголовок текстового попапа</p>
+        <p class="popup__subtitle">Текст для попапа, говорящий о том, что случилось.</p>
+      </div>
+      <div class="popup" id="project">
+        <p class="popup__title">Заказать проект склада</p>
+        <p class="popup__subtitle">Обратите внимание, поля со звездочками – обязательны для заполнения.</p>
+        <form class="popup__form">
+          <div class="common__row">
+            <input class="common__input" type="text" data-req="req">
+            <label class="common__placeholder">ФИО<span>*</span></label>
+          </div>
+          <div class="common__row">
+            <input class="common__input js-phone" type="text" data-req="req">
+            <label class="common__placeholder">Телефон<span>*</span></label>
+          </div>
+          <div class="common__row common__row_popcheck">
+            <div class="fakecheckbox">
+              <input class="fakecheckbox__truecheck" type="checkbox" value="" name="agreement" checked id="agreement1">
+              <label class="fakecheckbox__label" for="agreement1">Я даю согласие на <a href="#">обработку персональных данных</a></label>
+            </div>
+            <input class="btn common__sbm" type="submit" value="Отправить">
+          </div>
+        </form>
+      </div>
+      <div class="popup" id="projectfree">
+        <p class="popup__title">Заказать бесплатный проект склада</p>
+        <p class="popup__subtitle">Обратите внимание, поля со звездочками – обязательны для заполнения.</p>
+        <div class="popup__projects">
+          <p class="popup__projects-title">Выбранные категории товаров:</p>
+          <ol class="hidden" data-cats></ol>
+        </div>
+        <form class="popup__form">
+          <div class="common__row">
+            <input class="common__input" type="text" data-req="req">
+            <label class="common__placeholder">ФИО<span>*</span></label>
+          </div>
+          <div class="common__row">
+            <input class="common__input js-phone" type="text" data-req="req">
+            <label class="common__placeholder">Телефон<span>*</span></label>
+          </div>
+          <div class="common__row common__row_popcheck">
+            <div class="fakecheckbox">
+              <input class="fakecheckbox__truecheck" type="checkbox" value="" name="agreement" checked id="agreement1">
+              <label class="fakecheckbox__label" for="agreement1">Я даю согласие на <a href="#">обработку персональных данных</a></label>
+            </div>
+            <input class="btn common__sbm" type="submit" value="Отправить">
+          </div>
+        </form>
+      </div>
+      <div class="popup" id="question">
+        <p class="popup__title">Задать вопрос</p>
+        <p class="popup__subtitle">Обратите внимание, поля со звездочками – обязательны для заполнения.</p>
+        <form class="popup__form">
+          <div class="common__row">
+            <input class="common__input" type="text" data-req="req">
+            <label class="common__placeholder">ФИО<span>*</span></label>
+          </div>
+          <div class="common__row">
+            <input class="common__input js-phone" type="text" data-req="req">
+            <label class="common__placeholder">Телефон<span>*</span></label>
+          </div>
+          <div class="common__row">
+            <input class="common__input" type="text" data-req="req" data-type="email">
+            <label class="common__placeholder">E-mail<span>*</span></label>
+          </div>
+          <div class="common__row">
+            <textarea class="common__textarea" data-req="req"></textarea>
+            <label class="common__placeholder">Вопрос<span>*</span></label>
+          </div>
+          <div class="common__row common__row_popcheck">
+            <div class="fakecheckbox">
+              <input class="fakecheckbox__truecheck" type="checkbox" value="" name="agreement" checked id="agreement1">
+              <label class="fakecheckbox__label" for="agreement1">Я даю согласие на <a href="#">обработку персональных данных</a></label>
+            </div>
+            <input class="btn common__sbm" type="submit" value="Отправить">
+          </div>
+        </form>
+      </div>
+      <div class="popup" id="makereview">
+        <p class="popup__title">Оставить отзыв</p>
+        <p class="popup__subtitle">Оставьте  отзыв о проделаной работе с помощью этой формы. Помогите нам стать лучше. Обратите внимание, поля со звездочками – обязательны для заполнения.</p>
+        <form class="popup__form">
+          <div class="common__row">
+            <div class="reviews__form-stars">
+              <input class="reviews__form-stars-input js-reviews-starinput" type="stars" value=""><span class="reviews__form-star js-reviews-star" data-star="1"></span><span class="reviews__form-star js-reviews-star" data-star="2"></span><span class="reviews__form-star js-reviews-star" data-star="3"></span><span class="reviews__form-star js-reviews-star" data-star="4"></span><span class="reviews__form-star js-reviews-star" data-star="5"></span>
+            </div>
+          </div>
+          <div class="common__row">
+            <input class="common__input" type="text">
+            <label class="common__placeholder">Название компании</label>
+          </div>
+          <div class="common__row">
+            <input class="common__input" type="text" data-req="req">
+            <label class="common__placeholder">ФИО<span>*</span></label>
+          </div>
+          <div class="common__row">
+            <input class="common__input" type="text" data-req="req">
+            <label class="common__placeholder">Должность<span>*</span></label>
+          </div>
+          <div class="common__row">
+            <input class="common__input" type="text" data-req="req" data-type="email">
+            <label class="common__placeholder">E-mail<span>*</span></label>
+          </div>
+          <div class="common__row">
+            <textarea class="common__textarea" data-req="req"></textarea>
+            <label class="common__placeholder">Текст отзыва<span>*</span></label>
+          </div>
+          <div class="common__row">
+            <div class="common-fileovers">
+              <div class="common__fileover">
+                <input class="common__file js-common-fileinput" type="file" name="" id="file1">
+                <label class="common__filename js-common-file" for="file1" data-default="Добавить логотип">Добавить логотип</label>
+                <button class="common__filedelete js-common-filedelete" type="button"></button>
+              </div>
+              <div class="common__fileover">
+                <input class="common__file js-common-fileinput" type="file" name="" id="file2">
+                <label class="common__filename js-common-file" for="file2" data-default="Добавить изображение">Добавить изображение</label>
+                <button class="common__filedelete js-common-filedelete" type="button"></button>
+              </div>
+            </div>
+          </div>
+          <div class="common__row common__row_popcheck">
+            <div class="fakecheckbox">
+              <input class="fakecheckbox__truecheck" type="checkbox" value="" name="agreement" checked id="agreement1">
+              <label class="fakecheckbox__label" for="agreement1">Я даю согласие на <a href="#">обработку персональных данных</a></label>
+            </div>
+            <input class="btn common__sbm" type="submit" value="Отправить">
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="static/js/vendor.js"></script>
     <script src="static/js/script.js"></script>
   </body>

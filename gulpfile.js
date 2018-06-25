@@ -78,19 +78,19 @@ gulp.task('prog-js', function (event) {
 
 // pug task
 gulp.task('pug', function (cb) {
-	/*return gulp.src(src.dev.pug)
+	return gulp.src(src.dev.pug)
 		.pipe(pug({
 			pretty: true
 		}))
 		.pipe(gulp.dest(src.prod.html))
-    .pipe(reload({stream:true}));*/
-  pump([
+    .pipe(reload({stream:true}));
+  /*pump([
     gulp.src(src.dev.pug),
     pug({pretty: true}),
     gulp.dest(src.prod.html),
     reload({stream:true})
   ],
-    cb);
+    cb);*/
 });
 
 // stylus task and minify
@@ -178,7 +178,7 @@ gulp.task('icons-min', function () {
 
 // Reload all Browsers
 gulp.task('bs-reload', function () {
-  browserSync.reload();
+  browserSync.reload({stream:true});
 });
 
 // watch-такс с релоадом

@@ -1,0 +1,395 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    main.content
+      .container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim /
+        h1 Вопрос-ответ
+        section.consult-page.js-consult
+          .consult__cols
+            .consult__left
+              .consult__question-cats 
+                span Категория вопросов
+                button(type="button", data-type="quality").consult__question-cat.js-consult-question.active Качество продукции
+                button(type="button", data-type="garanty").consult__question-cat.js-consult-question Гарантийное обслуживание
+                button(type="button", data-type="delivery").consult__question-cat.js-consult-question Доставка и оплата
+            aside.consult__right
+          .consult__cols.consult__question-sticky
+            .consult__left
+              .consult__question-list-tabs
+                .consult__question-list-tab(data-type="quality")
+                  ul.consult__question-list.js-consult-question-list
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Наибольший Общий Делитель (НОД) отражает анормальный интеграл от функции, имеющий конечный разрыв, в итоге приходим к логическому противоречию?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты.
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Адекватная ментальность, в рамках сегодняшних воззрений, отталкивает рекламный клаттер?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text 
+                          p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          .consult__question-hidden.js-hidden
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          a(href="#", data-default="Показать полностью", data-open="Скрыть").consult__question-toggler.js-toggler
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Наибольший Общий Делитель (НОД) отражает анормальный интеграл от функции, имеющий конечный разрыв, в итоге приходим к логическому противоречию?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты.
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Адекватная ментальность, в рамках сегодняшних воззрений, отталкивает рекламный клаттер?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text 
+                          p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          .consult__question-hidden.js-hidden
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          a(href="#", data-default="Показать полностью", data-open="Скрыть").consult__question-toggler.js-toggler
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Наибольший Общий Делитель (НОД) отражает анормальный интеграл от функции, имеющий конечный разрыв, в итоге приходим к логическому противоречию?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты.
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Адекватная ментальность, в рамках сегодняшних воззрений, отталкивает рекламный клаттер?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text 
+                          p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          .consult__question-hidden.js-hidden
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          a(href="#", data-default="Показать полностью", data-open="Скрыть").consult__question-toggler.js-toggler
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                  .consult__question-showmore
+                    button(type="button").consult__question-showmore-href Показать еще
+                .consult__question-list-tab(data-type="garanty")
+                  ul.consult__question-list.js-consult-question-list
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Наибольший Общий Делитель (НОД) отражает анормальный интеграл от функции, имеющий конечный разрыв, в итоге приходим к логическому противоречию?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты.
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Адекватная ментальность, в рамках сегодняшних воззрений, отталкивает рекламный клаттер?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text 
+                          p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          .consult__question-hidden.js-hidden
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          a(href="#", data-default="Показать полностью", data-open="Скрыть").consult__question-toggler.js-toggler
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Наибольший Общий Делитель (НОД) отражает анормальный интеграл от функции, имеющий конечный разрыв, в итоге приходим к логическому противоречию?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты.
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Адекватная ментальность, в рамках сегодняшних воззрений, отталкивает рекламный клаттер?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text 
+                          p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          .consult__question-hidden.js-hidden
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          a(href="#", data-default="Показать полностью", data-open="Скрыть").consult__question-toggler.js-toggler
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Наибольший Общий Делитель (НОД) отражает анормальный интеграл от функции, имеющий конечный разрыв, в итоге приходим к логическому противоречию?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты.
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Адекватная ментальность, в рамках сегодняшних воззрений, отталкивает рекламный клаттер?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text 
+                          p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          .consult__question-hidden.js-hidden
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          a(href="#", data-default="Показать полностью", data-open="Скрыть").consult__question-toggler.js-toggler
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                  .consult__question-showmore
+                    button(type="button").consult__question-showmore-href Показать еще
+                .consult__question-list-tab(data-type="delivery")
+                  ul.consult__question-list.js-consult-question-list
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Наибольший Общий Делитель (НОД) отражает анормальный интеграл от функции, имеющий конечный разрыв, в итоге приходим к логическому противоречию?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты.
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Адекватная ментальность, в рамках сегодняшних воззрений, отталкивает рекламный клаттер?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text 
+                          p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          .consult__question-hidden.js-hidden
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          a(href="#", data-default="Показать полностью", data-open="Скрыть").consult__question-toggler.js-toggler
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Наибольший Общий Делитель (НОД) отражает анормальный интеграл от функции, имеющий конечный разрыв, в итоге приходим к логическому противоречию?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты.
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Адекватная ментальность, в рамках сегодняшних воззрений, отталкивает рекламный клаттер?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text 
+                          p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          .consult__question-hidden.js-hidden
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          a(href="#", data-default="Показать полностью", data-open="Скрыть").consult__question-toggler.js-toggler
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Наибольший Общий Делитель (НОД) отражает анормальный интеграл от функции, имеющий конечный разрыв, в итоге приходим к логическому противоречию?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты.
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                    li.consult__question-item
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Вопрос
+                          p.consult__question-date 23.05.18
+                        .consult__question-text Адекватная ментальность, в рамках сегодняшних воззрений, отталкивает рекламный клаттер?
+                      .consult__question-row
+                        aside.consult__question-info
+                          p.consult__question-title Ответ
+                          p.consult__question-date 24.05.18
+                        .consult__question-text 
+                          p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          .consult__question-hidden.js-hidden
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                            p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                          a(href="#", data-default="Показать полностью", data-open="Скрыть").consult__question-toggler.js-toggler
+                      .consult__question-row
+                        .consult__question-share
+                          span.consult__question-share-title Поделиться:
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                          button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                  .consult__question-showmore
+                    button(type="button").consult__question-showmore-href Показать еще
+            aside.consult__right.js-consult-question-sticky
+              .consult__person
+                .consult__person-imgover
+                  img(src="img/consult-person.jpg").consult__person-img
+                p.consult__person-name Мирошенко Алексей
+                p.consult__person-dlg На ваши вопросы отвечает главный технолог ООО «Горторгснаб»
+                button(type="button", data-fancybox, data-src="#question").btn.consult__person-ask Задать вопрос
+    include layout/__footer

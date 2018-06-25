@@ -1,5 +1,7 @@
 mixin cardElem(data)
-  li.card__elem
+  -var load = data.load ? data.load : ''
+
+  li.card__elem(data-cost=data.cost, data-load=load)
     .card__elem-hrefover
       a(href="#").card__elem-href !{data.name}
     if data.favorites

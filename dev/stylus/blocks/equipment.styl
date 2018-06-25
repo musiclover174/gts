@@ -1,4 +1,4 @@
-.equipment
+.i-equipment
   background-color whitesmoke
   padding 66px 0 74px
   &__list
@@ -73,4 +73,88 @@
     @media $tPortraitMax
       mt 30px
       ml 0
-  
+
+.equipment
+  pos relative
+  z-index 1
+  pb 90px
+  pt 72px
+  text-align center
+  &__car-over
+    pos relative
+  &__bg
+    pos absolute
+    z-index -1
+    t 0
+    l 50%
+    h 100%
+    w calc(100vw + 20px)
+    transform translateX(-50%)
+  &__title
+    color white
+    fontify 44px 400 48px
+    mb 80px
+    @media $tLandscapeMax
+      fontify 38px 400 44px
+    @media $mLandscapeMax
+      fontify 26px 400 32px
+  &__item
+    display flex
+  &__iconover
+    w 150px
+    @media $mPortraitMax
+      dn()
+  &__icon
+    max-width 100%
+  &__content
+    w calc(100% - 150px)
+    text-align left
+    @media $mPortraitMax
+      w 100%
+  &__href
+    color white
+    font-size 20px
+    font-weight 400
+    line-height 22px
+    border-bottom 2px solid $orange
+    transition .5s border
+    &:hover
+      border-color transparent
+  &__text
+    color white
+    fontify 14px 400 22px
+    mt 20px
+  &__order
+    mt 56px
+    @media $mPortraitMax
+      font-size 12px
+      padding 0 20px
+  .swiper-button-prev
+    l -73px
+    outline none
+    @media $lDesktopMax
+      l -55px
+    @media $desktopMax
+      t 92px
+    @media $tLandscapeMax
+      t 0
+      l 0
+  .swiper-button-next
+    r -73px
+    outline none
+    @media $lDesktopMax
+      r -55px
+    @media $desktopMax
+      t 92px
+    @media $tLandscapeMax
+      t 0
+      r auto
+      l 66px
+  .swiper-buttons
+    @media $tLandscapeMax
+      pos relative
+      margin 0 auto
+      z-index 10
+      w 110px
+      h 44px
+      mt 30px

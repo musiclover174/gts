@@ -1,0 +1,224 @@
+.stillage
+  pos relative
+  &__scrollhrefs
+    pos absolute
+    r 0
+    t -58px
+    @media $tPortraitMax
+      dn()
+    &-href
+      ib()
+      color $dark
+      bgc transparent
+      cursor pointer
+      border 0
+      padding 0
+      @media $mLandscape
+        ml 20px
+        mb 5px
+      fontify 14px 500 16px
+      border-bottom 2px dotted $orange
+      transition .5s border
+      &:hover
+        border-color transparent
+      & + &
+        ml 24px
+        @media $mLandscape
+          ml 20px
+  &__banner
+    mb 45px
+    &-img
+      max-width 100%
+    &-carover
+      pos relative
+      @media $mLandscapeMax
+        dn()
+      .swiper-button-prev
+        l 20px
+        outline none
+        @media $tLandscapeMax
+          mt -22px
+      .swiper-button-next
+        r 20px
+        outline none
+        @media $tLandscapeMax
+          mt -22px
+    &-bottom
+      mt 32px
+      display flex
+      justify-content space-between
+      @media $tPortraitMax
+        flex-direction column
+    &-text
+      w 876px
+      color $dark
+      fontify 14px 400 22px
+      @media $desktopMax
+        w 676px
+      @media $tLandscapeMax
+        w 560px
+      @media $tPortraitMax
+        w 100%
+    &-cost
+      w 422px
+      color $orange
+      fontify 44px 400 43px
+      font-size 44px
+      font-weight 400
+      line-height 43px
+      @media $tLandscapeMax
+        w 340px
+      @media $tPortraitMax
+        w 100%
+        mt 30px
+      @media $mPortraitMax
+        fontify 28px 400 28px
+      span
+        pos relative
+        color $dark
+        fontify 18px 400 43px
+        text-transform uppercase
+        letter-spacing .1em
+        pr 6px
+        @media $mPortraitMax
+          fontify 16px 400 28px
+  &__types
+    pos relative
+    z-index 1
+    pt 68px
+    pb 80px
+    &:before
+      content ""
+      bgc #f5f5f5
+      pos absolute
+      z-index -1
+      w calc(100vw + 20px)
+      h 100%
+      l 50%
+      t 0
+      transform translateX(-50%)
+  &__type
+    & + &
+      mt 70px
+    &-list
+      display flex
+      flex-wrap wrap
+    &-item
+      ib()
+      h 360px
+      pos relative
+      w calc(100% / 3)
+      padding 26px 34px
+      transition .5s border
+      &:last-child
+        z-index 1
+      @media $tLandscape
+        &:nth-child(n + 2):not(:nth-child(3n - 2))
+          border-left 2px solid #e5e5e5
+        &:nth-child(n + 4)
+          border-top 2px solid #e5e5e5
+      @media $tPortraitMax
+        &:nth-child(n + 1):not(:nth-child(2n - 1))
+          border-left 2px solid #e5e5e5
+        &:nth-child(n + 3)
+          border-top 2px solid #e5e5e5
+      @media $mLandscape
+        & + &
+          border-top 2px solid #e5e5e5
+        &:nth-child(n + 1):not(:nth-child(2n - 1))
+          border-left none
+      @media $tPortrait
+        &:hover
+          border-color transparent
+          z-index 2
+          & ^[-2]-bg
+            box-shadow 0 6px 19px rgba(0, 0, 0, 0.12)
+            transform scale(1.05)
+      @media $tPortraitMax
+        width 50%
+      @media $mLandscape
+        width 100%
+      @media $mPortraitMax
+        h auto
+    &-bg
+      bgc white
+      pos absolute
+      l 0
+      t 0
+      w 100%
+      h 100%
+      overflow hidden
+      z-index -1
+      will-change transform
+      box-shadow none
+      transition .5s transform, .5s box-shadow
+    &-img
+      pos absolute
+      l 270px
+      t 50%
+      transform translateY(-50%)
+      @media $desktopMax
+        l 230px
+      @media $mLandscapeMax
+        l auto
+        r 0
+      @media $mPortraitMax
+        dn()
+    &-width
+      max-width 170px
+      mb 20px
+      @media $mPortraitMax
+        max-width 100%
+    &-mainhref
+      color $dark
+      fontify 24px 400 30px
+      border-bottom 2px solid currentColor
+      transition .5s border
+      @media $mPortraitMax
+        fontify 18px 400 24px
+      span
+        pos relative
+        t 2px
+        line-height 25px
+        transition .5s border
+      &:hover
+        border-color transparent
+    &-hreflist
+      //mt 22px
+      mt -2px
+      max-width 250px
+    &-hrefitem
+      ml -20px
+      & + &
+        //mt 8px
+        mt 0
+    &-href 
+      ib()
+      color alpha($dark, .5)
+      font-size 14px
+      font-weight 400
+      line-height 22px
+      padding 4px 20px
+      border-radius 15px
+      transition .5s background, .5s color
+      &:hover
+        color $orange
+    &-text
+      color $dark
+      fontify 14px 300 22px
+      max-width 175px
+      mt 20px
+      opacity .5
+      ^[0]__types_equipment &
+        max-width 230px
+        @media $desktopMax
+          max-width 200px
+      b
+        font-weight 500
+      @media $mPortraitMax
+        max-width 100%
+    &-load
+      color $orange
+      fontify 16px 500 24px
+      span
+        color #0e0e0e

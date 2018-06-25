@@ -1,0 +1,8 @@
+mixin other(data)
+  .others__elem
+    p.others__hrefover
+      a(href="#").others__href.js-others-shaver !{data.href}
+    a(href="#").others__imgover
+      img(src=data.img, alt="").others__img
+    p.others__cost !{data.cost} 
+      span руб.

@@ -1,0 +1,301 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    main.content
+      .container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim /
+        h1 Стеллажи
+        section.stillage
+          .stillage__scrollhrefs
+            button(type="button", data-to="pols").stillage__scrollhrefs-href.js-scrollTo Полочные стеллажи
+            button(type="button", data-to="palet").stillage__scrollhrefs-href.js-scrollTo Палетные стеллажи
+            button(type="button", data-to="specs").stillage__scrollhrefs-href.js-scrollTo Специализированные стеллажи
+          
+          section.stillage__banner.js-stillage
+            .stillage__banner-carover
+              .swiper-container.stillage__banner-car.js-stillage-banner
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src="img/banner-gen1.jpg").stillage__banner-img
+                  .swiper-slide
+                    img(src="img/banner-gen2.jpg").stillage__banner-img
+              .swiper-buttons
+                .swiper-button-prev
+                .swiper-button-next
+            .stillage__banner-bottom
+              p.stillage__banner-text Мы занимаемся продажей стеллажей более 20 лет и за это время досконально изучили своих клиентов и нюансы логистических российских складов. В сочетании с высокой квалификацией наших специалистов это дает возможность предложить каждому заказчику самый выгодный вариант проекта складских стеллажных систем с учетом особенностей помещения, специфики грузов и организации работы склада.
+              p.stillage__banner-cost 
+                span цена от 
+                | 1 956 руб.
+          
+          section.stillage__types
+            .stillage__type(data-scroll="pols")
+              p.common__title Полочные стеллажи
+              .stillage__type-list
+                .stillage__type-item
+                  span.stillage__type-bg
+                    img(src="img/types1.jpg").stillage__type-img
+                  .stillage__type-width
+                    a(href="#").stillage__type-mainhref 
+                      span Лайт
+                  p.stillage__type-load 120 кг 
+                    span на полку
+                  p.stillage__type-load 750 кг 
+                    span на секцию
+                  p.stillage__type-text 
+                    b Оптимально подходят для хранения: 
+                    | дома (например на балконе), в офисах, в подсобных посмещениях, на складах для штучных грузов.
+                .stillage__type-item
+                  span.stillage__type-bg
+                    img(src="img/types2.jpg").stillage__type-img
+                  .stillage__type-width
+                    a(href="#").stillage__type-mainhref 
+                      span Универсал
+                  p.stillage__type-load 150 / 300 кг 
+                    span на полку
+                  p.stillage__type-load 750 кг 
+                    span на секцию
+                  p.stillage__type-text 
+                    b Оптимально подходят для хранения: 
+                    | дома (например на балконе), в офисах, в подсобных посмещениях, на складах для штучных грузов.
+                .stillage__type-item
+                  span.stillage__type-bg
+                    img(src="img/types3.jpg").stillage__type-img
+                  .stillage__type-width
+                    a(href="#").stillage__type-mainhref 
+                      span Профи-Т
+                  p.stillage__type-load 350 / 450 кг 
+                    span на полку
+                  p.stillage__type-load 999 кг
+                    span на секцию
+                  p.stillage__type-text 
+                    b Оптимально подходят для хранения: 
+                    | дома (например на балконе), в офисах, в подсобных посмещениях, на складах для штучных грузов.
+                .stillage__type-item
+                  span.stillage__type-bg
+                    img(src="img/types4.jpg").stillage__type-img
+                  .stillage__type-width
+                    a(href="#").stillage__type-mainhref 
+                      span Оптима
+                  p.stillage__type-load 120 кг 
+                    span на полку
+                  p.stillage__type-load 750 кг 
+                    span на секцию
+                  p.stillage__type-text 
+                    b Оптимально подходят для хранения: 
+                    | дома (например на балконе), в офисах, в подсобных посмещениях, на складах для штучных грузов.
+            .stillage__type(data-scroll="palet")
+              p.common__title Паллетные стеллажи
+              .stillage__type-list
+                .stillage__type-item
+                  span.stillage__type-bg
+                    img(src="img/types5.jpg").stillage__type-img
+                  .stillage__type-width
+                    a(href="#").stillage__type-mainhref 
+                      span Фронтальные
+                  p.stillage__type-load 120 кг 
+                    span на полку
+                  p.stillage__type-load 750 кг 
+                    span на секцию
+                  p.stillage__type-text 
+                    b Оптимально подходят для хранения: 
+                    | дома (например на балконе), в офисах, в подсобных посмещениях, на складах для штучных грузов.
+                .stillage__type-item
+                  span.stillage__type-bg
+                    img(src="img/types6.jpg").stillage__type-img
+                  .stillage__type-width
+                    a(href="#").stillage__type-mainhref 
+                      span Набивные
+                  p.stillage__type-load 150 / 300 кг 
+                    span на полку
+                  p.stillage__type-load 750 кг 
+                    span на секцию
+                  p.stillage__type-text 
+                    b Оптимально подходят для хранения: 
+                    | дома (например на балконе), в офисах, в подсобных посмещениях, на складах для штучных грузов.
+                .stillage__type-item
+                  span.stillage__type-bg
+                    img(src="img/types7.jpg").stillage__type-img
+                  .stillage__type-width
+                    a(href="#").stillage__type-mainhref 
+                      span Мезонины
+                  p.stillage__type-load 350 / 450 кг 
+                    span на полку
+                  p.stillage__type-load 999 кг
+                    span на секцию
+                  p.stillage__type-text 
+                    b Оптимально подходят для хранения: 
+                    | дома (например на балконе), в офисах, в подсобных посмещениях, на складах для штучных грузов.
+            .stillage__type(data-scroll="specs")
+              p.common__title Специализированные стеллажи
+              .stillage__type-list
+                .stillage__type-item
+                  span.stillage__type-bg
+                    img(src="img/types1.jpg").stillage__type-img
+                  .stillage__type-width
+                    a(href="#").stillage__type-mainhref 
+                      span Cash&Carry
+                  p.stillage__type-load 120 кг 
+                    span на полку
+                  p.stillage__type-load 750 кг 
+                    span на секцию
+                  p.stillage__type-text 
+                    b Оптимально подходят для хранения: 
+                    | дома (например на балконе), в офисах, в подсобных посмещениях, на складах для штучных грузов.
+                .stillage__type-item
+                  span.stillage__type-bg
+                    img(src="img/types3.jpg").stillage__type-img
+                  .stillage__type-width
+                    a(href="#").stillage__type-mainhref 
+                      span Торговые
+                  p.stillage__type-load 150 / 300 кг 
+                    span на полку
+                  p.stillage__type-load 750 кг 
+                    span на секцию
+                  p.stillage__type-text 
+                    b Оптимально подходят для хранения: 
+                    | дома (например на балконе), в офисах, в подсобных посмещениях, на складах для штучных грузов.
+                .stillage__type-item
+                  span.stillage__type-bg
+                    img(src="img/types5.jpg").stillage__type-img
+                  .stillage__type-width
+                    a(href="#").stillage__type-mainhref 
+                      span С вешалкой
+                  p.stillage__type-load 350 / 450 кг 
+                    span на полку
+                  p.stillage__type-load 999 кг
+                    span на секцию
+                  p.stillage__type-text 
+                    b Оптимально подходят для хранения: 
+                    | дома (например на балконе), в офисах, в подсобных посмещениях, на складах для штучных грузов.  
+                .stillage__type-item
+                  span.stillage__type-bg
+                    img(src="img/types4.jpg").stillage__type-img
+                  .stillage__type-width
+                    a(href="#").stillage__type-mainhref 
+                      span Cash&Carry
+                  p.stillage__type-load 120 кг 
+                    span на полку
+                  p.stillage__type-load 750 кг 
+                    span на секцию
+                  p.stillage__type-text 
+                    b Оптимально подходят для хранения: 
+                    | дома (например на балконе), в офисах, в подсобных посмещениях, на складах для штучных грузов.
+                .stillage__type-item
+                  span.stillage__type-bg
+                    img(src="img/types6.jpg").stillage__type-img
+                  .stillage__type-width
+                    a(href="#").stillage__type-mainhref 
+                      span Торговые
+                  p.stillage__type-load 150 / 300 кг 
+                    span на полку
+                  p.stillage__type-load 750 кг 
+                    span на секцию
+                  p.stillage__type-text 
+                    b Оптимально подходят для хранения: 
+                    | дома (например на балконе), в офисах, в подсобных посмещениях, на складах для штучных грузов.
+          
+          section.quiz
+            img(src="img/quiz.jpg").quiz__img
+          
+          section.complex
+            .complex__top
+              p.common__title Комплексные поставки
+              p.complex__subtitle В наличии более 30 00 товаров с доставкой по россии и СНГ
+            .complex__features
+              .complex__feature
+                img(src="img/complex-icon1.png").complex__feature-icon
+                .complex__feature-content
+                  p.complex__feature-title Экономия времени
+                  p.complex__feature-text Не нужно искать несколько поставщиков
+              .complex__feature
+                img(src="img/complex-icon2.png").complex__feature-icon
+                .complex__feature-content
+                  p.complex__feature-title Доставка дешевле
+                  p.complex__feature-text Все необходимое в одной поставке
+              .complex__feature
+                img(src="img/complex-icon3.png").complex__feature-icon
+                .complex__feature-content
+                  p.complex__feature-title Скидки на технику
+                  p.complex__feature-text При покупке стеллажных систем
+            .complex__calc
+              .complex__calc-item
+                .complex__calc-titleover
+                  a(href="#").complex__calc-title.js-complex-title-shave Штабелеры
+                .complex__calc-imgover
+                  img(src="img/complex-img1.jpg").complex__calc-img
+                .complex__calc-bottom
+                  p.complex__calc-cost от 3700 
+                    span руб.
+                  label(data-value="Штабелеры", data-default="Выбрать", data-checked="Выбрано").complex__calc-checkbox.js-complex-check
+                    input(type="checkbox", value="1").comlex__calc-checktrue
+              .complex__calc-item
+                .complex__calc-titleover
+                  a(href="#").complex__calc-title.js-complex-title-shave Гидравлические тележки
+                .complex__calc-imgover
+                  img(src="img/complex-img2.jpg").complex__calc-img
+                .complex__calc-bottom
+                  p.complex__calc-cost от 2300 
+                    span руб.
+                  label(data-value="Гидравлические тележки", data-default="Выбрать", data-checked="Выбрано").complex__calc-checkbox.js-complex-check
+                    input(type="checkbox", value="1").comlex__calc-checktrue
+              .complex__calc-item
+                .complex__calc-titleover
+                  a(href="#").complex__calc-title.js-complex-title-shave Палетные стелажи
+                .complex__calc-imgover
+                  img(src="img/complex-img3.jpg").complex__calc-img
+                .complex__calc-bottom
+                  p.complex__calc-cost от 1200 
+                    span руб.
+                  label(data-value="Палетные стелажи", data-default="Выбрать", data-checked="Выбрано").complex__calc-checkbox.js-complex-check
+                    input(type="checkbox", value="1").comlex__calc-checktrue
+              .complex__calc-item.complex__calc-item_last
+                p.complex__calc-full Полный ассортимент стеллажей и складской техники
+                p.complex__calc-benefit с выгодой до
+                  span 40%
+                p.complex__calc-discount скидки
+            .complex-bottom
+              button(type="button", data-fancybox, data-src="#projectfree").complex__href.btn Заказать бесплатный проект склада
+          
+          section.intresting
+            p.common__title Это интересно
+            include blocks/news-elem
+            
+            -var newsArray = []
+            -newsArray.push({img: 'img/inews1.jpg', date: "12 апреля 2018", href: "Доллар растет, а мы снижаем цены!", text: 'Хотим порадовать отличной новостью! Мы снизили цены на ряд самоходных штабелеров SMART и SMART PREMIUM!'})
+            -newsArray.push({img: 'img/inews2.jpg', date: "6 февраля 2018", href: "Качество не обязательно должно быть слишком дорогим! Наше предложение тому подтверждение!", text: 'ГТС "Складские системы" уже более 20 лет обеспечивает своих клиентов надежной техникой для любых нужд. Мы всегда стремимся дать нашим клиентам наиболее комфортные условия по самым низким ценам.'})
+            -newsArray.push({img: 'img/inews3.jpg', date: "15 ноября 2017", href: "На гидравлические штабелеры с электроподъемом SMART!", text: "Для тех кто ищет максимальную выгоду, мы снизили цены на популярные модели штабелеров с электроподъемом SMART BDA!"})
+            -newsArray.push({img: 'img/iproject2.jpg', date: "12 апреля 2018", href: "Популярнейший стеллаж Профи-Т теперь и с металлическим настилом! ", text: 'Стеллажи серии Профи-Т - это качество, проверенное временем! Тысячи наших довольных клиентов тому подтверждение.'})
+            ul.intresting__list
+              for news in newsArray
+                +newsElem(news)
+            a(href="#").intresting__toall Все статьи
+          
+          section.projects
+            include blocks/project
+
+            p.common__title Проекты, которые мы реализовали
+            .projects__car-over
+              .swiper-container.projects__car.js-iprojects
+                .swiper-wrapper
+                  -var projectsArray = []
+                  -projectsArray.push({img: 'img/iproject1.jpg', cost: "от 2 600 руб за 1 полку", href: "Стеллажные системы «Каскад»", text: 'Склад «Мособлфармация», 2016'})
+                  -projectsArray.push({img: 'img/iproject2.jpg', cost: "от 1 800 руб. за 1 паллетоместо", href: "Стеллажные системы «Турин»", text: 'Склад «Кант», 2016'})
+                  -projectsArray.push({img: 'img/iproject3.jpg', cost: "от 2 600 руб./м<sup>2</sup>", href: "Системы хранения «Оптима»", text: "Магазин «Элекс-Нет», 2017"})
+                  for project in projectsArray
+                    .swiper-slide
+                      +project(project)
+              .swiper-buttons
+                .swiper-button-prev.swiper-button-prev_dark
+                .swiper-button-next.swiper-button-next_dark
+            a(href="#").projects__toall Все выполненные проекты
+           
+          include blocks/consult
+            
+          include blocks/text
+    include layout/__footer

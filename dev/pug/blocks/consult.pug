@@ -1,0 +1,248 @@
+section.consult.js-consult
+  .consult__buttons
+    button(type="button", data-type="order").consult__button.consult__button_order.js-consult-tab.active Оставить заявку на скидку
+    button(type="button", data-type="question").consult__button.consult__button_question.js-consult-tab Задать вопрос
+    button(type="button", data-type="reviews").consult__button.consult__button_reviews.js-consult-tab Оставить отзыв
+  .consult__blocks
+    .consult__block(data-type="order")
+      p.common__title Оставьте заявку на скидку
+      form(data-scroll="reviews__form").reviews__form
+        aside.reviews__form-text
+          p Для получите бесплатной консультации заполните форму справа. Обратите внимание, поля со звездочками – обязательны для заполнения.
+        .reviews__form-main
+          .common__row
+            .common__col
+              .common__row
+                input(type="text", data-req="req").common__input
+                label.common__placeholder ФИО
+                  span *
+              .common__row
+                input(type="text", data-req="req").common__input.js-phone
+                label.common__placeholder Телефон
+                  span *
+              .common__row
+                input(type="text", data-req="req", data-type="email").common__input
+                label.common__placeholder E-mail
+                  span *
+            .common__col
+              .common__row
+                textarea(data-req="req").common__textarea
+                label.common__placeholder Комментарий
+                  span *
+          .reviews__form-bottom
+            .fakecheckbox
+              input(type="checkbox", value="", name="agreement", checked)#agreement1.fakecheckbox__truecheck
+              label(for="agreement1").fakecheckbox__label Я даю согласие на 
+                a(href="#") обработку персональных данных
+            input(type="submit", value="Отправить").btn.common__sbm
+    .consult__block(data-type="question")
+      p.common__title Бесплатная консультация он-лайн
+      .consult__cols
+        .consult__left
+          form(action="").search__form
+            input(type="text", data-req="req", placeholder="Поиск по вопросам").search__inp
+            input(type="submit", value="").search__icon
+          .consult__question-cats 
+            span Категория вопросов
+            button(type="button", data-type="quality").consult__question-cat.js-consult-question.active Качество продукции
+            button(type="button", data-type="garanty").consult__question-cat.js-consult-question Гарантийное обслуживание
+            button(type="button", data-type="delivery").consult__question-cat.js-consult-question Доставка и оплата
+            a(href="#").consult__question-toall Все вопросы 
+              span (134)
+        aside.consult__right
+      .consult__cols.consult__question-sticky
+        .consult__left
+          .consult__question-list-tabs
+            .consult__question-list-tab(data-type="quality")
+              ul.consult__question-list.js-consult-question-list
+                li.consult__question-item
+                  .consult__question-row
+                    aside.consult__question-info
+                      p.consult__question-title Вопрос
+                      p.consult__question-date 23.05.18
+                    .consult__question-text Наибольший Общий Делитель (НОД) отражает анормальный интеграл от функции, имеющий конечный разрыв, в итоге приходим к логическому противоречию?
+                  .consult__question-row
+                    aside.consult__question-info
+                      p.consult__question-title Ответ
+                      p.consult__question-date 24.05.18
+                    .consult__question-text Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты.
+                  .consult__question-row
+                    .consult__question-share
+                      span.consult__question-share-title Поделиться:
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                li.consult__question-item
+                  .consult__question-row
+                    aside.consult__question-info
+                      p.consult__question-title Вопрос
+                      p.consult__question-date 23.05.18
+                    .consult__question-text Адекватная ментальность, в рамках сегодняшних воззрений, отталкивает рекламный клаттер?
+                  .consult__question-row
+                    aside.consult__question-info
+                      p.consult__question-title Ответ
+                      p.consult__question-date 24.05.18
+                    .consult__question-text 
+                      p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                      .consult__question-hidden.js-hidden
+                        p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                        p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                      a(href="#", data-default="Показать полностью", data-open="Скрыть").consult__question-toggler.js-toggler
+                  .consult__question-row
+                    .consult__question-share
+                      span.consult__question-share-title Поделиться:
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+              .consult__question-showmore
+                button(type="button").consult__question-showmore-href Показать еще
+            .consult__question-list-tab(data-type="garanty")
+              ul.consult__question-list.js-consult-question-list
+                li.consult__question-item
+                  .consult__question-row
+                    aside.consult__question-info
+                      p.consult__question-title Вопрос
+                      p.consult__question-date 23.05.18
+                    .consult__question-text Наибольший Общий Делитель (НОД) отражает анормальный интеграл от функции, имеющий конечный разрыв, в итоге приходим к логическому противоречию?
+                  .consult__question-row
+                    aside.consult__question-info
+                      p.consult__question-title Ответ
+                      p.consult__question-date 24.05.18
+                    .consult__question-text Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты.
+                  .consult__question-row
+                    .consult__question-share
+                      span.consult__question-share-title Поделиться:
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                li.consult__question-item
+                  .consult__question-row
+                    aside.consult__question-info
+                      p.consult__question-title Вопрос
+                      p.consult__question-date 23.05.18
+                    .consult__question-text Адекватная ментальность, в рамках сегодняшних воззрений, отталкивает рекламный клаттер?
+                  .consult__question-row
+                    aside.consult__question-info
+                      p.consult__question-title Ответ
+                      p.consult__question-date 24.05.18
+                    .consult__question-text 
+                      p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                      .consult__question-hidden.js-hidden
+                        p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                        p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                      a(href="#", data-default="Показать полностью", data-open="Скрыть").consult__question-toggler.js-toggler
+                  .consult__question-row
+                    .consult__question-share
+                      span.consult__question-share-title Поделиться:
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+              .consult__question-showmore
+                button(type="button").consult__question-showmore-href Показать еще
+            .consult__question-list-tab(data-type="delivery")
+              ul.consult__question-list.js-consult-question-list
+                li.consult__question-item
+                  .consult__question-row
+                    aside.consult__question-info
+                      p.consult__question-title Вопрос
+                      p.consult__question-date 23.05.18
+                    .consult__question-text Наибольший Общий Делитель (НОД) отражает анормальный интеграл от функции, имеющий конечный разрыв, в итоге приходим к логическому противоречию?
+                  .consult__question-row
+                    aside.consult__question-info
+                      p.consult__question-title Ответ
+                      p.consult__question-date 24.05.18
+                    .consult__question-text Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты.
+                  .consult__question-row
+                    .consult__question-share
+                      span.consult__question-share-title Поделиться:
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+                li.consult__question-item
+                  .consult__question-row
+                    aside.consult__question-info
+                      p.consult__question-title Вопрос
+                      p.consult__question-date 23.05.18
+                    .consult__question-text Адекватная ментальность, в рамках сегодняшних воззрений, отталкивает рекламный клаттер?
+                  .consult__question-row
+                    aside.consult__question-info
+                      p.consult__question-title Ответ
+                      p.consult__question-date 24.05.18
+                    .consult__question-text 
+                      p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                      .consult__question-hidden.js-hidden
+                        p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                        p Стимулирование сбыта, анализируя результаты рекламной кампании, усиливает портрет потребителя, оптимизируя бюджеты. 
+                      a(href="#", data-default="Показать полностью", data-open="Скрыть").consult__question-toggler.js-toggler
+                  .consult__question-row
+                    .consult__question-share
+                      span.consult__question-share-title Поделиться:
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_fb
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_tw
+                      button(type="button").consult__question-share-icon.consult__question-share-icon_vk
+              .consult__question-showmore
+                button(type="button").consult__question-showmore-href Показать еще
+        aside.consult__right.js-consult-question-sticky
+          .consult__person
+            .consult__person-imgover
+              img(src="img/consult-person.jpg").consult__person-img
+            p.consult__person-name Мирошенко Алексей
+            p.consult__person-dlg На ваши вопросы отвечает главный технолог ООО «Горторгснаб»
+            button(type="button", data-fancybox, data-src="#question").btn.consult__person-ask Задать вопрос
+    .consult__block(data-type="reviews")
+      .consult__cols
+        .consult__left
+          .consult__rating
+            span.consult__rating-digits 5,5
+            p.consult__rating-percent Средний рейтинг
+              span 83% покупателей рекомендуют эту компанию
+        aside.consult__right
+          .consult__yandex
+            span.consult__yandex-title Гарантия проверки отзывов
+            img(src="img/ya-market.png").consult__yandex-img
+      .consult__cols.consult__reviews-sticky
+        .consult__left
+          ul.consult__reviews-list.js-consult-reviews-list
+            li.consult__reviews-item
+              aside.consult__reviews-info
+                p.consult__reviews-info-date 29 сентября 2017
+                span.consult__reviews-info-stars.consult__reviews-info-stars_star4
+                p.consult__reviews-info-name Дмитриченко Василий Геннадьевич
+              .consult__reviews-feat
+                .consult__reviews-featrow
+                  p.consult__reviews-title Достоинства
+                  p.consult__reviews-text По результатам лабораторных испытаний данный товар подтвердил свое соответствие всем требованиям законодательства и признан качественным и безопасным.
+                .consult__reviews-featrow
+                  p.consult__reviews-title Недостатки
+                  p.consult__reviews-text Нет
+                .consult__reviews-featrow
+                  p.consult__reviews-title Комментарий
+                  p.consult__reviews-text Образцы соответствуют всем обязательным требованиям к свойствам продукции
+                .consult__reviews-featrow.consult__reviews-featrow_answer
+                  p.consult__reviews-title Ответ администрации
+                  p.consult__reviews-text По результатам лабораторных испытаний данный товар подтвердил свое соответствие всем требованиям законодательстваи признан качественным и безопасным.
+            li.consult__reviews-item
+              aside.consult__reviews-info
+                p.consult__reviews-info-date 29 сентября 2017
+                span.consult__reviews-info-stars.consult__reviews-info-stars_star5
+                p.consult__reviews-info-name Дмитриченко Василий Геннадьевич
+              .consult__reviews-feat
+                .consult__reviews-featrow
+                  p.consult__reviews-title Достоинства
+                  p.consult__reviews-text По результатам лабораторных испытаний данный товар подтвердил свое соответствие всем требованиям законодательства и признан качественным и безопасным.
+                .consult__reviews-featrow
+                  p.consult__reviews-title Недостатки
+                  p.consult__reviews-text Нет
+                .consult__reviews-featrow
+                  p.consult__reviews-title Комментарий
+                  p.consult__reviews-text Образцы соответствуют всем обязательным требованиям к свойствам продукции
+                .consult__reviews-featrow.consult__reviews-featrow_answer
+                  p.consult__reviews-title Ответ администрации
+                  p.consult__reviews-text По результатам лабораторных испытаний данный товар подтвердил свое соответствие всем требованиям законодательстваи признан качественным и безопасным.
+          .consult__reviews-showmore
+            button(type="button").consult__reviews-showmore-href Показать еще
+        aside.consult__right.js-consult-reviews-sticky
+          .consult__makerev
+            p.consult__makerev-title Мы прислушаемся к вам
+            p.consult__makerev-text Оставьте  отзыв о проделаной работе с помощью этой формы. Помогите нам стать лучше.
+            button(type="button", data-fancybox, data-src="#makereview").btn.consult__makerev-btn Оставить отзыв

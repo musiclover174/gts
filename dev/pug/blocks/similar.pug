@@ -1,0 +1,14 @@
+include card-elem
+.recent__car-over
+  .swiper-container.recent__car.js-recent
+    .swiper-wrapper
+      -var cardArray = []
+      -cardArray.push({img: 'img/card1.jpg', name: "Стеллаж сборный (разборный) ТСУ 1-150", params: [{title: 'Высота', value: '2000 мм'},{title: 'Ширина', value: '2000 мм'},{title: 'Глубина', value: '300 мм'},{title: 'Вес', value: '120 кг'}], cost: '4 428', prevcost: '20 008', modified: 'new', inadd: '1', filtered: 'true'})
+      -cardArray.push({img: 'img/card2.jpg', name: "Большегрузная тележка БТ 3", params: [{title: 'Грузоподъемность', value: '400 кг'},{title: 'Высота подъема вил', value: '1550 мм'},{title: 'Минимальная высота бочки', value: '879 мм'},{title: 'Нагрузка на полку', value: '120 кг'}], cost: '56 334', modified: 'actions', filtered: 'true', load: '120'})
+      -cardArray.push({img: 'img/card3.jpg', name: "Штабелер с электроподъемом CDD 15B", params: [{title: 'Грузоподъемность', value: '1500 кг'},{title: ' Г/п на макс. высоте', value: '1550 мм'},{title: 'Высота подъема вил', value: '879 мм'},{title: 'Нагрузка на полку', value: '80 кг'}], cost: '56 334', modified: 'hit', filtered: 'true', load: '80'})
+      for card in cardArray
+        .swiper-slide
+          +cardElem(card)
+  .swiper-buttons
+    .swiper-button-prev.swiper-button-prev_dark
+    .swiper-button-next.swiper-button-next_dark

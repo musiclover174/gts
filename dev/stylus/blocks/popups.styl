@@ -1,0 +1,117 @@
+.popup
+  text-align center
+  w 95%
+  max-width 422px
+  height auto !important
+  &_city
+    max-width 1330px
+  &__title
+    color white
+    fontify 30px 400 36px
+    mb 30px
+  &__subtitle
+    color white
+    fontify 14px 400 22px
+    mb 25px
+    padding 0 20px
+  .common__placeholder
+    bgc white
+    w 100%
+    line-height 48px
+    h 100%
+    text-align left
+  .common__input,
+  .common__textarea
+    text-align left
+  .common__input:focus,
+  .common__input.notempty,
+  .common__textarea:focus,
+  .common__textarea.notempty
+    bgc white
+  .fakecheckbox
+    text-align left
+    &__label
+      color white
+      &:before
+        bgc white
+  .common__row
+    &_popcheck
+      flex-direction column
+      mt 35px
+  a:not([class])
+    color $orange
+    border-bottom 1px solid
+    transition .5s border
+    &:hover
+      border-color transparent
+  .common__sbm
+    mt 37px
+    w auto
+    align-self center
+  .reviews__form-stars
+    margin 0 auto 15px
+  .common__filename
+    color white
+  .common__fileover
+    text-align left
+  .common__filename:before
+    filter invert(100%)
+  &__projects
+    text-align left
+    &-title
+      color white
+      fontify 14px 400 22px
+      mb 20px
+  ol:not([class])
+    list-style none
+    margin 18px 0
+    counter-reset myCounter
+  ol:not([class]) li
+    color white
+    pl 30px
+    pos relative
+    fontify 14px 400 22px
+  ol:not([class]) li + li
+    mt 18px
+  ol:not([class]) li:before
+    counter-increment myCounter
+    content counter(myCounter)"."	
+    pos absolute
+    l 0
+    t 0
+    w 30px
+    pr 9px
+    color $orange
+    fontify 14px 400 22px
+  &__cities
+    text-align left
+    font-size 0
+    display flex
+    mt 50px
+    @media $mLandscape
+      flex-wrap wrap
+  &__city
+    &col
+      w 25%
+      @media $mLandscape
+        w 50%
+        mb 29px
+    &block
+      display flex
+      flex-direction column
+      & + &
+        mt 29px
+    &-alpha
+      color white
+      fontify 18px 500 21px
+      mb 21px
+    &-href
+      align-self flex-start
+      color white
+      fontify 14px 400 22px
+      border-bottom 1px solid $orange
+      transition .5s border
+      &:hover
+        border-color transparent
+      & + &
+        mt 8px

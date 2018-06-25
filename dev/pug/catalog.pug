@@ -1,0 +1,258 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    main.content
+      .container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim /
+        h1 Стеллажи Лайт
+        section.catalog-page.js-catpage
+          .catalog__top
+            .catalog__elem
+            
+              .catalog__elem-carover
+                .swiper-container.catalog__elem-car.js-catalog-car
+                  .swiper-wrapper
+                    .swiper-slide(data-index="0")
+                      img(src="img/cat1.jpg").catalog__elem-car-img
+                    .swiper-slide(data-index="1")
+                      img(src="img/cat1.jpg").catalog__elem-car-img
+                .swiper-button-prev.swiper-button-prev_arr
+                .swiper-button-next.swiper-button-next_arr
+                .catalog__elem-hide
+                  a(href="img/serv-device.jpg").catalog__elem-glightbox
+                  a(href="img/inews1.jpg").catalog__elem-glightbox
+              a(href="#").catalog__elem-projects Реализованные проекты со стеллажами Лайт
+              
+              .catalog__elem-about
+                .catalog__elem-feats
+                  p.catalog__elem-about-title Характеристики
+                  ul.catalog__elem-featlist
+                    li.catalog__elem-featitem
+                      p.catalog__elem-feat-title Грузоподъемность
+                      p.catalog__elem-feat-value до 120 кг на полку
+                    li.catalog__elem-featitem
+                      p.catalog__elem-feat-title Максимальная нагрузка
+                      p.catalog__elem-feat-value 750 кг на секцию
+                    li.catalog__elem-featitem
+                      p.catalog__elem-feat-title Высота
+                      p.catalog__elem-feat-value 1500, 2000, 2500 мм
+                    li.catalog__elem-featitem
+                      p.catalog__elem-feat-title Длина полок (1 секции)
+                      p.catalog__elem-feat-value 700, 800, 900, 1000, 1100, 1200 мм
+                    li.catalog__elem-featitem
+                      p.catalog__elem-feat-title Глубина полок
+                      p.catalog__elem-feat-value 300, 400, 500, 600, 700, 800 мм
+                .catalog__elem-places
+                  p.catalog__elem-about-title Оптимально подходят для хранения
+                  ul.catalog__elem-placelist
+                    li.catalog__elem-placeitem
+                      p(data-place="house").catalog__elem-place-title Дома (например, на балконе)
+                    li.catalog__elem-placeitem
+                      p(data-place="office").catalog__elem-place-title В офисах, архивах
+                    li.catalog__elem-placeitem
+                      p(data-place="utility").catalog__elem-place-title В подсобных помещениях
+                    li.catalog__elem-placeitem
+                      p(data-place="stock").catalog__elem-place-title На складах для штучных грузов
+              
+              p.catalog__mod-title Модификации серии Лайт
+              .catalog__modover
+                .swiper-container.catalog__mod.js-catalog-mod
+                  .swiper-wrapper
+                    .swiper-slide
+                      a(href="#").catalog__mod-imgover
+                        img(src="img/mod1.jpg").catalog__mod-img
+                      .catalog__mod-content
+                        a(href="#").catalog__mod-href Со сплошными полками
+                        p.catalog__mod-cost от 3 395 руб.
+                    .swiper-slide
+                      a(href="#").catalog__mod-imgover
+                        img(src="img/mod1.jpg").catalog__mod-img
+                      .catalog__mod-content
+                        a(href="#").catalog__mod-href Со сплошными полками2
+                        p.catalog__mod-cost от 3 395 руб.
+                    .swiper-slide
+                      a(href="#").catalog__mod-imgover
+                        img(src="img/mod1.jpg").catalog__mod-img
+                      .catalog__mod-content
+                        a(href="#").catalog__mod-href Со сплошными полками3
+                        p.catalog__mod-cost от 3 395 руб.
+                .swiper-button-prev.swiper-button-prev_arr
+                .swiper-button-next.swiper-button-next_arr
+              
+              .catalog__elem-hrefs
+                .catalog__elem-hrefover
+                  a(href="#").catalog__elem-href Скачать паспорт
+                .catalog__elem-hrefover
+                  a(href="#").catalog__elem-href Скачать сертификат
+                .catalog__elem-hrefover
+                  a(href="#").catalog__elem-href Скачать инструкцию по сборке
+            
+            aside.comb
+              p.comb__hint Недорогие и надежные сборные стеллажи на болтовых соединениях. Всегда в наличии - отгрузим уже сегодня! 
+              ul.comb__list
+                li.comb__item
+                  aside(style="background-image:url(img/comb1.jpg)").comb__imgover
+                  .comb__content
+                    p.comb__title Полный комплект, готовый для сборки
+                    p.comb__text Не нужно ничего докупать, вы получаете готовый стеллаж. В комплекте стойки, полки, угольники жёсткости, подпятники, болты, гайки, шайбы
+                li.comb__item
+                  aside(style="background-image:url(img/comb2.jpg)").comb__imgover
+                  .comb__content
+                    p.comb__title Полный комплект, готовый для сборки
+                    p.comb__text Не нужно ничего докупать, вы получаете готовый стеллаж. В комплекте стойки, полки, угольники жёсткости, подпятники, болты, гайки, шайбы
+                li.comb__item
+                  aside(style="background-image:url(img/comb3.jpg)").comb__imgover
+                  .comb__content
+                    p.comb__title Полный комплект, готовый для сборки
+                    p.comb__text Не нужно ничего докупать, вы получаете готовый стеллаж. В комплекте стойки, полки, угольники жёсткости, подпятники, болты, гайки, шайбы
+                li.comb__item
+                  aside(style="background-image:url(img/comb4.jpg)").comb__imgover
+                  .comb__content
+                    p.comb__title Полный комплект, готовый для сборки
+                    p.comb__text Не нужно ничего докупать, вы получаете готовый стеллаж. В комплекте стойки, полки, угольники жёсткости, подпятники, болты, гайки, шайбы
+                li.comb__item
+                  aside(style="background-image:url(img/comb5.jpg)").comb__imgover
+                  .comb__content
+                    p.comb__title Полный комплект, готовый для сборки
+                    p.comb__text Не нужно ничего докупать, вы получаете готовый стеллаж. В комплекте стойки, полки, угольники жёсткости, подпятники, болты, гайки, шайбы
+                li.comb__item
+                  aside(style="background-image:url(img/comb6.jpg)").comb__imgover
+                  .comb__content
+                    p.comb__title Полный комплект, готовый для сборки
+                    p.comb__text Не нужно ничего докупать, вы получаете готовый стеллаж. В комплекте стойки, полки, угольники жёсткости, подпятники, болты, гайки, шайбы
+              form.comb__form
+                p.comb__form-title Закажите стеллаж Лайт прямо сейчас
+                p.comb__form-hint * — Поля обязательные для заполнения
+                .common__row
+                  .common__col
+                    input(type="text", data-req="req").common__input
+                    label.common__placeholder Ваше имя
+                      span *
+                  .common__col
+                    input(type="text", data-req="req").common__input.js-phone
+                    label.common__placeholder Ваш номер телефона
+                      span *
+                .comb__form-bottom
+                  .fakecheckbox
+                    input(type="checkbox", value="", name="agreement", checked)#agreement1.fakecheckbox__truecheck
+                    label(for="agreement1").fakecheckbox__label Я даю согласие на 
+                      a(href="#") обработку персональных данных
+                  input(type="submit", value="Заказать").btn.common__sbm
+          section.others
+            p.common__title Аксессуары к стеллажам Лайт
+            include blocks/others
+          
+            .others__car-over
+              .swiper-container.others__car.js-others
+                .swiper-wrapper
+                  -var othersArray = []
+                  -othersArray.push({img: 'img/acc1.jpg', cost: "311", href: "Полка для стеллажа ТСУп сс 700/300/150"})
+                  -othersArray.push({img: 'img/acc2.jpg', cost: "от 400", href: "Стяжка-опора ТСУп сс 725"})
+                  -othersArray.push({img: 'img/acc3.jpg', cost: "240", href: "Поперечина ТСУп сс 325"})
+                  -othersArray.push({img: 'img/acc4.jpg', cost: "130", href: "Полка для стеллажа ТСУп сс 1200/600/300 перф. (усиленная)"})
+                  -othersArray.push({img: 'img/acc3.jpg', cost: "240", href: "Стяжка-опора ТСУп сс 725"})
+                  for other in othersArray
+                    .swiper-slide
+                      +other(other)
+              .swiper-buttons
+                .swiper-button-prev.swiper-button-prev_dark
+                .swiper-button-next.swiper-button-next_dark
+          
+          section.prcalc
+            p.common__title Рассчитаем проект под ваши задачи!
+            form.prcalc__form
+              .common__row
+                .common__col
+                  label.prcalc__label Площадь склада, м
+                    sup 2
+                  input(type="text", value="20000").common__input
+                .common__col
+                  label.prcalc__label Геометрия
+                  select.common__select.js-select
+                    option(value="1", selected) Прямоугольная
+                    option(value="2") Круглая
+                    option(value="3") Квадратная
+                    option(value="4") Сферическая
+              .common__row
+                .common__col
+                  label.prcalc__label Что храним?
+                  select.common__select.js-select
+                    option(value="1", selected) Шины
+                    option(value="2") Банки
+                    option(value="3") Коньки
+                    option(value="4") Арбузные дольки
+                .common__col
+                  label.prcalc__label Вес на полку
+                  select.common__select.js-select
+                    option(value="1", selected) 320 кг
+                    option(value="2") 350кг
+                    option(value="3") 400кг
+                    option(value="4") 2500кг
+              .common__row
+                .common__fileover
+                  input(type="file", name="").common__file#file1.js-common-fileinput
+                  label(for="file1", data-default="Прикрепить чертёж / схему").common__filename.js-common-file Прикрепить чертёж / схему
+                  button(type="button").common__filedelete.js-common-filedelete
+                  p.prcalc__filelabel Выберите файл на компьютере (.png, .jpeg, .bmp)
+              .common__row
+                input(type="submit", value="Получить расчёт").btn.prcalc__sbm
+                aside.prcalc__question
+                  p.prcalc__question-title Есть вопросы? Звоните
+                  p.prcalc__question-phone 8 (495) 788-48-42
+                
+          section.calc.calc_inner
+            p.common__title.calc__cattile Хотите подобрать стеллаж самостоятельно? Воспользуйтесь калькулятором
+            include blocks/calc
+            
+          section.catalog__text
+            h2 Технические характеристики
+            .h-catover
+              .h-catleft
+                p Производство стеллажей – основное направление деятельности компании «Горторгснаб». В этой сфере мы работаем почти два десятилетия и за это время выполнили сотни проектов, заработав доверие и уважение со стороны своих клиентов. В настоящее время наши производственные цеха обеспечивают бесперебойное изготовление стеллажей всех распространённых модификаций: полочных моделей различной грузоподъёмности, паллетных фронтальных и набивных стеллажей, мезонинов. Мощности наших производственных линий позволяют не только оперативно изготавливать заказанные стеллажи, но и держать на складе запас готовой продукции популярных типоразмеров.
+                p Вся продукция имеет сертификаты на соответствие международным стандартам качества ISO 9001:2000.
+                p Производственное предприятие расположено в Московской области, что позволяет обеспечить быструю доставку заказов по территории Центрального федерального округа. На территории площадью более 4 гектаров расположены четыре производственных корпуса и склады готовой продукции. Склады расположены также и рядом с московским офисом, благодаря чему мы можем доставить ваш заказ ещё быстрее! 
+                p Для изготовления стеллажей применяется современное оборудование ведущих южнокорейских и европейских производителей. Сварка балок производится с помощью роботизированного сварочного комплекса (промышленного сварочного робота), который обеспечивает высокую скорость, точность и качество сварочных работ.
+              aside.h-catright
+                img(src="img/h-cat.jpg")
+                p(style="font-style:italic") Описание фотографии
+            .text_short
+              h2 О компании
+              p Начиная с 2000 года одним из основных направлений деятельности компании «Горторгснаб» является производство и продажа стеллажей. В 2001 году начато производство легких стеллажей, чуть позже – полочных складских стеллажей малой и средней грузоподъемности, а также металлических шкафов. В 2004 году компанией было закуплено импортное оборудование и начато собственное производство разборных стеллажей для поддонов, а также полочных складских стеллажей, офисных стеллажей и недорогих металлических шкафов.
+              p На сегодняшний день компания «Горторгснаб» входит в пятерку крупнейших российских производителей стеллажных систем. Изготовление стеллажей осуществляется по самой современной технологии в соответствии с мировыми стандартами. Компания «Горторгснаб» внедрила в работу систему менеджмента качества на соответствие международным стандартам серии ISO 9001:2000. Наличие сертификата ISO 9001:2000 подтверждает качество выпускаемой продукции, производственных работ и услуг.
+            .contacts__col-over
+              .contacts__col
+                .contacts__features-item
+                  .contacts__features-imgover
+                    img(src="img/contacts-feat1.png", alt="").contacts__features-img
+                  p.contacts__features-title Выгодные цены
+                  p.contacts__features-text Собственное производство стеллажей позволяет держать адекватный уровень цен даже в условиях нестабильной экономической ситуации.
+              .contacts__col
+                .contacts__features-item
+                  .contacts__features-imgover
+                    img(src="img/contacts-feat2.png", alt="").contacts__features-img
+                  p.contacts__features-title Гарантия качества
+                  p.contacts__features-text Качество стеллажей от «Горторгснаб» подтверждено сертификатом ISO 9001:2000 (в России действует как стандарт ГОСТ Р ИСО 9001-2001). Мы осуществляем строгий контроль качества на всех этапах производства стеллажей.
+              .contacts__col
+                .contacts__features-item
+                  .contacts__features-imgover
+                    img(src="img/contacts-feat4.png", alt="").contacts__features-img
+                  p.contacts__features-title Индивидуальный проект
+                  p.contacts__features-text Многолетний опыт оснащения складов в сочетании с собственными производственными мощностями позволяет нам реализовывать даже сложные и нестандартные проекты стеллажных складских систем. Особенно мы гордимся нашими мезонинами!
+          
+          section.favorites__banner(style="background-image: url(img/favbanner1.jpg)")
+            p.favorites__banner-text Вся продукция сертифицирована, соответствует ГОСТу и ТУ. 
+              span Мы гарантируем 
+              | лучшую цену.
+          
+          section.associated
+            p.common__title Не нашли, что искали? Посмотрите другие стеллажи
+            .recent
+              include blocks/similar
+            
+          include blocks/text
+    include layout/__footer

@@ -1,0 +1,317 @@
+.catalog
+  &__text
+    .contacts__col-over
+      mt 55px
+      mb -34px
+  &__top
+    display flex
+    justify-content space-between
+    pos relative
+    z-index 1
+    pb 46px
+    mb 67px
+    @media $tPortraitMax
+      flex-direction column
+    &:before
+      content ""
+      pos absolute
+      z-index -1
+      bgc whitesmoke
+      t 113px
+      l 50%
+      h calc(100% - 113px)
+      w calc(100vw + 20px)
+      transform translateX(-50%)
+  &__elem
+    w 640px
+    @media $desktopMax
+      w 540px
+    @media $tLandscapeMax
+      w 470px
+    @media $tPortraitMax
+      w 100%
+    &-glightbox
+      visibility hidden
+    &-car
+      &-img
+        imgCenteringMax100()
+    &-carover
+      border 2px solid #ececec
+      pos relative
+      mb 25px
+      .swiper-slide
+        pos relative
+        w 100%
+        pt 82%
+        bgc white
+        cursor pointer
+      .swiper-button-prev
+        l 12px
+        outline none
+        @media $tLandscapeMax
+          mt -22px
+      .swiper-button-next
+        r 12px
+        outline none
+        @media $tLandscapeMax
+          mt -22px
+    &-projects
+      pos relative
+      color $dark
+      fontify 14px 500 18px
+      border-bottom 2px solid $orange
+      transition .5s border
+      &:hover
+        border-color transparent
+      &:after
+        content ""
+        pos absolute
+        r -33px
+        t 4px
+        w 24px
+        h 16px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQBAMAAAD+CqKmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAMFBMVEUODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg4ODg7////xSghVAAAADnRSTlMACT7plfQDnjyh8/KW5brqk1IAAAABYktHRA8YugDZAAAACXBIWXMAAAsSAAALEgHS3X78AAAAQElEQVQI12NggAIBBgRgMkLisDxVQHDY6oKQpNLxS71DgEfInBcIZZmvGhAGzNuBJPEahwQPkgQDxw0kK8FeAAAkZSTW+IpDlAAAAABJRU5ErkJggg==") no-repeat center
+        @media $mPortraitMax
+          dn()
+    &-about
+      display flex
+      justify-content space-between
+      mt 43px
+      @media $tLandscapeMax
+        flex-direction column
+      &-title
+        color $dark
+        fontify 18px 500 23px
+        mb 20px
+    &-feat
+      &s
+        w 300px
+        @media $desktopMax
+          w 250px
+        @media $tLandscapeMax
+          w 100%
+      &list
+        display flex
+        flex-direction column
+      &item
+        & + &
+          mt 10px
+      &-title
+        color alpha($dark, .5)
+        fontify 11px 400 16px
+      &-value
+        color $orange
+        fontify 16px 400 24px
+    &-place
+      &s
+        w 300px
+        @media $desktopMax
+          w 250px
+        @media $tLandscapeMax
+          w 100%
+          mt 30px
+      &list
+        display flex
+        flex-direction column
+      &item
+        & + &
+          mt 19px
+      &-title
+        pos relative
+        color $dark
+        fontify 14px 400 22px
+        pl 34px
+        &:before
+          content ""
+          pos absolute
+          l 0
+          w 22px
+          t 2px
+        &[data-place="house"]:before
+          h 16px
+          background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAMAAAAlM38UAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA4VBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///+zgJNPAAAASXRSTlMAJc27OcrBM7xV8ImitZ7EB5PsS2DyfV3xgk4hy8ceLNe5PdO+NlLujgUMpORHn+dGUI/vZvNvdVHhRTI8LSkiDf4PL0lW5evtjoH7HgAAAAFiS0dESh4MtcYAAAAJcEhZcwAACxIAAAsSAdLdfvwAAACwSURBVBjTpc3HDoJQEAXQEcsTrKDYKHbBLnYUfAqIzv//kC1REkxceDc3c2ZxAZ6JMNFYPEGSTAQCYblUGjNZzKU49o15XigAFMVSuVKtCXz+pZKsqI+uN5qtdqeryNLj6ml6//UfDEfjyXSmawbAfGF8NpardVHcGNockAS3tybsTNgjoBpkywTbBPUHHwihYT6eFhUhzA46NvcPW5RSF11PvDc9+9TzqYVwwS+53gBKzyafDslZlAAAAABJRU5ErkJggg==") no-repeat center
+        &[data-place="utility"]:before
+          h 18px
+          background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAASCAMAAAC3taQAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAb1BMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf////3fobSAAAAJHRSTlMA2N3Z4QkiF4XTu+qDh1qyiOleIFVDHEQfvZmWhsiqlRAzE8zBUW6aAAAAAWJLR0QktAb5mQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAGZJREFUCNeVzEkOgCAMQNGigKICKqDiPNz/jlqMYe3btD9pCiSJUqDAOM8g45w9O4VcFCWUhahCSRWGkn9L1w00tZYtlrHWgbPWUKyufw06XPoR+en7gtTfmpcVLVuo/Xidz06uiNxvSwnEqvuWBAAAAABJRU5ErkJggg==") no-repeat center
+        &[data-place="office"]:before
+          h 16px
+          background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAQCAMAAADDGrRQAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAnFBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///955+JzAAAAMnRSTlMAFvmWqrTjEZlvZnjhPjAPLh7DlbMLCBRYREaGr3JXXpcNLVQV/PD9H/Hq3fvzExfc7cfa7vIAAAABYktHRDM31XxeAAAACXBIWXMAAAsSAAALEgHS3X78AAAAyUlEQVQY003Q23aCMBCF4Y0FizEqo1EUQRA1ta32MO//cN1Jbrrv5lvrvxmAyyaaNsnCiZc8z4vpa9q04FVCZ8bMLRZLLBewc2NmCl1VlVisN9isYaWqVsGco2132G1pzkWra9r+gMOeVtfRmobmjjg6WtNEa1tampW2jQbQuhNOHQ2I1ve0skNX0vo+2jD8a4chteeRdjEX2nhO7fXmab54o/nbNZr40HrR0HoJdh+98AfvovyB+PGu+FD9zB6qz6+n6uP7R/X3D3j4F64t/wbDAAAAAElFTkSuQmCC") no-repeat center
+        &[data-place="stock"]:before
+          h 18px
+          background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAhFBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///8cCL0CAAAAKnRSTlMACWLKJo7u23QEUrv7sEcCf+Tmgx0cgoBjBR5odd0YGzNOZsPTWswiPMsT7K0NAAAAAWJLR0QrJLnkCAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAJpJREFUGNNlj9kSgyAMReOGu1a7uYNVRPP/H1jQWrE9cx9yz0BmArBimJZlGnBgO8T1PJc49tb9IIziJAVIkzgKAx/gkuXX2/78/sizJ2BRaiugLBCwkkPd1G3b1I0cq4/qaMcY7eiu+pdGv6phDL+Mw6b4uphJgJ8UThP+KhVNCSFQRldIiMpJ/X88q3lRagP4MqMq/Liay/oGOwIYo1jGIkwAAAAASUVORK5CYII=") no-repeat center
+    &-hrefs
+      display flex
+      flex-wrap wrap
+      mt 50px
+      ml -30px
+      mb -12px
+      w calc(100% + 30px)
+    &-hrefover
+      pl 26px
+      ml 30px
+      mb 12px
+    &-href
+      pos relative
+      color $dark
+      fontify 14px 400 18px
+      border-bottom 2px dotted $orange
+      transition .5s border
+      &:before
+        content ""
+        pos absolute
+        l -26px
+        t 0
+        size 16px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAWlBMVEUaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhj///+s7wSWAAAAHHRSTlMAubrwSqoYfNgbA5zd93FYAZaXV/3Sj5Jy9szOL9039QAAAAFiS0dEHesDcZEAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABkSURBVBjTrcvbDkAwFETRoW5FqUtRnf//TlWVkHi0X05mJQe4SlK8E+JnyPLihCLPIpSspBCyYhmhbtgq1bKpz9X1gB7oGzUwdZiNV72Qq98wM2jC27aFY3hD7BPs/sgSjq/cAf0tB8YcfGnCAAAAAElFTkSuQmCC") no-repeat center
+      &:hover
+        border-color transparent
+  &__mod
+    &-title
+      color $dark
+      fontify 18px 500 23px
+      mb 25px
+      mt 40px
+    &over
+      pos relative
+      padding 0 30px
+      .swiper-button-prev
+        l -15px
+        outline none
+      .swiper-button-next
+        r -15px
+        outline none
+      .swiper-slide
+        display flex
+    &-imgover
+      size 120px
+      bgc white
+      border 2px solid #ececec
+      pos relative
+      mr 20px
+      @media $desktopMax
+        size 90px
+        mr 15px
+      @media $tLandscapeMax
+        size 140px
+        mr 20px
+      @media $tPortraitMax
+        size 90px
+        mr 15px
+    &-img
+      imgCenteringMax()
+    &-content
+      w calc(100% - 140px)
+      pt 5px
+      @media $desktopMax
+        w calc(100% - 105px)
+      @media $tLandscapeMax
+        w calc(100% - 160px)
+      @media $tPortraitMax
+        w calc(100% - 105px)
+    &-href
+      color $dark
+      fontify 14px 500 20px
+      border-bottom 2px solid $orange
+      transition .5s border
+      @media $tLandscapeMax
+        fontify 16px 500 22px
+      @media $tPortraitMax
+        fontify 14px 500 20px
+      &:hover
+        border-color transparent
+    &-cost
+      color $dark
+      fontify 20px 500 32px
+      mt 7px
+      @media $desktopMax
+        fontify 14px 400 22px
+      @media $tLandscapeMax
+        fontify 20px 500 32px
+      @media $tPortraitMax
+        fontify 14px 400 22px
+.comb
+  w 650px
+  pt 20px
+  @media $desktopMax
+    w 550px
+  @media $tLandscapeMax
+    w 440px
+  @media $tPortraitMax
+    w 100%
+  &__hint
+    color $dark
+    fontify 18px 500 30px
+    mb 72px
+    @media $tLandscapeMax
+      fontify 16px 500 24px
+      mb 55px
+  &__list
+    mb 55px
+  &__item
+    display flex
+    @media $mPortraitMax
+      flex-direction column
+    & + &
+      mt 30px
+  &__imgover
+    size 90px
+    bgc white
+    background-repeat no-repeat
+    background-size cover
+    border 2px solid #ececec
+    mr 20px
+  &__content
+    w calc(100% - 120px)
+    pt 5px
+    @media $mPortraitMax
+      w 100%
+      mt 10px
+  &__title
+    color $orange
+    fontify 18px 500 22px
+    mb 13px
+    @media $tLandscapeMax
+      fontify 16px 500 22px
+      mb 8px
+  &__text
+    color $dark
+    fontify 14px 400 22px
+  &__form
+    mt 55px
+    bgc white
+    padding 35px 40px 40px
+    @media $tLandscapeMax
+      padding 25px 30px 30px
+    &-title
+      color $dark
+      fontify 30px 400 36px
+      mb 16px
+      @media $tLandscapeMax
+        fontify 22px 400 30px
+    &-hint
+      color $dark
+      fontify 14px 400 24px
+      mb 15px
+    .common__row
+      @media $tLandscapeMax
+        flex-direction column
+    .common__col
+      pos relative
+      z-index 1
+      @media $tLandscapeMax
+        w 100%
+        & + .common__col
+          mt 20px
+    &-bottom
+      mt 20px
+      w 100%
+      display flex
+      justify-content space-between
+      @media $tLandscapeMax
+        flex-direction column
+      .fakecheckbox
+        mt 4px
+        @media $tLandscapeMax
+          mt 0
+        @media $tLandscapeMax
+          mb 20px

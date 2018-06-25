@@ -1,0 +1,65 @@
+.others
+  pos relative
+  z-index 1
+  mb 62px
+  &__car
+    &-over
+      pos relative
+  &__elem
+    padding 24px 28px 19px
+    text-align center
+    border 2px solid #ececec
+    transition .5s border
+    &:hover
+      border-color $orange
+  &__hrefover
+    height 44px
+    mb 15px
+  &__href
+    color $dark
+    fontify 14px 500 20px
+    border-bottom 2px solid $orange
+    transition .5s border
+    &:hover
+      border-color transparent
+  &__imgover
+    height 180px
+    display flex
+    align-items center
+    justify-content center
+  &__img
+    max-width 100%
+    max-height 100%
+  &__cost
+    border-top 1px solid #ececec
+    mt 10px
+    pt 20px
+    color $orange
+    fontify 22px 500 32px
+    span
+      font-size 15px
+  .swiper-button-prev
+    l -73px
+    outline none
+    @media $lDesktopMax
+      l -55px
+    @media $tLandscapeMax
+      t 0
+      l 0
+  .swiper-button-next
+    r -73px
+    outline none
+    @media $lDesktopMax
+      r -55px
+    @media $tLandscapeMax
+      t 0
+      r auto
+      l 66px
+  .swiper-buttons
+    @media $tLandscapeMax
+      pos relative
+      margin 0 auto
+      z-index 10
+      w 110px
+      h 44px
+      mt 30px

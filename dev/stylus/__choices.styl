@@ -8,6 +8,7 @@
   position: relative;
   margin-bottom: 24px;
   font-size: 16px;
+  line-height: 22px;
 }
 
 .choices:focus {
@@ -163,6 +164,9 @@
 
 .choices__list--single .choices__item {
   width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow:hidden;
 }
 
 .choices__list--multiple {
@@ -245,6 +249,9 @@
   position: relative;
   padding: 4px 10px;
   font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow:hidden;
 }
 
 [dir="rtl"] .choices__list--dropdown .choices__item {

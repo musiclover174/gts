@@ -1,0 +1,54 @@
+.associated
+  pos relative
+  z-index 1
+  pt 68px
+  pb 80px
+  &:not(&_similar)
+    &:before
+      content ""
+      bgc whitesmoke    
+      pos absolute
+      z-index -1
+      w calc(100vw + 20px)
+      h 100%
+      l 50%
+      t 0
+      transform translateX(-50%)
+  &__filter
+    pos absolute
+    r 0
+    t 75px
+    display flex
+    @media $desktopMax
+      t 0
+      position static
+      mb 30px
+    @media $mLandscape
+      dn()
+    &-ib
+      display flex
+      color alpha($dark, .5)
+      fontify 14px 400 35px
+      span 
+        color $dark
+      & + &
+        ml 10px
+      & + &_another
+        ml 33px
+      .common__input
+        margin 0 8px 0 10px
+        size 91px 35px
+        bgc white
+        border 2px solid #b6b6b6
+        padding 0 9px
+  &:not(.associated_similar) .card__elem
+    background-color white
+    border 2px solid white
+  .card__elem
+    transition .5s border, .5s opacity
+    &:hover
+      border-color $orange
+    &.filtered
+      opacity .2
+      @media $mLandscape
+        opacity 1

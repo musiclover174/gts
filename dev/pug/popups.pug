@@ -1,0 +1,26 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    main.content
+      .container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim /
+        section.text
+          ul
+            li
+              a(href="#project", data-fancybox) Заказать проект склада
+            li
+              a(href="#makereview", data-fancybox) Оставить отзыв
+            li
+              a(href="#city", data-fancybox) Выбрать город
+            li
+              a(href="#projectfree", data-fancybox) Заказать бесплатный проект склада
+            li
+              a(href="#question", data-fancybox) Задать вопрос
+            li
+              a(href="#text", data-fancybox) Текстовый попап
+    include layout/__footer

@@ -218,3 +218,497 @@
         pr 17px
       @media $mPortraitMedium
         mt 15px
+        mt 15px
+  &__main
+    display flex
+    align-items flex-start
+    justify-content space-between
+    @media $mLandscape
+      flex-direction column
+    &-about
+      w calc(100% - 454px)
+      pr 32px
+      @media $desktopMax
+        w calc(100% - 380px)
+        pr 30px
+      @media $tPortraitMax
+        w calc(100% - 300px)
+      @media $mLandscape
+        w 100%
+        pr 0
+    &-top
+      display flex
+      @media $tLandscapeMax
+        flex-direction column
+    &-gallery
+      w 422px
+      mr 32px
+      @media $tLandscapeMax
+        w 100%
+    &-mainover
+      w 100%
+      pt 112%
+      overflow hidden
+      pos relative
+      cursor pointer
+      border 2px solid #ececec
+      &:before
+        content ""
+        pos absolute
+        l 0 
+        t 0
+        w 100%
+        h 100%
+        bgc #1a1a18
+        z-index 1
+        opacity 0
+        transition .5s opacity
+      &:after
+        content ""
+        pos absolute
+        z-index 2
+        l 50%
+        t 50%
+        size 30px 32px
+        mt -15px
+        ml -16px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAMAAAAynjhNAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABAlBMVEX////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////7Srm1AAAAVXRSTlMAJna85vk/wgiY/u6UTR4GDSgSxvd9DArI3y4tm+McN8OHiC8PxIGflb5Rvx1Sgu02QJnlodQVExCGzdjSCUwFtRfVxUd35/oBk9PPaZKg61yOsTBhQDaFqAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAFCSURBVCjPfZJpQ4JAEIZXBVRQ8VhFywNTLMrKbsvSLo/u8/3/fyVDdkGu+TIz+yzMzLtDiG2xeEIQRSERjxG/SUlwS0oemErLUDLZnJovZDMK5HTKTYsl0HKFZZUyRanoUK2K2ob7+mYNVY1ndTSa68WaDdR5VzJteTttUZn1p6Ptn2QL+iroQOmyQ0NnUVdBxwp62ObfADzcQc/yJnaDcBZ7lhfQD8J9CJYXoa7qMk1X9VWINs6vY2MNC4hF/dzEflRroYMd2LIcOrIYPlmCRW0zUf+fZOClAyofsfjY/6AnOOVJ0Drg7JynF1XQ9pBlw0uKqxGuHX5jreI4N5nkxstVxK12d+/mRHpwFrkG+kg8nBSm5mw+n5nTwuLJ5s9u7hjnL2oUH+GVRPA43kg4f//AJwnjX8sZvhck1H5+pQX5A2DwQ/OJ4YbEAAAAAElFTkSuQmCC") no-repeat center
+        opacity 0
+        transition .5s opacity
+      &:hover:before
+        opacity .6
+      &:hover:after
+        opacity 1
+    &-mainimg
+      imgCentering()
+    &-glightbox
+      visibility hidden
+    &-car
+      pos relative
+      margin 18px 33px 50px
+      &-over
+        pos relative
+        .swiper-button-prev
+          l -17px
+          outline none
+          bgc transparent
+        .swiper-button-next
+          r -17px
+          outline none
+          bgc transparent
+    &-carelem
+      w 100%
+      pt 100%
+      pos relative
+      cursor pointer
+      border 2px solid #ececec
+      transition .5s border
+      &_video:before
+        content ""
+        size 30px
+        pos absolute
+        z-index 2
+        l 50%
+        t 50%
+        mt -15px
+        ml -15px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAjVBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfsj0r//v73za7qgDL////++vf0vJPpeCb99O3xq3fncRv759numFn98ejwp3Hzuo/odiLCqS/wAAAAHXRSTlMABUyRxuj4EIDq61gDlq2TlFfpBpLExflN7IHH+vrIk+sAAAABYktHRCJdZVysAAAACXBIWXMAAAsSAAALEgHS3X78AAAA0ElEQVQoz42T1xKDIBBFV6zEDkZjIYX0+v+fl9FEB4hozttyZuACuwA9BjIt23Fsy0QGqLgeZgMLz5WtbzMJ2xdkELIfwmCwERsh6n3MRkk+NmUa0i4z0WnS5veYFg+AYr3GFJBQrlWPIBOqzXYn6xiWQsX5/nAUdQ5Y0pyfzhfhcCgUzfn1NiwUc1rd/P6QNs/laM+XHG3mYpPPsgJaTj7qzJdMfCh2J9vh247JuE3+a8WZRm7HQMlHxDFo81fC/ctKGaJuBLOaNA2pM0SHxTfMEFAj9SUYeAAAAABJRU5ErkJggg==") no-repeat center
+      &.active,
+      &:hover
+        border-color $orange
+    &-img
+      imgCenteringMax()
+  &__info
+    w 414px
+    @media $desktopMax
+      w 364px
+    @media $tPortraitMax
+      w 300px
+    @media $mLandscape
+      w 100%
+      height auto !important
+    &-sticky
+      w 100%
+      padding 40px
+      bgc whitesmoke
+      @media $desktopMax
+        padding 30px
+      @media $mLandscape
+        width 100% !important
+        transform none !important
+        position static !important
+        mt 30px
+    &-top
+      display flex
+      justify-content space-between
+      mb 26px
+      @media $tPortraitMax
+        display block
+      @media $mLandscape
+        display flex
+      @media $mPortraitMax
+        display block
+    &-art
+      bgc $orange
+      border-radius 15px
+      color white
+      fontify 14px 500 30px
+      padding 0 15px
+      @media $tPortraitMax
+        ib()
+        mb 15px
+    &-buttons
+      display flex
+      align-items center
+    &-tofavorites
+      border 0
+      cursor pointer
+      size 18px
+      outline none
+      ml 20px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAw1BMVEUaGhj///8aGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhgaGhj///9aFvE/AAAAP3RSTlMAAAUxim6D616VsDUgKEFdtek/7oJOOuxGxJbhTR+ktCcVwLwrm1f1OPdkhCpt5Ge5dI0kOczCbP1vR2MiegGoWiFiAAAAAWJLR0QB/wIt3gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKZJREFUGNNlztcSwiAQBdBFEzWaWGM3tth773r//69cBDKj8sAuZ9hCpE8srqIQRsjCHwH2DyUA/BCSKThflEaGS11FXjaX56ICUZFDyS9XyOEEVUt+rdVlzi0baEZjqQUEHNroGOkCvU/7PkIlHjDQE/VKNMTILDHW5GNiCFOi2dylBZYRrdZy+maLnaa9fNuHI98nTWdcrjIGIc9RdLubvR7PlxBv6T4WgxLqvT8AAAAASUVORK5CYII=") no-repeat center
+      transition .5s background
+      &.added,
+      &:hover 
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAMAAABhEH5lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAw1BMVEXnbxf////nbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf////LrmGBAAAAP3RSTlMAAAUxim6D616VsDUgKEFdtek/7oJOOuxGxJbhTR+ktCcVwLwrm1f1OPdkhCpt5Ge5dI0kOczCbP1vR2MiegGoWiFiAAAAAWJLR0QB/wIt3gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKZJREFUGNNlztcSwiAQBdBFEzWaWGM3tth773r//69cBDKj8sAuZ9hCpE8srqIQRsjCHwH2DyUA/BCSKThflEaGS11FXjaX56ICUZFDyS9XyOEEVUt+rdVlzi0baEZjqQUEHNroGOkCvU/7PkIlHjDQE/VKNMTILDHW5GNiCFOi2dylBZYRrdZy+maLnaa9fNuHI98nTWdcrjIGIc9RdLubvR7PlxBv6T4WgxLqvT8AAAAASUVORK5CYII=") no-repeat center
+    &-toprint
+      border 0
+      cursor pointer
+      size 17px 16px
+      outline none
+      ml 20px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQBAMAAAACH4lsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEUaGhj///8aGhgaGhgaGhgaGhgaGhj///8HIpIdAAAABnRSTlMAAErm5+SBOFCQAAAAAWJLR0QB/wIt3gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAEhJREFUCNdjYGBLAwEGAQZkVgIDAwOIpQwWSktRYDCDsNIMgOJgAFSTxpYGYyGLgQAaC2wekDRLS0gDIQcGFQgrVQHJNixuAQD0fiCBEUBlegAAAABJRU5ErkJggg==") no-repeat center
+      transition .5s background
+      &:hover 
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQBAMAAAACH4lsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGFBMVEXnbxf////nbxfnbxfnbxfnbxfnbxf////wTUd5AAAABnRSTlMAAErm5+SBOFCQAAAAAWJLR0QB/wIt3gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAEhJREFUCNdjYGBLAwEGAQZkVgIDAwOIpQwWSktRYDCDsNIMgOJgAFSTxpYGYyGLgQAaC2wekDRLS0gDIQcGFQgrVQHJNixuAQD0fiCBEUBlegAAAABJRU5ErkJggg==") no-repeat center
+    &-tocomment
+      border 0
+      cursor pointer
+      size 18px 16px
+      outline none
+      ml 20px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAMAAAAs2N9uAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAqFBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8AAACysrL///////8AAAAAAAAEBAStra34+PgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCQkAAAAuLi719fVQUFD///8vlJW4AAAAM3RSTlMAABx5t+P1E5z8K+T5pVQfCaT4EsKDwwbE2jff9wT9AgEDCme0CgglrPsU/vYk70L7acjeeaBEAAAAAWJLR0QB/wIt3gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAKVJREFUGNNtj+kOgkAMhMt9yiIsoAjeJ+A56vs/mouAYuL3o00mk+mUSCArqqbrmqrI1GCYFlos06gV24E78JjvM28YwLGJQg2ctX5iHFpIEeKEPiQjRDRGSj1STChD3pdyTP+5IvAma0ZzkcVFVndxQcvVmsX1xbpXIHpttrv9wX33Iiq69vcHyqLNFD86VZWVT4B+OJ7QSNKX8wUQqy9JV9zEfAHnchGWgSXl0AAAAABJRU5ErkJggg==") no-repeat center
+      &:hover 
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAQCAMAAAAs2N9uAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAmVBMVEXnbxf////nbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf////v9cISAAAAMXRSTlMAABx5t+P1E5z8K+T5pVQfCaT4EsKDwwbE2jff9wT9AgEDCme0CCWs+xT+9iTvQmnIeofpCgAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAACfSURBVBjTbY/XEoJAEASHcGQ5hAMUwYCJYNr//zmPoFKF/di1NTMLSFRNZ4bBdE0FFEUK07JpxLbMTjkueQufBwH3lyG5joKIkeAY4YJYhJiSFF/SFcVYU4YJGW2QUzFVBW3/XcUkhqwd9jJLyKxP4wHl8cSTrrHbFcpd5flyrbx+F1D/1lNT9w/1P7ptmzfSYVQDt/tM4VHNFJ70kuoNsWIRDwFYQLQAAAAASUVORK5CYII=") no-repeat center
+    &-tocompare
+      border 0
+      cursor pointer
+      size 18px 14px
+      outline none
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOBAMAAADQ9FGEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEUAAAAAAAAAAAAAAAD///9PsMGfAAAAA3RSTlMAw8SGqEb6AAAAAWJLR0QEj2jZUQAAAAlwSFlzAAALEgAACxIB0t1+/AAAADJJREFUCNdjEDY2FmAQBmIgYawAJBQYsAKYEkOIEiDLCIc6sBIBqBI85oHtNYTba8QAACmdCBLlSOhqAAAAAElFTkSuQmCC") no-repeat center
+      transition .5s background
+      &.added,      
+      &:hover
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAOBAMAAADQ9FGEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEXnbxf////nbxfnbxfnbxf////qzH61AAAABHRSTlMAAMPEz03kvgAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA5SURBVAjXY1BxcVFgUHFREAQSLgZAwkCQAQaQWUAlDCAlTiAlYJYzDnVgJRDznPGZB7bXCW6vsyAAXjIMjKdXpC8AAAAASUVORK5CYII=") no-repeat center
+    &-existence
+      color $orange
+      fontify 17px 500 22px
+      text-transform uppercase
+      letter-spacing 0.04em
+      mb 20px
+    &-row
+      display flex
+      mb 18px
+      @media $tPortraitMax
+        flex-direction column
+      @media $mLandscape
+        flex-direction row
+      @media $mPortraitMax
+        flex-direction column
+      &_count
+        margin 36px 0 25px
+        @media $tPortraitMax
+          margin 15px 0
+    &-label
+      w 115px
+      pr 15px
+      color $dark
+      fontify 14px 400 16px
+      pt 3px
+      @media $tPortraitMax
+        w 100%
+        pt 0
+        pr 0
+        mb 5px
+    &-value
+      w calc(100% - 115px)
+      @media $tPortraitMax
+        w 100%
+    &-cost
+      color $orange
+      fontify 25px 500 26px
+      span
+        font-size 18px
+      &_old
+        color $dark
+        font-family FiraSans
+        fontify 14px 400 22px
+        text-decoration line-through
+      &-time
+        ib()
+        mt 3px
+        background-color #e6e6e6
+        padding 0 5px
+        color #a5a5a5
+        font-family FiraSans
+        fontify 12px 400 19px
+    &-delivery
+      color $dark
+      fontify 14px 500 22px
+      span
+        color #a5a5a5
+        font-family FiraSans
+        fontify 12px 400 22px
+    &-bottom
+      display flex
+      flex-wrap wrap
+      border-top 1px solid #dddddd
+      mt 27px
+      pt 24px
+      @media $tPortraitMax
+        flex-direction column
+      & ^[0]__elem-tocart
+        mt 18px
+        w 100%
+        &:after
+          l 115px
+          @media $desktopMax
+            l 100px
+          @media $tPortraitMax
+            l 70px
+          @media $mLandscape
+            dn()
+    &-calc
+      w 100px
+      ml 20px
+      float right
+      mt 1px
+      @media $tPortraitMax
+        ml 0
+        mt 10px
+        w 100%
+      &-href
+        color $dark
+        fontify 14px 500 22px
+        border-bottom 2px solid $orange
+        transition .5s border
+        &:hover
+          border-color transparent
+    &-maxval
+      pos relative
+      ib()
+      mt -5px
+      .common__input
+        bgc white
+        border 2px solid #b6b6b6
+        w 92px
+        h 36px
+        text-align center
+      &-plus
+        pos absolute
+        t 12px
+        l 68px
+        cursor pointer
+        size 12px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMAgMAAAArG7R0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEXnbxfnbxf///+r1ZcnAAAAAXRSTlMAQObYZgAAAAFiS0dEAmYLfGQAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAVSURBVAjXY2AQYWBAx6GhoWCMRQ4AQsACx/Vqqw0AAAAASUVORK5CYII=") no-repeat center
+        transition .5s opacity
+        &:hover
+          opacity .7
+      &-minus
+        pos absolute
+        t 12px
+        l 12px
+        cursor pointer
+        size 12px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAACAQMAAABWsa/UAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABlBMVEXnbxf///94NDtdAAAAAWJLR0QB/wIt3gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAtJREFUCNdjYAABAAAGAAFm9MlsAAAAAElFTkSuQmCC") no-repeat center
+        transition .5s opacity
+        &:hover
+          opacity .7
+    &-msc
+      ib()
+      mt 6px
+      pos relative
+      pl 34px
+      color $dark
+      fontify 12px 400 15px
+      &:before
+        content ""
+        size 20px
+        bgc white
+        border 2px solid #b6b6b6
+        pos absolute
+        l 0
+        t 4px
+        cursor pointer
+      &:after
+        content ""
+        pos absolute
+        l 5px
+        t 10px
+        size 14px 12px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMBAMAAACgrpHpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///+QQS04AAAACHRSTlMAAymp8Dc2ON3HLXwAAAABYktHRAnx2aXsAAAACXBIWXMAAAsSAAALEgHS3X78AAAAMklEQVQI12NgAAFGBTDFIOwK4Vq4QbgtCRhcJgEIt8QQIhvSDJFl84AoZkiBKGZgA3MBeVoJKiGpBgkAAAAASUVORK5CYII=") no-repeat center
+        opacity 0
+        cursor pointer
+        transition .5s opacity
+      &.checked:after
+        opacity 1
+      input
+        pos absolute
+        l 0
+        t 0
+        w 0 
+        h 0
+        visibility hidden
+        border 0
+        user-select none
+        pointer-events none
+      &-town
+        color $dark
+        fontify 12px 400 15px
+        border-bottom 1px dotted $orange
+        transition .5s border
+        &:hover
+          border-color transparent
+  &__cost
+    w calc(100% - 120px)
+    display flex
+    flex-direction column
+    @media $tPortraitMax
+      w 100%
+    &-title
+      color $dark
+      fontify 14px 500 23px
+      mb 4px
+    &-value
+      color $orange
+      fontify 32px 500 32px
+      span
+        font-size 22px
+  &__params
+    mb 50px
+    &-title
+      color $dark
+      fontify 18px 500 23px
+      mb 15px
+    &-hidden
+      dn()
+      &.show
+        db()
+        mt 20px
+    &-row
+      display flex
+      & + &,
+      &:last-child
+        mt 20px
+    &-label
+      color alpha($dark, .5)
+      fontify 14px 400 22px
+      w 149px
+      pr 10px
+      @media $desktopMax
+        w 135px
+      @media $tLandscapeMax
+        w 250px
+      @media $tPortraitMax
+        w 135px
+      @media $mLandscape
+        w 30%
+      @media $mPortraitMax
+        w 50%
+    &-value
+      w calc(100% - 149px)
+      color $dark
+      fontify 14px 400 22px
+      @media $desktopMax
+        w calc(100% - 135px)
+      @media $tLandscapeMax
+        w calc(100% - 250px)
+      @media $tPortraitMax
+        w calc(100% - 135px)
+      @media $mLandscape
+        w 70%
+      @media $mPortraitMax
+        w 50%
+    .choices,
+    .common__select
+      color $dark
+      w 86px
+      mr 10px
+    &-tochars
+      pos relative
+      color $dark
+      fontify 14px 400 16px
+      border-bottom 2px dotted $orange
+      transition .5s border
+      &:hover
+        border-color transparent
+      &:after
+        content attr(data-default)
+      &.open:after
+        content attr(data-open)
+      &:before
+        content ""
+        pos absolute
+        t 3px 
+        r -15px
+        size 10px 14px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAOBAMAAADkjZCYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///+QQS04AAAACHRSTlMAKQM48Kk2NXVnihkAAAABYktHRAnx2aXsAAAACXBIWXMAAAsSAAALEgHS3X78AAAANklEQVQI12NgYOhgAAHCJKNCB5MAg0lQh6ozQ0prR4Q7A5tHR0sBA0NKhztQmt0lAaQyjYEBAKz8DAiq3OyxAAAAAElFTkSuQmCC") no-repeat center
+        transition .5s transform
+        will-change transform
+      &.open:before
+        transform rotate(180deg)
+  &__feats
+    display flex
+    bgc $orange
+    padding 32px 28px
+    mt 75px
+    mb 80px
+    @media $tLandscapeMax
+      padding 32px 0
+    @media $tPortraitMax
+      flex-direction column
+    @media $tPortraitMax
+      padding 10px 20px
+    &-elem
+      w 20%
+      color white
+      fontify 15px 400 22px
+      text-transform uppercase
+      letter-spacing .1em
+      padding 0 40px
+      text-align center
+      align-self stretch
+      @media $desktopMax
+        padding 0 20px
+      @media $tLandscapeMax
+        fontify 14px 400 22px
+        padding 0 10px
+      @media $tPortraitMax
+        w 100%
+        padding 17px 20px
+      &-text
+        pos relative
+        top 50%
+        transform translateY(-50%)
+        @media $tPortraitMax
+          t 0
+          transform none
+      span
+        text-transform none
+        letter-spacing 0
+        db()
+      & + &
+        border-left 1px solid #e88842
+        @media $tPortraitMax
+          border-left none
+          border-top 1px solid #e88842
+        
+  &__delivery
+    mt 80px
+    &-title
+      color $dark
+      fontify 30px 400 26px
+      mb 32px
+      
+.swiper-slide .card__elem
+  mb 0
