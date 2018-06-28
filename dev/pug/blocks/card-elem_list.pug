@@ -1,0 +1,31 @@
+mixin cardElem(data)
+  li.card__elem
+    aside.card__elem-imgover
+      img(src=data.img, alt="").card__elem-img
+    .card__elem-hrefover
+      a(href="#").card__elem-href !{data.name}
+      br
+      span(class="card__elem-modified card__elem-modified_" + data.modified)
+    .card__elem-info
+      each item in data.params
+        .card__elem-params-row
+          p.card__elem-params-title !{item.title}
+          p.card__elem-params-val !{item.value}
+    .card__elem-price
+      .card__elem-price-costover
+        if data.prevcost
+          span.card__elem-prevcost #{data.prevcost} 
+            sub руб.
+        span.card__elem-cost #{data.cost} 
+          sub руб.
+      .card__elem-price-btnover
+        if data.prevcost
+          button(type="button", data-default="в корзину", data-added="в корзине").btn.card__elem-tocart.added
+        else
+          button(type="button", data-default="в корзину", data-added="в корзине").btn.card__elem-tocart
+        .card__elem-icons
+          if !data.favorites && data.inadd
+            button(type="button").card__elem-tofavorites.added
+          if !data.favorites && !data.inadd
+            button(type="button").card__elem-tofavorites
+          button(type="button").card__elem-tocompare      

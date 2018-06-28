@@ -1,0 +1,292 @@
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+    main.content
+      .container
+        section.breadcrumbs
+          a(href="#").breadcrumbs__href Главная
+          span.breadcrumbs__delim / 
+          a(href="#").breadcrumbs__href Стеллажи
+          span.breadcrumbs__delim /
+        h1 Стеллажи Лайт
+        section.subcat-page.js-subcatpage
+          section.subcat__top
+            .subcat__elem
+              .catalog__elem-carover
+                .swiper-container.catalog__elem-car.js-catalog-car
+                  .swiper-wrapper
+                    .swiper-slide(data-index="0")
+                      img(src="img/cat1.jpg").catalog__elem-car-img
+                    .swiper-slide(data-index="1")
+                      img(src="img/cat1.jpg").catalog__elem-car-img
+                .swiper-button-prev.swiper-button-prev_arr
+                .swiper-button-next.swiper-button-next_arr
+                .catalog__elem-hide
+                  a(href="img/serv-device.jpg").catalog__elem-glightbox
+                  a(href="img/inews1.jpg").catalog__elem-glightbox
+            
+            aside.subcat__filter
+              p.subcat__filter-title Фильтр по параметрам
+              .subcat__filter-row
+                .subcat__filter-col.subcat__filter-col_col4.subcat__filter-col_wide
+                  p.subcat__filter-subtitle Стоимость
+                  .subcat__filter-inpwide
+                    .subcat__filter-inpleft
+                      | от 
+                      input(type="text", value="0").common__input.js-subcat-rangeMin
+                      |  руб.
+                    .subcat__filter-inpright
+                      | до 
+                      input(type="text", value="115000").common__input.js-subcat-rangeMax
+                      |  руб.
+                  .subcat__filter-rangeover
+                    input(type="text", value="", data-type="double", data-min="0", data-max="1000000", data-from="0", data-to="115000").js-subcat-range
+                .subcat__filter-col.subcat__filter-col_col4
+                  p.subcat__filter-subtitle Количество полок
+                  .subcat__filter-inpover
+                    input(type="text", value="").common__input
+                    |  шт
+              .subcat__filter-row
+                .subcat__filter-col.subcat__filter-col_col4
+                  p.subcat__filter-subtitle Ширина
+                  label.subcat__filter-input.checked.js-subcat-check 700
+                    input(type="checkbox", value="1", checked)
+                  label.subcat__filter-input.js-subcat-check 1000
+                    input(type="checkbox", value="2")
+                  label.subcat__filter-input.checked.js-subcat-check 1200
+                    input(type="checkbox", value="3", checked)
+                  label.subcat__filter-input.js-subcat-check 1500
+                    input(type="checkbox", value="4")
+                .subcat__filter-col.subcat__filter-col_col4
+                  p.subcat__filter-subtitle Высота
+                  label.subcat__filter-input.checked.js-subcat-check 2000
+                    input(type="checkbox", value="1", checked)
+                  label.subcat__filter-input.js-subcat-check 2500
+                    input(type="checkbox", value="2")
+                  label.subcat__filter-input.checked.js-subcat-check 3000
+                    input(type="checkbox", value="3", checked)
+                  label.subcat__filter-input.js-subcat-check 3500
+                    input(type="checkbox", value="4")
+                  label.subcat__filter-input.js-subcat-check 4000
+                    input(type="checkbox", value="5")
+                .subcat__filter-col.subcat__filter-col_col4
+                  p.subcat__filter-subtitle Глубина стеллажа
+                  label.subcat__filter-input.checked.js-subcat-check 300
+                    input(type="checkbox", value="1", checked)
+                  label.subcat__filter-input.js-subcat-check 400
+                    input(type="checkbox", value="2")
+                  label.subcat__filter-input.checked.js-subcat-check 500
+                    input(type="checkbox", value="3", checked)
+                  label.subcat__filter-input.js-subcat-check 600
+                    input(type="checkbox", value="4")
+                  label.subcat__filter-input.js-subcat-check 800
+                    input(type="checkbox", value="5")
+                .subcat__filter-col.subcat__filter-col_col4
+                  p.subcat__filter-subtitle Нагрузка на полку
+                  label.subcat__filter-input.checked.js-subcat-check 120
+                    input(type="checkbox", value="1", checked)
+                  label.subcat__filter-input.js-subcat-check 150
+                    input(type="checkbox", value="2")
+                  label.subcat__filter-input.checked.js-subcat-check 300
+                    input(type="checkbox", value="3", checked)
+                  label.subcat__filter-input.js-subcat-check 350
+                    input(type="checkbox", value="4")
+                  label.subcat__filter-input.js-subcat-check 450
+                    input(type="checkbox", value="5")
+              .subcat__filter-row
+                p.subcat__filter-subtitle.subcat__filter-subtitle_wide Модификации
+                .subcat__filter-col.subcat__filter-col_col2
+                  label.subcat__filter-input.checked.js-subcat-check Со сплошными полками
+                    input(type="checkbox", value="1", checked)
+                  label.subcat__filter-input.js-subcat-check С перфорирированными полками
+                    input(type="checkbox", value="2")
+                  label.subcat__filter-input.js-subcat-check Оцинкованные
+                    input(type="checkbox", value="3")
+                .subcat__filter-col.subcat__filter-col_col2
+                  label.subcat__filter-input.js-subcat-check Из нержавеющей стали
+                    input(type="checkbox", value="4")
+                  label.subcat__filter-input.js-subcat-check Оцинкованные с перфорированными полками
+                    input(type="checkbox", value="5")
+              
+          section.subcat__variants
+            table.calc__result-table.js-subcat-table
+              thead
+                tr
+                  th Наименование
+                  th Нагрузка<br>на полку, кг
+                  th Ширина,<br>мм
+                  th Высота,<br>мм
+                  th Глубина,<br>мм
+                  th Кол-во<br>секций
+                  th Кол-во<br>полок
+                  th Тип<br>расстановки
+                  th Тип<br>полки
+                  th Цена, руб.
+              tbody
+                tr
+                  td Стеллаж перфорированный Лайт-234
+                  td 120
+                  td 500
+                  td 1600
+                  td 500
+                  td 100
+                  td 3
+                  td В линейку
+                  td Цельная
+                  td 3 000
+                    a(href="#", title="В корзину добавлен <b>Стеллаж перфорированный Лайт-264").calc__result-buy.added.js-calc-tocart
+                tr
+                  td Стеллаж перфорированный Лайт-234
+                  td 120
+                  td 1000
+                  td 2000
+                  td 500
+                  td 100
+                  td 4
+                  td В линейку
+                  td Цельная
+                  td 3 400
+                    a(href="#").calc__result-buy.js-calc-tocart
+                tr.hidden
+                  td Стеллаж перфорированный Лайт-234
+                  td 120
+                  td 1000
+                  td 2000
+                  td 500
+                  td 100
+                  td 4
+                  td В линейку
+                  td Цельная
+                  td 3 400
+                    a(href="#").calc__result-buy.js-calc-tocart
+                tr.hidden
+                  td Стеллаж перфорированный Лайт-234
+                  td 120
+                  td 1000
+                  td 2000
+                  td 500
+                  td 100
+                  td 4
+                  td В линейку
+                  td Цельная
+                  td 3 400
+                    a(href="#").calc__result-buy.js-calc-tocart
+            .subcat__variants-more
+              a(href="#", data-default="Показать еще", data-open="Скрыть").subcat__variants-href.js-subcat-hidden
+          
+          section.others
+            p.common__title Аксессуары к стеллажам Лайт
+            include blocks/others
+          
+            .others__car-over
+              .swiper-container.others__car.js-others
+                .swiper-wrapper
+                  -var othersArray = []
+                  -othersArray.push({img: 'img/acc1.jpg', cost: "311", href: "Полка для стеллажа ТСУп сс 700/300/150"})
+                  -othersArray.push({img: 'img/acc2.jpg', cost: "от 400", href: "Стяжка-опора ТСУп сс 725"})
+                  -othersArray.push({img: 'img/acc3.jpg', cost: "240", href: "Поперечина ТСУп сс 325"})
+                  -othersArray.push({img: 'img/acc4.jpg', cost: "130", href: "Полка для стеллажа ТСУп сс 1200/600/300 перф. (усиленная)"})
+                  -othersArray.push({img: 'img/acc3.jpg', cost: "240", href: "Стяжка-опора ТСУп сс 725"})
+                  for other in othersArray
+                    .swiper-slide
+                      +other(other)
+              .swiper-buttons
+                .swiper-button-prev.swiper-button-prev_dark
+                .swiper-button-next.swiper-button-next_dark
+          
+          section.prcalc
+            p.common__title Рассчитаем проект под ваши задачи!
+            form.prcalc__form
+              .common__row
+                .common__col
+                  label.prcalc__label Площадь склада, м
+                    sup 2
+                  input(type="text", value="20000").common__input
+                .common__col
+                  label.prcalc__label Геометрия
+                  select.common__select.js-select
+                    option(value="1", selected) Прямоугольная
+                    option(value="2") Круглая
+                    option(value="3") Квадратная
+                    option(value="4") Сферическая
+              .common__row
+                .common__col
+                  label.prcalc__label Что храним?
+                  select.common__select.js-select
+                    option(value="1", selected) Шины
+                    option(value="2") Банки
+                    option(value="3") Коньки
+                    option(value="4") Арбузные дольки
+                .common__col
+                  label.prcalc__label Вес на полку
+                  select.common__select.js-select
+                    option(value="1", selected) 320 кг
+                    option(value="2") 350кг
+                    option(value="3") 400кг
+                    option(value="4") 2500кг
+              .common__row
+                .common__fileover
+                  input(type="file", name="").common__file#file1.js-common-fileinput
+                  label(for="file1", data-default="Прикрепить чертёж / схему").common__filename.js-common-file Прикрепить чертёж / схему
+                  button(type="button").common__filedelete.js-common-filedelete
+                  p.prcalc__filelabel Выберите файл на компьютере (.png, .jpeg, .bmp)
+              .common__row
+                input(type="submit", value="Получить расчёт").btn.prcalc__sbm
+                aside.prcalc__question
+                  p.prcalc__question-title Есть вопросы? Звоните
+                  p.prcalc__question-phone 8 (495) 788-48-42
+                
+          section.calc.calc_inner
+            p.common__title.calc__cattile Хотите подобрать стеллаж самостоятельно? Воспользуйтесь калькулятором
+            include blocks/calc
+            
+          section.catalog__text
+            h2 Технические характеристики
+            .h-catover
+              .h-catleft
+                p Производство стеллажей – основное направление деятельности компании «Горторгснаб». В этой сфере мы работаем почти два десятилетия и за это время выполнили сотни проектов, заработав доверие и уважение со стороны своих клиентов. В настоящее время наши производственные цеха обеспечивают бесперебойное изготовление стеллажей всех распространённых модификаций: полочных моделей различной грузоподъёмности, паллетных фронтальных и набивных стеллажей, мезонинов. Мощности наших производственных линий позволяют не только оперативно изготавливать заказанные стеллажи, но и держать на складе запас готовой продукции популярных типоразмеров.
+                p Вся продукция имеет сертификаты на соответствие международным стандартам качества ISO 9001:2000.
+                p Производственное предприятие расположено в Московской области, что позволяет обеспечить быструю доставку заказов по территории Центрального федерального округа. На территории площадью более 4 гектаров расположены четыре производственных корпуса и склады готовой продукции. Склады расположены также и рядом с московским офисом, благодаря чему мы можем доставить ваш заказ ещё быстрее! 
+                p Для изготовления стеллажей применяется современное оборудование ведущих южнокорейских и европейских производителей. Сварка балок производится с помощью роботизированного сварочного комплекса (промышленного сварочного робота), который обеспечивает высокую скорость, точность и качество сварочных работ.
+              aside.h-catright
+                img(src="img/h-cat.jpg")
+                p(style="font-style:italic") Описание фотографии
+            .text_short
+              h2 О компании
+              p Начиная с 2000 года одним из основных направлений деятельности компании «Горторгснаб» является производство и продажа стеллажей. В 2001 году начато производство легких стеллажей, чуть позже – полочных складских стеллажей малой и средней грузоподъемности, а также металлических шкафов. В 2004 году компанией было закуплено импортное оборудование и начато собственное производство разборных стеллажей для поддонов, а также полочных складских стеллажей, офисных стеллажей и недорогих металлических шкафов.
+              p На сегодняшний день компания «Горторгснаб» входит в пятерку крупнейших российских производителей стеллажных систем. Изготовление стеллажей осуществляется по самой современной технологии в соответствии с мировыми стандартами. Компания «Горторгснаб» внедрила в работу систему менеджмента качества на соответствие международным стандартам серии ISO 9001:2000. Наличие сертификата ISO 9001:2000 подтверждает качество выпускаемой продукции, производственных работ и услуг.
+            .contacts__col-over
+              .contacts__col
+                .contacts__features-item
+                  .contacts__features-imgover
+                    img(src="img/contacts-feat1.png", alt="").contacts__features-img
+                  p.contacts__features-title Выгодные цены
+                  p.contacts__features-text Собственное производство стеллажей позволяет держать адекватный уровень цен даже в условиях нестабильной экономической ситуации.
+              .contacts__col
+                .contacts__features-item
+                  .contacts__features-imgover
+                    img(src="img/contacts-feat2.png", alt="").contacts__features-img
+                  p.contacts__features-title Гарантия качества
+                  p.contacts__features-text Качество стеллажей от «Горторгснаб» подтверждено сертификатом ISO 9001:2000 (в России действует как стандарт ГОСТ Р ИСО 9001-2001). Мы осуществляем строгий контроль качества на всех этапах производства стеллажей.
+              .contacts__col
+                .contacts__features-item
+                  .contacts__features-imgover
+                    img(src="img/contacts-feat4.png", alt="").contacts__features-img
+                  p.contacts__features-title Индивидуальный проект
+                  p.contacts__features-text Многолетний опыт оснащения складов в сочетании с собственными производственными мощностями позволяет нам реализовывать даже сложные и нестандартные проекты стеллажных складских систем. Особенно мы гордимся нашими мезонинами!
+          
+          section.favorites__banner(style="background-image: url(img/favbanner1.jpg)")
+            p.favorites__banner-text Вся продукция сертифицирована, соответствует ГОСТу и ТУ. 
+              span Мы гарантируем 
+              | лучшую цену.
+          
+          section.associated
+            p.common__title Не нашли, что искали? Посмотрите другие стеллажи
+            .recent
+              include blocks/similar
+            
+          include blocks/text
+    include layout/__footer

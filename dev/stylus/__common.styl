@@ -27,6 +27,11 @@ html.burgeropen
   pt 124px
   pos relative
   z-index 1
+  &.cling
+    & + .footer
+      mt 0
+    @media $mPortraitMax
+      pb 0
   @media $mLandscape
     pt 72px
   @media $mPortraitMax
@@ -359,7 +364,25 @@ div[class\^="table-scroller"]
     &.warning + ^[0]__label:before 
       border-color #ed1c24
     
-
+.totop
+  pos fixed
+  z-index 5
+  b 20px
+  r 20px
+  cursor pointer
+  size 44px
+  border-radius 50%
+  box-shadow 0 6px 19px rgba(0, 0, 0, 0.12)
+  visibility hidden
+  opacity 0
+  background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAKBAMAAABLZROSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAMFBMVEX///////////////////////////////////////////////////////////////9Or7hAAAAAD3RSTlMAPTz08p6hA6DzCennlZZZY9tOAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAEhJREFUCNdjYAACIQYoYDRRgLKE/ztBhezDvkAEhb+W5ztBhMIZysCCwl8LGNhBgiAhBoaKnwoMq4FCDAzs/acYGK+DtdUpAACFthD1OC0MSwAAAABJRU5ErkJggg==") no-repeat center #e76f17
+  transition .5s visible, .5s box-shadow, .5s opacity
+  &:hover
+    box-shadow none
+  &.visible
+    visibility visible
+    opacity 1
+      
 .text
   &_short
     max-width 877px
@@ -387,3 +410,15 @@ textarea.warning
 
 .hidden-block
   display none
+  
+.tippy-tooltip.light-theme
+  bgc white
+  box-shadow 0 6px 32px rgba(0, 0, 0, 0.21)
+  fontif 14px 400 18px
+  color $dark
+  padding 15px 19px
+  .tippy-backdrop
+    bgc white
+    color $dark
+  .tippy-arrow
+    border-top-color white

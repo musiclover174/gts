@@ -1,0 +1,224 @@
+.model
+  &__filter
+    bgc #484846
+    mt 80px
+    padding 44px 48px
+    &-row
+      display flex
+      flex-wrap wrap
+      & + &
+        mt 27px
+      &_labelside
+        pl 210px
+        pos relative
+        @media $mLandscapeMax
+          pl 0
+    &-title
+      w 330px
+      pr 20px
+      color white
+      fontify 30px 400 36px
+      @media $desktopMax
+        w 300px
+      @media $tLandscapeMax
+        w 100%
+        mb 30px
+    &-label
+      color white
+      fontify 14px 500 22px
+      pos absolute
+      l 0
+      t 5px
+      max-width 210px
+      padding-right 20px
+      @media $mLandscapeMax
+        pos static
+        t 0
+        mb 20px
+        max-width none
+        w 100%
+    &-rangecol
+      pt 3px
+      w 430px
+      mb 34px
+      @media $desktopMax
+        w 342px
+      @media $tLandscapeMax
+        w calc(50% - 20px)
+      @media $tPortraitMax
+        w 100%
+      & + &
+        ml 40px
+        @media $tPortraitMax
+          ml 0
+      .subcat__filter-subtitle
+        color white
+        font-weight 500
+        mb 16px
+        span
+          font-weight 400
+      .subcat__filter-inpleft, .subcat__filter-inpright, .subcat__filter-inpover, .irs-from, .irs-to, .irs-single
+        color white
+      .irs-from:after, .irs-to:after, .irs-single:after
+        border-color #484846
+      .irs-line
+        bgc white
+    &-inpcol
+      w 20%
+      pr 20px
+      mb 13px
+      display flex
+      flex-direction column
+      @media $desktopMax
+        w 25%
+      @media $tLandscapeMax
+        w calc(100% / 3)
+      @media $tPortraitMax
+        w 50%
+      @media $mPortraitMax
+        w 100%
+      .subcat__filter-input
+        color white
+    &-hidden
+      mt 24px
+      pt 36px
+      border-top 1px solid #6d6d6b
+      display none
+      &.open
+        display block
+    &-resrow
+      mt 30px
+      display flex
+      justify-content flex-end
+      align-items center
+      pos relative
+      @media $mLandscapeMax
+        flex-wrap wrap
+        flex-direction column
+        align-items flex-start
+        justify-content flex-start
+    &-cancel
+      cursor pointer
+      color white
+      fontify 14px 400 17px
+      border-bottom 2px dotted $orange
+      ml 31px
+      transition .5s border
+      &:hover
+        border-color transparent
+      @media $mLandscapeMax
+        ml 0
+        mt 20px
+    &-rescount
+      color white
+      fontify 20px 500 23px
+      mr 31px
+      @media $tPortraitMax
+        dn()
+      @media $mLandscapeMax
+        db()
+        mt 10px
+    &-show
+      @media $mLandscapeMax
+        mt 20px
+    &-open
+      cursor pointer
+      color white
+      fontify 14px 400 17px
+      border-bottom 2px dotted $orange
+      pos absolute
+      l 0
+      t 50%
+      transform translateY(-50%)
+      transition .5s border
+      &:hover
+        border-color transparent
+      &:before
+        content attr(data-default)
+      &.open:before
+        content attr(data-open)
+      @media $mLandscapeMax
+        pos static
+  &__res
+    mt 53px
+    &-title
+      mt -2px
+      color $dark
+      fontify 20px 500 23px
+      span
+        db()
+        fontify 14px 400 23px
+        mt 10px
+      @media $desktopMax
+        pr 100px
+    &-more
+      mt 35px
+      text-align center
+      pr 17px
+    &-href
+      pos relative
+      cursor pointer
+      color $dark
+      fontify 14px 500 16px
+      border-bottom 2px dotted $orange
+      transition .5s border
+      &:hover
+        border-color transparent
+      &:after
+        content attr(data-default)
+      &.open:after
+        content attr(data-open)
+      &:before
+        content ""
+        pos absolute
+        t 3px 
+        r -19px
+        size 10px 14px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAOBAMAAADkjZCYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///+QQS04AAAACHRSTlMAKQM48Kk2NXVnihkAAAABYktHRAnx2aXsAAAACXBIWXMAAAsSAAALEgHS3X78AAAANklEQVQI12NgYOhgAAHCJKNCB5MAg0lQh6ozQ0prR4Q7A5tHR0sBA0NKhztQmt0lAaQyjYEBAKz8DAiq3OyxAAAAAElFTkSuQmCC") no-repeat center
+        transition .5s transform
+        will-change transform
+      &.open:before
+        transform rotate(180deg)
+    .filter
+      pos relative
+      pr 100px
+      mb 34px
+      @media $desktopMax
+        flex-direction column
+      @media $mPortraitMax
+        pr 0
+      .choices
+        @media $mPortraitMedium
+          w 155px
+      .filter__sort,
+      .filter__show
+        @media $mPortraitMedium
+          justify-content space-between
+          display flex
+      .filter__sort_long
+        .choices
+          @media $mPortraitMediumMin
+            w 249px
+      &__main
+        @media $desktopMax
+          mt 30px
+    &-types
+      pos absolute
+      r 0 
+      t 8px
+      display flex
+    &-type
+      size 36px
+      background-position center
+      background-repeat no-repeat
+      transition .5s background, .5s opacity
+      &:not(.active):hover
+        opacity .7
+      &.active
+        bgc whitesmoke
+      & + &
+        ml 8px
+      &[data-type="list"]
+        background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEX///8aGhj///9jX17hAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAUSURBVAjXYwhlCA0FYgwSF6CSegC46Q/xE2N5awAAAABJRU5ErkJggg==")
+      &[data-type="grid"]
+        background-image url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUAgMAAADw5/WeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEX///8aGhj///9jX17hAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAARSURBVAjXYwhlwA5xASqpBwDNxgv1GbvGUAAAAABJRU5ErkJggg==")

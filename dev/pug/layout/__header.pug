@@ -49,7 +49,9 @@ header.header
                       - var menuList = ['Гидравлические тележки', 'Электрические (самоходные) тележки', 'Платформенные тележки', 'Складные тележки', 'Тележки с бортами']
                       each item in menuList
                         li.navcats__deepitem
-                          a(href="#").navcats__deepitem-href= item
+                          a(href="#").navcats__deepitem-href
+                            span(style="background-image:url(img/header-cat1.jpg);").navcats__deepitem-href-img
+                            | #{item}
                       li.navcats__deepitem
                         a(href="#").navcats__deepitem-href.navcats__deepitem-href_toall Смотреть все модели
                   li.navcats__subitem
@@ -58,7 +60,9 @@ header.header
                       - var menuList = ['Гидравлические штабелёры', 'Штабелёры с электроподъёмом', 'Электроштабелёры самоходные', 'Электрические штабелёры', 'Сборщик заказов']
                       each item in menuList
                         li.navcats__deepitem
-                          a(href="#").navcats__deepitem-href= item
+                          a(href="#").navcats__deepitem-href
+                            span(style="background-image:url(img/header-cat1.jpg);").navcats__deepitem-href-img
+                            | #{item}
                   li.navcats__subitem
                     a(href="#").navcats__subitem-href Ричтраки
                   li.navcats__subitem
@@ -71,28 +75,36 @@ header.header
                       - var menuList = ['Складские минипогрузчики (оператор на подножке)', 'Вилочные электрические погрузчики']
                       each item in menuList
                         li.navcats__deepitem
-                          a(href="#").navcats__deepitem-href= item
+                          a(href="#").navcats__deepitem-href
+                            span(style="background-image:url(img/header-cat1.jpg);").navcats__deepitem-href-img
+                            | #{item}
                   li.navcats__subitem
                     a(href="#").navcats__subitem-href Колёса
                     ul.navcats__deeplist
                       - var menuList = ['Колёса и колёсные опоры для тележек', 'Колёса большегрузные для тележек', 'Колёса промышленные']
                       each item in menuList
                         li.navcats__deepitem
-                          a(href="#").navcats__deepitem-href= item
+                          a(href="#").navcats__deepitem-href
+                            span(style="background-image:url(img/header-cat1.jpg);").navcats__deepitem-href-img
+                            | #{item}
                   li.navcats__subitem
                     a(href="#").navcats__subitem-href Колёсные опоры
                     ul.navcats__deeplist
                       - var menuList = ['Колёсные опоры промышленные', 'Колёсные опоры аппаратные', 'Колёсные опоры пневматические', 'Опоры колёсные большегрузные']
                       each item in menuList
                         li.navcats__deepitem
-                          a(href="#").navcats__deepitem-href= item
+                          a(href="#").navcats__deepitem-href
+                            span(style="background-image:url(img/header-cat1.jpg);").navcats__deepitem-href-img
+                            | #{item}
                   li.navcats__subitem
                     a(href="#").navcats__subitem-href Ролики
                     ul.navcats__deeplist
                       - var menuList = ['Колёса и ролики для гидравлических тележек', 'Специальные колёса и ролики для тележек']
                       each item in menuList
                         li.navcats__deepitem
-                          a(href="#").navcats__deepitem-href= item
+                          a(href="#").navcats__deepitem-href
+                            span(style="background-image:url(img/header-cat1.jpg);").navcats__deepitem-href-img
+                            | #{item}
               li.navcats__dropitem
                 a(href="#").navcats__dropitem-href Грузоподъемное оборудование, механизмы
               li.navcats__dropitem

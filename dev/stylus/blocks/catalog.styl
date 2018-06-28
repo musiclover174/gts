@@ -315,3 +315,179 @@
           mt 0
         @media $tLandscapeMax
           mb 20px
+          
+.subcat
+  &__top
+    display flex
+    justify-content space-between
+    pos relative
+    z-index 1
+    mb 37px
+    @media $tPortraitMax
+      flex-direction column
+  &__elem
+    w 540px
+    .catalog__elem-car,
+    .catalog__elem-carover
+      h 100%
+      .swiper-slide
+        h 100%
+        pt 0
+    @media $desktopMax
+      w 480px
+    @media $tPortraitMax
+      w 100%
+      .catalog__elem-car,
+      .catalog__elem-carover
+        h auto
+        .swiper-slide
+          h 0
+          pt 82%
+  &__variants
+    mb 70px
+    .hidden
+      dn()
+    &-more
+      mt 14px
+      text-align center
+      pr 17px
+    &-href
+      pos relative
+      cursor pointer
+      color $dark
+      fontify 14px 500 16px
+      border-bottom 2px dotted $orange
+      transition .5s border
+      &:hover
+        border-color transparent
+      &:after
+        content attr(data-default)
+      &.open:after
+        content attr(data-open)
+      &:before
+        content ""
+        pos absolute
+        t 3px 
+        r -19px
+        size 10px 14px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAOBAMAAADkjZCYAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///+QQS04AAAACHRSTlMAKQM48Kk2NXVnihkAAAABYktHRAnx2aXsAAAACXBIWXMAAAsSAAALEgHS3X78AAAANklEQVQI12NgYOhgAAHCJKNCB5MAg0lQh6ozQ0prR4Q7A5tHR0sBA0NKhztQmt0lAaQyjYEBAKz8DAiq3OyxAAAAAElFTkSuQmCC") no-repeat center
+        transition .5s transform
+        will-change transform
+      &.open:before
+        transform rotate(180deg)
+  &__filter
+    w 740px
+    padding 42px 50px
+    background-color whitesmoke
+    @media $desktopMax
+      w 600px
+    @media (max-width:1199px) and (min-width:1000px), (max-width:768px)
+      w 420px
+    @media $tPortraitMax
+      w 100%
+    &-title
+      color $dark
+      fontify 18px 500 24px
+      mb 31px
+    &-row
+      display flex
+      flex-wrap wrap
+      justify-content space-between
+      ml -20px
+      w calc(100% + 20px)
+      & + &
+        mt 43px
+        @media (max-width:1199px) and (min-width:1000px), (max-width:768px)
+          mt 0
+    &-col
+      w calc(50% - 20px)
+      display flex
+      flex-direction column
+      ml 20px
+      @media (max-width:1199px) and (min-width:1000px), (max-width:768px)
+        mb 30px
+      &_col2
+        @media (max-width:1199px) and (min-width:1000px), (max-width:768px)
+          w calc(100% - 20px)
+          mb 10px
+      &_col4
+        w calc(25% - 20px)
+        @media (max-width:1199px) and (min-width:1000px), (max-width:768px)
+          w calc(50% - 20px)
+        @media $mPortraitMax
+          w calc(100% - 20px)
+      &_wide
+        w calc(70% - 20px)
+        @media (max-width:1199px) and (min-width:1000px), (max-width:768px)
+          w calc(100% - 20px)
+    &-inpwide
+      display flex
+      justify-content space-between
+      @media $mPortraitMax
+        flex-direction column
+    &-inpleft,
+    &-inpright,
+    &-inpover
+      display flex
+      color $dark
+      fontify 14px 400 36px
+      .common__input
+        w 93px
+        bgc white
+        h 36px
+        margin 0 5px
+        border-color #b6b6b6
+        padding 0 7px
+      @media $mPortraitMax
+        mb 10px
+    &-inpover
+      .common__input
+        ml 0
+    &-rangeover
+      mt -2px
+    &-subtitle
+      w 100%
+      color $dark
+      fontify 14px 700 18px
+      mb 8px
+      &_wide
+        ml 20px
+    &-input
+      color $dark
+      fontify 14px 400 18px
+      pos relative
+      pl 34px
+      pt 6px
+      & + &
+        mt 10px
+      &:before
+        content ""
+        size 20px
+        bgc white
+        border 2px solid #b6b6b6
+        pos absolute
+        l 0
+        t 4px
+        cursor pointer
+      &:after
+        content ""
+        pos absolute
+        l 5px
+        t 10px
+        size 14px 12px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMBAMAAACgrpHpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAHlBMVEXnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxfnbxf///+QQS04AAAACHRSTlMAAymp8Dc2ON3HLXwAAAABYktHRAnx2aXsAAAACXBIWXMAAAsSAAALEgHS3X78AAAAMklEQVQI12NgAAFGBTDFIOwK4Vq4QbgtCRhcJgEIt8QQIhvSDJFl84AoZkiBKGZgA3MBeVoJKiGpBgkAAAAASUVORK5CYII=") no-repeat center
+        opacity 0
+        cursor pointer
+        transition .5s opacity
+      &.checked:after
+        opacity 1
+      input
+        pos absolute
+        l 0
+        t 0
+        w 0 
+        h 0
+        visibility hidden
+        border 0
+        user-select none
+        pointer-events none

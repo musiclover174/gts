@@ -290,3 +290,73 @@
       max-width 375px
       @media $mLandscape
         max-width 100%
+.contact
+  mt 70px
+  background-size cover
+  background-repeat no-repeat
+  background-position center
+  &__text
+    w 400px
+    @media $desktopMax
+      w 342px
+    @media $tLandscapeMax
+      w 100%
+    fontify 30px 400 36px
+    color white
+    span
+      color $orange
+  &__form
+    mt 70px
+    padding 50px 0
+    display flex
+    justify-content space-between
+    @media $tLandscapeMax
+      align-content flex-start
+      flex-wrap wrap
+    @media $mPortraitMax
+      padding 35px
+  &__main
+    w 750px
+    display flex
+    justify-content space-between
+    flex-wrap wrap
+    @media $tLandscapeMax
+      w 100%
+      mt 30px
+    @media $mLandscape
+      flex-direction column
+  &__bottom
+    mt 20px
+    w 100%
+    display flex
+    justify-content space-between
+    @media $mLandscape
+      flex-direction column
+    @media $tPortraitMax
+      align-items flex-start
+    .fakecheckbox
+      mt 4px
+      @media $tPortraitMax
+        mt 0
+      @media $mLandscape
+        mb 20px
+  .common__row
+    pos relative
+    z-index 1
+  .common__placeholder
+    bgc white
+    w 100%
+    line-height 48px
+    h 100%
+    text-align left
+  .common__input:focus,
+  .common__input.notempty,
+  .common__textarea:focus,
+  .common__textarea.notempty
+    bgc white
+  .fakecheckbox
+    text-align left
+    &__label
+      color white
+      &:before
+        bgc white

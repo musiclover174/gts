@@ -66,12 +66,20 @@
       mt 4px
     @media $tPortraitMax
       dn()
+    @media $mLandscape
+      db()
+      mt 16px
+      mr 22px
+    @media $mPortraitMedium
+      mr 15px
     &-row
       color alpha(#0e0e0e, .8)
       fontify 12px 400 18px
       span
         @media $tLandscapeMax
           db()
+        @media $mLandscape
+          dn()
       a
         ib bottom
         ml 13px
@@ -81,6 +89,9 @@
         color #0e0e0e
         @media $tLandscapeMax
           fontify 14px 700 16px
+        @media $mPortraitMedium
+          fontify 12px 400 14px
+          ml 0
       & + &
         mt 5px
         @media $tLandscapeMax
@@ -95,6 +106,12 @@
       mr 15px
     @media $mLandscape
       mt 10px
+    @media $mPortraitMedium
+      w 80px
+      mt 18px
+      mr 10px
+    img
+      max-width 100%
 .town
   float right
   color white
@@ -281,11 +298,27 @@
     mb -4px
   &__deepitem
     mb 6px
+    pos relative
+    &:hover
+      z-index 1
     &-href
       color $dark
       fontify 12px 400 18px
       border-bottom 1px solid transparent
       transition .5s border
+      &-img
+        pos absolute
+        l 100%
+        size 90px
+        background-repeat no-repeat
+        background-position center
+        background-color white
+        border 2px solid #ececec
+        t 50%
+        transform translateY(-50%)
+        visibility hidden
+      &:hover &-img
+        visibility visible
       &.active,
       &:hover
         border-color currentColor

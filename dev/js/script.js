@@ -210,6 +210,12 @@ window.onload = function () {
           }
         }
       });
+      form.querySelectorAll('input[name^=agreement]').forEach((item) => {
+				if (!item.checked) {
+					item.classList.add('warning');
+					checkResult = false;
+				}
+			});
       return checkResult;
     }
 
@@ -1035,6 +1041,192 @@ window.onload = function () {
       
     },
     
+    subcatPage: () => {
+      const elemSwiper = new Swiper ('.js-catalog-car', {
+        loop: true,
+        speed: 800,
+        slidesPerView: 1,
+        navigation: {
+          nextEl: '.js-catalog-car ~ .swiper-button-next',
+          prevEl: '.js-catalog-car ~ .swiper-button-prev',
+        }
+      });
+      
+      const catLightbox = GLightbox({
+        'selector': 'catalog__elem-glightbox',
+      });
+      
+      const slideCat = document.querySelectorAll('.js-catalog-car .swiper-slide');
+      
+      if (slideCat.length){
+        slideCat.forEach((item) => {
+          item.addEventListener('click', () => {
+            let eventClick = new Event('click'),
+                lightImgs = document.querySelectorAll('.catalog__elem-glightbox'),
+                index = parseInt(item.getAttribute('data-index'));
+
+            lightImgs[index].dispatchEvent(eventClick);
+          })
+        })
+      }
+      
+      const subcatRange = document.querySelector('.js-subcat-range'),
+            subcatRangeMax = subcatRange.getAttribute('data-max'),
+            subcatRangeMin = subcatRange.getAttribute('data-min');
+      
+      let rangeMin = document.querySelector('.js-subcat-rangeMin'),
+          rangeMax = document.querySelector('.js-subcat-rangeMax'), rangeData;
+      
+      function updateRange() {
+        if (rangeMin.value > rangeMax.value)
+          [rangeMin.value, rangeMax.value] = [rangeMax.value, rangeMin.value]
+        if (rangeMin.value < subcatRangeMin)
+          rangeMin.value = subcatRangeMin
+        if (rangeMax.value > subcatRangeMax)
+          rangeMax.value = subcatRangeMax
+        
+        rangeData.update({
+          from: rangeMin.value,
+          to: rangeMax.value
+        });
+      }
+      
+      $('.js-subcat-range').ionRangeSlider({
+        onFinish: (data) => {
+          let eventChange1 = new Event('change'),
+              eventChange2 = new Event('change');
+          rangeMin.value = data.from
+          rangeMax.value = data.to
+          rangeMin.dispatchEvent(eventChange1);
+          rangeMax.dispatchEvent(eventChange2);
+        }
+      });
+      
+      rangeData = $('.js-subcat-range').data('ionRangeSlider'); // jquery 
+      
+      rangeMin.addEventListener('change', updateRange);
+      rangeMax.addEventListener('change', updateRange);
+      
+      const mscCheckboxs = document.querySelectorAll('.js-subcat-check');
+      
+      for (let mscCheckbox of mscCheckboxs){
+        let mscCheckboxInp = mscCheckbox.querySelector('input');
+        mscCheckbox.addEventListener('click', (e) => {
+          mscCheckbox.classList.toggle('checked');
+          if (mscCheckbox.classList.contains('checked'))
+            mscCheckboxInp.setAttribute('checked', true)
+          else
+            mscCheckboxInp.removeAttribute('checked')
+
+          let eventChange = new Event('change');
+          mscCheckboxInp.dispatchEvent(eventChange);
+
+          e.preventDefault(); 
+        })
+      }
+      
+      $(document).on('click', '.js-subcat-hidden', function(){
+        $(this).toggleClass('open');
+        $('.js-subcat-table .hidden').fadeToggle(400);
+        return false;
+      });
+      
+        tippy('.js-subcatpage', {
+          target: '.js-calc-tocart.added',
+          placement: 'top',
+          maxWidth: '193px',
+          theme: 'light',
+          arrow: true
+        })
+    },
+    
+    modelBlock: () => {
+      
+      const modelRange = document.querySelector('.js-model-range'),
+            modelRangeMax = modelRange.getAttribute('data-max'),
+            modelRangeMin = modelRange.getAttribute('data-min');
+      
+      let rangeMin = document.querySelector('.js-model-rangeMin'),
+          rangeMax = document.querySelector('.js-model-rangeMax'), rangeData;
+      
+      $('.js-model-range').each((count, item) => {
+        let modelRange = $(item),
+            modelRangeMax = $(item).data('max'),
+            modelRangeMin = $(item).data('min'),
+            rangeMin = $(item).parent().parent().find('.js-model-rangeMin')[0],
+            rangeMax = $(item).parent().parent().find('.js-model-rangeMax')[0], 
+            rangeData;
+        
+        function updateRange() {
+          if (rangeMin.value > rangeMax.value)
+            [rangeMin.value, rangeMax.value] = [rangeMax.value, rangeMin.value]
+          if (rangeMin.value < modelRangeMin)
+            rangeMin.value = modelRangeMin
+          if (rangeMax.value > modelRangeMax)
+            rangeMax.value = modelRangeMax
+
+          rangeData.update({
+            from: rangeMin.value,
+            to: rangeMax.value
+          });
+        }
+
+        $(item).ionRangeSlider({
+          onFinish: (data) => {
+            let eventChange1 = new Event('change'),
+                eventChange2 = new Event('change');
+            rangeMin.value = data.from
+            rangeMax.value = data.to
+            rangeMin.dispatchEvent(eventChange1);
+            rangeMax.dispatchEvent(eventChange2);
+          }
+        });
+
+        rangeData = $(item).data('ionRangeSlider'); // jquery 
+
+        rangeMin.addEventListener('change', updateRange);
+        rangeMax.addEventListener('change', updateRange);
+
+      });
+      
+      const openModel = document.querySelector('.js-model-open'),
+            openModelHidden = document.querySelector('.js-model-hidden');
+      
+      openModel.addEventListener('click', () => {
+        openModel.classList.toggle('open');
+        openModelHidden.classList.toggle('open');
+      })
+      
+      const modelCancel = document.querySelector('.js-model-cancel');
+      modelCancel.addEventListener('click', (e) => {
+        document.querySelectorAll('.js-model-check input').forEach(item => {
+          item.removeAttribute('checked')
+          item.parentNode.classList.remove('checked')
+        });
+        e.preventDefault(); 
+      });
+      
+      
+      const mscCheckboxs = document.querySelectorAll('.js-model-check');
+      
+      for (let mscCheckbox of mscCheckboxs){
+        let mscCheckboxInp = mscCheckbox.querySelector('input');
+        mscCheckbox.addEventListener('click', (e) => {
+          mscCheckbox.classList.toggle('checked');
+          if (mscCheckbox.classList.contains('checked'))
+            mscCheckboxInp.setAttribute('checked', true)
+          else
+            mscCheckboxInp.removeAttribute('checked')
+
+          let eventChange = new Event('change');
+          mscCheckboxInp.dispatchEvent(eventChange);
+
+          e.preventDefault(); 
+        })
+      }
+        
+    },
+    
     catPage: () => {
       const elemSwiper = new Swiper ('.js-catalog-car', {
         loop: true,
@@ -1124,6 +1316,10 @@ window.onload = function () {
       
       if (document.querySelectorAll('.js-catpage').length) this.catPage();
       
+      if (document.querySelectorAll('.js-subcatpage').length) this.subcatPage();
+      
+      if (document.querySelectorAll('.js-model').length) this.modelBlock();
+      
       if (document.querySelectorAll('.js-consult').length) this.consult();
       
       if (document.querySelectorAll('.js-recent').length) this.recentCar();
@@ -1203,6 +1399,20 @@ window.onload = function () {
         });
       }
       
+      if (document.querySelectorAll('.js-totop').length){
+        const toTop = document.querySelector('.js-totop');
+        
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 800)
+            toTop.classList.add('visible')
+          else
+            toTop.classList.remove('visible')
+        });
+        toTop.addEventListener('click', () => {
+          window.animation.scrollTo(0, 800);
+        });
+      }
+      
       if (document.querySelectorAll('.js-lightbox').length){
         let lightbox = GLightbox({
           'selector': 'js-lightbox',
@@ -1243,6 +1453,8 @@ window.onload = function () {
           }
         }
       }); // jquery
+      
+      return this;
       
     }
   }).init();

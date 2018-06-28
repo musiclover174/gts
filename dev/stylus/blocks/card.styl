@@ -5,6 +5,151 @@
     ml -32px
     mb -30px
     w calc(100% + 32px)
+    &_line
+      ml 0
+      flex-direction column
+      justify-content flex-start
+      w 100%
+      & ^[0]__elem
+        w 100%
+        ml 0
+        display flex
+        align-items center
+        padding 17px 10px
+        @media $mLandscapeMax
+          flex-direction column
+          padding 27px 30px
+        &-imgover
+          w 130px
+          mr 18px
+          @media $tPortraitMax
+            dn()
+        &-img
+          max-width 120px
+          max-height 120px
+        &-hrefover
+          w 360px
+          max-width none
+          height auto
+          mb 0
+          @media $desktopMax
+            w 300px
+          @media $tLandscapeMax
+            w 270px
+          @media $tPortraitMax
+            pl 20px
+          @media $mLandscapeMax
+            w 100%
+            padding 0
+        &-href
+          display inline
+        &-modified
+          pos relative
+          mt 10px
+          h 23px
+          padding 0 14px
+          ib()
+          mt 15px
+          w auto
+          line-height 23px
+          border-radius 12px
+          background-image none
+          &_hit
+            background-color #ffac1b
+        &-info
+          w 360px
+          border-left 1px solid #ececec
+          border-right 1px solid #ececec
+          height auto !important
+          padding 10px 38px
+          flex-direction row
+          flex-wrap wrap
+          @media $desktopMax
+            w 350px
+          @media $mLandscapeMax
+            w 100%
+            border 0
+            border-top 1px solid #ececec
+            border-bottom 1px solid #ececec
+            padding 18px 0
+            mt 20px
+        &-params-row
+          max-width none
+          w 50%
+          pr 20px
+          &:nth-child(2)
+            mt 0
+          @media $tPortraitMax
+            w 100%
+            &:nth-child(2)
+              mt 11px
+          @media $mLandscapeMax
+            w 50%
+            &:nth-child(2)
+              mt 0
+        &-price
+          padding 0 0 0 38px
+          border-top 0
+          align-items center
+          justify-content space-between
+          mt 0
+          w 400px
+          @media $desktopMax
+            w 385px
+            pr 20px
+          @media $tLandscapeMax
+            flex-direction column
+            justify-content flex-start
+            align-items flex-start
+            w 270px
+            pos static
+          @media $mLandscapeMax
+            w 100%
+            padding 0
+            mt 20px
+            align-items center
+            justify-content space-between
+            flex-direction row
+          @media $mPortraitMax
+            flex-direction column
+            justify-content flex-start
+            align-items flex-start
+            w 100%
+            pos static
+          &-costover
+            display flex
+            flex-direction column
+          &-btnover
+            @media $desktop
+              pos relative
+            @media $tLandscapeMax
+              mt 10px
+        &-prevcost
+          pos relative
+          t 0
+        &-cost
+          font-weight 500
+          pt 4px
+          &:first-child
+            pt 0
+        &-icons
+          @media $desktop
+            display flex
+            align-items center
+            pos absolute
+            b -74px
+            l 50%
+            r auto
+            transform translateX(-50%)
+          @media $tLandscapeMax
+            t 12px
+            r 16px
+        &-tocompare
+          @media $desktop
+            mt 0
+            ml 20px
+            &:first-child
+              ml 0
   &__elem
     pos relative
     w calc(100% / 3 - 32px)
